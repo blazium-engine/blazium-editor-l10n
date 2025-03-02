@@ -29,7 +29,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Godot Engine properties\n"
-"Report-Msgid-Bugs-To: https://github.com/godotengine/godot\n"
+"Report-Msgid-Bugs-To: https://github.com/blazium-engine/blazium\n"
 "POT-Creation-Date: \n"
 "PO-Revision-Date: 2023-11-06 00:36+0000\n"
 "Last-Translator: Fragment Ventures <lasse@fragmentventures.com>\n"
@@ -57,8 +57,9 @@ msgstr "konfigurer"
 #: editor/animation_track_editor.cpp
 #: editor/plugins/tiles/tile_set_atlas_source_editor.cpp
 #: platform/android/export/export_plugin.cpp scene/2d/physics/area_2d.cpp
-#: scene/3d/physics/area_3d.cpp scene/resources/3d/mesh_library.cpp
-#: scene/resources/3d/skin.cpp servers/xr/xr_pose.cpp servers/xr/xr_tracker.cpp
+#: scene/3d/physics/area_3d.cpp scene/3d/skeleton_3d.cpp
+#: scene/resources/3d/mesh_library.cpp scene/resources/3d/skin.cpp
+#: servers/xr/xr_pose.cpp servers/xr/xr_tracker.cpp
 msgid "Name"
 msgstr "Navn"
 
@@ -66,9 +67,9 @@ msgstr "Navn"
 msgid "Name Localized"
 msgstr "Lokalt navn"
 
-#: core/config/project_settings.cpp platform/windows/export/export_plugin.cpp
-#: scene/main/node.cpp scene/resources/visual_shader.cpp
-#: servers/xr/xr_tracker.cpp
+#: core/config/project_settings.cpp platform/web/export/export_plugin.cpp
+#: platform/windows/export/export_plugin.cpp scene/main/node.cpp
+#: scene/resources/visual_shader.cpp servers/xr/xr_tracker.cpp
 msgid "Description"
 msgstr "Beskrivelse"
 
@@ -154,9 +155,9 @@ msgstr "Vindu"
 #: scene/gui/control.cpp scene/gui/graph_edit.cpp scene/main/viewport.cpp
 #: scene/main/window.cpp scene/resources/2d/rectangle_shape_2d.cpp
 #: scene/resources/3d/box_shape_3d.cpp scene/resources/3d/primitive_meshes.cpp
-#: scene/resources/external_texture.cpp scene/resources/label_settings.cpp
-#: scene/resources/placeholder_textures.cpp scene/resources/style_box_flat.cpp
-#: scene/resources/visual_shader.cpp servers/rendering_server.cpp
+#: scene/resources/label_settings.cpp scene/resources/placeholder_textures.cpp
+#: scene/resources/style_box_flat.cpp scene/resources/visual_shader.cpp
+#: servers/rendering_server.cpp
 msgid "Size"
 msgstr "Størrelse"
 
@@ -226,11 +227,6 @@ msgstr "Utvid til tittel"
 msgid "No Focus"
 msgstr "Ingen fokus"
 
-#: core/config/project_settings.cpp scene/main/window.cpp
-#, fuzzy
-msgid "Sharp Corners"
-msgstr "Gjør Intensiteten Skarpere"
-
 #: core/config/project_settings.cpp
 msgid "Window Width Override"
 msgstr "Overstyr vindusbredde"
@@ -284,7 +280,7 @@ msgstr ""
 msgid "Default Bus Layout"
 msgstr "Håndter Eksportmaler"
 
-#: core/config/project_settings.cpp editor/editor_settings.cpp
+#: core/config/project_settings.cpp
 #, fuzzy
 msgid "General"
 msgstr "Generelt"
@@ -334,30 +330,10 @@ msgid "Embed Subwindows"
 msgstr "Aktiver Snap"
 
 #: core/config/project_settings.cpp
-#, fuzzy
-msgid "Frame Pacing"
-msgstr "Beskrivelse:"
-
-#: core/config/project_settings.cpp platform/android/export/export.cpp
-msgid "Android"
-msgstr "Android"
-
-#: core/config/project_settings.cpp
-#, fuzzy
-msgid "Enable Frame Pacing"
-msgstr "Aktiver Løk-Lag"
-
-#: core/config/project_settings.cpp
-#, fuzzy
-msgid "Swappy Mode"
-msgstr "Velg Modus"
-
-#: core/config/project_settings.cpp
 #: editor/import/3d/resource_importer_scene.cpp main/main.cpp
-#: modules/jolt_physics/jolt_project_settings.cpp scene/2d/tile_map_layer.cpp
-#: scene/main/scene_tree.cpp scene/main/viewport.cpp
-#: scene/resources/2d/tile_set.cpp servers/physics_server_2d.cpp
-#: servers/physics_server_3d.cpp
+#: scene/2d/tile_map_layer.cpp scene/main/scene_tree.cpp
+#: scene/main/viewport.cpp scene/resources/2d/tile_set.cpp
+#: servers/physics_server_2d.cpp servers/physics_server_3d.cpp
 msgid "Physics"
 msgstr "Fysikk"
 
@@ -395,8 +371,8 @@ msgstr "Inspektør"
 #: scene/2d/parallax_layer.cpp scene/2d/polygon_2d.cpp
 #: scene/2d/remote_transform_2d.cpp scene/3d/cpu_particles_3d.cpp
 #: scene/3d/node_3d.cpp scene/3d/remote_transform_3d.cpp
-#: scene/animation/animation_blend_tree.h scene/gui/control.cpp
-#: scene/main/canvas_layer.cpp scene/main/scene_tree.cpp
+#: scene/3d/skeleton_3d.cpp scene/animation/animation_blend_tree.h
+#: scene/gui/control.cpp scene/main/canvas_layer.cpp scene/main/scene_tree.cpp
 #: scene/main/viewport.cpp scene/resources/camera_attributes.cpp
 #: scene/resources/material.cpp scene/resources/particle_process_material.cpp
 #: servers/rendering_server.cpp
@@ -422,7 +398,7 @@ msgstr "Debug"
 
 #: core/config/project_settings.cpp
 #: editor/import/3d/resource_importer_scene.cpp main/main.cpp
-#: modules/gdscript/gdscript.cpp scene/3d/spring_bone_simulator_3d.cpp
+#: modules/gdscript/gdscript.cpp
 msgid "Settings"
 msgstr "Innstillinger"
 
@@ -618,11 +594,6 @@ msgid "Texture Upload Region Size Px"
 msgstr ""
 
 #: core/config/project_settings.cpp
-#, fuzzy
-msgid "Texture Download Region Size Px"
-msgstr "Størrelse:"
-
-#: core/config/project_settings.cpp
 msgid "Pipeline Cache"
 msgstr ""
 
@@ -630,8 +601,7 @@ msgstr ""
 #: editor/import/3d/post_import_plugin_skeleton_rest_fixer.cpp
 #: modules/gdscript/gdscript.cpp platform/android/export/export_plugin.cpp
 #: platform/windows/export/export_plugin.cpp
-#: scene/3d/physics/joints/hinge_joint_3d.cpp scene/3d/retarget_modifier_3d.cpp
-#: servers/rendering_server.cpp
+#: scene/3d/physics/joints/hinge_joint_3d.cpp servers/rendering_server.cpp
 msgid "Enable"
 msgstr "Aktiver"
 
@@ -712,6 +682,10 @@ msgstr "Alle enheter"
 msgid "Pointing"
 msgstr "Punkt"
 
+#: core/config/project_settings.cpp platform/android/export/export.cpp
+msgid "Android"
+msgstr "Android"
+
 #: core/config/project_settings.cpp editor/editor_settings.cpp
 msgid "Enable Long Press as Right Click"
 msgstr ""
@@ -741,10 +715,6 @@ msgstr "Delta Utjevning"
 #: core/core_bind.cpp
 msgid "Print Error Messages"
 msgstr "Print Feilmelding"
-
-#: core/core_bind.cpp
-msgid "Print to stdout"
-msgstr ""
 
 #: core/core_bind.cpp main/main.cpp
 msgid "Physics Ticks per Second"
@@ -891,7 +861,8 @@ msgstr "Knappmaske"
 #: editor/import/3d/resource_importer_scene.cpp
 #: modules/gltf/structures/gltf_node.cpp scene/2d/node_2d.cpp
 #: scene/2d/remote_transform_2d.cpp scene/3d/node_3d.cpp
-#: scene/3d/remote_transform_3d.cpp scene/gui/control.cpp scene/main/window.cpp
+#: scene/3d/remote_transform_3d.cpp scene/3d/skeleton_3d.cpp
+#: scene/gui/control.cpp scene/main/window.cpp
 #: scene/resources/particle_process_material.cpp servers/physics_server_2d.cpp
 #: servers/physics_server_3d.cpp
 msgid "Position"
@@ -979,7 +950,8 @@ msgid "Action"
 msgstr "Handling"
 
 #: core/input/input_event.cpp modules/mobile_vr/mobile_vr_interface.cpp
-#: modules/openxr/openxr_interface.cpp scene/3d/gpu_particles_collision_3d.cpp
+#: modules/openxr/openxr_interface.cpp scene/3d/audio_stream_player_3d.cpp
+#: scene/3d/gpu_particles_collision_3d.cpp
 #: scene/resources/2d/skeleton/skeleton_modification_stack_2d.cpp
 #: scene/resources/environment.cpp scene/resources/material.cpp
 msgid "Strength"
@@ -1103,13 +1075,12 @@ msgstr "Region"
 #: scene/2d/animated_sprite_2d.cpp scene/2d/camera_2d.cpp scene/2d/light_2d.cpp
 #: scene/2d/parallax_background.cpp scene/2d/parallax_layer.cpp
 #: scene/2d/polygon_2d.cpp scene/2d/sprite_2d.cpp scene/3d/label_3d.cpp
-#: scene/3d/look_at_modifier_3d.cpp scene/3d/physics/physical_bone_3d.cpp
-#: scene/3d/soft_body_3d.cpp scene/3d/spring_bone_collision_3d.cpp
+#: scene/3d/physics/physical_bone_3d.cpp scene/3d/soft_body_3d.cpp
 #: scene/3d/sprite_3d.cpp scene/3d/visual_instance_3d.cpp
-#: scene/gui/rich_text_effect.cpp scene/gui/split_container.cpp
-#: scene/main/canvas_layer.cpp scene/resources/3d/primitive_meshes.cpp
-#: scene/resources/font.cpp scene/resources/label_settings.cpp
-#: scene/resources/material.cpp scene/resources/style_box_flat.cpp
+#: scene/gui/rich_text_effect.cpp scene/main/canvas_layer.cpp
+#: scene/resources/3d/primitive_meshes.cpp scene/resources/font.cpp
+#: scene/resources/label_settings.cpp scene/resources/material.cpp
+#: scene/resources/style_box_flat.cpp
 #, fuzzy
 msgid "Offset"
 msgstr "Avstand:"
@@ -1146,8 +1117,6 @@ msgid "Diagonal Mode"
 msgstr "Prioritet Modus"
 
 #: core/math/random_number_generator.cpp modules/noise/fastnoise_lite.cpp
-#: scene/2d/cpu_particles_2d.cpp scene/2d/gpu_particles_2d.cpp
-#: scene/3d/cpu_particles_3d.cpp scene/3d/gpu_particles_3d.cpp
 msgid "Seed"
 msgstr "Frø"
 
@@ -1160,7 +1129,6 @@ msgid "Memory"
 msgstr ""
 
 #: core/object/message_queue.cpp core/register_core_types.cpp main/main.cpp
-#: modules/jolt_physics/jolt_project_settings.cpp
 #: modules/webrtc/register_types.cpp scene/main/window.cpp
 #: servers/rendering_server.cpp
 msgid "Limits"
@@ -1180,7 +1148,7 @@ msgstr "Steg"
 #: editor/debugger/debug_adapter/debug_adapter_server.cpp
 #: editor/editor_settings.cpp main/main.cpp
 #: modules/gdscript/language_server/gdscript_language_server.cpp
-#: modules/mbedtls/register_types.cpp modules/webrtc/register_types.cpp
+#: modules/webrtc/register_types.cpp
 msgid "Network"
 msgstr "Nettverk"
 
@@ -1204,7 +1172,6 @@ msgid "Max Buffer (Power of 2)"
 msgstr ""
 
 #: core/register_core_types.cpp editor/editor_settings.cpp
-#: modules/mbedtls/register_types.cpp
 msgid "TLS"
 msgstr ""
 
@@ -1222,7 +1189,7 @@ msgstr "Fyll"
 msgid "Worker Pool"
 msgstr ""
 
-#: core/register_core_types.cpp servers/navigation_server_3d.cpp
+#: core/register_core_types.cpp
 #, fuzzy
 msgid "Max Threads"
 msgstr "Hastighet (FPS):"
@@ -1297,8 +1264,9 @@ msgstr ""
 #: modules/gltf/structures/gltf_node.cpp scene/2d/node_2d.cpp
 #: scene/2d/polygon_2d.cpp scene/2d/remote_transform_2d.cpp
 #: scene/3d/node_3d.cpp scene/3d/physics/physical_bone_3d.cpp
-#: scene/3d/remote_transform_3d.cpp scene/gui/control.cpp
-#: scene/main/canvas_layer.cpp scene/resources/environment.cpp
+#: scene/3d/remote_transform_3d.cpp scene/3d/skeleton_3d.cpp
+#: scene/gui/control.cpp scene/main/canvas_layer.cpp
+#: scene/resources/environment.cpp
 #, fuzzy
 msgid "Rotation"
 msgstr "Rotasjon Steg:"
@@ -1317,9 +1285,9 @@ msgid "Args"
 msgstr ""
 
 #: editor/animation_track_editor.cpp editor/editor_settings.cpp
-#: modules/noise/fastnoise_lite.cpp scene/3d/physics/physical_bone_3d.cpp
-#: scene/gui/text_edit.cpp scene/resources/visual_shader_nodes.cpp
-#: servers/xr/xr_tracker.cpp
+#: modules/noise/fastnoise_lite.cpp platform/web/export/export_plugin.cpp
+#: scene/3d/physics/physical_bone_3d.cpp scene/gui/text_edit.cpp
+#: scene/resources/visual_shader_nodes.cpp servers/xr/xr_tracker.cpp
 msgid "Type"
 msgstr "Skriv"
 
@@ -1380,11 +1348,6 @@ msgstr "Forespørsel feilet, returneringskode:"
 msgid "Sync Breakpoints"
 msgstr "Stoppunkter"
 
-#: editor/editor_feature_profile.cpp
-#, fuzzy
-msgid "Default Feature Profile"
-msgstr "Håndter Eksportmaler"
-
 #: editor/editor_inspector.cpp editor/gui/editor_spin_slider.cpp
 msgid "Label"
 msgstr ""
@@ -1394,16 +1357,6 @@ msgstr ""
 #, fuzzy
 msgid "Read Only"
 msgstr "Metoder"
-
-#: editor/editor_inspector.cpp
-#, fuzzy
-msgid "Draw Label"
-msgstr "Ring"
-
-#: editor/editor_inspector.cpp
-#, fuzzy
-msgid "Draw Background"
-msgstr "Ugyldig navn."
 
 #: editor/editor_inspector.cpp
 msgid "Checkable"
@@ -1428,20 +1381,6 @@ msgstr "Spill"
 #, fuzzy
 msgid "Deletable"
 msgstr "Slett"
-
-#: editor/editor_inspector.cpp scene/gui/graph_element.cpp
-#, fuzzy
-msgid "Selectable"
-msgstr "Velg"
-
-#: editor/editor_inspector.cpp
-#, fuzzy
-msgid "Use Folding"
-msgstr "Deaktivert"
-
-#: editor/editor_inspector.cpp
-msgid "Name Split Ratio"
-msgstr ""
 
 #: editor/editor_interface.cpp
 msgid "Distraction Free Mode"
@@ -1559,10 +1498,6 @@ msgid "Font Disable Embedded Bitmaps"
 msgstr "Deaktiver lys fra omgivelser"
 
 #: editor/editor_settings.cpp
-msgid "Font Allow MSDF"
-msgstr ""
-
-#: editor/editor_settings.cpp
 #, fuzzy
 msgid "Main Font"
 msgstr "Egenskaper"
@@ -1589,6 +1524,10 @@ msgstr ""
 #, fuzzy
 msgid "Single Window Mode"
 msgstr "Min. Vindustørrelse"
+
+#: editor/editor_settings.cpp
+msgid "Remember Window Size and Position"
+msgstr ""
 
 #: editor/editor_settings.cpp
 msgid "Mouse Extra Buttons Navigate History"
@@ -1732,6 +1671,7 @@ msgid "Border Size"
 msgstr ""
 
 #: editor/editor_settings.cpp scene/resources/style_box_flat.cpp
+#: scene/theme/theme_db.cpp
 #, fuzzy
 msgid "Corner Radius"
 msgstr "Endre Anker og Marginer"
@@ -1864,40 +1804,6 @@ msgstr "Panorerings-Modus"
 msgid "Thumbnail Size"
 msgstr "Miniatyrbilde..."
 
-#: editor/editor_settings.cpp
-msgid "Quick Open Dialog"
-msgstr ""
-
-#: editor/editor_settings.cpp scene/2d/physics/shape_cast_2d.cpp
-#: scene/3d/physics/shape_cast_3d.cpp
-#, fuzzy
-msgid "Max Results"
-msgstr "Søkeresultater"
-
-#: editor/editor_settings.cpp
-#, fuzzy
-msgid "Show Search Highlight"
-msgstr "Retninger"
-
-#: editor/editor_settings.cpp
-#, fuzzy
-msgid "Enable Fuzzy Matching"
-msgstr "Endre Anim Lengde"
-
-#: editor/editor_settings.cpp
-msgid "Max Fuzzy Misses"
-msgstr ""
-
-#: editor/editor_settings.cpp
-#, fuzzy
-msgid "Include Addons"
-msgstr "Veksle Visning av Skjulte Filer"
-
-#: editor/editor_settings.cpp
-#, fuzzy
-msgid "Default Display Mode"
-msgstr "Panorerings-Modus"
-
 #: editor/editor_settings.cpp editor/import/3d/resource_importer_scene.cpp
 #: editor/register_editor_types.cpp modules/fbx/register_types.cpp
 #: modules/gltf/register_types.cpp
@@ -1964,10 +1870,6 @@ msgid "Center Node on Reparent"
 msgstr ""
 
 #: editor/editor_settings.cpp
-msgid "Hide Filtered Out Parents"
-msgstr ""
-
-#: editor/editor_settings.cpp
 #, fuzzy
 msgid "Always Show Folders"
 msgstr "Alltid Vis Rutenett"
@@ -2002,7 +1904,7 @@ msgstr "Tekst Editor"
 
 #: editor/editor_settings.cpp scene/3d/label_3d.cpp
 #: scene/resources/3d/primitive_meshes.cpp scene/resources/label_settings.cpp
-#: scene/resources/text_paragraph.cpp scene/theme/default_theme.cpp
+#: scene/theme/default_theme.cpp
 msgid "Line Spacing"
 msgstr ""
 
@@ -2116,11 +2018,6 @@ msgstr "Ring"
 msgid "Behavior"
 msgstr ""
 
-#: editor/editor_settings.cpp
-#, fuzzy
-msgid "Empty Selection Clipboard"
-msgstr "Kun Valgte"
-
 #: editor/editor_settings.cpp main/performance.cpp modules/gridmap/grid_map.cpp
 #: scene/2d/tile_map_layer.cpp scene/resources/2d/tile_set.cpp
 #: servers/navigation_server_3d.cpp
@@ -2223,16 +2120,6 @@ msgstr ""
 
 #: editor/editor_settings.cpp
 #, fuzzy
-msgid "Documentation"
-msgstr "Åpne Godots nettbaserte dokumentasjon"
-
-#: editor/editor_settings.cpp
-#, fuzzy
-msgid "Enable Tooltips"
-msgstr "Kan ikke Løses"
-
-#: editor/editor_settings.cpp
-#, fuzzy
 msgid "Script List"
 msgstr "Skript Redigeringsverktøy"
 
@@ -2251,10 +2138,6 @@ msgstr "Velg malfil"
 
 #: editor/editor_settings.cpp
 msgid "Script Temperature History Size"
-msgstr ""
-
-#: editor/editor_settings.cpp
-msgid "Highlight Scene Scripts"
 msgstr ""
 
 #: editor/editor_settings.cpp
@@ -2291,10 +2174,6 @@ msgstr "Fullføring"
 
 #: editor/editor_settings.cpp
 msgid "Idle Parse Delay"
-msgstr ""
-
-#: editor/editor_settings.cpp
-msgid "Idle Parse Delay With Errors Found"
 msgstr ""
 
 #: editor/editor_settings.cpp
@@ -2373,6 +2252,16 @@ msgstr "Velg en HovedScene"
 #: editor/editor_settings.cpp
 msgid "Palette Min Width"
 msgstr ""
+
+#: editor/editor_settings.cpp
+#, fuzzy
+msgid "Preview Size"
+msgstr "Forhåndvisning"
+
+#: editor/editor_settings.cpp
+#, fuzzy
+msgid "Editor Side"
+msgstr "Redaktør"
 
 #: editor/editor_settings.cpp
 #, fuzzy
@@ -2493,25 +2382,6 @@ msgstr "Velg"
 
 #: editor/editor_settings.cpp
 msgid "CSG"
-msgstr ""
-
-#: editor/editor_settings.cpp
-#, fuzzy
-msgid "GridMap Grid"
-msgstr "Velg farge"
-
-#: editor/editor_settings.cpp
-#, fuzzy
-msgid "Spring Bone Joint"
-msgstr "Flytt Punkt"
-
-#: editor/editor_settings.cpp
-#, fuzzy
-msgid "Spring Bone Collision"
-msgstr "Deaktivert"
-
-#: editor/editor_settings.cpp
-msgid "Spring Bone Inside Collision"
 msgstr ""
 
 #: editor/editor_settings.cpp
@@ -2895,7 +2765,7 @@ msgid "Platforms"
 msgstr "Bruk Tilpasset Brukerkatalog"
 
 #: editor/editor_settings.cpp
-msgid "Linux/*BSD"
+msgid "Linuxbsd"
 msgstr ""
 
 #: editor/editor_settings.cpp
@@ -2935,10 +2805,6 @@ msgstr ""
 #, fuzzy
 msgid "Profiler Frame Max Functions"
 msgstr "Endre navn på funksjonen"
-
-#: editor/editor_settings.cpp
-msgid "Profiler Target FPS"
-msgstr ""
 
 #: editor/editor_settings.cpp
 msgid "Remote Scene Tree Refresh Interval"
@@ -3261,11 +3127,6 @@ msgstr "Kun Valgte"
 msgid "Particle Color"
 msgstr "Deaktivert"
 
-#: editor/editor_settings_dialog.cpp
-#, fuzzy
-msgid "Editor Settings Advanced Mode"
-msgstr "Innstillinger for redigeringsverktøy"
-
 #: editor/export/editor_export_platform_pc.cpp
 #: platform/android/export/export_plugin.cpp
 #: platform/ios/export/export_plugin.cpp
@@ -3313,10 +3174,6 @@ msgstr "Importer"
 msgid "ETC2 ASTC"
 msgstr "Importer"
 
-#: editor/export/export_template_manager.cpp
-msgid "Export Template Download Directory"
-msgstr ""
-
 #: editor/export/project_export.cpp
 #, fuzzy
 msgid "Export Path"
@@ -3348,7 +3205,7 @@ msgid "Disable Overwrite Warning"
 msgstr ""
 
 #: editor/gui/editor_spin_slider.cpp scene/gui/button.cpp
-#: scene/gui/line_edit.cpp scene/gui/menu_bar.cpp
+#: scene/gui/color_button.cpp scene/gui/line_edit.cpp scene/gui/menu_bar.cpp
 #, fuzzy
 msgid "Flat"
 msgstr "Flat0"
@@ -3357,10 +3214,6 @@ msgstr "Flat0"
 #, fuzzy
 msgid "Hide Slider"
 msgstr "Kollisjon Modus"
-
-#: editor/gui/editor_spin_slider.cpp
-msgid "Editing Integer"
-msgstr ""
 
 #: editor/gui/editor_zoom_widget.cpp scene/2d/camera_2d.cpp
 #: scene/gui/graph_edit.cpp
@@ -3420,23 +3273,12 @@ msgstr ""
 
 #: editor/import/3d/post_import_plugin_skeleton_rest_fixer.cpp
 #, fuzzy
-msgid "Retarget Method"
-msgstr "Rendrer"
+msgid "Overwrite Axis"
+msgstr "Overstyringer"
 
 #: editor/import/3d/post_import_plugin_skeleton_rest_fixer.cpp
 msgid "Keep Global Rest on Leftovers"
 msgstr ""
-
-#: editor/import/3d/post_import_plugin_skeleton_rest_fixer.cpp
-#: scene/3d/retarget_modifier_3d.cpp
-#, fuzzy
-msgid "Use Global Pose"
-msgstr "Neste Koordinat"
-
-#: editor/import/3d/post_import_plugin_skeleton_rest_fixer.cpp
-#, fuzzy
-msgid "Original Skeleton Name"
-msgstr "Skelett"
 
 #: editor/import/3d/post_import_plugin_skeleton_rest_fixer.cpp
 msgid "Fix Silhouette"
@@ -3452,7 +3294,6 @@ msgstr "Lim inn Noder"
 
 #: editor/import/3d/post_import_plugin_skeleton_rest_fixer.cpp
 #: editor/import/resource_importer_bitmask.cpp
-#: modules/openxr/extensions/openxr_dpad_binding_extension.cpp
 #: servers/audio/effects/audio_effect_compressor.cpp
 msgid "Threshold"
 msgstr ""
@@ -3484,26 +3325,6 @@ msgstr ""
 #, fuzzy
 msgid "Generate Tangents"
 msgstr "Fjern Punkt"
-
-#: editor/import/3d/resource_importer_obj.cpp
-#: editor/import/3d/resource_importer_scene.cpp
-#, fuzzy
-msgid "Generate LODs"
-msgstr "Fjern Punkt"
-
-#: editor/import/3d/resource_importer_obj.cpp
-#, fuzzy
-msgid "Generate Shadow Mesh"
-msgstr "Lag Node"
-
-#: editor/import/3d/resource_importer_obj.cpp
-#, fuzzy
-msgid "Generate Lightmap UV2"
-msgstr "Genererer lyskart"
-
-#: editor/import/3d/resource_importer_obj.cpp
-msgid "Generate Lightmap UV2 Texel Size"
-msgstr ""
 
 #: editor/import/3d/resource_importer_obj.cpp
 #, fuzzy
@@ -3690,7 +3511,6 @@ msgstr "Prioritet Modus"
 #: modules/gltf/structures/gltf_node.cpp modules/noise/noise_texture_2d.cpp
 #: modules/noise/noise_texture_3d.cpp scene/2d/light_2d.cpp
 #: scene/3d/navigation_agent_3d.cpp scene/3d/navigation_obstacle_3d.cpp
-#: scene/3d/spring_bone_collision_capsule_3d.cpp
 #: scene/resources/2d/capsule_shape_2d.cpp
 #: scene/resources/3d/capsule_shape_3d.cpp
 #: scene/resources/3d/cylinder_shape_3d.cpp
@@ -3708,10 +3528,8 @@ msgstr "Lys"
 #: scene/2d/navigation_agent_2d.cpp scene/2d/navigation_obstacle_2d.cpp
 #: scene/3d/gpu_particles_collision_3d.cpp scene/3d/navigation_agent_3d.cpp
 #: scene/3d/navigation_obstacle_3d.cpp scene/3d/occluder_instance_3d.cpp
-#: scene/3d/physics/vehicle_body_3d.cpp
-#: scene/3d/spring_bone_collision_capsule_3d.cpp
-#: scene/3d/spring_bone_collision_sphere_3d.cpp
-#: scene/animation/root_motion_view.cpp scene/resources/2d/capsule_shape_2d.cpp
+#: scene/3d/physics/vehicle_body_3d.cpp scene/animation/root_motion_view.cpp
+#: scene/resources/2d/capsule_shape_2d.cpp
 #: scene/resources/2d/circle_shape_2d.cpp
 #: scene/resources/2d/navigation_polygon.cpp
 #: scene/resources/3d/capsule_shape_3d.cpp
@@ -3751,8 +3569,8 @@ msgstr "Lagre ei fil"
 #: scene/3d/navigation_region_3d.cpp scene/3d/physics/area_3d.cpp
 #: scene/3d/physics/joints/generic_6dof_joint_3d.cpp
 #: scene/3d/physics/ray_cast_3d.cpp scene/3d/physics/shape_cast_3d.cpp
-#: scene/3d/sprite_3d.cpp scene/gui/code_edit.cpp scene/gui/graph_edit.cpp
-#: scene/main/canvas_layer.cpp
+#: scene/3d/skeleton_3d.cpp scene/3d/sprite_3d.cpp scene/gui/code_edit.cpp
+#: scene/gui/graph_edit.cpp scene/main/canvas_layer.cpp
 #: scene/resources/2d/skeleton/skeleton_modification_2d.cpp
 #: scene/resources/2d/skeleton/skeleton_modification_stack_2d.cpp
 #: scene/resources/camera_attributes.cpp scene/resources/compositor.cpp
@@ -3779,8 +3597,18 @@ msgstr ""
 
 #: editor/import/3d/resource_importer_scene.cpp
 #, fuzzy
+msgid "Normal Split Angle"
+msgstr "Fjern Mal"
+
+#: editor/import/3d/resource_importer_scene.cpp
+#, fuzzy
 msgid "Normal Merge Angle"
 msgstr "Fjern Mal"
+
+#: editor/import/3d/resource_importer_scene.cpp
+#, fuzzy
+msgid "Raycast Normals"
+msgstr "Støtte"
 
 #: editor/import/3d/resource_importer_scene.cpp
 #, fuzzy
@@ -3906,10 +3734,6 @@ msgstr "Skala"
 msgid "Import as Skeleton Bones"
 msgstr ""
 
-#: editor/import/3d/resource_importer_scene.cpp
-msgid "Use Node Type Suffixes"
-msgstr ""
-
 #: editor/import/3d/resource_importer_scene.cpp modules/gltf/gltf_state.cpp
 msgid "Meshes"
 msgstr ""
@@ -3918,6 +3742,11 @@ msgstr ""
 #, fuzzy
 msgid "Ensure Tangents"
 msgstr "Modifiser Kurvetangent"
+
+#: editor/import/3d/resource_importer_scene.cpp
+#, fuzzy
+msgid "Generate LODs"
+msgstr "Fjern Punkt"
 
 #: editor/import/3d/resource_importer_scene.cpp
 #, fuzzy
@@ -3972,7 +3801,7 @@ msgid "Import Script"
 msgstr "Importer Scene"
 
 #: editor/import/dynamic_font_import_settings.cpp
-#: editor/import/resource_importer_dynamic_font.cpp
+#: editor/import/resource_importer_dynamic_font.cpp scene/resources/font.cpp
 #, fuzzy
 msgid "Antialiasing"
 msgstr "Store bokstaver"
@@ -4028,6 +3857,12 @@ msgstr ""
 msgid "Subpixel Positioning"
 msgstr "Partisjonerer..."
 
+#: editor/import/dynamic_font_import_settings.cpp scene/resources/font.cpp
+#: scene/theme/theme_db.cpp
+#, fuzzy
+msgid "LCD Subpixel Layout"
+msgstr "Slett Layout"
+
 #: editor/import/dynamic_font_import_settings.cpp
 #: editor/import/resource_importer_dynamic_font.cpp scene/resources/font.cpp
 msgid "Keep Rounding Remainders"
@@ -4080,8 +3915,8 @@ msgid "Compress"
 msgstr "Komponenter"
 
 #: editor/import/dynamic_font_import_settings.cpp scene/3d/label_3d.cpp
-#: scene/gui/button.cpp scene/gui/label.cpp scene/gui/line_edit.cpp
-#: scene/gui/link_button.cpp scene/gui/menu_bar.cpp
+#: scene/gui/button.cpp scene/gui/foldable_container.cpp scene/gui/label.cpp
+#: scene/gui/line_edit.cpp scene/gui/link_button.cpp scene/gui/menu_bar.cpp
 #: scene/gui/rich_text_label.cpp scene/gui/text_edit.cpp
 #: scene/resources/3d/primitive_meshes.cpp
 #: servers/rendering/rendering_device_binds.h
@@ -4461,16 +4296,9 @@ msgid "Frames Count"
 msgstr "Legg til Input"
 
 #: editor/plugins/tiles/tile_set_atlas_source_editor.cpp
-#: modules/openxr/action_map/openxr_haptic_feedback.cpp
-#: scene/3d/look_at_modifier_3d.cpp
 #, fuzzy
 msgid "Duration"
 msgstr "Nummereringer:"
-
-#: editor/project_settings_editor.cpp
-#, fuzzy
-msgid "Project Settings Advanced Mode"
-msgstr "Overstyr prosjektinnstillinger"
 
 #: editor/register_editor_types.cpp
 msgid "Main Run Args"
@@ -4536,54 +4364,9 @@ msgstr "Navn på tillegg:"
 msgid "Autoload on Startup"
 msgstr "Automatisk Lasting Ved Oppstart"
 
-#: editor/scene_tree_dock.cpp
-#, fuzzy
-msgid "Use Favorites Root Selection"
-msgstr "Bildeutvalg"
-
-#: editor/script_create_dialog.cpp
-msgid "Script Setup Use Script Templates"
-msgstr ""
-
-#: editor/script_create_dialog.cpp
-msgid "Script Setup Templates Dictionary"
-msgstr ""
-
 #: main/main.cpp
 msgid "Flush stdout on Print"
 msgstr ""
-
-#: main/main.cpp
-msgid "Low Processor Mode"
-msgstr ""
-
-#: main/main.cpp
-msgid "stdout"
-msgstr ""
-
-#: main/main.cpp
-msgid "Print FPS"
-msgstr ""
-
-#: main/main.cpp
-#, fuzzy
-msgid "Print GPU Profile"
-msgstr "Gjeldende Versjon:"
-
-#: main/main.cpp
-msgid "Verbose stdout"
-msgstr ""
-
-#: main/main.cpp scene/main/node.cpp scene/main/scene_tree.cpp
-#: scene/resources/multimesh.cpp
-#, fuzzy
-msgid "Physics Interpolation"
-msgstr "Interpolasjonsmodus"
-
-#: main/main.cpp
-#, fuzzy
-msgid "Enable Warnings"
-msgstr "Advarsler"
 
 #: main/main.cpp
 msgid "Max Chars per Second"
@@ -4638,7 +4421,7 @@ msgstr "Tilbakefallsverdier"
 
 #: main/main.cpp
 #, fuzzy
-msgid "Fallback to OpenGL 3"
+msgid "Fallback to Opengl 3"
 msgstr "Tilbakefallsverdier"
 
 #: main/main.cpp servers/rendering_server.cpp
@@ -4662,7 +4445,7 @@ msgstr "Tilbakefallsverdier"
 
 #: main/main.cpp
 #, fuzzy
-msgid "Fallback to GLES"
+msgid "Fallback to Gles"
 msgstr "Tilbakefallsverdier"
 
 #: main/main.cpp
@@ -4735,7 +4518,28 @@ msgid "Output Latency"
 msgstr "Utgang"
 
 #: main/main.cpp
+msgid "stdout"
+msgstr ""
+
+#: main/main.cpp
+msgid "Print FPS"
+msgstr ""
+
+#: main/main.cpp
+#, fuzzy
+msgid "Print GPU Profile"
+msgstr "Gjeldende Versjon:"
+
+#: main/main.cpp
+msgid "Verbose stdout"
+msgstr ""
+
+#: main/main.cpp
 msgid "Frame Delay Msec"
+msgstr ""
+
+#: main/main.cpp
+msgid "Low Processor Mode"
 msgstr ""
 
 #: main/main.cpp
@@ -4847,20 +4651,6 @@ msgid "Eye Gaze Interaction"
 msgstr "Lag Funksjon"
 
 #: main/main.cpp
-#, fuzzy
-msgid "Binding Modifiers"
-msgstr "Panorerings-Modus"
-
-#: main/main.cpp
-msgid "Analog Threshold"
-msgstr ""
-
-#: main/main.cpp
-#, fuzzy
-msgid "Dpad Binding"
-msgstr "Fyll"
-
-#: main/main.cpp
 msgid "Boot Splash"
 msgstr ""
 
@@ -4937,6 +4727,11 @@ msgstr "Rotasjon Offset:"
 msgid "Show Image"
 msgstr "Vis Ben"
 
+#: main/main.cpp platform/web/export/export_plugin.cpp
+#: scene/resources/image_texture.cpp
+msgid "Image"
+msgstr ""
+
 #: main/main.cpp
 msgid "Fullsize"
 msgstr ""
@@ -4945,10 +4740,6 @@ msgstr ""
 #, fuzzy
 msgid "Use Filter"
 msgstr "Filter:"
-
-#: main/main.cpp scene/resources/image_texture.cpp
-msgid "Image"
-msgstr ""
 
 #: main/main.cpp
 #, fuzzy
@@ -5128,44 +4919,14 @@ msgstr "Maks Ventende Tilkoblinger"
 msgid "Edges Free"
 msgstr ""
 
-#: main/performance.cpp
-msgid "Obstacles"
-msgstr ""
-
-#: main/performance.cpp
-#, fuzzy
-msgid "Pipeline"
-msgstr "Sidestørrelse"
-
-#: main/performance.cpp
-#, fuzzy
-msgid "Compilations Canvas"
-msgstr "Fullføring"
-
-#: main/performance.cpp
-#, fuzzy
-msgid "Compilations Mesh"
-msgstr "Fullføring"
-
-#: main/performance.cpp
-#, fuzzy
-msgid "Compilations Surface"
-msgstr "Fullføring"
-
-#: main/performance.cpp
-#, fuzzy
-msgid "Compilations Draw"
-msgstr "Fullføring"
-
-#: main/performance.cpp
-#, fuzzy
-msgid "Compilations Specialization"
-msgstr "Importer Scene"
-
 #: modules/csg/csg_shape.cpp
 #, fuzzy
 msgid "Operation"
 msgstr "Innstillinger"
+
+#: modules/csg/csg_shape.cpp scene/main/scene_tree.cpp
+msgid "Snap"
+msgstr ""
 
 #: modules/csg/csg_shape.cpp
 msgid "Calculate Tangents"
@@ -5310,11 +5071,6 @@ msgstr "Tilfeldig Rotasjon:"
 
 #: modules/csg/csg_shape.cpp
 #, fuzzy
-msgid "Path Rotation Accurate"
-msgstr "Tilfeldig Rotasjon:"
-
-#: modules/csg/csg_shape.cpp
-#, fuzzy
 msgid "Path Local"
 msgstr "Lag Ben"
 
@@ -5428,10 +5184,6 @@ msgstr ""
 msgid "Exclude Addons"
 msgstr ""
 
-#: modules/gdscript/gdscript.cpp
-msgid "Renamed in Godot 4 Hint"
-msgstr ""
-
 #: modules/gdscript/language_server/gdscript_language_server.cpp
 #, fuzzy
 msgid "Language Server"
@@ -5480,11 +5232,11 @@ msgstr "Versjon"
 #: scene/2d/cpu_particles_2d.cpp scene/2d/light_2d.cpp scene/2d/polygon_2d.cpp
 #: scene/3d/cpu_particles_3d.cpp scene/3d/light_3d.cpp
 #: scene/3d/reflection_probe.cpp scene/animation/root_motion_view.cpp
-#: scene/gui/color_picker.cpp scene/gui/color_rect.cpp
-#: scene/gui/rich_text_effect.cpp scene/main/canvas_item.cpp
-#: scene/resources/3d/sky_material.cpp scene/resources/environment.cpp
-#: scene/resources/label_settings.cpp scene/resources/material.cpp
-#: scene/resources/particle_process_material.cpp
+#: scene/gui/color_button.cpp scene/gui/color_picker.cpp
+#: scene/gui/color_rect.cpp scene/gui/rich_text_effect.cpp
+#: scene/main/canvas_item.cpp scene/resources/3d/sky_material.cpp
+#: scene/resources/environment.cpp scene/resources/label_settings.cpp
+#: scene/resources/material.cpp scene/resources/particle_process_material.cpp
 #: scene/resources/style_box_flat.cpp scene/resources/style_box_line.cpp
 #: scene/resources/style_box_texture.cpp
 #, fuzzy
@@ -5852,7 +5604,7 @@ msgstr "Lys"
 msgid "Instance Materials"
 msgstr "Forandre"
 
-#: modules/gltf/structures/gltf_node.cpp
+#: modules/gltf/structures/gltf_node.cpp scene/3d/skeleton_3d.cpp
 #, fuzzy
 msgid "Parent"
 msgstr "Snap til foreldre"
@@ -5875,36 +5627,8 @@ msgstr ""
 msgid "Light"
 msgstr "Lys"
 
-#: modules/gltf/structures/gltf_object_model_property.cpp
-msgid "glTF to Godot Expression"
-msgstr ""
-
-#: modules/gltf/structures/gltf_object_model_property.cpp
-msgid "Godot to glTF Expression"
-msgstr ""
-
-#: modules/gltf/structures/gltf_object_model_property.cpp
-#, fuzzy
-msgid "Node Paths"
-msgstr "Kopier Node-bane"
-
-#: modules/gltf/structures/gltf_object_model_property.cpp
-msgid "Object Model Type"
-msgstr ""
-
-#: modules/gltf/structures/gltf_object_model_property.cpp
-#, fuzzy
-msgid "Json Pointers"
-msgstr "Flytt Punkt"
-
-#: modules/gltf/structures/gltf_object_model_property.cpp
-#, fuzzy
-msgid "Variant Type"
-msgstr "Varierende type"
-
 #: modules/gltf/structures/gltf_skeleton.cpp
 #: modules/gltf/structures/gltf_skin.cpp
-#: modules/jolt_physics/jolt_project_settings.cpp
 #, fuzzy
 msgid "Joints"
 msgstr "Punkt"
@@ -6013,13 +5737,13 @@ msgstr "Navigasjon"
 
 #: modules/interactive_music/audio_stream_interactive.cpp
 #, fuzzy
-msgid "Clip Count"
-msgstr "Konstant"
+msgid "Initial Clip"
+msgstr "Store bokstaver"
 
 #: modules/interactive_music/audio_stream_interactive.cpp
 #, fuzzy
-msgid "Initial Clip"
-msgstr "Store bokstaver"
+msgid "Clip Count"
+msgstr "Konstant"
 
 #: modules/interactive_music/audio_stream_playlist.cpp
 msgid "Shuffle"
@@ -6035,171 +5759,6 @@ msgstr "X-Fade Tid (s):"
 #, fuzzy
 msgid "Stream Count"
 msgstr "Legg til Input"
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "Jolt Physics 3D"
-msgstr "Fysikk"
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "Simulation"
-msgstr "Animasjon"
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "Velocity Steps"
-msgstr "Hastighet"
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "Position Steps"
-msgstr "Posisjon"
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Use Enhanced Internal Edge Removal"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Areas Detect Static Bodies"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Generate All Kinematic Contacts"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "Penetration Slop"
-msgstr "Funksjoner"
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "Speculative Contact Distance"
-msgstr "Applikasjon"
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Baumgarte Stabilization Factor"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "Soft Body Point Radius"
-msgstr "Radius:"
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Bounce Velocity Threshold"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "Allow Sleep"
-msgstr "Søk"
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "Sleep Velocity Threshold"
-msgstr "Hastighet"
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Sleep Time Threshold"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Continuous CD Movement Threshold"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "Continuous CD Max Penetration"
-msgstr "Nummereringer:"
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Body Pair Contact Cache Enabled"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Body Pair Contact Cache Distance Threshold"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Body Pair Contact Cache Angle Threshold"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Queries"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Enable Ray Cast Face Index"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "Motion Queries"
-msgstr "Roter Modus"
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "Recovery Iterations"
-msgstr "Lag Funksjon"
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "Recovery Amount"
-msgstr "Lag Poly"
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "Collisions"
-msgstr "Animasjonsnode"
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "Collision Margin Fraction"
-msgstr "Lag Poly"
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Active Edge Threshold"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "World Node"
-msgstr "Tilfeldig Skala:"
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "Temporary Memory Buffer Size"
-msgstr "Bakvisning"
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "World Boundary Shape Size"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "Max Linear Velocity"
-msgstr "Store bokstaver"
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "Max Angular Velocity"
-msgstr "Store bokstaver"
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "Max Bodies"
-msgstr "Lag"
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Max Body Pairs"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "Max Contact Constraints"
-msgstr "Konstanter"
 
 #: modules/lightmapper_rd/register_types.cpp servers/rendering_server.cpp
 #, fuzzy
@@ -6243,11 +5802,6 @@ msgid "Region Size"
 msgstr "Størrelse:"
 
 #: modules/lightmapper_rd/register_types.cpp
-#, fuzzy
-msgid "Max Transparency Rays"
-msgstr "Transposer"
-
-#: modules/lightmapper_rd/register_types.cpp
 msgid "Low Quality Probe Ray Count"
 msgstr ""
 
@@ -6277,11 +5831,6 @@ msgstr "Fjern manglende"
 #, fuzzy
 msgid "Denoiser"
 msgstr "Filter:"
-
-#: modules/mbedtls/register_types.cpp
-#, fuzzy
-msgid "Enable TLS V 1"
-msgstr "Aktiver"
 
 #: modules/minimp3/audio_stream_mp3.cpp
 #: modules/minimp3/resource_importer_mp3.cpp
@@ -6362,11 +5911,6 @@ msgstr "Radius:"
 
 #: modules/multiplayer/multiplayer_spawner.cpp
 #, fuzzy
-msgid "Spawnable Scenes"
-msgstr "Lagre Scene"
-
-#: modules/multiplayer/multiplayer_spawner.cpp
-#, fuzzy
 msgid "Spawn Path"
 msgstr "Splitt Sti"
 
@@ -6439,7 +5983,6 @@ msgid "Noise Type"
 msgstr "Endre %s type"
 
 #: modules/noise/fastnoise_lite.cpp
-#: modules/openxr/action_map/openxr_haptic_feedback.cpp
 #: scene/resources/particle_process_material.cpp
 msgid "Frequency"
 msgstr ""
@@ -6496,7 +6039,6 @@ msgid "Domain Warp"
 msgstr ""
 
 #: modules/noise/fastnoise_lite.cpp
-#: modules/openxr/action_map/openxr_haptic_feedback.cpp
 #, fuzzy
 msgid "Amplitude"
 msgstr "Lukk Kurve"
@@ -6583,9 +6125,10 @@ msgid "Toplevel Paths"
 msgstr "Kopier Node-bane"
 
 #: modules/openxr/action_map/openxr_interaction_profile.cpp
+#: scene/main/scene_tree.cpp
 #, fuzzy
-msgid "Binding Path"
-msgstr "Scene-Sti:"
+msgid "Paths"
+msgstr "Søkesti"
 
 #: modules/openxr/action_map/openxr_interaction_profile.cpp
 #, fuzzy
@@ -6596,53 +6139,6 @@ msgstr "Interpolasjonsmodus"
 #, fuzzy
 msgid "Runtime Paths"
 msgstr "Fjern punkt"
-
-#: modules/openxr/extensions/openxr_dpad_binding_extension.cpp
-#, fuzzy
-msgid "Action Set"
-msgstr "Ikon Modus"
-
-#: modules/openxr/extensions/openxr_dpad_binding_extension.cpp
-#, fuzzy
-msgid "Input Path"
-msgstr "Snap til foreldre"
-
-#: modules/openxr/extensions/openxr_dpad_binding_extension.cpp
-#, fuzzy
-msgid "Threshold Released"
-msgstr "Eksportmodus?"
-
-#: modules/openxr/extensions/openxr_dpad_binding_extension.cpp
-#, fuzzy
-msgid "Center Region"
-msgstr "Region"
-
-#: modules/openxr/extensions/openxr_dpad_binding_extension.cpp
-#, fuzzy
-msgid "Wedge Angle"
-msgstr "Små bokstaver"
-
-#: modules/openxr/extensions/openxr_dpad_binding_extension.cpp
-msgid "Is Sticky"
-msgstr ""
-
-#: modules/openxr/extensions/openxr_dpad_binding_extension.cpp
-#: modules/openxr/extensions/openxr_valve_analog_threshold_extension.cpp
-msgid "On Haptic"
-msgstr ""
-
-#: modules/openxr/extensions/openxr_dpad_binding_extension.cpp
-#: modules/openxr/extensions/openxr_valve_analog_threshold_extension.cpp
-msgid "Off Haptic"
-msgstr ""
-
-#: modules/openxr/extensions/openxr_valve_analog_threshold_extension.cpp
-msgid "On Threshold"
-msgstr ""
-
-#: modules/openxr/extensions/openxr_valve_analog_threshold_extension.cpp
-msgid "Off Threshold"
-msgstr ""
 
 #: modules/openxr/openxr_interface.cpp
 #, fuzzy
@@ -6658,16 +6154,6 @@ msgstr "Sett mange:"
 #, fuzzy
 msgid "Layer Viewport"
 msgstr "Vis hjelpere"
-
-#: modules/openxr/scene/openxr_composition_layer.cpp
-#, fuzzy
-msgid "Use Android Surface"
-msgstr "Følg Overflate"
-
-#: modules/openxr/scene/openxr_composition_layer.cpp
-#, fuzzy
-msgid "Android Surface Size"
-msgstr "Bakvisning"
 
 #: modules/openxr/scene/openxr_composition_layer.cpp
 #, fuzzy
@@ -6847,11 +6333,6 @@ msgstr "Tid:"
 #: modules/websocket/websocket_peer.cpp
 msgid "Max Queued Packets"
 msgstr ""
-
-#: modules/websocket/websocket_peer.cpp
-#, fuzzy
-msgid "Heartbeat Interval"
-msgstr "Oversettelser"
 
 #: modules/webxr/webxr_interface.cpp
 #, fuzzy
@@ -7067,15 +6548,6 @@ msgid "XR Mode"
 msgstr "Panorerings-Modus"
 
 #: platform/android/export/export_plugin.cpp
-#, fuzzy
-msgid "Gesture"
-msgstr "Tekst"
-
-#: platform/android/export/export_plugin.cpp
-msgid "Swipe to Dismiss"
-msgstr ""
-
-#: platform/android/export/export_plugin.cpp
 msgid "Screen"
 msgstr ""
 
@@ -7157,6 +6629,40 @@ msgid "Icons"
 msgstr "Ikoner"
 
 #: platform/ios/export/export_plugin.cpp
+msgid "iPhone 120 X 120"
+msgstr ""
+
+#: platform/ios/export/export_plugin.cpp
+msgid "iPhone 180 X 180"
+msgstr ""
+
+#: platform/ios/export/export_plugin.cpp
+#, fuzzy
+msgid "iPad 76 X 76"
+msgstr "Tilfeldig Rotasjon:"
+
+#: platform/ios/export/export_plugin.cpp
+msgid "iPad 152 X 152"
+msgstr ""
+
+#: platform/ios/export/export_plugin.cpp
+msgid "iPad 167 X 167"
+msgstr ""
+
+#: platform/ios/export/export_plugin.cpp
+msgid "App Store 1024 X 1024"
+msgstr ""
+
+#: platform/ios/export/export_plugin.cpp
+#, fuzzy
+msgid "Spotlight 40 X 40"
+msgstr "Tilfeldig Rotasjon:"
+
+#: platform/ios/export/export_plugin.cpp
+msgid "Spotlight 80 X 80"
+msgstr ""
+
+#: platform/ios/export/export_plugin.cpp
 #, fuzzy
 msgid "Settings 58 X 58"
 msgstr "Innstillinger"
@@ -7177,57 +6683,15 @@ msgid "Notification 60 X 60"
 msgstr "Tilfeldig Rotasjon:"
 
 #: platform/ios/export/export_plugin.cpp
-#, fuzzy
-msgid "Notification 76 X 76"
-msgstr "Tilfeldig Rotasjon:"
-
-#: platform/ios/export/export_plugin.cpp
-#, fuzzy
-msgid "Notification 114 X 114"
-msgstr "Tilfeldig Rotasjon:"
-
-#: platform/ios/export/export_plugin.cpp
-msgid "Spotlight 80 X 80"
-msgstr ""
-
-#: platform/ios/export/export_plugin.cpp
-msgid "Spotlight 120 X 120"
-msgstr ""
-
-#: platform/ios/export/export_plugin.cpp
-msgid "iPhone 120 X 120"
-msgstr ""
-
-#: platform/ios/export/export_plugin.cpp
-msgid "iPhone 180 X 180"
-msgstr ""
-
-#: platform/ios/export/export_plugin.cpp
-msgid "iPad 167 X 167"
-msgstr ""
-
-#: platform/ios/export/export_plugin.cpp
-msgid "iPad 152 X 152"
-msgstr ""
-
-#: platform/ios/export/export_plugin.cpp
-msgid "iOS 128 X 128"
-msgstr ""
-
-#: platform/ios/export/export_plugin.cpp
-msgid "iOS 192 X 192"
-msgstr ""
-
-#: platform/ios/export/export_plugin.cpp
-msgid "iOS 136 X 136"
-msgstr ""
-
-#: platform/ios/export/export_plugin.cpp
-msgid "App Store 1024 X 1024"
-msgstr ""
-
-#: platform/ios/export/export_plugin.cpp
 msgid "App Store Team ID"
+msgstr ""
+
+#: platform/ios/export/export_plugin.cpp
+msgid "Provisioning Profile UUID Debug"
+msgstr ""
+
+#: platform/ios/export/export_plugin.cpp
+msgid "Code Sign Identity Debug"
 msgstr ""
 
 #: platform/ios/export/export_plugin.cpp
@@ -7236,30 +6700,12 @@ msgid "Export Method Debug"
 msgstr "Eksportmodus?"
 
 #: platform/ios/export/export_plugin.cpp
-msgid "Code Sign Identity Debug"
+msgid "Provisioning Profile UUID Release"
 msgstr ""
 
 #: platform/ios/export/export_plugin.cpp
 msgid "Code Sign Identity Release"
 msgstr ""
-
-#: platform/ios/export/export_plugin.cpp
-msgid "Provisioning Profile UUID Debug"
-msgstr ""
-
-#: platform/ios/export/export_plugin.cpp
-msgid "Provisioning Profile UUID Release"
-msgstr ""
-
-#: platform/ios/export/export_plugin.cpp
-#, fuzzy
-msgid "Provisioning Profile Specifier Debug"
-msgstr "Gjeldende Versjon:"
-
-#: platform/ios/export/export_plugin.cpp
-#, fuzzy
-msgid "Provisioning Profile Specifier Release"
-msgstr "Gjeldende Versjon:"
 
 #: platform/ios/export/export_plugin.cpp
 #, fuzzy
@@ -7313,6 +6759,10 @@ msgstr "Prosjekt"
 
 #: platform/ios/export/export_plugin.cpp
 msgid "Delete Old Export Files Unconditionally"
+msgstr ""
+
+#: platform/ios/export/export_plugin.cpp
+msgid "Generate Simulator Library If Missing"
 msgstr ""
 
 #: platform/ios/export/export_plugin.cpp
@@ -7423,18 +6873,6 @@ msgstr "Aktiver"
 #, fuzzy
 msgid "Tracking Domains"
 msgstr "Pakking"
-
-#: platform/ios/export/export_plugin.cpp
-msgid "Icon 1024 X 1024"
-msgstr ""
-
-#: platform/ios/export/export_plugin.cpp
-msgid "Icon 1024 X 1024 Dark"
-msgstr ""
-
-#: platform/ios/export/export_plugin.cpp
-msgid "Icon 1024 X 1024 Tinted"
-msgstr ""
 
 #: platform/ios/export/export_plugin.cpp
 msgid "Storyboard"
@@ -7932,6 +7370,64 @@ msgstr ""
 msgid "Icon 512 X 512"
 msgstr ""
 
+#: platform/web/export/export_plugin.cpp
+msgid "Blazium"
+msgstr ""
+
+#: platform/web/export/export_plugin.cpp
+#, fuzzy
+msgid "Web Headers"
+msgstr "Tid:"
+
+#: platform/web/export/export_plugin.cpp scene/gui/graph_frame.cpp
+#: scene/gui/graph_node.cpp scene/main/window.cpp
+#: scene/resources/visual_shader.cpp
+msgid "Title"
+msgstr ""
+
+#: platform/web/export/export_plugin.cpp
+msgid "URL"
+msgstr ""
+
+#: platform/web/export/export_plugin.cpp
+#, fuzzy
+msgid "Site Name"
+msgstr "Scene-Sti:"
+
+#: platform/web/export/export_plugin.cpp
+#, fuzzy
+msgid "Social Headers"
+msgstr "Legg til Input"
+
+#: platform/web/export/export_plugin.cpp
+msgid "Site"
+msgstr ""
+
+#: platform/web/export/export_plugin.cpp
+msgid "Card"
+msgstr ""
+
+#: platform/web/export/export_plugin.cpp
+msgid "Discord Embed"
+msgstr ""
+
+#: platform/web/export/export_plugin.cpp
+#, fuzzy
+msgid "Autodetect"
+msgstr "Automatisk Innrykk"
+
+#: platform/web/export/export_plugin.cpp
+msgid "Youtube Playable"
+msgstr ""
+
+#: platform/web/export/export_plugin.cpp
+msgid "Export Gzip Compressed Wasm"
+msgstr ""
+
+#: platform/web/export/export_plugin.cpp
+msgid "Keep Uncompressed Wasm"
+msgstr ""
+
 #: platform/windows/export/export_plugin.cpp
 msgid "Identity Type"
 msgstr ""
@@ -8293,12 +7789,6 @@ msgstr ""
 msgid "Randomness"
 msgstr "Tilfeldig Omstart (s):"
 
-#: scene/2d/cpu_particles_2d.cpp scene/2d/gpu_particles_2d.cpp
-#: scene/3d/cpu_particles_3d.cpp scene/3d/gpu_particles_3d.cpp
-#, fuzzy
-msgid "Use Fixed Seed"
-msgstr "Frontvisning"
-
 #: scene/2d/cpu_particles_2d.cpp scene/3d/cpu_particles_3d.cpp
 #: scene/resources/particle_process_material.cpp
 msgid "Lifetime Randomness"
@@ -8368,8 +7858,7 @@ msgid "Normals"
 msgstr "Format"
 
 #: scene/2d/cpu_particles_2d.cpp scene/3d/cpu_particles_3d.cpp
-#: scene/gui/control.cpp scene/main/window.cpp
-#: scene/resources/color_palette.cpp scene/resources/gradient.cpp
+#: scene/gui/control.cpp scene/main/window.cpp scene/resources/gradient.cpp
 msgid "Colors"
 msgstr "Farger"
 
@@ -8613,13 +8102,17 @@ msgid "Sub Emitter"
 msgstr ""
 
 #: scene/2d/gpu_particles_2d.cpp scene/3d/gpu_particles_3d.cpp
-#, fuzzy
-msgid "Interp to End"
-msgstr "Interpolasjonsmodus"
+msgid "Process Material"
+msgstr ""
 
 #: scene/2d/gpu_particles_2d.cpp scene/3d/gpu_particles_3d.cpp
 #, fuzzy
 msgid "Interpolate"
+msgstr "Interpolasjonsmodus"
+
+#: scene/2d/gpu_particles_2d.cpp scene/3d/gpu_particles_3d.cpp
+#, fuzzy
+msgid "Interp to End"
 msgstr "Interpolasjonsmodus"
 
 #: scene/2d/gpu_particles_2d.cpp scene/3d/gpu_particles_3d.cpp
@@ -8644,10 +8137,6 @@ msgstr "Retninger"
 
 #: scene/2d/gpu_particles_2d.cpp
 msgid "Section Subdivisions"
-msgstr ""
-
-#: scene/2d/gpu_particles_2d.cpp scene/3d/gpu_particles_3d.cpp
-msgid "Process Material"
 msgstr ""
 
 #: scene/2d/light_2d.cpp scene/3d/light_3d.cpp scene/gui/reference_rect.cpp
@@ -8703,7 +8192,6 @@ msgid "Texture Scale"
 msgstr ""
 
 #: scene/2d/light_occluder_2d.cpp scene/2d/line_2d.cpp
-#: scene/resources/curve.cpp
 #, fuzzy
 msgid "Closed"
 msgstr "Lukk"
@@ -8794,7 +8282,6 @@ msgid "Multimesh"
 msgstr ""
 
 #: scene/2d/navigation_agent_2d.cpp scene/3d/navigation_agent_3d.cpp
-#: servers/navigation_server_3d.cpp
 #, fuzzy
 msgid "Pathfinding"
 msgstr "Fyll"
@@ -9251,14 +8738,16 @@ msgstr "Lag"
 msgid "Wall Layers"
 msgstr "Lag"
 
-#: scene/2d/physics/character_body_2d.cpp scene/3d/look_at_modifier_3d.cpp
+#: scene/2d/physics/character_body_2d.cpp
 #: scene/3d/physics/character_body_3d.cpp
 #, fuzzy
 msgid "Safe Margin"
 msgstr "Sett Handle"
 
 #: scene/2d/physics/collision_object_2d.cpp
-#: scene/3d/physics/collision_object_3d.cpp scene/3d/soft_body_3d.cpp
+#: scene/2d/physics/joints/joint_2d.cpp
+#: scene/3d/physics/collision_object_3d.cpp
+#: scene/3d/physics/joints/joint_3d.cpp scene/3d/soft_body_3d.cpp
 #, fuzzy
 msgid "Disable Mode"
 msgstr "Deaktivert"
@@ -9295,8 +8784,6 @@ msgid "One Way Collision Margin"
 msgstr "Lag Poly"
 
 #: scene/2d/physics/collision_shape_2d.cpp
-#: scene/3d/physics/collision_polygon_3d.cpp
-#: scene/3d/physics/collision_shape_3d.cpp
 #, fuzzy
 msgid "Debug Color"
 msgstr "Standard"
@@ -9558,11 +9045,16 @@ msgstr ""
 #: scene/2d/physics/shape_cast_2d.cpp scene/3d/physics/collision_polygon_3d.cpp
 #: scene/3d/physics/shape_cast_3d.cpp scene/3d/physics/spring_arm_3d.cpp
 #: scene/resources/3d/shape_3d.cpp scene/resources/atlas_texture.cpp
-#: scene/theme/default_theme.cpp servers/physics_server_2d.cpp
-#: servers/physics_server_3d.cpp
+#: scene/theme/default_theme.cpp scene/theme/theme_db.cpp
+#: servers/physics_server_2d.cpp servers/physics_server_3d.cpp
 #, fuzzy
 msgid "Margin"
 msgstr "Sett Handle"
+
+#: scene/2d/physics/shape_cast_2d.cpp scene/3d/physics/shape_cast_3d.cpp
+#, fuzzy
+msgid "Max Results"
+msgstr "Søkeresultater"
 
 #: scene/2d/physics/static_body_2d.cpp scene/3d/physics/static_body_3d.cpp
 #, fuzzy
@@ -9620,7 +9112,7 @@ msgstr "Innstillinger for redigeringsverktøy"
 msgid "Show Bone Gizmo"
 msgstr "Vis Ben"
 
-#: scene/2d/skeleton_2d.cpp
+#: scene/2d/skeleton_2d.cpp scene/3d/skeleton_3d.cpp
 #, fuzzy
 msgid "Rest"
 msgstr "Omstart"
@@ -9672,11 +9164,6 @@ msgstr "Prioritet Modus"
 #, fuzzy
 msgid "Navigation Visibility Mode"
 msgstr "Prioritet Modus"
-
-#: scene/2d/tile_map_layer.cpp
-#, fuzzy
-msgid "Occlusion Enabled"
-msgstr "Kollisjon Modus"
 
 #: scene/2d/tile_map_layer.cpp scene/resources/2d/tile_set.cpp
 #, fuzzy
@@ -9800,8 +9287,11 @@ msgstr "Endre Anim Lengde"
 msgid "Tracking"
 msgstr "Pakking"
 
-#: scene/3d/bone_attachment_3d.cpp scene/3d/look_at_modifier_3d.cpp
-#: scene/3d/physics/physical_bone_3d.cpp scene/3d/spring_bone_collision_3d.cpp
+#: scene/3d/audio_stream_player_3d.cpp
+msgid "Clamp"
+msgstr ""
+
+#: scene/3d/bone_attachment_3d.cpp scene/3d/physics/physical_bone_3d.cpp
 #, fuzzy
 msgid "Bone Name"
 msgstr "Nodenavn:"
@@ -10017,11 +9507,6 @@ msgstr "Veksl Aktivering Av Spor"
 
 #: scene/3d/gpu_particles_collision_3d.cpp
 #, fuzzy
-msgid "Heightfield Mask"
-msgstr "Lys"
-
-#: scene/3d/gpu_particles_collision_3d.cpp
-#, fuzzy
 msgid "Directionality"
 msgstr "Retninger"
 
@@ -10127,9 +9612,10 @@ msgid "Outline Render Priority"
 msgstr "Rediger Filtre"
 
 #: scene/3d/label_3d.cpp scene/gui/button.cpp scene/gui/control.cpp
-#: scene/gui/dialogs.cpp scene/gui/label.cpp scene/gui/line_edit.cpp
-#: scene/gui/link_button.cpp scene/gui/rich_text_label.cpp
-#: scene/gui/text_edit.cpp scene/resources/3d/primitive_meshes.cpp
+#: scene/gui/dialogs.cpp scene/gui/foldable_container.cpp scene/gui/label.cpp
+#: scene/gui/line_edit.cpp scene/gui/link_button.cpp
+#: scene/gui/rich_text_label.cpp scene/gui/text_edit.cpp
+#: scene/resources/3d/primitive_meshes.cpp
 msgid "Text"
 msgstr "Tekst"
 
@@ -10156,7 +9642,7 @@ msgstr "Frontvisning"
 msgid "Horizontal Alignment"
 msgstr "Vend horisontalt"
 
-#: scene/3d/label_3d.cpp scene/gui/label.cpp scene/gui/rich_text_label.cpp
+#: scene/3d/label_3d.cpp scene/gui/label.cpp
 #: scene/resources/3d/primitive_meshes.cpp
 #, fuzzy
 msgid "Vertical Alignment"
@@ -10173,16 +9659,16 @@ msgstr "Store bokstaver"
 msgid "Justification Flags"
 msgstr "Tilfeldig Rotasjon:"
 
-#: scene/3d/label_3d.cpp scene/gui/button.cpp scene/gui/label.cpp
-#: scene/gui/line_edit.cpp scene/gui/link_button.cpp scene/gui/menu_bar.cpp
-#: scene/gui/rich_text_label.cpp scene/gui/text_edit.cpp
+#: scene/3d/label_3d.cpp scene/gui/button.cpp scene/gui/foldable_container.cpp
+#: scene/gui/label.cpp scene/gui/line_edit.cpp scene/gui/link_button.cpp
+#: scene/gui/menu_bar.cpp scene/gui/rich_text_label.cpp scene/gui/text_edit.cpp
 #: scene/resources/3d/primitive_meshes.cpp
 msgid "BiDi"
 msgstr ""
 
-#: scene/3d/label_3d.cpp scene/gui/button.cpp scene/gui/label.cpp
-#: scene/gui/line_edit.cpp scene/gui/link_button.cpp scene/gui/menu_bar.cpp
-#: scene/gui/rich_text_label.cpp scene/gui/text_edit.cpp
+#: scene/3d/label_3d.cpp scene/gui/button.cpp scene/gui/foldable_container.cpp
+#: scene/gui/label.cpp scene/gui/line_edit.cpp scene/gui/link_button.cpp
+#: scene/gui/menu_bar.cpp scene/gui/rich_text_label.cpp scene/gui/text_edit.cpp
 #: scene/resources/3d/primitive_meshes.cpp
 #, fuzzy
 msgid "Text Direction"
@@ -10271,11 +9757,6 @@ msgstr ""
 msgid "Blur"
 msgstr "Uskarp"
 
-#: scene/3d/light_3d.cpp
-#, fuzzy
-msgid "Caster Mask"
-msgstr "Lag"
-
 #: scene/3d/light_3d.cpp servers/rendering_server.cpp
 #, fuzzy
 msgid "Directional Shadow"
@@ -10336,27 +9817,13 @@ msgstr "Animasjon"
 
 #: scene/3d/lightmap_gi.cpp
 #, fuzzy
-msgid "Lightmap Textures"
+msgid "Light Texture"
 msgstr "Tekst"
 
-#: scene/3d/lightmap_gi.cpp
-#, fuzzy
-msgid "Shadowmask Textures"
-msgstr "Fjern Mal"
-
 #: scene/3d/lightmap_gi.cpp scene/main/scene_tree.cpp
-#: scene/resources/multimesh.cpp servers/rendering_server.cpp
+#: servers/rendering_server.cpp
 msgid "Quality"
 msgstr "Kvalitet"
-
-#: scene/3d/lightmap_gi.cpp
-#, fuzzy
-msgid "Supersampling"
-msgstr "Skalerer: "
-
-#: scene/3d/lightmap_gi.cpp
-msgid "Supersampling Factor"
-msgstr ""
 
 #: scene/3d/lightmap_gi.cpp
 msgid "Bounces"
@@ -10371,11 +9838,6 @@ msgstr "Innrykk Høyre"
 #, fuzzy
 msgid "Directional"
 msgstr "Retninger"
-
-#: scene/3d/lightmap_gi.cpp
-#, fuzzy
-msgid "Shadowmask Mode"
-msgstr "Veksle Modus"
 
 #: scene/3d/lightmap_gi.cpp
 #, fuzzy
@@ -10446,119 +9908,6 @@ msgstr ""
 #, fuzzy
 msgid "Light Data"
 msgstr "Lys"
-
-#: scene/3d/look_at_modifier_3d.cpp scene/3d/skeleton_ik_3d.cpp
-#, fuzzy
-msgid "Target Node"
-msgstr "Lag Node"
-
-#: scene/3d/look_at_modifier_3d.cpp
-#, fuzzy
-msgid "Forward Axis"
-msgstr "Opprett mappe"
-
-#: scene/3d/look_at_modifier_3d.cpp
-#, fuzzy
-msgid "Primary Rotation Axis"
-msgstr "Tilfeldig Rotasjon:"
-
-#: scene/3d/look_at_modifier_3d.cpp
-msgid "Use Secondary Rotation"
-msgstr ""
-
-#: scene/3d/look_at_modifier_3d.cpp
-#, fuzzy
-msgid "Origin Settings"
-msgstr "Innstillinger"
-
-#: scene/3d/look_at_modifier_3d.cpp scene/resources/gradient_texture.cpp
-#: servers/physics_server_2d.cpp servers/physics_server_3d.cpp
-msgid "From"
-msgstr "Fra"
-
-#: scene/3d/look_at_modifier_3d.cpp
-#, fuzzy
-msgid "External Node"
-msgstr "Åpne en fil"
-
-#: scene/3d/look_at_modifier_3d.cpp
-#, fuzzy
-msgid "Time Based Interpolation"
-msgstr "Interpolasjonsmodus"
-
-#: scene/3d/look_at_modifier_3d.cpp
-#, fuzzy
-msgid "Transition Type"
-msgstr "Rediger Variabel:"
-
-#: scene/3d/look_at_modifier_3d.cpp
-#, fuzzy
-msgid "Ease Type"
-msgstr "Endre %s type"
-
-#: scene/3d/look_at_modifier_3d.cpp
-#, fuzzy
-msgid "Angle Limitation"
-msgstr "Animasjon"
-
-#: scene/3d/look_at_modifier_3d.cpp
-#, fuzzy
-msgid "Use Angle Limitation"
-msgstr "Animasjon"
-
-#: scene/3d/look_at_modifier_3d.cpp
-msgid "Symmetry Limitation"
-msgstr ""
-
-#: scene/3d/look_at_modifier_3d.cpp
-#, fuzzy
-msgid "Primary Limit Angle"
-msgstr "Lineær"
-
-#: scene/3d/look_at_modifier_3d.cpp
-msgid "Primary Damp Threshold"
-msgstr ""
-
-#: scene/3d/look_at_modifier_3d.cpp
-msgid "Primary Positive Limit Angle"
-msgstr ""
-
-#: scene/3d/look_at_modifier_3d.cpp
-msgid "Primary Positive Damp Threshold"
-msgstr ""
-
-#: scene/3d/look_at_modifier_3d.cpp
-msgid "Primary Negative Limit Angle"
-msgstr ""
-
-#: scene/3d/look_at_modifier_3d.cpp
-msgid "Primary Negative Damp Threshold"
-msgstr ""
-
-#: scene/3d/look_at_modifier_3d.cpp
-#, fuzzy
-msgid "Secondary Limit Angle"
-msgstr "Lineær"
-
-#: scene/3d/look_at_modifier_3d.cpp
-msgid "Secondary Damp Threshold"
-msgstr ""
-
-#: scene/3d/look_at_modifier_3d.cpp
-msgid "Secondary Positive Limit Angle"
-msgstr ""
-
-#: scene/3d/look_at_modifier_3d.cpp
-msgid "Secondary Positive Damp Threshold"
-msgstr ""
-
-#: scene/3d/look_at_modifier_3d.cpp
-msgid "Secondary Negative Limit Angle"
-msgstr ""
-
-#: scene/3d/look_at_modifier_3d.cpp
-msgid "Secondary Negative Damp Threshold"
-msgstr ""
 
 #: scene/3d/mesh_instance_3d.cpp
 #, fuzzy
@@ -10681,12 +10030,6 @@ msgstr ""
 #, fuzzy
 msgid "Capture on Drag"
 msgstr "Fang"
-
-#: scene/3d/physics/collision_polygon_3d.cpp
-#: scene/3d/physics/collision_shape_3d.cpp
-#, fuzzy
-msgid "Debug Fill"
-msgstr "Standard"
 
 #: scene/3d/physics/joints/cone_twist_joint_3d.cpp
 #: scene/3d/physics/physical_bone_3d.cpp
@@ -11102,11 +10445,6 @@ msgstr "Feil!"
 
 #: scene/3d/reflection_probe.cpp
 #, fuzzy
-msgid "Blend Distance"
-msgstr "Instans"
-
-#: scene/3d/reflection_probe.cpp
-#, fuzzy
 msgid "Origin Offset"
 msgstr "Rutenett Offset:"
 
@@ -11138,11 +10476,10 @@ msgstr "Omgivelser"
 msgid "Color Energy"
 msgstr "Flytt Bus Effekt"
 
-#: scene/3d/retarget_modifier_3d.cpp scene/resources/bone_map.cpp
-#: servers/xr/xr_positional_tracker.cpp
+#: scene/3d/skeleton_3d.cpp
 #, fuzzy
-msgid "Profile"
-msgstr "Profiler"
+msgid "Bones"
+msgstr "Bein"
 
 #: scene/3d/skeleton_3d.cpp
 #, fuzzy
@@ -11199,6 +10536,11 @@ msgstr ""
 #: scene/3d/skeleton_ik_3d.cpp
 msgid "Magnet"
 msgstr ""
+
+#: scene/3d/skeleton_ik_3d.cpp
+#, fuzzy
+msgid "Target Node"
+msgstr "Lag Node"
 
 #: scene/3d/skeleton_ik_3d.cpp scene/resources/material.cpp
 #, fuzzy
@@ -11270,21 +10612,6 @@ msgstr ""
 msgid "Drag Coefficient"
 msgstr ""
 
-#: scene/3d/spring_bone_collision_3d.cpp scene/gui/graph_element.cpp
-#, fuzzy
-msgid "Position Offset"
-msgstr "Rotasjon Offset:"
-
-#: scene/3d/spring_bone_collision_3d.cpp
-#, fuzzy
-msgid "Rotation Offset"
-msgstr "Rotasjon Offset:"
-
-#: scene/3d/spring_bone_collision_capsule_3d.cpp
-#: scene/3d/spring_bone_collision_sphere_3d.cpp
-msgid "Inside"
-msgstr ""
-
 #: scene/3d/velocity_tracker_3d.cpp
 #, fuzzy
 msgid "Track Physics Step"
@@ -11345,11 +10672,6 @@ msgid "Global Illumination"
 msgstr "Konstant"
 
 #: scene/3d/visual_instance_3d.cpp
-#, fuzzy
-msgid "Lightmap Texel Scale"
-msgstr "Frontvisning"
-
-#: scene/3d/visual_instance_3d.cpp
 msgid "Lightmap Scale"
 msgstr ""
 
@@ -11408,11 +10730,6 @@ msgstr "Tilfeldig Skala:"
 #, fuzzy
 msgid "Play Mode"
 msgstr "Panorerings-Modus"
-
-#: scene/animation/animation_blend_tree.cpp
-#, fuzzy
-msgid "Advance on Start"
-msgstr "Automatisk Lasting Ved Oppstart"
 
 #: scene/animation/animation_blend_tree.cpp
 #, fuzzy
@@ -11482,10 +10799,6 @@ msgstr ""
 #, fuzzy
 msgid "Random Delay"
 msgstr "Tilfeldig Tilt:"
-
-#: scene/animation/animation_blend_tree.cpp
-msgid "Explicit Elapse"
-msgstr ""
 
 #: scene/animation/animation_blend_tree.cpp
 #: scene/animation/animation_node_state_machine.cpp
@@ -11581,11 +10894,6 @@ msgstr ""
 #, fuzzy
 msgid "Track"
 msgstr "Legg til Spor"
-
-#: scene/animation/animation_mixer.cpp
-#, fuzzy
-msgid "Local"
-msgstr "Språk"
 
 #: scene/animation/animation_mixer.cpp
 #, fuzzy
@@ -11739,6 +11047,11 @@ msgid "Action Mode"
 msgstr "Ikon Modus"
 
 #: scene/gui/base_button.cpp
+#, fuzzy
+msgid "Size Mode"
+msgstr "Lim inn Noder"
+
+#: scene/gui/base_button.cpp
 msgid "Keep Pressed Outside"
 msgstr ""
 
@@ -11771,7 +11084,13 @@ msgstr ""
 msgid "Text Behavior"
 msgstr "Tekst Editor"
 
-#: scene/gui/button.cpp scene/gui/item_list.cpp scene/gui/label.cpp
+#: scene/gui/button.cpp
+#, fuzzy
+msgid "Expand Text"
+msgstr "Panorerings-Modus"
+
+#: scene/gui/button.cpp scene/gui/foldable_container.cpp
+#: scene/gui/item_list.cpp scene/gui/label.cpp scene/gui/link_button.cpp
 #: scene/resources/text_line.cpp scene/resources/text_paragraph.cpp
 msgid "Text Overrun Behavior"
 msgstr ""
@@ -11808,10 +11127,6 @@ msgstr "Øverst til venstre"
 
 #: scene/gui/code_edit.cpp
 msgid "Symbol Lookup on Click"
-msgstr ""
-
-#: scene/gui/code_edit.cpp
-msgid "Symbol Tooltip on Hover"
 msgstr ""
 
 #: scene/gui/code_edit.cpp
@@ -11906,7 +11221,7 @@ msgstr "Retninger"
 msgid "Pairs"
 msgstr ""
 
-#: scene/gui/color_picker.cpp
+#: scene/gui/color_button.cpp scene/gui/color_picker.cpp
 #, fuzzy
 msgid "Edit Alpha"
 msgstr "Rediger Poly"
@@ -12047,11 +11362,6 @@ msgstr ""
 msgid "Tooltip"
 msgstr "Verktøy"
 
-#: scene/gui/control.cpp
-#, fuzzy
-msgid "Auto Translate Mode"
-msgstr "Oversett"
-
 #: scene/gui/control.cpp scene/theme/default_theme.cpp
 msgid "Focus"
 msgstr "Fokuser"
@@ -12166,6 +11476,35 @@ msgstr "Filtrer Signaler"
 msgid "Reverse Fill"
 msgstr "Nullstill Bus Volum"
 
+#: scene/gui/foldable_container.cpp scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Folded"
+msgstr "Mappe:"
+
+#: scene/gui/foldable_container.cpp
+#, fuzzy
+msgid "Title Alignment"
+msgstr "Filtrer Signaler"
+
+#: scene/gui/foldable_container.cpp
+#, fuzzy
+msgid "Title Position"
+msgstr "Opprinnelig posisjon"
+
+#: scene/gui/foldable_container.cpp
+#, fuzzy
+msgid "Foldable Group"
+msgstr "Mappe:"
+
+#: scene/gui/foldable_container.cpp
+#, fuzzy
+msgid "Buttons"
+msgstr "Knappmaske"
+
+#: scene/gui/foldable_container.cpp
+msgid "Allow Folding All"
+msgstr ""
+
 #: scene/gui/graph_edit.cpp
 msgid "Show Grid"
 msgstr ""
@@ -12199,11 +11538,6 @@ msgstr "Fullføring"
 #, fuzzy
 msgid "Curvature"
 msgstr "Fang"
-
-#: scene/gui/graph_edit.cpp
-#, fuzzy
-msgid "Connections"
-msgstr "Fullføring"
 
 #: scene/gui/graph_edit.cpp
 #, fuzzy
@@ -12256,19 +11590,24 @@ msgstr "Høyre knapp"
 
 #: scene/gui/graph_element.cpp
 #, fuzzy
+msgid "Position Offset"
+msgstr "Rotasjon Offset:"
+
+#: scene/gui/graph_element.cpp
+#, fuzzy
 msgid "Draggable"
 msgstr "Sett Handle"
+
+#: scene/gui/graph_element.cpp
+#, fuzzy
+msgid "Selectable"
+msgstr "Velg"
 
 #: scene/gui/graph_element.cpp scene/gui/option_button.cpp
 #: scene/theme/default_theme.cpp
 #, fuzzy
 msgid "Selected"
 msgstr "Velg"
-
-#: scene/gui/graph_frame.cpp scene/gui/graph_node.cpp scene/main/window.cpp
-#: scene/resources/visual_shader.cpp
-msgid "Title"
-msgstr ""
 
 #: scene/gui/graph_frame.cpp
 #, fuzzy
@@ -12324,17 +11663,8 @@ msgstr ""
 
 #: scene/gui/item_list.cpp
 #, fuzzy
-msgid "Auto Width"
-msgstr "Venstrevisning"
-
-#: scene/gui/item_list.cpp
-#, fuzzy
 msgid "Auto Height"
 msgstr "Tester"
-
-#: scene/gui/item_list.cpp
-msgid "Wraparound Items"
-msgstr ""
 
 #: scene/gui/item_list.cpp scene/gui/menu_button.cpp
 #: scene/gui/option_button.cpp scene/gui/popup_menu.cpp
@@ -12371,11 +11701,6 @@ msgstr "Frontvisning"
 #, fuzzy
 msgid "Label Settings"
 msgstr "Lokalisering"
-
-#: scene/gui/label.cpp
-#, fuzzy
-msgid "Paragraph Separator"
-msgstr "Nummereringer:"
 
 #: scene/gui/label.cpp scene/resources/text_line.cpp
 #: scene/resources/text_paragraph.cpp
@@ -12435,11 +11760,6 @@ msgstr "Standard"
 #: scene/gui/text_edit.cpp
 msgid "Context Menu Enabled"
 msgstr ""
-
-#: scene/gui/line_edit.cpp scene/gui/text_edit.cpp
-#, fuzzy
-msgid "Emoji Menu Enabled"
-msgstr "Kjørbar"
 
 #: scene/gui/line_edit.cpp scene/gui/text_edit.cpp
 #, fuzzy
@@ -12537,6 +11857,11 @@ msgstr ""
 #: scene/gui/link_button.cpp
 msgid "URI"
 msgstr ""
+
+#: scene/gui/link_button.cpp
+#, fuzzy
+msgid "Text Alignment"
+msgstr "Filtrer Signaler"
 
 #: scene/gui/menu_bar.cpp
 #, fuzzy
@@ -12668,6 +11993,7 @@ msgid "Border Color"
 msgstr "Fjern Gjenstand"
 
 #: scene/gui/reference_rect.cpp scene/resources/style_box_flat.cpp
+#: scene/theme/theme_db.cpp
 msgid "Border Width"
 msgstr ""
 
@@ -12776,11 +12102,6 @@ msgstr ""
 
 #: scene/gui/scroll_container.cpp
 #, fuzzy
-msgid "Draw Focus Border"
-msgstr "Flytt Modus"
-
-#: scene/gui/scroll_container.cpp
-#, fuzzy
 msgid "Horizontal Custom Step"
 msgstr "Vend horisontalt"
 
@@ -12834,6 +12155,11 @@ msgstr "Klipp ut Noder"
 
 #: scene/gui/split_container.cpp
 #, fuzzy
+msgid "Dragging Enabled"
+msgstr "Aktiver"
+
+#: scene/gui/split_container.cpp
+#, fuzzy
 msgid "Split Offset"
 msgstr "Rutenett Offset:"
 
@@ -12844,43 +12170,23 @@ msgstr "Fold sammen alle"
 
 #: scene/gui/split_container.cpp
 #, fuzzy
-msgid "Dragging Enabled"
-msgstr "Aktiver"
-
-#: scene/gui/split_container.cpp
-#, fuzzy
 msgid "Dragger Visibility"
 msgstr "Juster synlighet"
 
 #: scene/gui/split_container.cpp
 #, fuzzy
-msgid "Drag Area"
-msgstr "Sett Handle"
+msgid "Collapse Mode"
+msgstr "Fold sammen alle"
 
 #: scene/gui/split_container.cpp
 #, fuzzy
-msgid "Margin Begin"
-msgstr "Sett Handle"
-
-#: scene/gui/split_container.cpp
-#, fuzzy
-msgid "Margin End"
-msgstr "Sett Handle"
-
-#: scene/gui/split_container.cpp
-#, fuzzy
-msgid "Highlight in Editor"
+msgid "Drag Area Highlight in Editor"
 msgstr "Retninger"
 
 #: scene/gui/subviewport_container.cpp
 #, fuzzy
 msgid "Stretch Shrink"
 msgstr "Velg Modus"
-
-#: scene/gui/subviewport_container.cpp
-#, fuzzy
-msgid "Mouse Target"
-msgstr "Mål"
 
 #: scene/gui/tab_bar.cpp scene/gui/tab_container.cpp
 #, fuzzy
@@ -12966,11 +12272,6 @@ msgstr "Flytt Modus"
 
 #: scene/gui/text_edit.cpp
 #, fuzzy
-msgid "Empty Selection Clipboard Enabled"
-msgstr "Kun Valgte"
-
-#: scene/gui/text_edit.cpp
-#, fuzzy
 msgid "Wrap Mode"
 msgstr "Prioritet Modus"
 
@@ -12986,11 +12287,6 @@ msgstr ""
 #: scene/gui/text_edit.cpp
 #, fuzzy
 msgid "Fit Content Height"
-msgstr "Tester"
-
-#: scene/gui/text_edit.cpp
-#, fuzzy
-msgid "Fit Content Width"
 msgstr "Tester"
 
 #: scene/gui/text_edit.cpp
@@ -13045,7 +12341,7 @@ msgctxt "Ordinary"
 msgid "Normal"
 msgstr "Format"
 
-#: scene/gui/texture_button.cpp
+#: scene/gui/texture_button.cpp scene/theme/default_theme.cpp
 msgid "Hover"
 msgstr ""
 
@@ -13152,11 +12448,6 @@ msgstr "Vend horisontalt"
 #, fuzzy
 msgid "Scroll Vertical Enabled"
 msgstr "Filtrer Signaler"
-
-#: scene/gui/tree.cpp
-#, fuzzy
-msgid "Auto Tooltip"
-msgstr "Verktøy"
 
 #: scene/gui/video_stream_player.cpp
 #, fuzzy
@@ -13308,6 +12599,11 @@ msgstr "Gruppestørrelse"
 msgid "Messages"
 msgstr "Melding"
 
+#: scene/main/node.cpp scene/main/scene_tree.cpp
+#, fuzzy
+msgid "Physics Interpolation"
+msgstr "Interpolasjonsmodus"
+
 #: scene/main/node.cpp
 #, fuzzy
 msgid "Auto Translate"
@@ -13358,11 +12654,6 @@ msgid "Contact Color"
 msgstr "Velg farge"
 
 #: scene/main/scene_tree.cpp
-#, fuzzy
-msgid "Paths"
-msgstr "Søkesti"
-
-#: scene/main/scene_tree.cpp
 msgid "Geometry Color"
 msgstr ""
 
@@ -13381,7 +12672,21 @@ msgstr "Vis alle"
 msgid "Draw 2D Outlines"
 msgstr "Lag Omriss"
 
-#: scene/main/scene_tree.cpp servers/rendering_server.cpp
+#: scene/main/scene_tree.cpp scene/resources/style_box_flat.cpp
+#: servers/rendering_server.cpp
+msgid "Anti Aliasing"
+msgstr ""
+
+#: scene/main/scene_tree.cpp scene/main/viewport.cpp
+msgid "MSAA 2D"
+msgstr ""
+
+#: scene/main/scene_tree.cpp scene/main/viewport.cpp
+#: servers/rendering/storage/render_scene_buffers.cpp
+msgid "MSAA 3D"
+msgstr ""
+
+#: scene/main/scene_tree.cpp
 #, fuzzy
 msgid "Viewport"
 msgstr "Vis hjelpere"
@@ -13391,9 +12696,8 @@ msgstr "Vis hjelpere"
 msgid "Transparent Background"
 msgstr "Transposer"
 
-#: scene/main/scene_tree.cpp scene/resources/style_box_flat.cpp
-#: servers/rendering_server.cpp
-msgid "Anti Aliasing"
+#: scene/main/scene_tree.cpp
+msgid "HDR 2D"
 msgstr ""
 
 #: scene/main/scene_tree.cpp scene/main/viewport.cpp
@@ -13429,10 +12733,6 @@ msgstr ""
 msgid "Threshold Pixels"
 msgstr ""
 
-#: scene/main/scene_tree.cpp
-msgid "Snap"
-msgstr ""
-
 #: scene/main/scene_tree.cpp scene/main/viewport.cpp
 #, fuzzy
 msgid "Snap 2D Transforms to Pixel"
@@ -13460,6 +12760,11 @@ msgstr "Retninger"
 #: scene/main/scene_tree.cpp
 msgid "Atlas Size"
 msgstr ""
+
+#: scene/main/scene_tree.cpp
+#, fuzzy
+msgid "Atlas 16 Bits"
+msgstr "Ny %s"
 
 #: scene/main/scene_tree.cpp
 #, fuzzy
@@ -13514,11 +12819,6 @@ msgstr "Tid"
 msgid "Autostart"
 msgstr "Start Om Igjen Automatisk:"
 
-#: scene/main/timer.cpp
-#, fuzzy
-msgid "Ignore Time Scale"
-msgstr "Tidsskala"
-
 #: scene/main/viewport.cpp
 #, fuzzy
 msgid "Viewport Path"
@@ -13552,15 +12852,6 @@ msgstr "Transposer"
 #, fuzzy
 msgid "Handle Input Locally"
 msgstr "Anim Forandre Verdi"
-
-#: scene/main/viewport.cpp servers/rendering_server.cpp
-msgid "MSAA 2D"
-msgstr ""
-
-#: scene/main/viewport.cpp servers/rendering/storage/render_scene_buffers.cpp
-#: servers/rendering_server.cpp
-msgid "MSAA 3D"
-msgstr ""
 
 #: scene/main/viewport.cpp
 #, fuzzy
@@ -13745,11 +13036,6 @@ msgstr ""
 
 #: scene/main/window.cpp
 #, fuzzy
-msgid "Exclude From Capture"
-msgstr "Kutt Noder"
-
-#: scene/main/window.cpp
-#, fuzzy
 msgid "Force Native"
 msgstr "Ring"
 
@@ -13816,18 +13102,6 @@ msgstr "Navigasjon"
 #: scene/resources/2d/concave_polygon_shape_2d.cpp
 msgid "Segments"
 msgstr ""
-
-#: scene/resources/2d/navigation_polygon.cpp scene/resources/material.cpp
-#: scene/resources/navigation_mesh.cpp
-#, fuzzy
-msgid "Sampling"
-msgstr "Skalerer: "
-
-#: scene/resources/2d/navigation_polygon.cpp
-#: scene/resources/navigation_mesh.cpp
-#, fuzzy
-msgid "Partition Type"
-msgstr "Rediger Variabel:"
 
 #: scene/resources/2d/navigation_polygon.cpp
 #: scene/resources/navigation_mesh.cpp
@@ -14047,6 +13321,26 @@ msgstr "Egendefinerte data"
 
 #: scene/resources/2d/tile_set.cpp
 #, fuzzy
+msgid "Tile Proxies"
+msgstr "TileSet..."
+
+#: scene/resources/2d/tile_set.cpp
+#, fuzzy
+msgid "Source Level"
+msgstr "Øverst til venstre"
+
+#: scene/resources/2d/tile_set.cpp
+#, fuzzy
+msgid "Coords Level"
+msgstr "Komprimering"
+
+#: scene/resources/2d/tile_set.cpp
+#, fuzzy
+msgid "Alternative Level"
+msgstr "Komprimering"
+
+#: scene/resources/2d/tile_set.cpp
+#, fuzzy
 msgid "Tile Shape"
 msgstr "TileSet..."
 
@@ -14196,11 +13490,6 @@ msgstr "Oppføring"
 #, fuzzy
 msgid "Mesh Transform"
 msgstr "Transformer"
-
-#: scene/resources/3d/mesh_library.cpp
-#, fuzzy
-msgid "Mesh Cast Shadow"
-msgstr "Lag Node"
 
 #: scene/resources/3d/mesh_library.cpp
 #, fuzzy
@@ -14433,6 +13722,11 @@ msgstr "Miks-Node"
 msgid "Stereo"
 msgstr ""
 
+#: scene/resources/bone_map.cpp servers/xr/xr_positional_tracker.cpp
+#, fuzzy
+msgid "Profile"
+msgstr "Profiler"
+
 #: scene/resources/bone_map.cpp
 #, fuzzy
 msgid "Bonemap"
@@ -14607,16 +13901,6 @@ msgstr "Flytt Bus Effekt"
 #, fuzzy
 msgid "Load Path"
 msgstr "Åpne forhåndsinnstilling"
-
-#: scene/resources/curve.cpp
-#, fuzzy
-msgid "Min Domain"
-msgstr "Pakking"
-
-#: scene/resources/curve.cpp
-#, fuzzy
-msgid "Max Domain"
-msgstr "Instans"
 
 #: scene/resources/curve.cpp
 #, fuzzy
@@ -14947,7 +14231,7 @@ msgstr ""
 msgid "Brightness"
 msgstr "Lys"
 
-#: scene/resources/environment.cpp
+#: scene/resources/environment.cpp scene/theme/theme_db.cpp
 msgid "Contrast"
 msgstr ""
 
@@ -15035,13 +14319,13 @@ msgstr ""
 
 #: scene/resources/gradient_texture.cpp servers/physics_server_2d.cpp
 #: servers/physics_server_3d.cpp
+msgid "From"
+msgstr "Fra"
+
+#: scene/resources/gradient_texture.cpp servers/physics_server_2d.cpp
+#: servers/physics_server_3d.cpp
 msgid "To"
 msgstr "Til"
-
-#: scene/resources/label_settings.cpp
-#, fuzzy
-msgid "Paragraph Spacing"
-msgstr "Beskrivelse:"
 
 #: scene/resources/material.cpp
 #, fuzzy
@@ -15231,6 +14515,11 @@ msgstr ""
 msgid "UV2"
 msgstr ""
 
+#: scene/resources/material.cpp scene/resources/navigation_mesh.cpp
+#, fuzzy
+msgid "Sampling"
+msgstr "Skalerer: "
+
 #: scene/resources/material.cpp
 msgid "Shadows"
 msgstr ""
@@ -15355,6 +14644,11 @@ msgstr "Instans"
 #: scene/resources/multimesh.cpp
 msgid "Visible Instance Count"
 msgstr ""
+
+#: scene/resources/navigation_mesh.cpp
+#, fuzzy
+msgid "Partition Type"
+msgstr "Rediger Variabel:"
 
 #: scene/resources/navigation_mesh.cpp
 #, fuzzy
@@ -15617,11 +14911,6 @@ msgstr "Lag Poly"
 
 #: scene/resources/particle_process_material.cpp
 #, fuzzy
-msgid "Amount at Start"
-msgstr "Mengde:"
-
-#: scene/resources/particle_process_material.cpp
-#, fuzzy
 msgid "Keep Velocity"
 msgstr "Hastighet"
 
@@ -15784,6 +15073,16 @@ msgstr "Panorerings-Modus"
 
 #: scene/resources/visual_shader.cpp
 #, fuzzy
+msgid "Varyings"
+msgstr "Advarsler"
+
+#: scene/resources/visual_shader.cpp
+#, fuzzy
+msgid "Preview Params"
+msgstr "Forhåndvisning"
+
+#: scene/resources/visual_shader.cpp
+#, fuzzy
 msgid "Input Name"
 msgstr "Snap til foreldre"
 
@@ -15854,11 +15153,6 @@ msgstr "Anim Forandre Verdi"
 
 #: scene/resources/visual_shader_nodes.cpp
 #, fuzzy
-msgid "Enum Names"
-msgstr "Fjern-funksjon "
-
-#: scene/resources/visual_shader_nodes.cpp
-#, fuzzy
 msgid "Color Default"
 msgstr "Last Standard"
 
@@ -15921,7 +15215,7 @@ msgstr "Fjern Gjenstand"
 msgid "Font Disabled Color"
 msgstr "Velg farge"
 
-#: scene/theme/default_theme.cpp
+#: scene/theme/default_theme.cpp scene/theme/theme_db.cpp
 #, fuzzy
 msgid "Font Outline Color"
 msgstr "Funksjoner"
@@ -16162,11 +15456,6 @@ msgstr "Opprett mappe"
 
 #: scene/theme/default_theme.cpp
 #, fuzzy
-msgid "Folded"
-msgstr "Mappe:"
-
-#: scene/theme/default_theme.cpp
-#, fuzzy
 msgid "Can Fold Code Region"
 msgstr "Region"
 
@@ -16178,11 +15467,6 @@ msgstr "Region"
 #: scene/theme/default_theme.cpp
 msgid "Folded EOL Icon"
 msgstr ""
-
-#: scene/theme/default_theme.cpp
-#, fuzzy
-msgid "Completion Color BG"
-msgstr "Importer Scene"
 
 #: scene/theme/default_theme.cpp
 #, fuzzy
@@ -16495,16 +15779,6 @@ msgstr "Nummereringer:"
 
 #: scene/theme/default_theme.cpp
 #, fuzzy
-msgid "Load"
-msgstr "Åpne forhåndsinnstilling"
-
-#: scene/theme/default_theme.cpp
-#, fuzzy
-msgid "Save"
-msgstr "Lagre"
-
-#: scene/theme/default_theme.cpp
-#, fuzzy
 msgid "Parent Folder"
 msgstr "Opprett mappe"
 
@@ -16659,16 +15933,6 @@ msgstr "Rutenett Offset:"
 
 #: scene/theme/default_theme.cpp
 #, fuzzy
-msgid "Hovered"
-msgstr "Trykket"
-
-#: scene/theme/default_theme.cpp
-#, fuzzy
-msgid "Hovered Dimmed"
-msgstr "Trykket"
-
-#: scene/theme/default_theme.cpp
-#, fuzzy
 msgid "Selected Focus"
 msgstr "Velg"
 
@@ -16679,11 +15943,6 @@ msgstr ""
 #: scene/theme/default_theme.cpp
 msgid "Cursor Unfocused"
 msgstr ""
-
-#: scene/theme/default_theme.cpp
-#, fuzzy
-msgid "Button Hover"
-msgstr "Museknapp"
 
 #: scene/theme/default_theme.cpp
 #, fuzzy
@@ -16749,16 +16008,6 @@ msgstr "Museknapp"
 #, fuzzy
 msgid "Title Button Color"
 msgstr "Kun Valgte"
-
-#: scene/theme/default_theme.cpp
-#, fuzzy
-msgid "Font Hovered Color"
-msgstr "Velg farge"
-
-#: scene/theme/default_theme.cpp
-#, fuzzy
-msgid "Font Hovered Dimmed Color"
-msgstr "Velg farge"
 
 #: scene/theme/default_theme.cpp
 #, fuzzy
@@ -16895,18 +16144,13 @@ msgstr "Sett Handle"
 
 #: scene/theme/default_theme.cpp
 #, fuzzy
-msgid "Font Hovered Selected Color"
-msgstr "Gjeldende Versjon:"
+msgid "Font Hovered Color"
+msgstr "Velg farge"
 
 #: scene/theme/default_theme.cpp
 #, fuzzy
-msgid "Hovered Selected"
-msgstr "Velg"
-
-#: scene/theme/default_theme.cpp
-#, fuzzy
-msgid "Hovered Selected Focus"
-msgstr "Velg"
+msgid "Hovered"
+msgstr "Trykket"
 
 #: scene/theme/default_theme.cpp
 #, fuzzy
@@ -16975,6 +16219,15 @@ msgstr "Retninger"
 
 #: scene/theme/default_theme.cpp
 #, fuzzy
+msgid "BG"
+msgstr "B"
+
+#: scene/theme/default_theme.cpp
+msgid "Overbright Indicator"
+msgstr ""
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
 msgid "SV Width"
 msgstr "Venstrevisning"
 
@@ -16985,13 +16238,23 @@ msgstr "Lys"
 
 #: scene/theme/default_theme.cpp
 #, fuzzy
+msgid "Label Width"
+msgstr "Venstrevisning"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
 msgid "H Width"
 msgstr "Venstrevisning"
 
 #: scene/theme/default_theme.cpp
 #, fuzzy
-msgid "Label Width"
-msgstr "Venstrevisning"
+msgid "Sample Height"
+msgstr "Lys"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Preset Size"
+msgstr "Sidestørrelse"
 
 #: scene/theme/default_theme.cpp
 msgid "Center Slider Grabbers"
@@ -16999,8 +16262,13 @@ msgstr ""
 
 #: scene/theme/default_theme.cpp
 #, fuzzy
-msgid "Menu Option"
-msgstr "Innstillinger"
+msgid "Colorize Sliders"
+msgstr "Region"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Expanded Arrow"
+msgstr "Utvid alle"
 
 #: scene/theme/default_theme.cpp
 #, fuzzy
@@ -17009,8 +16277,8 @@ msgstr "Mappe:"
 
 #: scene/theme/default_theme.cpp
 #, fuzzy
-msgid "Expanded Arrow"
-msgstr "Utvid alle"
+msgid "Folded Arrow Mirrored"
+msgstr "Mappe:"
 
 #: scene/theme/default_theme.cpp
 msgid "Screen Picker"
@@ -17046,10 +16314,6 @@ msgid "Sample Revert"
 msgstr "Avstand:"
 
 #: scene/theme/default_theme.cpp
-msgid "Overbright Indicator"
-msgstr ""
-
-#: scene/theme/default_theme.cpp
 msgid "Bar Arrow"
 msgstr ""
 
@@ -17065,23 +16329,18 @@ msgstr "Velg farge"
 
 #: scene/theme/default_theme.cpp
 #, fuzzy
+msgid "Hex Icon"
+msgstr "Ikon"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Hex Code Icon"
+msgstr "Legg til punkt"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
 msgid "Color Hue"
 msgstr "Medlemmer"
-
-#: scene/theme/default_theme.cpp
-#, fuzzy
-msgid "BG"
-msgstr "B"
-
-#: scene/theme/default_theme.cpp
-#, fuzzy
-msgid "Preset FG"
-msgstr "Forhåndsinnstilling"
-
-#: scene/theme/default_theme.cpp
-#, fuzzy
-msgid "Preset BG"
-msgstr "Forhåndsinnstilling"
 
 #: scene/theme/default_theme.cpp
 #, fuzzy
@@ -17175,6 +16434,31 @@ msgstr ""
 
 #: scene/theme/default_theme.cpp
 #, fuzzy
+msgid "H Split Bar Background"
+msgstr "Ugyldig navn."
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "V Split Bar Background"
+msgstr "Ugyldig navn."
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Split Bar Background"
+msgstr "Ugyldig navn."
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Grabber Icon Normal"
+msgstr "Støtte"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Grabber Icon Pressed"
+msgstr "Trykket"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
 msgid "Margin Left"
 msgstr "Sett Handle"
 
@@ -17204,8 +16488,17 @@ msgstr "Automatisk Innrykk"
 
 #: scene/theme/default_theme.cpp
 #, fuzzy
-msgid "Split Bar Background"
-msgstr "Ugyldig navn."
+msgid "Autohide Split Bar"
+msgstr "Automatisk Innrykk"
+
+#: scene/theme/default_theme.cpp
+msgid "Draw Grabber Icon"
+msgstr ""
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Draw Split Bar"
+msgstr "Ring"
 
 #: scene/theme/default_theme.cpp
 #, fuzzy
@@ -17271,11 +16564,6 @@ msgstr "Neste Koordinat"
 
 #: scene/theme/default_theme.cpp
 #, fuzzy
-msgid "Connection Hover Thickness"
-msgstr "Neste Koordinat"
-
-#: scene/theme/default_theme.cpp
-#, fuzzy
 msgid "Connection Valid Target Tint Color"
 msgstr "Importer Scene"
 
@@ -17283,6 +16571,95 @@ msgstr "Importer Scene"
 #, fuzzy
 msgid "Connection Rim Color"
 msgstr "Tilkoblingsfeil"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Title Panel"
+msgstr "Legg til punkt"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Title Hover Panel"
+msgstr "Museknapp"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Title Collapsed Panel"
+msgstr "Fold sammen alle"
+
+#: scene/theme/default_theme.cpp
+msgid "Title Collapsed Hover Panel"
+msgstr ""
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Button Normal Style"
+msgstr "Museknapp"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Button Hovered Style"
+msgstr "Museknapp"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Button Pressed Style"
+msgstr "Trykket"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Button Disabled Style"
+msgstr "Deaktivert"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Hover Font Color"
+msgstr "Lagrer Fil:"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Collapsed Font Color"
+msgstr "Velg farge"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Button Icon Normal"
+msgstr "Museknapp"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Button Icon Hovered"
+msgstr "Museknapp"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Button Icon Pressed"
+msgstr "Trykket"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Button Icon Disabled"
+msgstr "Deaktivert"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Arrow Normal Color"
+msgstr "Bokmerker"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Arrow Hover Color"
+msgstr "Velg farge"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Arrow Collapsed Color"
+msgstr "Fold sammen alle"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Expanded Arrow Mirrored"
+msgstr "Utvid alle"
 
 #: scene/theme/default_theme.cpp
 msgid "Port Hotzone Inner Extent"
@@ -17300,11 +16677,6 @@ msgstr "Node"
 #, fuzzy
 msgid "Default Theme Scale"
 msgstr "Håndter Eksportmaler"
-
-#: scene/theme/theme_db.cpp
-#, fuzzy
-msgid "Custom"
-msgstr "Klipp ut Noder"
 
 #: scene/theme/theme_db.cpp
 #, fuzzy
@@ -17336,12 +16708,85 @@ msgstr ""
 
 #: scene/theme/theme_db.cpp
 #, fuzzy
-msgid "LCD Subpixel Layout"
-msgstr "Slett Layout"
+msgid "Custom"
+msgstr "Klipp ut Noder"
 
 #: scene/theme/theme_db.cpp
 msgid "Fallback values"
 msgstr "Tilbakefallsverdier"
+
+#: scene/theme/theme_db.cpp
+#, fuzzy
+msgid "Base Color"
+msgstr "Endre %s type"
+
+#: scene/theme/theme_db.cpp
+#, fuzzy
+msgid "Accent Color"
+msgstr "Neste Koordinat"
+
+#: scene/theme/theme_db.cpp
+#, fuzzy
+msgid "Font Color Override"
+msgstr "Overskriv"
+
+#: scene/theme/theme_db.cpp
+#, fuzzy
+msgid "Custom Font Color"
+msgstr "Klipp ut Noder"
+
+#: scene/theme/theme_db.cpp
+#, fuzzy
+msgid "Normal Contrast"
+msgstr "Format"
+
+#: scene/theme/theme_db.cpp
+#, fuzzy
+msgid "Hover Contrast"
+msgstr "Velg farge"
+
+#: scene/theme/theme_db.cpp
+#, fuzzy
+msgid "Pressed Contrast"
+msgstr "Versjonskontroll"
+
+#: scene/theme/theme_db.cpp
+#, fuzzy
+msgid "BG Contrast"
+msgstr "Farger"
+
+#: scene/theme/theme_db.cpp
+#, fuzzy
+msgid "Padding"
+msgstr "Fyll"
+
+#: scene/theme/theme_db.cpp
+#, fuzzy
+msgid "Font Outline Size"
+msgstr "Lag Omriss"
+
+#: scene/theme/theme_db.cpp
+#, fuzzy
+msgid "Font Embolden"
+msgstr "Fjern-funksjon "
+
+#: scene/theme/theme_db.cpp
+msgid "Font Spacing Glyph"
+msgstr ""
+
+#: scene/theme/theme_db.cpp
+msgid "Font Spacing Space"
+msgstr ""
+
+#: scene/theme/theme_db.cpp
+#, fuzzy
+msgid "Font Spacing Top"
+msgstr "Beskrivelse:"
+
+#: scene/theme/theme_db.cpp
+#, fuzzy
+msgid "Font Spacing Bottom"
+msgstr "Velg Modus"
 
 #: servers/audio/audio_stream.cpp
 msgid "Playback Mode"
@@ -17534,11 +16979,6 @@ msgstr "Tid:"
 msgid "Surround"
 msgstr "Surround"
 
-#: servers/audio/effects/audio_stream_generator.cpp
-#, fuzzy
-msgid "Mix Rate Mode"
-msgstr "Miks-Node"
-
 #: servers/audio_server.cpp
 #, fuzzy
 msgid "Enable Input"
@@ -17660,16 +17100,6 @@ msgstr "Standard"
 #: servers/navigation_server_3d.cpp
 msgid "Merge Rasterizer Cell Scale"
 msgstr ""
-
-#: servers/navigation_server_3d.cpp
-#, fuzzy
-msgid "World"
-msgstr "Tilfeldig Skala:"
-
-#: servers/navigation_server_3d.cpp
-#, fuzzy
-msgid "Map Use Async Iterations"
-msgstr "Lag Funksjon"
 
 #: servers/navigation_server_3d.cpp
 #, fuzzy
@@ -18186,11 +17616,6 @@ msgid "Compress With GPU"
 msgstr "Komponenter"
 
 #: servers/rendering_server.cpp
-#, fuzzy
-msgid "Cache GPU Compressor"
-msgstr "Komprimering"
-
-#: servers/rendering_server.cpp
 msgid "Lossless Compression"
 msgstr ""
 
@@ -18226,27 +17651,13 @@ msgid "Soft Shadow Filter Quality"
 msgstr ""
 
 #: servers/rendering_server.cpp
-#, fuzzy
-msgid "Atlas 16 Bits"
-msgstr "Ny %s"
-
-#: servers/rendering_server.cpp
 msgid "Shadow Atlas"
 msgstr "Skyggeatlas"
 
 #: servers/rendering_server.cpp
 #, fuzzy
-msgid "Batching"
-msgstr "Sett Handle"
-
-#: servers/rendering_server.cpp
-#, fuzzy
 msgid "Item Buffer Size"
 msgstr "Bakvisning"
-
-#: servers/rendering_server.cpp
-msgid "Uniform Set Cache Size"
-msgstr ""
 
 #: servers/rendering_server.cpp
 #, fuzzy
@@ -18389,10 +17800,6 @@ msgstr "X-Fade Tid (s):"
 #, fuzzy
 msgid "Fadeout To"
 msgstr "X-Fade Tid (s):"
-
-#: servers/rendering_server.cpp
-msgid "HDR 2D"
-msgstr ""
 
 #: servers/rendering_server.cpp
 msgid "Screen Space Roughness Limiter"
@@ -18602,19 +18009,10 @@ msgstr "Radius:"
 msgid "VRS Strength"
 msgstr "Styrke"
 
-#: servers/xr/xr_vrs.cpp
-#, fuzzy
-msgid "VRS Render Region"
-msgstr "Rendrer"
-
 #: servers/xr_server.cpp
 #, fuzzy
 msgid "World Origin"
 msgstr "Vis Rutenett"
-
-#: servers/xr_server.cpp
-msgid "Camera Locked to Origin"
-msgstr ""
 
 #: servers/xr_server.cpp
 msgid "Primary Interface"

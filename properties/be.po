@@ -8,7 +8,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Godot Engine properties\n"
-"Report-Msgid-Bugs-To: https://github.com/godotengine/godot\n"
+"Report-Msgid-Bugs-To: https://github.com/blazium-engine/blazium\n"
 "PO-Revision-Date: 2023-07-04 00:53+0000\n"
 "Last-Translator: Maxim Valuy <maks.valui@gmail.com>\n"
 "Language-Team: Belarusian <https://hosted.weblate.org/projects/godot-engine/"
@@ -36,8 +36,9 @@ msgstr ""
 #: editor/animation_track_editor.cpp
 #: editor/plugins/tiles/tile_set_atlas_source_editor.cpp
 #: platform/android/export/export_plugin.cpp scene/2d/physics/area_2d.cpp
-#: scene/3d/physics/area_3d.cpp scene/resources/3d/mesh_library.cpp
-#: scene/resources/3d/skin.cpp servers/xr/xr_pose.cpp servers/xr/xr_tracker.cpp
+#: scene/3d/physics/area_3d.cpp scene/3d/skeleton_3d.cpp
+#: scene/resources/3d/mesh_library.cpp scene/resources/3d/skin.cpp
+#: servers/xr/xr_pose.cpp servers/xr/xr_tracker.cpp
 msgid "Name"
 msgstr ""
 
@@ -45,9 +46,9 @@ msgstr ""
 msgid "Name Localized"
 msgstr ""
 
-#: core/config/project_settings.cpp platform/windows/export/export_plugin.cpp
-#: scene/main/node.cpp scene/resources/visual_shader.cpp
-#: servers/xr/xr_tracker.cpp
+#: core/config/project_settings.cpp platform/web/export/export_plugin.cpp
+#: platform/windows/export/export_plugin.cpp scene/main/node.cpp
+#: scene/resources/visual_shader.cpp servers/xr/xr_tracker.cpp
 msgid "Description"
 msgstr ""
 
@@ -132,9 +133,9 @@ msgstr ""
 #: scene/gui/control.cpp scene/gui/graph_edit.cpp scene/main/viewport.cpp
 #: scene/main/window.cpp scene/resources/2d/rectangle_shape_2d.cpp
 #: scene/resources/3d/box_shape_3d.cpp scene/resources/3d/primitive_meshes.cpp
-#: scene/resources/external_texture.cpp scene/resources/label_settings.cpp
-#: scene/resources/placeholder_textures.cpp scene/resources/style_box_flat.cpp
-#: scene/resources/visual_shader.cpp servers/rendering_server.cpp
+#: scene/resources/label_settings.cpp scene/resources/placeholder_textures.cpp
+#: scene/resources/style_box_flat.cpp scene/resources/visual_shader.cpp
+#: servers/rendering_server.cpp
 msgid "Size"
 msgstr ""
 
@@ -204,10 +205,6 @@ msgstr ""
 msgid "No Focus"
 msgstr ""
 
-#: core/config/project_settings.cpp scene/main/window.cpp
-msgid "Sharp Corners"
-msgstr ""
-
 #: core/config/project_settings.cpp
 msgid "Window Width Override"
 msgstr ""
@@ -260,7 +257,7 @@ msgstr ""
 msgid "Default Bus Layout"
 msgstr ""
 
-#: core/config/project_settings.cpp editor/editor_settings.cpp
+#: core/config/project_settings.cpp
 msgid "General"
 msgstr ""
 
@@ -302,27 +299,10 @@ msgid "Embed Subwindows"
 msgstr ""
 
 #: core/config/project_settings.cpp
-msgid "Frame Pacing"
-msgstr ""
-
-#: core/config/project_settings.cpp platform/android/export/export.cpp
-msgid "Android"
-msgstr ""
-
-#: core/config/project_settings.cpp
-msgid "Enable Frame Pacing"
-msgstr ""
-
-#: core/config/project_settings.cpp
-msgid "Swappy Mode"
-msgstr ""
-
-#: core/config/project_settings.cpp
 #: editor/import/3d/resource_importer_scene.cpp main/main.cpp
-#: modules/jolt_physics/jolt_project_settings.cpp scene/2d/tile_map_layer.cpp
-#: scene/main/scene_tree.cpp scene/main/viewport.cpp
-#: scene/resources/2d/tile_set.cpp servers/physics_server_2d.cpp
-#: servers/physics_server_3d.cpp
+#: scene/2d/tile_map_layer.cpp scene/main/scene_tree.cpp
+#: scene/main/viewport.cpp scene/resources/2d/tile_set.cpp
+#: servers/physics_server_2d.cpp servers/physics_server_3d.cpp
 msgid "Physics"
 msgstr ""
 
@@ -358,8 +338,8 @@ msgstr ""
 #: scene/2d/parallax_layer.cpp scene/2d/polygon_2d.cpp
 #: scene/2d/remote_transform_2d.cpp scene/3d/cpu_particles_3d.cpp
 #: scene/3d/node_3d.cpp scene/3d/remote_transform_3d.cpp
-#: scene/animation/animation_blend_tree.h scene/gui/control.cpp
-#: scene/main/canvas_layer.cpp scene/main/scene_tree.cpp
+#: scene/3d/skeleton_3d.cpp scene/animation/animation_blend_tree.h
+#: scene/gui/control.cpp scene/main/canvas_layer.cpp scene/main/scene_tree.cpp
 #: scene/main/viewport.cpp scene/resources/camera_attributes.cpp
 #: scene/resources/material.cpp scene/resources/particle_process_material.cpp
 #: servers/rendering_server.cpp
@@ -384,7 +364,7 @@ msgstr ""
 
 #: core/config/project_settings.cpp
 #: editor/import/3d/resource_importer_scene.cpp main/main.cpp
-#: modules/gdscript/gdscript.cpp scene/3d/spring_bone_simulator_3d.cpp
+#: modules/gdscript/gdscript.cpp
 msgid "Settings"
 msgstr ""
 
@@ -557,10 +537,6 @@ msgid "Texture Upload Region Size Px"
 msgstr ""
 
 #: core/config/project_settings.cpp
-msgid "Texture Download Region Size Px"
-msgstr ""
-
-#: core/config/project_settings.cpp
 msgid "Pipeline Cache"
 msgstr ""
 
@@ -568,8 +544,7 @@ msgstr ""
 #: editor/import/3d/post_import_plugin_skeleton_rest_fixer.cpp
 #: modules/gdscript/gdscript.cpp platform/android/export/export_plugin.cpp
 #: platform/windows/export/export_plugin.cpp
-#: scene/3d/physics/joints/hinge_joint_3d.cpp scene/3d/retarget_modifier_3d.cpp
-#: servers/rendering_server.cpp
+#: scene/3d/physics/joints/hinge_joint_3d.cpp servers/rendering_server.cpp
 msgid "Enable"
 msgstr ""
 
@@ -639,6 +614,10 @@ msgstr ""
 msgid "Pointing"
 msgstr ""
 
+#: core/config/project_settings.cpp platform/android/export/export.cpp
+msgid "Android"
+msgstr ""
+
 #: core/config/project_settings.cpp editor/editor_settings.cpp
 msgid "Enable Long Press as Right Click"
 msgstr ""
@@ -665,10 +644,6 @@ msgstr ""
 
 #: core/core_bind.cpp
 msgid "Print Error Messages"
-msgstr ""
-
-#: core/core_bind.cpp
-msgid "Print to stdout"
 msgstr ""
 
 #: core/core_bind.cpp main/main.cpp
@@ -799,7 +774,8 @@ msgstr ""
 #: editor/import/3d/resource_importer_scene.cpp
 #: modules/gltf/structures/gltf_node.cpp scene/2d/node_2d.cpp
 #: scene/2d/remote_transform_2d.cpp scene/3d/node_3d.cpp
-#: scene/3d/remote_transform_3d.cpp scene/gui/control.cpp scene/main/window.cpp
+#: scene/3d/remote_transform_3d.cpp scene/3d/skeleton_3d.cpp
+#: scene/gui/control.cpp scene/main/window.cpp
 #: scene/resources/particle_process_material.cpp servers/physics_server_2d.cpp
 #: servers/physics_server_3d.cpp
 msgid "Position"
@@ -878,7 +854,8 @@ msgid "Action"
 msgstr ""
 
 #: core/input/input_event.cpp modules/mobile_vr/mobile_vr_interface.cpp
-#: modules/openxr/openxr_interface.cpp scene/3d/gpu_particles_collision_3d.cpp
+#: modules/openxr/openxr_interface.cpp scene/3d/audio_stream_player_3d.cpp
+#: scene/3d/gpu_particles_collision_3d.cpp
 #: scene/resources/2d/skeleton/skeleton_modification_stack_2d.cpp
 #: scene/resources/environment.cpp scene/resources/material.cpp
 msgid "Strength"
@@ -992,13 +969,12 @@ msgstr ""
 #: scene/2d/animated_sprite_2d.cpp scene/2d/camera_2d.cpp scene/2d/light_2d.cpp
 #: scene/2d/parallax_background.cpp scene/2d/parallax_layer.cpp
 #: scene/2d/polygon_2d.cpp scene/2d/sprite_2d.cpp scene/3d/label_3d.cpp
-#: scene/3d/look_at_modifier_3d.cpp scene/3d/physics/physical_bone_3d.cpp
-#: scene/3d/soft_body_3d.cpp scene/3d/spring_bone_collision_3d.cpp
+#: scene/3d/physics/physical_bone_3d.cpp scene/3d/soft_body_3d.cpp
 #: scene/3d/sprite_3d.cpp scene/3d/visual_instance_3d.cpp
-#: scene/gui/rich_text_effect.cpp scene/gui/split_container.cpp
-#: scene/main/canvas_layer.cpp scene/resources/3d/primitive_meshes.cpp
-#: scene/resources/font.cpp scene/resources/label_settings.cpp
-#: scene/resources/material.cpp scene/resources/style_box_flat.cpp
+#: scene/gui/rich_text_effect.cpp scene/main/canvas_layer.cpp
+#: scene/resources/3d/primitive_meshes.cpp scene/resources/font.cpp
+#: scene/resources/label_settings.cpp scene/resources/material.cpp
+#: scene/resources/style_box_flat.cpp
 msgid "Offset"
 msgstr ""
 
@@ -1029,8 +1005,6 @@ msgid "Diagonal Mode"
 msgstr ""
 
 #: core/math/random_number_generator.cpp modules/noise/fastnoise_lite.cpp
-#: scene/2d/cpu_particles_2d.cpp scene/2d/gpu_particles_2d.cpp
-#: scene/3d/cpu_particles_3d.cpp scene/3d/gpu_particles_3d.cpp
 msgid "Seed"
 msgstr ""
 
@@ -1043,7 +1017,6 @@ msgid "Memory"
 msgstr ""
 
 #: core/object/message_queue.cpp core/register_core_types.cpp main/main.cpp
-#: modules/jolt_physics/jolt_project_settings.cpp
 #: modules/webrtc/register_types.cpp scene/main/window.cpp
 #: servers/rendering_server.cpp
 msgid "Limits"
@@ -1061,7 +1034,7 @@ msgstr ""
 #: editor/debugger/debug_adapter/debug_adapter_server.cpp
 #: editor/editor_settings.cpp main/main.cpp
 #: modules/gdscript/language_server/gdscript_language_server.cpp
-#: modules/mbedtls/register_types.cpp modules/webrtc/register_types.cpp
+#: modules/webrtc/register_types.cpp
 msgid "Network"
 msgstr ""
 
@@ -1082,7 +1055,6 @@ msgid "Max Buffer (Power of 2)"
 msgstr ""
 
 #: core/register_core_types.cpp editor/editor_settings.cpp
-#: modules/mbedtls/register_types.cpp
 msgid "TLS"
 msgstr ""
 
@@ -1098,7 +1070,7 @@ msgstr ""
 msgid "Worker Pool"
 msgstr ""
 
-#: core/register_core_types.cpp servers/navigation_server_3d.cpp
+#: core/register_core_types.cpp
 msgid "Max Threads"
 msgstr ""
 
@@ -1165,8 +1137,9 @@ msgstr ""
 #: modules/gltf/structures/gltf_node.cpp scene/2d/node_2d.cpp
 #: scene/2d/polygon_2d.cpp scene/2d/remote_transform_2d.cpp
 #: scene/3d/node_3d.cpp scene/3d/physics/physical_bone_3d.cpp
-#: scene/3d/remote_transform_3d.cpp scene/gui/control.cpp
-#: scene/main/canvas_layer.cpp scene/resources/environment.cpp
+#: scene/3d/remote_transform_3d.cpp scene/3d/skeleton_3d.cpp
+#: scene/gui/control.cpp scene/main/canvas_layer.cpp
+#: scene/resources/environment.cpp
 msgid "Rotation"
 msgstr ""
 
@@ -1183,9 +1156,9 @@ msgid "Args"
 msgstr ""
 
 #: editor/animation_track_editor.cpp editor/editor_settings.cpp
-#: modules/noise/fastnoise_lite.cpp scene/3d/physics/physical_bone_3d.cpp
-#: scene/gui/text_edit.cpp scene/resources/visual_shader_nodes.cpp
-#: servers/xr/xr_tracker.cpp
+#: modules/noise/fastnoise_lite.cpp platform/web/export/export_plugin.cpp
+#: scene/3d/physics/physical_bone_3d.cpp scene/gui/text_edit.cpp
+#: scene/resources/visual_shader_nodes.cpp servers/xr/xr_tracker.cpp
 msgid "Type"
 msgstr ""
 
@@ -1237,10 +1210,6 @@ msgstr ""
 msgid "Sync Breakpoints"
 msgstr ""
 
-#: editor/editor_feature_profile.cpp
-msgid "Default Feature Profile"
-msgstr ""
-
 #: editor/editor_inspector.cpp editor/gui/editor_spin_slider.cpp
 msgid "Label"
 msgstr ""
@@ -1248,14 +1217,6 @@ msgstr ""
 #: editor/editor_inspector.cpp editor/gui/editor_spin_slider.cpp
 #: scene/theme/default_theme.cpp
 msgid "Read Only"
-msgstr ""
-
-#: editor/editor_inspector.cpp
-msgid "Draw Label"
-msgstr ""
-
-#: editor/editor_inspector.cpp
-msgid "Draw Background"
 msgstr ""
 
 #: editor/editor_inspector.cpp
@@ -1276,18 +1237,6 @@ msgstr ""
 
 #: editor/editor_inspector.cpp
 msgid "Deletable"
-msgstr ""
-
-#: editor/editor_inspector.cpp scene/gui/graph_element.cpp
-msgid "Selectable"
-msgstr ""
-
-#: editor/editor_inspector.cpp
-msgid "Use Folding"
-msgstr ""
-
-#: editor/editor_inspector.cpp
-msgid "Name Split Ratio"
 msgstr ""
 
 #: editor/editor_interface.cpp
@@ -1391,10 +1340,6 @@ msgid "Font Disable Embedded Bitmaps"
 msgstr ""
 
 #: editor/editor_settings.cpp
-msgid "Font Allow MSDF"
-msgstr ""
-
-#: editor/editor_settings.cpp
 msgid "Main Font"
 msgstr ""
 
@@ -1416,6 +1361,10 @@ msgstr ""
 
 #: editor/editor_settings.cpp
 msgid "Single Window Mode"
+msgstr ""
+
+#: editor/editor_settings.cpp
+msgid "Remember Window Size and Position"
 msgstr ""
 
 #: editor/editor_settings.cpp
@@ -1546,6 +1495,7 @@ msgid "Border Size"
 msgstr ""
 
 #: editor/editor_settings.cpp scene/resources/style_box_flat.cpp
+#: scene/theme/theme_db.cpp
 msgid "Corner Radius"
 msgstr ""
 
@@ -1661,35 +1611,6 @@ msgstr ""
 msgid "Thumbnail Size"
 msgstr ""
 
-#: editor/editor_settings.cpp
-msgid "Quick Open Dialog"
-msgstr ""
-
-#: editor/editor_settings.cpp scene/2d/physics/shape_cast_2d.cpp
-#: scene/3d/physics/shape_cast_3d.cpp
-msgid "Max Results"
-msgstr ""
-
-#: editor/editor_settings.cpp
-msgid "Show Search Highlight"
-msgstr ""
-
-#: editor/editor_settings.cpp
-msgid "Enable Fuzzy Matching"
-msgstr ""
-
-#: editor/editor_settings.cpp
-msgid "Max Fuzzy Misses"
-msgstr ""
-
-#: editor/editor_settings.cpp
-msgid "Include Addons"
-msgstr ""
-
-#: editor/editor_settings.cpp
-msgid "Default Display Mode"
-msgstr ""
-
 #: editor/editor_settings.cpp editor/import/3d/resource_importer_scene.cpp
 #: editor/register_editor_types.cpp modules/fbx/register_types.cpp
 #: modules/gltf/register_types.cpp
@@ -1749,10 +1670,6 @@ msgid "Center Node on Reparent"
 msgstr ""
 
 #: editor/editor_settings.cpp
-msgid "Hide Filtered Out Parents"
-msgstr ""
-
-#: editor/editor_settings.cpp
 msgid "Always Show Folders"
 msgstr ""
 
@@ -1782,7 +1699,7 @@ msgstr ""
 
 #: editor/editor_settings.cpp scene/3d/label_3d.cpp
 #: scene/resources/3d/primitive_meshes.cpp scene/resources/label_settings.cpp
-#: scene/resources/text_paragraph.cpp scene/theme/default_theme.cpp
+#: scene/theme/default_theme.cpp
 msgid "Line Spacing"
 msgstr ""
 
@@ -1888,10 +1805,6 @@ msgstr ""
 msgid "Behavior"
 msgstr ""
 
-#: editor/editor_settings.cpp
-msgid "Empty Selection Clipboard"
-msgstr ""
-
 #: editor/editor_settings.cpp main/performance.cpp modules/gridmap/grid_map.cpp
 #: scene/2d/tile_map_layer.cpp scene/resources/2d/tile_set.cpp
 #: servers/navigation_server_3d.cpp
@@ -1987,14 +1900,6 @@ msgid "Open Dominant Script on Scene Change"
 msgstr ""
 
 #: editor/editor_settings.cpp
-msgid "Documentation"
-msgstr ""
-
-#: editor/editor_settings.cpp
-msgid "Enable Tooltips"
-msgstr ""
-
-#: editor/editor_settings.cpp
 msgid "Script List"
 msgstr ""
 
@@ -2012,10 +1917,6 @@ msgstr ""
 
 #: editor/editor_settings.cpp
 msgid "Script Temperature History Size"
-msgstr ""
-
-#: editor/editor_settings.cpp
-msgid "Highlight Scene Scripts"
 msgstr ""
 
 #: editor/editor_settings.cpp
@@ -2048,10 +1949,6 @@ msgstr ""
 
 #: editor/editor_settings.cpp
 msgid "Idle Parse Delay"
-msgstr ""
-
-#: editor/editor_settings.cpp
-msgid "Idle Parse Delay With Errors Found"
 msgstr ""
 
 #: editor/editor_settings.cpp
@@ -2121,6 +2018,16 @@ msgstr ""
 #: editor/editor_settings.cpp
 msgid "Palette Min Width"
 msgstr ""
+
+#: editor/editor_settings.cpp
+#, fuzzy
+msgid "Preview Size"
+msgstr "Налева"
+
+#: editor/editor_settings.cpp
+#, fuzzy
+msgid "Editor Side"
+msgstr "Направа"
 
 #: editor/editor_settings.cpp
 msgid "Selection Box Color"
@@ -2228,22 +2135,6 @@ msgstr ""
 
 #: editor/editor_settings.cpp
 msgid "CSG"
-msgstr ""
-
-#: editor/editor_settings.cpp
-msgid "GridMap Grid"
-msgstr ""
-
-#: editor/editor_settings.cpp
-msgid "Spring Bone Joint"
-msgstr ""
-
-#: editor/editor_settings.cpp
-msgid "Spring Bone Collision"
-msgstr ""
-
-#: editor/editor_settings.cpp
-msgid "Spring Bone Inside Collision"
 msgstr ""
 
 #: editor/editor_settings.cpp
@@ -2581,7 +2472,7 @@ msgid "Platforms"
 msgstr ""
 
 #: editor/editor_settings.cpp
-msgid "Linux/*BSD"
+msgid "Linuxbsd"
 msgstr ""
 
 #: editor/editor_settings.cpp
@@ -2617,10 +2508,6 @@ msgstr ""
 
 #: editor/editor_settings.cpp
 msgid "Profiler Frame Max Functions"
-msgstr ""
-
-#: editor/editor_settings.cpp
-msgid "Profiler Target FPS"
 msgstr ""
 
 #: editor/editor_settings.cpp
@@ -2900,10 +2787,6 @@ msgstr ""
 msgid "Particle Color"
 msgstr ""
 
-#: editor/editor_settings_dialog.cpp
-msgid "Editor Settings Advanced Mode"
-msgstr ""
-
 #: editor/export/editor_export_platform_pc.cpp
 #: platform/android/export/export_plugin.cpp
 #: platform/ios/export/export_plugin.cpp
@@ -2948,10 +2831,6 @@ msgstr ""
 msgid "ETC2 ASTC"
 msgstr ""
 
-#: editor/export/export_template_manager.cpp
-msgid "Export Template Download Directory"
-msgstr ""
-
 #: editor/export/project_export.cpp
 msgid "Export Path"
 msgstr ""
@@ -2979,16 +2858,12 @@ msgid "Disable Overwrite Warning"
 msgstr ""
 
 #: editor/gui/editor_spin_slider.cpp scene/gui/button.cpp
-#: scene/gui/line_edit.cpp scene/gui/menu_bar.cpp
+#: scene/gui/color_button.cpp scene/gui/line_edit.cpp scene/gui/menu_bar.cpp
 msgid "Flat"
 msgstr ""
 
 #: editor/gui/editor_spin_slider.cpp
 msgid "Hide Slider"
-msgstr ""
-
-#: editor/gui/editor_spin_slider.cpp
-msgid "Editing Integer"
 msgstr ""
 
 #: editor/gui/editor_zoom_widget.cpp scene/2d/camera_2d.cpp
@@ -3040,20 +2915,11 @@ msgid "Reset All Bone Poses After Import"
 msgstr ""
 
 #: editor/import/3d/post_import_plugin_skeleton_rest_fixer.cpp
-msgid "Retarget Method"
+msgid "Overwrite Axis"
 msgstr ""
 
 #: editor/import/3d/post_import_plugin_skeleton_rest_fixer.cpp
 msgid "Keep Global Rest on Leftovers"
-msgstr ""
-
-#: editor/import/3d/post_import_plugin_skeleton_rest_fixer.cpp
-#: scene/3d/retarget_modifier_3d.cpp
-msgid "Use Global Pose"
-msgstr ""
-
-#: editor/import/3d/post_import_plugin_skeleton_rest_fixer.cpp
-msgid "Original Skeleton Name"
 msgstr ""
 
 #: editor/import/3d/post_import_plugin_skeleton_rest_fixer.cpp
@@ -3069,7 +2935,6 @@ msgstr ""
 
 #: editor/import/3d/post_import_plugin_skeleton_rest_fixer.cpp
 #: editor/import/resource_importer_bitmask.cpp
-#: modules/openxr/extensions/openxr_dpad_binding_extension.cpp
 #: servers/audio/effects/audio_effect_compressor.cpp
 msgid "Threshold"
 msgstr ""
@@ -3096,23 +2961,6 @@ msgstr ""
 
 #: editor/import/3d/resource_importer_obj.cpp
 msgid "Generate Tangents"
-msgstr ""
-
-#: editor/import/3d/resource_importer_obj.cpp
-#: editor/import/3d/resource_importer_scene.cpp
-msgid "Generate LODs"
-msgstr ""
-
-#: editor/import/3d/resource_importer_obj.cpp
-msgid "Generate Shadow Mesh"
-msgstr ""
-
-#: editor/import/3d/resource_importer_obj.cpp
-msgid "Generate Lightmap UV2"
-msgstr ""
-
-#: editor/import/3d/resource_importer_obj.cpp
-msgid "Generate Lightmap UV2 Texel Size"
 msgstr ""
 
 #: editor/import/3d/resource_importer_obj.cpp
@@ -3276,7 +3124,6 @@ msgstr ""
 #: modules/gltf/structures/gltf_node.cpp modules/noise/noise_texture_2d.cpp
 #: modules/noise/noise_texture_3d.cpp scene/2d/light_2d.cpp
 #: scene/3d/navigation_agent_3d.cpp scene/3d/navigation_obstacle_3d.cpp
-#: scene/3d/spring_bone_collision_capsule_3d.cpp
 #: scene/resources/2d/capsule_shape_2d.cpp
 #: scene/resources/3d/capsule_shape_3d.cpp
 #: scene/resources/3d/cylinder_shape_3d.cpp
@@ -3293,10 +3140,8 @@ msgstr ""
 #: scene/2d/navigation_agent_2d.cpp scene/2d/navigation_obstacle_2d.cpp
 #: scene/3d/gpu_particles_collision_3d.cpp scene/3d/navigation_agent_3d.cpp
 #: scene/3d/navigation_obstacle_3d.cpp scene/3d/occluder_instance_3d.cpp
-#: scene/3d/physics/vehicle_body_3d.cpp
-#: scene/3d/spring_bone_collision_capsule_3d.cpp
-#: scene/3d/spring_bone_collision_sphere_3d.cpp
-#: scene/animation/root_motion_view.cpp scene/resources/2d/capsule_shape_2d.cpp
+#: scene/3d/physics/vehicle_body_3d.cpp scene/animation/root_motion_view.cpp
+#: scene/resources/2d/capsule_shape_2d.cpp
 #: scene/resources/2d/circle_shape_2d.cpp
 #: scene/resources/2d/navigation_polygon.cpp
 #: scene/resources/3d/capsule_shape_3d.cpp
@@ -3333,8 +3178,8 @@ msgstr ""
 #: scene/3d/navigation_region_3d.cpp scene/3d/physics/area_3d.cpp
 #: scene/3d/physics/joints/generic_6dof_joint_3d.cpp
 #: scene/3d/physics/ray_cast_3d.cpp scene/3d/physics/shape_cast_3d.cpp
-#: scene/3d/sprite_3d.cpp scene/gui/code_edit.cpp scene/gui/graph_edit.cpp
-#: scene/main/canvas_layer.cpp
+#: scene/3d/skeleton_3d.cpp scene/3d/sprite_3d.cpp scene/gui/code_edit.cpp
+#: scene/gui/graph_edit.cpp scene/main/canvas_layer.cpp
 #: scene/resources/2d/skeleton/skeleton_modification_2d.cpp
 #: scene/resources/2d/skeleton/skeleton_modification_stack_2d.cpp
 #: scene/resources/camera_attributes.cpp scene/resources/compositor.cpp
@@ -3357,7 +3202,15 @@ msgid "LODs"
 msgstr ""
 
 #: editor/import/3d/resource_importer_scene.cpp
+msgid "Normal Split Angle"
+msgstr ""
+
+#: editor/import/3d/resource_importer_scene.cpp
 msgid "Normal Merge Angle"
+msgstr ""
+
+#: editor/import/3d/resource_importer_scene.cpp
+msgid "Raycast Normals"
 msgstr ""
 
 #: editor/import/3d/resource_importer_scene.cpp
@@ -3463,16 +3316,16 @@ msgstr ""
 msgid "Import as Skeleton Bones"
 msgstr ""
 
-#: editor/import/3d/resource_importer_scene.cpp
-msgid "Use Node Type Suffixes"
-msgstr ""
-
 #: editor/import/3d/resource_importer_scene.cpp modules/gltf/gltf_state.cpp
 msgid "Meshes"
 msgstr ""
 
 #: editor/import/3d/resource_importer_scene.cpp
 msgid "Ensure Tangents"
+msgstr ""
+
+#: editor/import/3d/resource_importer_scene.cpp
+msgid "Generate LODs"
 msgstr ""
 
 #: editor/import/3d/resource_importer_scene.cpp
@@ -3521,7 +3374,7 @@ msgid "Import Script"
 msgstr ""
 
 #: editor/import/dynamic_font_import_settings.cpp
-#: editor/import/resource_importer_dynamic_font.cpp
+#: editor/import/resource_importer_dynamic_font.cpp scene/resources/font.cpp
 msgid "Antialiasing"
 msgstr ""
 
@@ -3571,6 +3424,11 @@ msgstr ""
 msgid "Subpixel Positioning"
 msgstr ""
 
+#: editor/import/dynamic_font_import_settings.cpp scene/resources/font.cpp
+#: scene/theme/theme_db.cpp
+msgid "LCD Subpixel Layout"
+msgstr ""
+
 #: editor/import/dynamic_font_import_settings.cpp
 #: editor/import/resource_importer_dynamic_font.cpp scene/resources/font.cpp
 msgid "Keep Rounding Remainders"
@@ -3617,8 +3475,8 @@ msgid "Compress"
 msgstr ""
 
 #: editor/import/dynamic_font_import_settings.cpp scene/3d/label_3d.cpp
-#: scene/gui/button.cpp scene/gui/label.cpp scene/gui/line_edit.cpp
-#: scene/gui/link_button.cpp scene/gui/menu_bar.cpp
+#: scene/gui/button.cpp scene/gui/foldable_container.cpp scene/gui/label.cpp
+#: scene/gui/line_edit.cpp scene/gui/link_button.cpp scene/gui/menu_bar.cpp
 #: scene/gui/rich_text_label.cpp scene/gui/text_edit.cpp
 #: scene/resources/3d/primitive_meshes.cpp
 #: servers/rendering/rendering_device_binds.h
@@ -3950,13 +3808,7 @@ msgid "Frames Count"
 msgstr ""
 
 #: editor/plugins/tiles/tile_set_atlas_source_editor.cpp
-#: modules/openxr/action_map/openxr_haptic_feedback.cpp
-#: scene/3d/look_at_modifier_3d.cpp
 msgid "Duration"
-msgstr ""
-
-#: editor/project_settings_editor.cpp
-msgid "Project Settings Advanced Mode"
 msgstr ""
 
 #: editor/register_editor_types.cpp
@@ -4015,49 +3867,8 @@ msgstr ""
 msgid "Autoload on Startup"
 msgstr ""
 
-#: editor/scene_tree_dock.cpp
-msgid "Use Favorites Root Selection"
-msgstr ""
-
-#: editor/script_create_dialog.cpp
-msgid "Script Setup Use Script Templates"
-msgstr ""
-
-#: editor/script_create_dialog.cpp
-msgid "Script Setup Templates Dictionary"
-msgstr ""
-
 #: main/main.cpp
 msgid "Flush stdout on Print"
-msgstr ""
-
-#: main/main.cpp
-msgid "Low Processor Mode"
-msgstr ""
-
-#: main/main.cpp
-msgid "stdout"
-msgstr ""
-
-#: main/main.cpp
-msgid "Print FPS"
-msgstr ""
-
-#: main/main.cpp
-msgid "Print GPU Profile"
-msgstr ""
-
-#: main/main.cpp
-msgid "Verbose stdout"
-msgstr ""
-
-#: main/main.cpp scene/main/node.cpp scene/main/scene_tree.cpp
-#: scene/resources/multimesh.cpp
-msgid "Physics Interpolation"
-msgstr ""
-
-#: main/main.cpp
-msgid "Enable Warnings"
 msgstr ""
 
 #: main/main.cpp
@@ -4106,7 +3917,7 @@ msgid "Fallback to D3D12"
 msgstr ""
 
 #: main/main.cpp
-msgid "Fallback to OpenGL 3"
+msgid "Fallback to Opengl 3"
 msgstr ""
 
 #: main/main.cpp servers/rendering_server.cpp
@@ -4126,7 +3937,7 @@ msgid "Fallback to Native"
 msgstr ""
 
 #: main/main.cpp
-msgid "Fallback to GLES"
+msgid "Fallback to Gles"
 msgstr ""
 
 #: main/main.cpp
@@ -4192,7 +4003,27 @@ msgid "Output Latency"
 msgstr ""
 
 #: main/main.cpp
+msgid "stdout"
+msgstr ""
+
+#: main/main.cpp
+msgid "Print FPS"
+msgstr ""
+
+#: main/main.cpp
+msgid "Print GPU Profile"
+msgstr ""
+
+#: main/main.cpp
+msgid "Verbose stdout"
+msgstr ""
+
+#: main/main.cpp
 msgid "Frame Delay Msec"
+msgstr ""
+
+#: main/main.cpp
+msgid "Low Processor Mode"
 msgstr ""
 
 #: main/main.cpp
@@ -4289,18 +4120,6 @@ msgid "Eye Gaze Interaction"
 msgstr ""
 
 #: main/main.cpp
-msgid "Binding Modifiers"
-msgstr ""
-
-#: main/main.cpp
-msgid "Analog Threshold"
-msgstr ""
-
-#: main/main.cpp
-msgid "Dpad Binding"
-msgstr ""
-
-#: main/main.cpp
 msgid "Boot Splash"
 msgstr ""
 
@@ -4368,16 +4187,17 @@ msgstr ""
 msgid "Show Image"
 msgstr ""
 
+#: main/main.cpp platform/web/export/export_plugin.cpp
+#: scene/resources/image_texture.cpp
+msgid "Image"
+msgstr ""
+
 #: main/main.cpp
 msgid "Fullsize"
 msgstr ""
 
 #: main/main.cpp servers/rendering_server.cpp
 msgid "Use Filter"
-msgstr ""
-
-#: main/main.cpp scene/resources/image_texture.cpp
-msgid "Image"
 msgstr ""
 
 #: main/main.cpp
@@ -4536,36 +4356,12 @@ msgstr ""
 msgid "Edges Free"
 msgstr ""
 
-#: main/performance.cpp
-msgid "Obstacles"
-msgstr ""
-
-#: main/performance.cpp
-msgid "Pipeline"
-msgstr ""
-
-#: main/performance.cpp
-msgid "Compilations Canvas"
-msgstr ""
-
-#: main/performance.cpp
-msgid "Compilations Mesh"
-msgstr ""
-
-#: main/performance.cpp
-msgid "Compilations Surface"
-msgstr ""
-
-#: main/performance.cpp
-msgid "Compilations Draw"
-msgstr ""
-
-#: main/performance.cpp
-msgid "Compilations Specialization"
-msgstr ""
-
 #: modules/csg/csg_shape.cpp
 msgid "Operation"
+msgstr ""
+
+#: modules/csg/csg_shape.cpp scene/main/scene_tree.cpp
+msgid "Snap"
 msgstr ""
 
 #: modules/csg/csg_shape.cpp
@@ -4695,10 +4491,6 @@ msgid "Path Rotation"
 msgstr ""
 
 #: modules/csg/csg_shape.cpp
-msgid "Path Rotation Accurate"
-msgstr ""
-
-#: modules/csg/csg_shape.cpp
 msgid "Path Local"
 msgstr ""
 
@@ -4796,10 +4588,6 @@ msgstr ""
 msgid "Exclude Addons"
 msgstr ""
 
-#: modules/gdscript/gdscript.cpp
-msgid "Renamed in Godot 4 Hint"
-msgstr ""
-
 #: modules/gdscript/language_server/gdscript_language_server.cpp
 msgid "Language Server"
 msgstr ""
@@ -4843,11 +4631,11 @@ msgstr ""
 #: scene/2d/cpu_particles_2d.cpp scene/2d/light_2d.cpp scene/2d/polygon_2d.cpp
 #: scene/3d/cpu_particles_3d.cpp scene/3d/light_3d.cpp
 #: scene/3d/reflection_probe.cpp scene/animation/root_motion_view.cpp
-#: scene/gui/color_picker.cpp scene/gui/color_rect.cpp
-#: scene/gui/rich_text_effect.cpp scene/main/canvas_item.cpp
-#: scene/resources/3d/sky_material.cpp scene/resources/environment.cpp
-#: scene/resources/label_settings.cpp scene/resources/material.cpp
-#: scene/resources/particle_process_material.cpp
+#: scene/gui/color_button.cpp scene/gui/color_picker.cpp
+#: scene/gui/color_rect.cpp scene/gui/rich_text_effect.cpp
+#: scene/main/canvas_item.cpp scene/resources/3d/sky_material.cpp
+#: scene/resources/environment.cpp scene/resources/label_settings.cpp
+#: scene/resources/material.cpp scene/resources/particle_process_material.cpp
 #: scene/resources/style_box_flat.cpp scene/resources/style_box_line.cpp
 #: scene/resources/style_box_texture.cpp
 msgid "Color"
@@ -5170,7 +4958,7 @@ msgstr ""
 msgid "Instance Materials"
 msgstr ""
 
-#: modules/gltf/structures/gltf_node.cpp
+#: modules/gltf/structures/gltf_node.cpp scene/3d/skeleton_3d.cpp
 msgid "Parent"
 msgstr ""
 
@@ -5191,33 +4979,8 @@ msgstr ""
 msgid "Light"
 msgstr ""
 
-#: modules/gltf/structures/gltf_object_model_property.cpp
-msgid "glTF to Godot Expression"
-msgstr ""
-
-#: modules/gltf/structures/gltf_object_model_property.cpp
-msgid "Godot to glTF Expression"
-msgstr ""
-
-#: modules/gltf/structures/gltf_object_model_property.cpp
-msgid "Node Paths"
-msgstr ""
-
-#: modules/gltf/structures/gltf_object_model_property.cpp
-msgid "Object Model Type"
-msgstr ""
-
-#: modules/gltf/structures/gltf_object_model_property.cpp
-msgid "Json Pointers"
-msgstr ""
-
-#: modules/gltf/structures/gltf_object_model_property.cpp
-msgid "Variant Type"
-msgstr ""
-
 #: modules/gltf/structures/gltf_skeleton.cpp
 #: modules/gltf/structures/gltf_skin.cpp
-#: modules/jolt_physics/jolt_project_settings.cpp
 msgid "Joints"
 msgstr ""
 
@@ -5310,11 +5073,11 @@ msgid "Bake Navigation"
 msgstr ""
 
 #: modules/interactive_music/audio_stream_interactive.cpp
-msgid "Clip Count"
+msgid "Initial Clip"
 msgstr ""
 
 #: modules/interactive_music/audio_stream_interactive.cpp
-msgid "Initial Clip"
+msgid "Clip Count"
 msgstr ""
 
 #: modules/interactive_music/audio_stream_playlist.cpp
@@ -5328,150 +5091,6 @@ msgstr ""
 #: modules/interactive_music/audio_stream_playlist.cpp
 #: modules/interactive_music/audio_stream_synchronized.cpp
 msgid "Stream Count"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Jolt Physics 3D"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Simulation"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Velocity Steps"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Position Steps"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Use Enhanced Internal Edge Removal"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Areas Detect Static Bodies"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Generate All Kinematic Contacts"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Penetration Slop"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Speculative Contact Distance"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Baumgarte Stabilization Factor"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Soft Body Point Radius"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Bounce Velocity Threshold"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Allow Sleep"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Sleep Velocity Threshold"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Sleep Time Threshold"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Continuous CD Movement Threshold"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Continuous CD Max Penetration"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Body Pair Contact Cache Enabled"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Body Pair Contact Cache Distance Threshold"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Body Pair Contact Cache Angle Threshold"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Queries"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Enable Ray Cast Face Index"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Motion Queries"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Recovery Iterations"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Recovery Amount"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Collisions"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Collision Margin Fraction"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Active Edge Threshold"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "World Node"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Temporary Memory Buffer Size"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "World Boundary Shape Size"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Max Linear Velocity"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Max Angular Velocity"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Max Bodies"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Max Body Pairs"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Max Contact Constraints"
 msgstr ""
 
 #: modules/lightmapper_rd/register_types.cpp servers/rendering_server.cpp
@@ -5511,10 +5130,6 @@ msgid "Region Size"
 msgstr ""
 
 #: modules/lightmapper_rd/register_types.cpp
-msgid "Max Transparency Rays"
-msgstr ""
-
-#: modules/lightmapper_rd/register_types.cpp
 msgid "Low Quality Probe Ray Count"
 msgstr ""
 
@@ -5540,10 +5155,6 @@ msgstr ""
 
 #: modules/lightmapper_rd/register_types.cpp
 msgid "Denoiser"
-msgstr ""
-
-#: modules/mbedtls/register_types.cpp
-msgid "Enable TLS V 1"
 msgstr ""
 
 #: modules/minimp3/audio_stream_mp3.cpp
@@ -5617,10 +5228,6 @@ msgid "Min Radius"
 msgstr ""
 
 #: modules/multiplayer/multiplayer_spawner.cpp
-msgid "Spawnable Scenes"
-msgstr ""
-
-#: modules/multiplayer/multiplayer_spawner.cpp
 msgid "Spawn Path"
 msgstr ""
 
@@ -5682,7 +5289,6 @@ msgid "Noise Type"
 msgstr ""
 
 #: modules/noise/fastnoise_lite.cpp
-#: modules/openxr/action_map/openxr_haptic_feedback.cpp
 #: scene/resources/particle_process_material.cpp
 msgid "Frequency"
 msgstr ""
@@ -5734,7 +5340,6 @@ msgid "Domain Warp"
 msgstr ""
 
 #: modules/noise/fastnoise_lite.cpp
-#: modules/openxr/action_map/openxr_haptic_feedback.cpp
 msgid "Amplitude"
 msgstr ""
 
@@ -5811,7 +5416,8 @@ msgid "Toplevel Paths"
 msgstr ""
 
 #: modules/openxr/action_map/openxr_interaction_profile.cpp
-msgid "Binding Path"
+#: scene/main/scene_tree.cpp
+msgid "Paths"
 msgstr ""
 
 #: modules/openxr/action_map/openxr_interaction_profile.cpp
@@ -5820,48 +5426,6 @@ msgstr ""
 
 #: modules/openxr/editor/openxr_select_runtime.cpp
 msgid "Runtime Paths"
-msgstr ""
-
-#: modules/openxr/extensions/openxr_dpad_binding_extension.cpp
-msgid "Action Set"
-msgstr ""
-
-#: modules/openxr/extensions/openxr_dpad_binding_extension.cpp
-msgid "Input Path"
-msgstr ""
-
-#: modules/openxr/extensions/openxr_dpad_binding_extension.cpp
-msgid "Threshold Released"
-msgstr ""
-
-#: modules/openxr/extensions/openxr_dpad_binding_extension.cpp
-msgid "Center Region"
-msgstr ""
-
-#: modules/openxr/extensions/openxr_dpad_binding_extension.cpp
-msgid "Wedge Angle"
-msgstr ""
-
-#: modules/openxr/extensions/openxr_dpad_binding_extension.cpp
-msgid "Is Sticky"
-msgstr ""
-
-#: modules/openxr/extensions/openxr_dpad_binding_extension.cpp
-#: modules/openxr/extensions/openxr_valve_analog_threshold_extension.cpp
-msgid "On Haptic"
-msgstr ""
-
-#: modules/openxr/extensions/openxr_dpad_binding_extension.cpp
-#: modules/openxr/extensions/openxr_valve_analog_threshold_extension.cpp
-msgid "Off Haptic"
-msgstr ""
-
-#: modules/openxr/extensions/openxr_valve_analog_threshold_extension.cpp
-msgid "On Threshold"
-msgstr ""
-
-#: modules/openxr/extensions/openxr_valve_analog_threshold_extension.cpp
-msgid "Off Threshold"
 msgstr ""
 
 #: modules/openxr/openxr_interface.cpp
@@ -5874,14 +5438,6 @@ msgstr ""
 
 #: modules/openxr/scene/openxr_composition_layer.cpp
 msgid "Layer Viewport"
-msgstr ""
-
-#: modules/openxr/scene/openxr_composition_layer.cpp
-msgid "Use Android Surface"
-msgstr ""
-
-#: modules/openxr/scene/openxr_composition_layer.cpp
-msgid "Android Surface Size"
 msgstr ""
 
 #: modules/openxr/scene/openxr_composition_layer.cpp
@@ -6034,10 +5590,6 @@ msgstr ""
 #: modules/websocket/websocket_multiplayer_peer.cpp
 #: modules/websocket/websocket_peer.cpp
 msgid "Max Queued Packets"
-msgstr ""
-
-#: modules/websocket/websocket_peer.cpp
-msgid "Heartbeat Interval"
 msgstr ""
 
 #: modules/webxr/webxr_interface.cpp
@@ -6228,14 +5780,6 @@ msgid "XR Mode"
 msgstr ""
 
 #: platform/android/export/export_plugin.cpp
-msgid "Gesture"
-msgstr ""
-
-#: platform/android/export/export_plugin.cpp
-msgid "Swipe to Dismiss"
-msgstr ""
-
-#: platform/android/export/export_plugin.cpp
 msgid "Screen"
 msgstr ""
 
@@ -6305,6 +5849,38 @@ msgid "Icons"
 msgstr ""
 
 #: platform/ios/export/export_plugin.cpp
+msgid "iPhone 120 X 120"
+msgstr ""
+
+#: platform/ios/export/export_plugin.cpp
+msgid "iPhone 180 X 180"
+msgstr ""
+
+#: platform/ios/export/export_plugin.cpp
+msgid "iPad 76 X 76"
+msgstr ""
+
+#: platform/ios/export/export_plugin.cpp
+msgid "iPad 152 X 152"
+msgstr ""
+
+#: platform/ios/export/export_plugin.cpp
+msgid "iPad 167 X 167"
+msgstr ""
+
+#: platform/ios/export/export_plugin.cpp
+msgid "App Store 1024 X 1024"
+msgstr ""
+
+#: platform/ios/export/export_plugin.cpp
+msgid "Spotlight 40 X 40"
+msgstr ""
+
+#: platform/ios/export/export_plugin.cpp
+msgid "Spotlight 80 X 80"
+msgstr ""
+
+#: platform/ios/export/export_plugin.cpp
 msgid "Settings 58 X 58"
 msgstr ""
 
@@ -6321,67 +5897,7 @@ msgid "Notification 60 X 60"
 msgstr ""
 
 #: platform/ios/export/export_plugin.cpp
-msgid "Notification 76 X 76"
-msgstr ""
-
-#: platform/ios/export/export_plugin.cpp
-msgid "Notification 114 X 114"
-msgstr ""
-
-#: platform/ios/export/export_plugin.cpp
-msgid "Spotlight 80 X 80"
-msgstr ""
-
-#: platform/ios/export/export_plugin.cpp
-msgid "Spotlight 120 X 120"
-msgstr ""
-
-#: platform/ios/export/export_plugin.cpp
-msgid "iPhone 120 X 120"
-msgstr ""
-
-#: platform/ios/export/export_plugin.cpp
-msgid "iPhone 180 X 180"
-msgstr ""
-
-#: platform/ios/export/export_plugin.cpp
-msgid "iPad 167 X 167"
-msgstr ""
-
-#: platform/ios/export/export_plugin.cpp
-msgid "iPad 152 X 152"
-msgstr ""
-
-#: platform/ios/export/export_plugin.cpp
-msgid "iOS 128 X 128"
-msgstr ""
-
-#: platform/ios/export/export_plugin.cpp
-msgid "iOS 192 X 192"
-msgstr ""
-
-#: platform/ios/export/export_plugin.cpp
-msgid "iOS 136 X 136"
-msgstr ""
-
-#: platform/ios/export/export_plugin.cpp
-msgid "App Store 1024 X 1024"
-msgstr ""
-
-#: platform/ios/export/export_plugin.cpp
 msgid "App Store Team ID"
-msgstr ""
-
-#: platform/ios/export/export_plugin.cpp
-msgid "Export Method Debug"
-msgstr ""
-
-#: platform/ios/export/export_plugin.cpp
-msgid "Code Sign Identity Debug"
-msgstr ""
-
-#: platform/ios/export/export_plugin.cpp
-msgid "Code Sign Identity Release"
 msgstr ""
 
 #: platform/ios/export/export_plugin.cpp
@@ -6389,15 +5905,19 @@ msgid "Provisioning Profile UUID Debug"
 msgstr ""
 
 #: platform/ios/export/export_plugin.cpp
+msgid "Code Sign Identity Debug"
+msgstr ""
+
+#: platform/ios/export/export_plugin.cpp
+msgid "Export Method Debug"
+msgstr ""
+
+#: platform/ios/export/export_plugin.cpp
 msgid "Provisioning Profile UUID Release"
 msgstr ""
 
 #: platform/ios/export/export_plugin.cpp
-msgid "Provisioning Profile Specifier Debug"
-msgstr ""
-
-#: platform/ios/export/export_plugin.cpp
-msgid "Provisioning Profile Specifier Release"
+msgid "Code Sign Identity Release"
 msgstr ""
 
 #: platform/ios/export/export_plugin.cpp
@@ -6444,6 +5964,10 @@ msgstr ""
 
 #: platform/ios/export/export_plugin.cpp
 msgid "Delete Old Export Files Unconditionally"
+msgstr ""
+
+#: platform/ios/export/export_plugin.cpp
+msgid "Generate Simulator Library If Missing"
 msgstr ""
 
 #: platform/ios/export/export_plugin.cpp
@@ -6537,18 +6061,6 @@ msgstr ""
 #: platform/ios/export/export_plugin.cpp
 #: platform/macos/export/export_plugin.cpp
 msgid "Tracking Domains"
-msgstr ""
-
-#: platform/ios/export/export_plugin.cpp
-msgid "Icon 1024 X 1024"
-msgstr ""
-
-#: platform/ios/export/export_plugin.cpp
-msgid "Icon 1024 X 1024 Dark"
-msgstr ""
-
-#: platform/ios/export/export_plugin.cpp
-msgid "Icon 1024 X 1024 Tinted"
 msgstr ""
 
 #: platform/ios/export/export_plugin.cpp
@@ -6982,6 +6494,60 @@ msgstr ""
 msgid "Icon 512 X 512"
 msgstr ""
 
+#: platform/web/export/export_plugin.cpp
+msgid "Blazium"
+msgstr ""
+
+#: platform/web/export/export_plugin.cpp
+msgid "Web Headers"
+msgstr ""
+
+#: platform/web/export/export_plugin.cpp scene/gui/graph_frame.cpp
+#: scene/gui/graph_node.cpp scene/main/window.cpp
+#: scene/resources/visual_shader.cpp
+msgid "Title"
+msgstr ""
+
+#: platform/web/export/export_plugin.cpp
+msgid "URL"
+msgstr ""
+
+#: platform/web/export/export_plugin.cpp
+msgid "Site Name"
+msgstr ""
+
+#: platform/web/export/export_plugin.cpp
+msgid "Social Headers"
+msgstr ""
+
+#: platform/web/export/export_plugin.cpp
+msgid "Site"
+msgstr ""
+
+#: platform/web/export/export_plugin.cpp
+msgid "Card"
+msgstr ""
+
+#: platform/web/export/export_plugin.cpp
+msgid "Discord Embed"
+msgstr ""
+
+#: platform/web/export/export_plugin.cpp
+msgid "Autodetect"
+msgstr ""
+
+#: platform/web/export/export_plugin.cpp
+msgid "Youtube Playable"
+msgstr ""
+
+#: platform/web/export/export_plugin.cpp
+msgid "Export Gzip Compressed Wasm"
+msgstr ""
+
+#: platform/web/export/export_plugin.cpp
+msgid "Keep Uncompressed Wasm"
+msgstr ""
+
 #: platform/windows/export/export_plugin.cpp
 msgid "Identity Type"
 msgstr ""
@@ -7293,11 +6859,6 @@ msgstr ""
 msgid "Randomness"
 msgstr ""
 
-#: scene/2d/cpu_particles_2d.cpp scene/2d/gpu_particles_2d.cpp
-#: scene/3d/cpu_particles_3d.cpp scene/3d/gpu_particles_3d.cpp
-msgid "Use Fixed Seed"
-msgstr ""
-
 #: scene/2d/cpu_particles_2d.cpp scene/3d/cpu_particles_3d.cpp
 #: scene/resources/particle_process_material.cpp
 msgid "Lifetime Randomness"
@@ -7362,8 +6923,7 @@ msgid "Normals"
 msgstr ""
 
 #: scene/2d/cpu_particles_2d.cpp scene/3d/cpu_particles_3d.cpp
-#: scene/gui/control.cpp scene/main/window.cpp
-#: scene/resources/color_palette.cpp scene/resources/gradient.cpp
+#: scene/gui/control.cpp scene/main/window.cpp scene/resources/gradient.cpp
 msgid "Colors"
 msgstr ""
 
@@ -7575,11 +7135,15 @@ msgid "Sub Emitter"
 msgstr ""
 
 #: scene/2d/gpu_particles_2d.cpp scene/3d/gpu_particles_3d.cpp
-msgid "Interp to End"
+msgid "Process Material"
 msgstr ""
 
 #: scene/2d/gpu_particles_2d.cpp scene/3d/gpu_particles_3d.cpp
 msgid "Interpolate"
+msgstr ""
+
+#: scene/2d/gpu_particles_2d.cpp scene/3d/gpu_particles_3d.cpp
+msgid "Interp to End"
 msgstr ""
 
 #: scene/2d/gpu_particles_2d.cpp scene/3d/gpu_particles_3d.cpp
@@ -7600,10 +7164,6 @@ msgstr ""
 
 #: scene/2d/gpu_particles_2d.cpp
 msgid "Section Subdivisions"
-msgstr ""
-
-#: scene/2d/gpu_particles_2d.cpp scene/3d/gpu_particles_3d.cpp
-msgid "Process Material"
 msgstr ""
 
 #: scene/2d/light_2d.cpp scene/3d/light_3d.cpp scene/gui/reference_rect.cpp
@@ -7654,7 +7214,6 @@ msgid "Texture Scale"
 msgstr ""
 
 #: scene/2d/light_occluder_2d.cpp scene/2d/line_2d.cpp
-#: scene/resources/curve.cpp
 msgid "Closed"
 msgstr ""
 
@@ -7733,7 +7292,6 @@ msgid "Multimesh"
 msgstr ""
 
 #: scene/2d/navigation_agent_2d.cpp scene/3d/navigation_agent_3d.cpp
-#: servers/navigation_server_3d.cpp
 msgid "Pathfinding"
 msgstr ""
 
@@ -8125,13 +7683,15 @@ msgstr ""
 msgid "Wall Layers"
 msgstr ""
 
-#: scene/2d/physics/character_body_2d.cpp scene/3d/look_at_modifier_3d.cpp
+#: scene/2d/physics/character_body_2d.cpp
 #: scene/3d/physics/character_body_3d.cpp
 msgid "Safe Margin"
 msgstr ""
 
 #: scene/2d/physics/collision_object_2d.cpp
-#: scene/3d/physics/collision_object_3d.cpp scene/3d/soft_body_3d.cpp
+#: scene/2d/physics/joints/joint_2d.cpp
+#: scene/3d/physics/collision_object_3d.cpp
+#: scene/3d/physics/joints/joint_3d.cpp scene/3d/soft_body_3d.cpp
 msgid "Disable Mode"
 msgstr ""
 
@@ -8162,8 +7722,6 @@ msgid "One Way Collision Margin"
 msgstr ""
 
 #: scene/2d/physics/collision_shape_2d.cpp
-#: scene/3d/physics/collision_polygon_3d.cpp
-#: scene/3d/physics/collision_shape_3d.cpp
 msgid "Debug Color"
 msgstr ""
 
@@ -8398,9 +7956,13 @@ msgstr ""
 #: scene/2d/physics/shape_cast_2d.cpp scene/3d/physics/collision_polygon_3d.cpp
 #: scene/3d/physics/shape_cast_3d.cpp scene/3d/physics/spring_arm_3d.cpp
 #: scene/resources/3d/shape_3d.cpp scene/resources/atlas_texture.cpp
-#: scene/theme/default_theme.cpp servers/physics_server_2d.cpp
-#: servers/physics_server_3d.cpp
+#: scene/theme/default_theme.cpp scene/theme/theme_db.cpp
+#: servers/physics_server_2d.cpp servers/physics_server_3d.cpp
 msgid "Margin"
+msgstr ""
+
+#: scene/2d/physics/shape_cast_2d.cpp scene/3d/physics/shape_cast_3d.cpp
+msgid "Max Results"
 msgstr ""
 
 #: scene/2d/physics/static_body_2d.cpp scene/3d/physics/static_body_3d.cpp
@@ -8451,7 +8013,7 @@ msgstr ""
 msgid "Show Bone Gizmo"
 msgstr ""
 
-#: scene/2d/skeleton_2d.cpp
+#: scene/2d/skeleton_2d.cpp scene/3d/skeleton_3d.cpp
 msgid "Rest"
 msgstr ""
 
@@ -8493,10 +8055,6 @@ msgstr ""
 
 #: scene/2d/tile_map.cpp scene/2d/tile_map_layer.cpp
 msgid "Navigation Visibility Mode"
-msgstr ""
-
-#: scene/2d/tile_map_layer.cpp
-msgid "Occlusion Enabled"
 msgstr ""
 
 #: scene/2d/tile_map_layer.cpp scene/resources/2d/tile_set.cpp
@@ -8604,8 +8162,11 @@ msgstr ""
 msgid "Tracking"
 msgstr ""
 
-#: scene/3d/bone_attachment_3d.cpp scene/3d/look_at_modifier_3d.cpp
-#: scene/3d/physics/physical_bone_3d.cpp scene/3d/spring_bone_collision_3d.cpp
+#: scene/3d/audio_stream_player_3d.cpp
+msgid "Clamp"
+msgstr ""
+
+#: scene/3d/bone_attachment_3d.cpp scene/3d/physics/physical_bone_3d.cpp
 msgid "Bone Name"
 msgstr ""
 
@@ -8788,10 +8349,6 @@ msgid "Follow Camera Enabled"
 msgstr ""
 
 #: scene/3d/gpu_particles_collision_3d.cpp
-msgid "Heightfield Mask"
-msgstr ""
-
-#: scene/3d/gpu_particles_collision_3d.cpp
 msgid "Directionality"
 msgstr ""
 
@@ -8884,9 +8441,10 @@ msgid "Outline Render Priority"
 msgstr ""
 
 #: scene/3d/label_3d.cpp scene/gui/button.cpp scene/gui/control.cpp
-#: scene/gui/dialogs.cpp scene/gui/label.cpp scene/gui/line_edit.cpp
-#: scene/gui/link_button.cpp scene/gui/rich_text_label.cpp
-#: scene/gui/text_edit.cpp scene/resources/3d/primitive_meshes.cpp
+#: scene/gui/dialogs.cpp scene/gui/foldable_container.cpp scene/gui/label.cpp
+#: scene/gui/line_edit.cpp scene/gui/link_button.cpp
+#: scene/gui/rich_text_label.cpp scene/gui/text_edit.cpp
+#: scene/resources/3d/primitive_meshes.cpp
 msgid "Text"
 msgstr ""
 
@@ -8909,7 +8467,7 @@ msgstr ""
 msgid "Horizontal Alignment"
 msgstr ""
 
-#: scene/3d/label_3d.cpp scene/gui/label.cpp scene/gui/rich_text_label.cpp
+#: scene/3d/label_3d.cpp scene/gui/label.cpp
 #: scene/resources/3d/primitive_meshes.cpp
 msgid "Vertical Alignment"
 msgstr ""
@@ -8924,16 +8482,16 @@ msgstr ""
 msgid "Justification Flags"
 msgstr ""
 
-#: scene/3d/label_3d.cpp scene/gui/button.cpp scene/gui/label.cpp
-#: scene/gui/line_edit.cpp scene/gui/link_button.cpp scene/gui/menu_bar.cpp
-#: scene/gui/rich_text_label.cpp scene/gui/text_edit.cpp
+#: scene/3d/label_3d.cpp scene/gui/button.cpp scene/gui/foldable_container.cpp
+#: scene/gui/label.cpp scene/gui/line_edit.cpp scene/gui/link_button.cpp
+#: scene/gui/menu_bar.cpp scene/gui/rich_text_label.cpp scene/gui/text_edit.cpp
 #: scene/resources/3d/primitive_meshes.cpp
 msgid "BiDi"
 msgstr ""
 
-#: scene/3d/label_3d.cpp scene/gui/button.cpp scene/gui/label.cpp
-#: scene/gui/line_edit.cpp scene/gui/link_button.cpp scene/gui/menu_bar.cpp
-#: scene/gui/rich_text_label.cpp scene/gui/text_edit.cpp
+#: scene/3d/label_3d.cpp scene/gui/button.cpp scene/gui/foldable_container.cpp
+#: scene/gui/label.cpp scene/gui/line_edit.cpp scene/gui/link_button.cpp
+#: scene/gui/menu_bar.cpp scene/gui/rich_text_label.cpp scene/gui/text_edit.cpp
 #: scene/resources/3d/primitive_meshes.cpp
 msgid "Text Direction"
 msgstr ""
@@ -9011,10 +8569,6 @@ msgstr ""
 msgid "Blur"
 msgstr ""
 
-#: scene/3d/light_3d.cpp
-msgid "Caster Mask"
-msgstr ""
-
 #: scene/3d/light_3d.cpp servers/rendering_server.cpp
 msgid "Directional Shadow"
 msgstr ""
@@ -9064,24 +8618,12 @@ msgid "Angle Attenuation"
 msgstr ""
 
 #: scene/3d/lightmap_gi.cpp
-msgid "Lightmap Textures"
-msgstr ""
-
-#: scene/3d/lightmap_gi.cpp
-msgid "Shadowmask Textures"
+msgid "Light Texture"
 msgstr ""
 
 #: scene/3d/lightmap_gi.cpp scene/main/scene_tree.cpp
-#: scene/resources/multimesh.cpp servers/rendering_server.cpp
+#: servers/rendering_server.cpp
 msgid "Quality"
-msgstr ""
-
-#: scene/3d/lightmap_gi.cpp
-msgid "Supersampling"
-msgstr ""
-
-#: scene/3d/lightmap_gi.cpp
-msgid "Supersampling Factor"
 msgstr ""
 
 #: scene/3d/lightmap_gi.cpp
@@ -9094,10 +8636,6 @@ msgstr ""
 
 #: scene/3d/lightmap_gi.cpp
 msgid "Directional"
-msgstr ""
-
-#: scene/3d/lightmap_gi.cpp
-msgid "Shadowmask Mode"
 msgstr ""
 
 #: scene/3d/lightmap_gi.cpp
@@ -9156,107 +8694,6 @@ msgstr ""
 
 #: scene/3d/lightmap_gi.cpp
 msgid "Light Data"
-msgstr ""
-
-#: scene/3d/look_at_modifier_3d.cpp scene/3d/skeleton_ik_3d.cpp
-msgid "Target Node"
-msgstr ""
-
-#: scene/3d/look_at_modifier_3d.cpp
-msgid "Forward Axis"
-msgstr ""
-
-#: scene/3d/look_at_modifier_3d.cpp
-msgid "Primary Rotation Axis"
-msgstr ""
-
-#: scene/3d/look_at_modifier_3d.cpp
-msgid "Use Secondary Rotation"
-msgstr ""
-
-#: scene/3d/look_at_modifier_3d.cpp
-msgid "Origin Settings"
-msgstr ""
-
-#: scene/3d/look_at_modifier_3d.cpp scene/resources/gradient_texture.cpp
-#: servers/physics_server_2d.cpp servers/physics_server_3d.cpp
-msgid "From"
-msgstr ""
-
-#: scene/3d/look_at_modifier_3d.cpp
-msgid "External Node"
-msgstr ""
-
-#: scene/3d/look_at_modifier_3d.cpp
-msgid "Time Based Interpolation"
-msgstr ""
-
-#: scene/3d/look_at_modifier_3d.cpp
-msgid "Transition Type"
-msgstr ""
-
-#: scene/3d/look_at_modifier_3d.cpp
-msgid "Ease Type"
-msgstr ""
-
-#: scene/3d/look_at_modifier_3d.cpp
-msgid "Angle Limitation"
-msgstr ""
-
-#: scene/3d/look_at_modifier_3d.cpp
-msgid "Use Angle Limitation"
-msgstr ""
-
-#: scene/3d/look_at_modifier_3d.cpp
-msgid "Symmetry Limitation"
-msgstr ""
-
-#: scene/3d/look_at_modifier_3d.cpp
-msgid "Primary Limit Angle"
-msgstr ""
-
-#: scene/3d/look_at_modifier_3d.cpp
-msgid "Primary Damp Threshold"
-msgstr ""
-
-#: scene/3d/look_at_modifier_3d.cpp
-msgid "Primary Positive Limit Angle"
-msgstr ""
-
-#: scene/3d/look_at_modifier_3d.cpp
-msgid "Primary Positive Damp Threshold"
-msgstr ""
-
-#: scene/3d/look_at_modifier_3d.cpp
-msgid "Primary Negative Limit Angle"
-msgstr ""
-
-#: scene/3d/look_at_modifier_3d.cpp
-msgid "Primary Negative Damp Threshold"
-msgstr ""
-
-#: scene/3d/look_at_modifier_3d.cpp
-msgid "Secondary Limit Angle"
-msgstr ""
-
-#: scene/3d/look_at_modifier_3d.cpp
-msgid "Secondary Damp Threshold"
-msgstr ""
-
-#: scene/3d/look_at_modifier_3d.cpp
-msgid "Secondary Positive Limit Angle"
-msgstr ""
-
-#: scene/3d/look_at_modifier_3d.cpp
-msgid "Secondary Positive Damp Threshold"
-msgstr ""
-
-#: scene/3d/look_at_modifier_3d.cpp
-msgid "Secondary Negative Limit Angle"
-msgstr ""
-
-#: scene/3d/look_at_modifier_3d.cpp
-msgid "Secondary Negative Damp Threshold"
 msgstr ""
 
 #: scene/3d/mesh_instance_3d.cpp
@@ -9359,11 +8796,6 @@ msgstr ""
 
 #: scene/3d/physics/collision_object_3d.cpp
 msgid "Capture on Drag"
-msgstr ""
-
-#: scene/3d/physics/collision_polygon_3d.cpp
-#: scene/3d/physics/collision_shape_3d.cpp
-msgid "Debug Fill"
 msgstr ""
 
 #: scene/3d/physics/joints/cone_twist_joint_3d.cpp
@@ -9719,10 +9151,6 @@ msgid "Max Force"
 msgstr ""
 
 #: scene/3d/reflection_probe.cpp
-msgid "Blend Distance"
-msgstr ""
-
-#: scene/3d/reflection_probe.cpp
 msgid "Origin Offset"
 msgstr ""
 
@@ -9750,9 +9178,8 @@ msgstr ""
 msgid "Color Energy"
 msgstr ""
 
-#: scene/3d/retarget_modifier_3d.cpp scene/resources/bone_map.cpp
-#: servers/xr/xr_positional_tracker.cpp
-msgid "Profile"
+#: scene/3d/skeleton_3d.cpp
+msgid "Bones"
 msgstr ""
 
 #: scene/3d/skeleton_3d.cpp
@@ -9801,6 +9228,10 @@ msgstr ""
 
 #: scene/3d/skeleton_ik_3d.cpp
 msgid "Magnet"
+msgstr ""
+
+#: scene/3d/skeleton_ik_3d.cpp
+msgid "Target Node"
 msgstr ""
 
 #: scene/3d/skeleton_ik_3d.cpp scene/resources/material.cpp
@@ -9865,19 +9296,6 @@ msgstr ""
 msgid "Drag Coefficient"
 msgstr ""
 
-#: scene/3d/spring_bone_collision_3d.cpp scene/gui/graph_element.cpp
-msgid "Position Offset"
-msgstr ""
-
-#: scene/3d/spring_bone_collision_3d.cpp
-msgid "Rotation Offset"
-msgstr ""
-
-#: scene/3d/spring_bone_collision_capsule_3d.cpp
-#: scene/3d/spring_bone_collision_sphere_3d.cpp
-msgid "Inside"
-msgstr ""
-
 #: scene/3d/velocity_tracker_3d.cpp
 msgid "Track Physics Step"
 msgstr ""
@@ -9926,10 +9344,6 @@ msgstr ""
 
 #: scene/3d/visual_instance_3d.cpp servers/rendering_server.cpp
 msgid "Global Illumination"
-msgstr ""
-
-#: scene/3d/visual_instance_3d.cpp
-msgid "Lightmap Texel Scale"
 msgstr ""
 
 #: scene/3d/visual_instance_3d.cpp
@@ -9982,10 +9396,6 @@ msgstr ""
 
 #: scene/animation/animation_blend_tree.cpp
 msgid "Play Mode"
-msgstr ""
-
-#: scene/animation/animation_blend_tree.cpp
-msgid "Advance on Start"
 msgstr ""
 
 #: scene/animation/animation_blend_tree.cpp
@@ -10043,10 +9453,6 @@ msgstr ""
 
 #: scene/animation/animation_blend_tree.cpp
 msgid "Random Delay"
-msgstr ""
-
-#: scene/animation/animation_blend_tree.cpp
-msgid "Explicit Elapse"
 msgstr ""
 
 #: scene/animation/animation_blend_tree.cpp
@@ -10126,10 +9532,6 @@ msgstr ""
 
 #: scene/animation/animation_mixer.cpp
 msgid "Track"
-msgstr ""
-
-#: scene/animation/animation_mixer.cpp
-msgid "Local"
 msgstr ""
 
 #: scene/animation/animation_mixer.cpp
@@ -10260,6 +9662,10 @@ msgid "Action Mode"
 msgstr ""
 
 #: scene/gui/base_button.cpp
+msgid "Size Mode"
+msgstr ""
+
+#: scene/gui/base_button.cpp
 msgid "Keep Pressed Outside"
 msgstr ""
 
@@ -10287,7 +9693,12 @@ msgstr ""
 msgid "Text Behavior"
 msgstr ""
 
-#: scene/gui/button.cpp scene/gui/item_list.cpp scene/gui/label.cpp
+#: scene/gui/button.cpp
+msgid "Expand Text"
+msgstr ""
+
+#: scene/gui/button.cpp scene/gui/foldable_container.cpp
+#: scene/gui/item_list.cpp scene/gui/label.cpp scene/gui/link_button.cpp
 #: scene/resources/text_line.cpp scene/resources/text_paragraph.cpp
 msgid "Text Overrun Behavior"
 msgstr ""
@@ -10318,10 +9729,6 @@ msgstr ""
 
 #: scene/gui/code_edit.cpp
 msgid "Symbol Lookup on Click"
-msgstr ""
-
-#: scene/gui/code_edit.cpp
-msgid "Symbol Tooltip on Hover"
 msgstr ""
 
 #: scene/gui/code_edit.cpp
@@ -10400,7 +9807,7 @@ msgstr ""
 msgid "Pairs"
 msgstr ""
 
-#: scene/gui/color_picker.cpp
+#: scene/gui/color_button.cpp scene/gui/color_picker.cpp
 msgid "Edit Alpha"
 msgstr ""
 
@@ -10516,10 +9923,6 @@ msgstr ""
 msgid "Tooltip"
 msgstr ""
 
-#: scene/gui/control.cpp
-msgid "Auto Translate Mode"
-msgstr ""
-
 #: scene/gui/control.cpp scene/theme/default_theme.cpp
 msgid "Focus"
 msgstr ""
@@ -10616,6 +10019,30 @@ msgstr ""
 msgid "Reverse Fill"
 msgstr ""
 
+#: scene/gui/foldable_container.cpp scene/theme/default_theme.cpp
+msgid "Folded"
+msgstr ""
+
+#: scene/gui/foldable_container.cpp
+msgid "Title Alignment"
+msgstr ""
+
+#: scene/gui/foldable_container.cpp
+msgid "Title Position"
+msgstr ""
+
+#: scene/gui/foldable_container.cpp
+msgid "Foldable Group"
+msgstr ""
+
+#: scene/gui/foldable_container.cpp
+msgid "Buttons"
+msgstr ""
+
+#: scene/gui/foldable_container.cpp
+msgid "Allow Folding All"
+msgstr ""
+
 #: scene/gui/graph_edit.cpp
 msgid "Show Grid"
 msgstr ""
@@ -10642,10 +10069,6 @@ msgstr ""
 
 #: scene/gui/graph_edit.cpp
 msgid "Curvature"
-msgstr ""
-
-#: scene/gui/graph_edit.cpp
-msgid "Connections"
 msgstr ""
 
 #: scene/gui/graph_edit.cpp
@@ -10689,17 +10112,20 @@ msgid "Show Arrange Button"
 msgstr ""
 
 #: scene/gui/graph_element.cpp
+msgid "Position Offset"
+msgstr ""
+
+#: scene/gui/graph_element.cpp
 msgid "Draggable"
+msgstr ""
+
+#: scene/gui/graph_element.cpp
+msgid "Selectable"
 msgstr ""
 
 #: scene/gui/graph_element.cpp scene/gui/option_button.cpp
 #: scene/theme/default_theme.cpp
 msgid "Selected"
-msgstr ""
-
-#: scene/gui/graph_frame.cpp scene/gui/graph_node.cpp scene/main/window.cpp
-#: scene/resources/visual_shader.cpp
-msgid "Title"
 msgstr ""
 
 #: scene/gui/graph_frame.cpp
@@ -10747,15 +10173,7 @@ msgid "Max Text Lines"
 msgstr ""
 
 #: scene/gui/item_list.cpp
-msgid "Auto Width"
-msgstr ""
-
-#: scene/gui/item_list.cpp
 msgid "Auto Height"
-msgstr ""
-
-#: scene/gui/item_list.cpp
-msgid "Wraparound Items"
 msgstr ""
 
 #: scene/gui/item_list.cpp scene/gui/menu_button.cpp
@@ -10789,10 +10207,6 @@ msgstr ""
 
 #: scene/gui/label.cpp
 msgid "Label Settings"
-msgstr ""
-
-#: scene/gui/label.cpp
-msgid "Paragraph Separator"
 msgstr ""
 
 #: scene/gui/label.cpp scene/resources/text_line.cpp
@@ -10847,10 +10261,6 @@ msgstr ""
 #: scene/gui/line_edit.cpp scene/gui/rich_text_label.cpp
 #: scene/gui/text_edit.cpp
 msgid "Context Menu Enabled"
-msgstr ""
-
-#: scene/gui/line_edit.cpp scene/gui/text_edit.cpp
-msgid "Emoji Menu Enabled"
 msgstr ""
 
 #: scene/gui/line_edit.cpp scene/gui/text_edit.cpp
@@ -10934,6 +10344,10 @@ msgstr ""
 
 #: scene/gui/link_button.cpp
 msgid "URI"
+msgstr ""
+
+#: scene/gui/link_button.cpp
+msgid "Text Alignment"
 msgstr ""
 
 #: scene/gui/menu_bar.cpp
@@ -11048,6 +10462,7 @@ msgid "Border Color"
 msgstr ""
 
 #: scene/gui/reference_rect.cpp scene/resources/style_box_flat.cpp
+#: scene/theme/theme_db.cpp
 msgid "Border Width"
 msgstr ""
 
@@ -11140,10 +10555,6 @@ msgid "Follow Focus"
 msgstr ""
 
 #: scene/gui/scroll_container.cpp
-msgid "Draw Focus Border"
-msgstr ""
-
-#: scene/gui/scroll_container.cpp
 msgid "Horizontal Custom Step"
 msgstr ""
 
@@ -11188,6 +10599,10 @@ msgid "Custom Arrow Step"
 msgstr ""
 
 #: scene/gui/split_container.cpp
+msgid "Dragging Enabled"
+msgstr ""
+
+#: scene/gui/split_container.cpp
 msgid "Split Offset"
 msgstr ""
 
@@ -11196,35 +10611,19 @@ msgid "Collapsed"
 msgstr ""
 
 #: scene/gui/split_container.cpp
-msgid "Dragging Enabled"
-msgstr ""
-
-#: scene/gui/split_container.cpp
 msgid "Dragger Visibility"
 msgstr ""
 
 #: scene/gui/split_container.cpp
-msgid "Drag Area"
+msgid "Collapse Mode"
 msgstr ""
 
 #: scene/gui/split_container.cpp
-msgid "Margin Begin"
-msgstr ""
-
-#: scene/gui/split_container.cpp
-msgid "Margin End"
-msgstr ""
-
-#: scene/gui/split_container.cpp
-msgid "Highlight in Editor"
+msgid "Drag Area Highlight in Editor"
 msgstr ""
 
 #: scene/gui/subviewport_container.cpp
 msgid "Stretch Shrink"
-msgstr ""
-
-#: scene/gui/subviewport_container.cpp
-msgid "Mouse Target"
 msgstr ""
 
 #: scene/gui/tab_bar.cpp scene/gui/tab_container.cpp
@@ -11296,10 +10695,6 @@ msgid "Tab Focus Mode"
 msgstr ""
 
 #: scene/gui/text_edit.cpp
-msgid "Empty Selection Clipboard Enabled"
-msgstr ""
-
-#: scene/gui/text_edit.cpp
 msgid "Wrap Mode"
 msgstr ""
 
@@ -11313,10 +10708,6 @@ msgstr ""
 
 #: scene/gui/text_edit.cpp
 msgid "Fit Content Height"
-msgstr ""
-
-#: scene/gui/text_edit.cpp
-msgid "Fit Content Width"
 msgstr ""
 
 #: scene/gui/text_edit.cpp
@@ -11364,7 +10755,7 @@ msgctxt "Ordinary"
 msgid "Normal"
 msgstr ""
 
-#: scene/gui/texture_button.cpp
+#: scene/gui/texture_button.cpp scene/theme/default_theme.cpp
 msgid "Hover"
 msgstr ""
 
@@ -11454,10 +10845,6 @@ msgstr ""
 
 #: scene/gui/tree.cpp
 msgid "Scroll Vertical Enabled"
-msgstr ""
-
-#: scene/gui/tree.cpp
-msgid "Auto Tooltip"
 msgstr ""
 
 #: scene/gui/video_stream_player.cpp
@@ -11588,6 +10975,10 @@ msgstr ""
 msgid "Messages"
 msgstr ""
 
+#: scene/main/node.cpp scene/main/scene_tree.cpp
+msgid "Physics Interpolation"
+msgstr ""
+
 #: scene/main/node.cpp
 msgid "Auto Translate"
 msgstr ""
@@ -11630,10 +11021,6 @@ msgid "Contact Color"
 msgstr ""
 
 #: scene/main/scene_tree.cpp
-msgid "Paths"
-msgstr ""
-
-#: scene/main/scene_tree.cpp
 msgid "Geometry Color"
 msgstr ""
 
@@ -11649,7 +11036,21 @@ msgstr ""
 msgid "Draw 2D Outlines"
 msgstr ""
 
-#: scene/main/scene_tree.cpp servers/rendering_server.cpp
+#: scene/main/scene_tree.cpp scene/resources/style_box_flat.cpp
+#: servers/rendering_server.cpp
+msgid "Anti Aliasing"
+msgstr ""
+
+#: scene/main/scene_tree.cpp scene/main/viewport.cpp
+msgid "MSAA 2D"
+msgstr ""
+
+#: scene/main/scene_tree.cpp scene/main/viewport.cpp
+#: servers/rendering/storage/render_scene_buffers.cpp
+msgid "MSAA 3D"
+msgstr ""
+
+#: scene/main/scene_tree.cpp
 msgid "Viewport"
 msgstr ""
 
@@ -11657,9 +11058,8 @@ msgstr ""
 msgid "Transparent Background"
 msgstr ""
 
-#: scene/main/scene_tree.cpp scene/resources/style_box_flat.cpp
-#: servers/rendering_server.cpp
-msgid "Anti Aliasing"
+#: scene/main/scene_tree.cpp
+msgid "HDR 2D"
 msgstr ""
 
 #: scene/main/scene_tree.cpp scene/main/viewport.cpp
@@ -11692,10 +11092,6 @@ msgstr ""
 msgid "Threshold Pixels"
 msgstr ""
 
-#: scene/main/scene_tree.cpp
-msgid "Snap"
-msgstr ""
-
 #: scene/main/scene_tree.cpp scene/main/viewport.cpp
 msgid "Snap 2D Transforms to Pixel"
 msgstr ""
@@ -11719,6 +11115,10 @@ msgstr ""
 
 #: scene/main/scene_tree.cpp
 msgid "Atlas Size"
+msgstr ""
+
+#: scene/main/scene_tree.cpp
+msgid "Atlas 16 Bits"
 msgstr ""
 
 #: scene/main/scene_tree.cpp
@@ -11765,10 +11165,6 @@ msgstr ""
 msgid "Autostart"
 msgstr ""
 
-#: scene/main/timer.cpp
-msgid "Ignore Time Scale"
-msgstr ""
-
 #: scene/main/viewport.cpp
 msgid "Viewport Path"
 msgstr ""
@@ -11795,15 +11191,6 @@ msgstr ""
 
 #: scene/main/viewport.cpp
 msgid "Handle Input Locally"
-msgstr ""
-
-#: scene/main/viewport.cpp servers/rendering_server.cpp
-msgid "MSAA 2D"
-msgstr ""
-
-#: scene/main/viewport.cpp servers/rendering/storage/render_scene_buffers.cpp
-#: servers/rendering_server.cpp
-msgid "MSAA 3D"
 msgstr ""
 
 #: scene/main/viewport.cpp
@@ -11962,10 +11349,6 @@ msgid "Mouse Passthrough"
 msgstr ""
 
 #: scene/main/window.cpp
-msgid "Exclude From Capture"
-msgstr ""
-
-#: scene/main/window.cpp
 msgid "Force Native"
 msgstr ""
 
@@ -12019,16 +11402,6 @@ msgstr ""
 
 #: scene/resources/2d/concave_polygon_shape_2d.cpp
 msgid "Segments"
-msgstr ""
-
-#: scene/resources/2d/navigation_polygon.cpp scene/resources/material.cpp
-#: scene/resources/navigation_mesh.cpp
-msgid "Sampling"
-msgstr ""
-
-#: scene/resources/2d/navigation_polygon.cpp
-#: scene/resources/navigation_mesh.cpp
-msgid "Partition Type"
 msgstr ""
 
 #: scene/resources/2d/navigation_polygon.cpp
@@ -12218,6 +11591,22 @@ msgid "Custom Data"
 msgstr ""
 
 #: scene/resources/2d/tile_set.cpp
+msgid "Tile Proxies"
+msgstr ""
+
+#: scene/resources/2d/tile_set.cpp
+msgid "Source Level"
+msgstr ""
+
+#: scene/resources/2d/tile_set.cpp
+msgid "Coords Level"
+msgstr ""
+
+#: scene/resources/2d/tile_set.cpp
+msgid "Alternative Level"
+msgstr ""
+
+#: scene/resources/2d/tile_set.cpp
 msgid "Tile Shape"
 msgstr ""
 
@@ -12347,10 +11736,6 @@ msgstr ""
 
 #: scene/resources/3d/mesh_library.cpp
 msgid "Mesh Transform"
-msgstr ""
-
-#: scene/resources/3d/mesh_library.cpp
-msgid "Mesh Cast Shadow"
 msgstr ""
 
 #: scene/resources/3d/mesh_library.cpp
@@ -12557,6 +11942,10 @@ msgstr ""
 msgid "Stereo"
 msgstr ""
 
+#: scene/resources/bone_map.cpp servers/xr/xr_positional_tracker.cpp
+msgid "Profile"
+msgstr ""
+
 #: scene/resources/bone_map.cpp
 msgid "Bonemap"
 msgstr ""
@@ -12703,14 +12092,6 @@ msgstr ""
 
 #: scene/resources/compressed_texture.cpp
 msgid "Load Path"
-msgstr ""
-
-#: scene/resources/curve.cpp
-msgid "Min Domain"
-msgstr ""
-
-#: scene/resources/curve.cpp
-msgid "Max Domain"
 msgstr ""
 
 #: scene/resources/curve.cpp
@@ -13005,7 +12386,7 @@ msgstr ""
 msgid "Brightness"
 msgstr ""
 
-#: scene/resources/environment.cpp
+#: scene/resources/environment.cpp scene/theme/theme_db.cpp
 msgid "Contrast"
 msgstr ""
 
@@ -13079,11 +12460,12 @@ msgstr ""
 
 #: scene/resources/gradient_texture.cpp servers/physics_server_2d.cpp
 #: servers/physics_server_3d.cpp
-msgid "To"
+msgid "From"
 msgstr ""
 
-#: scene/resources/label_settings.cpp
-msgid "Paragraph Spacing"
+#: scene/resources/gradient_texture.cpp servers/physics_server_2d.cpp
+#: servers/physics_server_3d.cpp
+msgid "To"
 msgstr ""
 
 #: scene/resources/material.cpp
@@ -13254,6 +12636,10 @@ msgstr ""
 msgid "UV2"
 msgstr ""
 
+#: scene/resources/material.cpp scene/resources/navigation_mesh.cpp
+msgid "Sampling"
+msgstr ""
+
 #: scene/resources/material.cpp
 msgid "Shadows"
 msgstr ""
@@ -13356,6 +12742,10 @@ msgstr ""
 
 #: scene/resources/multimesh.cpp
 msgid "Visible Instance Count"
+msgstr ""
+
+#: scene/resources/navigation_mesh.cpp
+msgid "Partition Type"
 msgstr ""
 
 #: scene/resources/navigation_mesh.cpp
@@ -13575,10 +12965,6 @@ msgid "Amount at Collision"
 msgstr ""
 
 #: scene/resources/particle_process_material.cpp
-msgid "Amount at Start"
-msgstr ""
-
-#: scene/resources/particle_process_material.cpp
 msgid "Keep Velocity"
 msgstr ""
 
@@ -13723,6 +13109,14 @@ msgid "Modes"
 msgstr ""
 
 #: scene/resources/visual_shader.cpp
+msgid "Varyings"
+msgstr ""
+
+#: scene/resources/visual_shader.cpp
+msgid "Preview Params"
+msgstr ""
+
+#: scene/resources/visual_shader.cpp
 msgid "Input Name"
 msgstr ""
 
@@ -13784,10 +13178,6 @@ msgid "Default Value"
 msgstr ""
 
 #: scene/resources/visual_shader_nodes.cpp
-msgid "Enum Names"
-msgstr ""
-
-#: scene/resources/visual_shader_nodes.cpp
 msgid "Color Default"
 msgstr ""
 
@@ -13839,7 +13229,7 @@ msgstr ""
 msgid "Font Disabled Color"
 msgstr ""
 
-#: scene/theme/default_theme.cpp
+#: scene/theme/default_theme.cpp scene/theme/theme_db.cpp
 msgid "Font Outline Color"
 msgstr ""
 
@@ -14036,10 +13426,6 @@ msgid "Can Fold"
 msgstr ""
 
 #: scene/theme/default_theme.cpp
-msgid "Folded"
-msgstr ""
-
-#: scene/theme/default_theme.cpp
 msgid "Can Fold Code Region"
 msgstr ""
 
@@ -14049,10 +13435,6 @@ msgstr ""
 
 #: scene/theme/default_theme.cpp
 msgid "Folded EOL Icon"
-msgstr ""
-
-#: scene/theme/default_theme.cpp
-msgid "Completion Color BG"
 msgstr ""
 
 #: scene/theme/default_theme.cpp
@@ -14316,14 +13698,6 @@ msgid "Buttons Separation"
 msgstr ""
 
 #: scene/theme/default_theme.cpp
-msgid "Load"
-msgstr ""
-
-#: scene/theme/default_theme.cpp
-msgid "Save"
-msgstr ""
-
-#: scene/theme/default_theme.cpp
 msgid "Parent Folder"
 msgstr ""
 
@@ -14452,14 +13826,6 @@ msgid "Port H Offset"
 msgstr ""
 
 #: scene/theme/default_theme.cpp
-msgid "Hovered"
-msgstr ""
-
-#: scene/theme/default_theme.cpp
-msgid "Hovered Dimmed"
-msgstr ""
-
-#: scene/theme/default_theme.cpp
 msgid "Selected Focus"
 msgstr ""
 
@@ -14469,10 +13835,6 @@ msgstr ""
 
 #: scene/theme/default_theme.cpp
 msgid "Cursor Unfocused"
-msgstr ""
-
-#: scene/theme/default_theme.cpp
-msgid "Button Hover"
 msgstr ""
 
 #: scene/theme/default_theme.cpp
@@ -14525,14 +13887,6 @@ msgstr ""
 
 #: scene/theme/default_theme.cpp
 msgid "Title Button Color"
-msgstr ""
-
-#: scene/theme/default_theme.cpp
-msgid "Font Hovered Color"
-msgstr ""
-
-#: scene/theme/default_theme.cpp
-msgid "Font Hovered Dimmed Color"
 msgstr ""
 
 #: scene/theme/default_theme.cpp
@@ -14644,15 +13998,11 @@ msgid "Icon Margin"
 msgstr ""
 
 #: scene/theme/default_theme.cpp
-msgid "Font Hovered Selected Color"
+msgid "Font Hovered Color"
 msgstr ""
 
 #: scene/theme/default_theme.cpp
-msgid "Hovered Selected"
-msgstr ""
-
-#: scene/theme/default_theme.cpp
-msgid "Hovered Selected Focus"
+msgid "Hovered"
 msgstr ""
 
 #: scene/theme/default_theme.cpp
@@ -14708,6 +14058,14 @@ msgid "Button Highlight"
 msgstr ""
 
 #: scene/theme/default_theme.cpp
+msgid "BG"
+msgstr ""
+
+#: scene/theme/default_theme.cpp
+msgid "Overbright Indicator"
+msgstr ""
+
+#: scene/theme/default_theme.cpp
 msgid "SV Width"
 msgstr ""
 
@@ -14716,19 +14074,32 @@ msgid "SV Height"
 msgstr ""
 
 #: scene/theme/default_theme.cpp
+msgid "Label Width"
+msgstr ""
+
+#: scene/theme/default_theme.cpp
 msgid "H Width"
 msgstr ""
 
 #: scene/theme/default_theme.cpp
-msgid "Label Width"
+msgid "Sample Height"
 msgstr ""
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Preset Size"
+msgstr "Налева"
 
 #: scene/theme/default_theme.cpp
 msgid "Center Slider Grabbers"
 msgstr ""
 
 #: scene/theme/default_theme.cpp
-msgid "Menu Option"
+msgid "Colorize Sliders"
+msgstr ""
+
+#: scene/theme/default_theme.cpp
+msgid "Expanded Arrow"
 msgstr ""
 
 #: scene/theme/default_theme.cpp
@@ -14736,7 +14107,7 @@ msgid "Folded Arrow"
 msgstr ""
 
 #: scene/theme/default_theme.cpp
-msgid "Expanded Arrow"
+msgid "Folded Arrow Mirrored"
 msgstr ""
 
 #: scene/theme/default_theme.cpp
@@ -14768,10 +14139,6 @@ msgid "Sample Revert"
 msgstr ""
 
 #: scene/theme/default_theme.cpp
-msgid "Overbright Indicator"
-msgstr ""
-
-#: scene/theme/default_theme.cpp
 msgid "Bar Arrow"
 msgstr ""
 
@@ -14784,19 +14151,15 @@ msgid "Picker Cursor BG"
 msgstr ""
 
 #: scene/theme/default_theme.cpp
+msgid "Hex Icon"
+msgstr ""
+
+#: scene/theme/default_theme.cpp
+msgid "Hex Code Icon"
+msgstr ""
+
+#: scene/theme/default_theme.cpp
 msgid "Color Hue"
-msgstr ""
-
-#: scene/theme/default_theme.cpp
-msgid "BG"
-msgstr ""
-
-#: scene/theme/default_theme.cpp
-msgid "Preset FG"
-msgstr ""
-
-#: scene/theme/default_theme.cpp
-msgid "Preset BG"
 msgstr ""
 
 #: scene/theme/default_theme.cpp
@@ -14876,6 +14239,26 @@ msgid "V Grabber"
 msgstr ""
 
 #: scene/theme/default_theme.cpp
+msgid "H Split Bar Background"
+msgstr ""
+
+#: scene/theme/default_theme.cpp
+msgid "V Split Bar Background"
+msgstr ""
+
+#: scene/theme/default_theme.cpp
+msgid "Split Bar Background"
+msgstr ""
+
+#: scene/theme/default_theme.cpp
+msgid "Grabber Icon Normal"
+msgstr ""
+
+#: scene/theme/default_theme.cpp
+msgid "Grabber Icon Pressed"
+msgstr ""
+
+#: scene/theme/default_theme.cpp
 msgid "Margin Left"
 msgstr ""
 
@@ -14900,7 +14283,15 @@ msgid "Autohide"
 msgstr ""
 
 #: scene/theme/default_theme.cpp
-msgid "Split Bar Background"
+msgid "Autohide Split Bar"
+msgstr ""
+
+#: scene/theme/default_theme.cpp
+msgid "Draw Grabber Icon"
+msgstr ""
+
+#: scene/theme/default_theme.cpp
+msgid "Draw Split Bar"
 msgstr ""
 
 #: scene/theme/default_theme.cpp
@@ -14956,15 +14347,83 @@ msgid "Connection Hover Tint Color"
 msgstr ""
 
 #: scene/theme/default_theme.cpp
-msgid "Connection Hover Thickness"
-msgstr ""
-
-#: scene/theme/default_theme.cpp
 msgid "Connection Valid Target Tint Color"
 msgstr ""
 
 #: scene/theme/default_theme.cpp
 msgid "Connection Rim Color"
+msgstr ""
+
+#: scene/theme/default_theme.cpp
+msgid "Title Panel"
+msgstr ""
+
+#: scene/theme/default_theme.cpp
+msgid "Title Hover Panel"
+msgstr ""
+
+#: scene/theme/default_theme.cpp
+msgid "Title Collapsed Panel"
+msgstr ""
+
+#: scene/theme/default_theme.cpp
+msgid "Title Collapsed Hover Panel"
+msgstr ""
+
+#: scene/theme/default_theme.cpp
+msgid "Button Normal Style"
+msgstr ""
+
+#: scene/theme/default_theme.cpp
+msgid "Button Hovered Style"
+msgstr ""
+
+#: scene/theme/default_theme.cpp
+msgid "Button Pressed Style"
+msgstr ""
+
+#: scene/theme/default_theme.cpp
+msgid "Button Disabled Style"
+msgstr ""
+
+#: scene/theme/default_theme.cpp
+msgid "Hover Font Color"
+msgstr ""
+
+#: scene/theme/default_theme.cpp
+msgid "Collapsed Font Color"
+msgstr ""
+
+#: scene/theme/default_theme.cpp
+msgid "Button Icon Normal"
+msgstr ""
+
+#: scene/theme/default_theme.cpp
+msgid "Button Icon Hovered"
+msgstr ""
+
+#: scene/theme/default_theme.cpp
+msgid "Button Icon Pressed"
+msgstr ""
+
+#: scene/theme/default_theme.cpp
+msgid "Button Icon Disabled"
+msgstr ""
+
+#: scene/theme/default_theme.cpp
+msgid "Arrow Normal Color"
+msgstr ""
+
+#: scene/theme/default_theme.cpp
+msgid "Arrow Hover Color"
+msgstr ""
+
+#: scene/theme/default_theme.cpp
+msgid "Arrow Collapsed Color"
+msgstr ""
+
+#: scene/theme/default_theme.cpp
+msgid "Expanded Arrow Mirrored"
 msgstr ""
 
 #: scene/theme/default_theme.cpp
@@ -14981,10 +14440,6 @@ msgstr ""
 
 #: scene/theme/theme_db.cpp
 msgid "Default Theme Scale"
-msgstr ""
-
-#: scene/theme/theme_db.cpp
-msgid "Custom"
 msgstr ""
 
 #: scene/theme/theme_db.cpp
@@ -15012,11 +14467,71 @@ msgid "Default Font Generate Mipmaps"
 msgstr ""
 
 #: scene/theme/theme_db.cpp
-msgid "LCD Subpixel Layout"
+msgid "Custom"
 msgstr ""
 
 #: scene/theme/theme_db.cpp
 msgid "Fallback values"
+msgstr ""
+
+#: scene/theme/theme_db.cpp
+msgid "Base Color"
+msgstr ""
+
+#: scene/theme/theme_db.cpp
+msgid "Accent Color"
+msgstr ""
+
+#: scene/theme/theme_db.cpp
+msgid "Font Color Override"
+msgstr ""
+
+#: scene/theme/theme_db.cpp
+msgid "Custom Font Color"
+msgstr ""
+
+#: scene/theme/theme_db.cpp
+msgid "Normal Contrast"
+msgstr ""
+
+#: scene/theme/theme_db.cpp
+msgid "Hover Contrast"
+msgstr ""
+
+#: scene/theme/theme_db.cpp
+msgid "Pressed Contrast"
+msgstr ""
+
+#: scene/theme/theme_db.cpp
+msgid "BG Contrast"
+msgstr ""
+
+#: scene/theme/theme_db.cpp
+msgid "Padding"
+msgstr ""
+
+#: scene/theme/theme_db.cpp
+msgid "Font Outline Size"
+msgstr ""
+
+#: scene/theme/theme_db.cpp
+msgid "Font Embolden"
+msgstr ""
+
+#: scene/theme/theme_db.cpp
+msgid "Font Spacing Glyph"
+msgstr ""
+
+#: scene/theme/theme_db.cpp
+msgid "Font Spacing Space"
+msgstr ""
+
+#: scene/theme/theme_db.cpp
+msgid "Font Spacing Top"
+msgstr ""
+
+#: scene/theme/theme_db.cpp
+msgid "Font Spacing Bottom"
 msgstr ""
 
 #: servers/audio/audio_stream.cpp
@@ -15201,10 +14716,6 @@ msgstr ""
 msgid "Surround"
 msgstr ""
 
-#: servers/audio/effects/audio_stream_generator.cpp
-msgid "Mix Rate Mode"
-msgstr ""
-
 #: servers/audio_server.cpp
 msgid "Enable Input"
 msgstr ""
@@ -15307,14 +14818,6 @@ msgstr ""
 
 #: servers/navigation_server_3d.cpp
 msgid "Merge Rasterizer Cell Scale"
-msgstr ""
-
-#: servers/navigation_server_3d.cpp
-msgid "World"
-msgstr ""
-
-#: servers/navigation_server_3d.cpp
-msgid "Map Use Async Iterations"
 msgstr ""
 
 #: servers/navigation_server_3d.cpp
@@ -15770,10 +15273,6 @@ msgid "Compress With GPU"
 msgstr ""
 
 #: servers/rendering_server.cpp
-msgid "Cache GPU Compressor"
-msgstr ""
-
-#: servers/rendering_server.cpp
 msgid "Lossless Compression"
 msgstr ""
 
@@ -15806,23 +15305,11 @@ msgid "Soft Shadow Filter Quality"
 msgstr ""
 
 #: servers/rendering_server.cpp
-msgid "Atlas 16 Bits"
-msgstr ""
-
-#: servers/rendering_server.cpp
 msgid "Shadow Atlas"
 msgstr ""
 
 #: servers/rendering_server.cpp
-msgid "Batching"
-msgstr ""
-
-#: servers/rendering_server.cpp
 msgid "Item Buffer Size"
-msgstr ""
-
-#: servers/rendering_server.cpp
-msgid "Uniform Set Cache Size"
 msgstr ""
 
 #: servers/rendering_server.cpp
@@ -15947,10 +15434,6 @@ msgstr ""
 
 #: servers/rendering_server.cpp
 msgid "Fadeout To"
-msgstr ""
-
-#: servers/rendering_server.cpp
-msgid "HDR 2D"
 msgstr ""
 
 #: servers/rendering_server.cpp
@@ -16138,16 +15621,8 @@ msgstr ""
 msgid "VRS Strength"
 msgstr ""
 
-#: servers/xr/xr_vrs.cpp
-msgid "VRS Render Region"
-msgstr ""
-
 #: servers/xr_server.cpp
 msgid "World Origin"
-msgstr ""
-
-#: servers/xr_server.cpp
-msgid "Camera Locked to Origin"
 msgstr ""
 
 #: servers/xr_server.cpp

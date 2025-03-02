@@ -27,7 +27,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Godot Engine properties\n"
-"Report-Msgid-Bugs-To: https://github.com/godotengine/godot\n"
+"Report-Msgid-Bugs-To: https://github.com/blazium-engine/blazium\n"
 "POT-Creation-Date: \n"
 "PO-Revision-Date: 2024-09-24 00:16+0000\n"
 "Last-Translator: \"Anthony V.\" <anthonyv156@outlook.com>\n"
@@ -56,8 +56,9 @@ msgstr "Διαμόρφωση"
 #: editor/animation_track_editor.cpp
 #: editor/plugins/tiles/tile_set_atlas_source_editor.cpp
 #: platform/android/export/export_plugin.cpp scene/2d/physics/area_2d.cpp
-#: scene/3d/physics/area_3d.cpp scene/resources/3d/mesh_library.cpp
-#: scene/resources/3d/skin.cpp servers/xr/xr_pose.cpp servers/xr/xr_tracker.cpp
+#: scene/3d/physics/area_3d.cpp scene/3d/skeleton_3d.cpp
+#: scene/resources/3d/mesh_library.cpp scene/resources/3d/skin.cpp
+#: servers/xr/xr_pose.cpp servers/xr/xr_tracker.cpp
 msgid "Name"
 msgstr "Όνομα"
 
@@ -66,9 +67,9 @@ msgstr "Όνομα"
 msgid "Name Localized"
 msgstr "Μορφή"
 
-#: core/config/project_settings.cpp platform/windows/export/export_plugin.cpp
-#: scene/main/node.cpp scene/resources/visual_shader.cpp
-#: servers/xr/xr_tracker.cpp
+#: core/config/project_settings.cpp platform/web/export/export_plugin.cpp
+#: platform/windows/export/export_plugin.cpp scene/main/node.cpp
+#: scene/resources/visual_shader.cpp servers/xr/xr_tracker.cpp
 msgid "Description"
 msgstr "Περιγραφή"
 
@@ -154,9 +155,9 @@ msgstr "Παράθυρο"
 #: scene/gui/control.cpp scene/gui/graph_edit.cpp scene/main/viewport.cpp
 #: scene/main/window.cpp scene/resources/2d/rectangle_shape_2d.cpp
 #: scene/resources/3d/box_shape_3d.cpp scene/resources/3d/primitive_meshes.cpp
-#: scene/resources/external_texture.cpp scene/resources/label_settings.cpp
-#: scene/resources/placeholder_textures.cpp scene/resources/style_box_flat.cpp
-#: scene/resources/visual_shader.cpp servers/rendering_server.cpp
+#: scene/resources/label_settings.cpp scene/resources/placeholder_textures.cpp
+#: scene/resources/style_box_flat.cpp scene/resources/visual_shader.cpp
+#: servers/rendering_server.cpp
 msgid "Size"
 msgstr "Μέγεθος"
 
@@ -228,11 +229,6 @@ msgstr "Επέκταση στον Τίτλο"
 msgid "No Focus"
 msgstr "Χωρίς Εστίαση"
 
-#: core/config/project_settings.cpp scene/main/window.cpp
-#, fuzzy
-msgid "Sharp Corners"
-msgstr "Επόμενο πάτωμα"
-
 #: core/config/project_settings.cpp
 msgid "Window Width Override"
 msgstr "Παράκαμψη Πλάτους Παραθύρου"
@@ -286,7 +282,7 @@ msgstr "Δίαυλοι"
 msgid "Default Bus Layout"
 msgstr "Προεπιλεγμένη Διάταξη Διαύλου"
 
-#: core/config/project_settings.cpp editor/editor_settings.cpp
+#: core/config/project_settings.cpp
 msgid "General"
 msgstr "Γενικά"
 
@@ -328,30 +324,10 @@ msgid "Embed Subwindows"
 msgstr "Ενσωματωμένα Υποπαράθυρα"
 
 #: core/config/project_settings.cpp
-#, fuzzy
-msgid "Frame Pacing"
-msgstr "Επιλογές υφής"
-
-#: core/config/project_settings.cpp platform/android/export/export.cpp
-msgid "Android"
-msgstr ""
-
-#: core/config/project_settings.cpp
-#, fuzzy
-msgid "Enable Frame Pacing"
-msgstr "Ενεργοποίηση ξεφλουδίσματος κρεμμυδιού"
-
-#: core/config/project_settings.cpp
-#, fuzzy
-msgid "Swappy Mode"
-msgstr "Επιλογή Λειτουργίας"
-
-#: core/config/project_settings.cpp
 #: editor/import/3d/resource_importer_scene.cpp main/main.cpp
-#: modules/jolt_physics/jolt_project_settings.cpp scene/2d/tile_map_layer.cpp
-#: scene/main/scene_tree.cpp scene/main/viewport.cpp
-#: scene/resources/2d/tile_set.cpp servers/physics_server_2d.cpp
-#: servers/physics_server_3d.cpp
+#: scene/2d/tile_map_layer.cpp scene/main/scene_tree.cpp
+#: scene/main/viewport.cpp scene/resources/2d/tile_set.cpp
+#: servers/physics_server_2d.cpp servers/physics_server_3d.cpp
 #, fuzzy
 msgid "Physics"
 msgstr "Φυσική"
@@ -388,8 +364,8 @@ msgstr "Όψη"
 #: scene/2d/parallax_layer.cpp scene/2d/polygon_2d.cpp
 #: scene/2d/remote_transform_2d.cpp scene/3d/cpu_particles_3d.cpp
 #: scene/3d/node_3d.cpp scene/3d/remote_transform_3d.cpp
-#: scene/animation/animation_blend_tree.h scene/gui/control.cpp
-#: scene/main/canvas_layer.cpp scene/main/scene_tree.cpp
+#: scene/3d/skeleton_3d.cpp scene/animation/animation_blend_tree.h
+#: scene/gui/control.cpp scene/main/canvas_layer.cpp scene/main/scene_tree.cpp
 #: scene/main/viewport.cpp scene/resources/camera_attributes.cpp
 #: scene/resources/material.cpp scene/resources/particle_process_material.cpp
 #: servers/rendering_server.cpp
@@ -414,7 +390,7 @@ msgstr "Αποσφαλμάτωση"
 
 #: core/config/project_settings.cpp
 #: editor/import/3d/resource_importer_scene.cpp main/main.cpp
-#: modules/gdscript/gdscript.cpp scene/3d/spring_bone_simulator_3d.cpp
+#: modules/gdscript/gdscript.cpp
 msgid "Settings"
 msgstr "Ρυθμίσεις"
 
@@ -606,11 +582,6 @@ msgid "Texture Upload Region Size Px"
 msgstr "TextureRegion"
 
 #: core/config/project_settings.cpp
-#, fuzzy
-msgid "Texture Download Region Size Px"
-msgstr "TextureRegion"
-
-#: core/config/project_settings.cpp
 msgid "Pipeline Cache"
 msgstr ""
 
@@ -618,8 +589,7 @@ msgstr ""
 #: editor/import/3d/post_import_plugin_skeleton_rest_fixer.cpp
 #: modules/gdscript/gdscript.cpp platform/android/export/export_plugin.cpp
 #: platform/windows/export/export_plugin.cpp
-#: scene/3d/physics/joints/hinge_joint_3d.cpp scene/3d/retarget_modifier_3d.cpp
-#: servers/rendering_server.cpp
+#: scene/3d/physics/joints/hinge_joint_3d.cpp servers/rendering_server.cpp
 msgid "Enable"
 msgstr "Ενεργοποίηση"
 
@@ -697,6 +667,10 @@ msgstr "Όλες οι Συσκευές"
 msgid "Pointing"
 msgstr "Σημείο"
 
+#: core/config/project_settings.cpp platform/android/export/export.cpp
+msgid "Android"
+msgstr ""
+
 #: core/config/project_settings.cpp editor/editor_settings.cpp
 msgid "Enable Long Press as Right Click"
 msgstr ""
@@ -726,10 +700,6 @@ msgstr "Delta Smoothing"
 #: core/core_bind.cpp
 msgid "Print Error Messages"
 msgstr "Εκτύπωση μηνυμάτων σφάλματος"
-
-#: core/core_bind.cpp
-msgid "Print to stdout"
-msgstr ""
 
 #: core/core_bind.cpp main/main.cpp
 msgid "Physics Ticks per Second"
@@ -874,7 +844,8 @@ msgstr "Κουμπί"
 #: editor/import/3d/resource_importer_scene.cpp
 #: modules/gltf/structures/gltf_node.cpp scene/2d/node_2d.cpp
 #: scene/2d/remote_transform_2d.cpp scene/3d/node_3d.cpp
-#: scene/3d/remote_transform_3d.cpp scene/gui/control.cpp scene/main/window.cpp
+#: scene/3d/remote_transform_3d.cpp scene/3d/skeleton_3d.cpp
+#: scene/gui/control.cpp scene/main/window.cpp
 #: scene/resources/particle_process_material.cpp servers/physics_server_2d.cpp
 #: servers/physics_server_3d.cpp
 msgid "Position"
@@ -959,7 +930,8 @@ msgid "Action"
 msgstr "Ενέργεια"
 
 #: core/input/input_event.cpp modules/mobile_vr/mobile_vr_interface.cpp
-#: modules/openxr/openxr_interface.cpp scene/3d/gpu_particles_collision_3d.cpp
+#: modules/openxr/openxr_interface.cpp scene/3d/audio_stream_player_3d.cpp
+#: scene/3d/gpu_particles_collision_3d.cpp
 #: scene/resources/2d/skeleton/skeleton_modification_stack_2d.cpp
 #: scene/resources/environment.cpp scene/resources/material.cpp
 msgid "Strength"
@@ -1082,13 +1054,12 @@ msgstr "Περιοχή"
 #: scene/2d/animated_sprite_2d.cpp scene/2d/camera_2d.cpp scene/2d/light_2d.cpp
 #: scene/2d/parallax_background.cpp scene/2d/parallax_layer.cpp
 #: scene/2d/polygon_2d.cpp scene/2d/sprite_2d.cpp scene/3d/label_3d.cpp
-#: scene/3d/look_at_modifier_3d.cpp scene/3d/physics/physical_bone_3d.cpp
-#: scene/3d/soft_body_3d.cpp scene/3d/spring_bone_collision_3d.cpp
+#: scene/3d/physics/physical_bone_3d.cpp scene/3d/soft_body_3d.cpp
 #: scene/3d/sprite_3d.cpp scene/3d/visual_instance_3d.cpp
-#: scene/gui/rich_text_effect.cpp scene/gui/split_container.cpp
-#: scene/main/canvas_layer.cpp scene/resources/3d/primitive_meshes.cpp
-#: scene/resources/font.cpp scene/resources/label_settings.cpp
-#: scene/resources/material.cpp scene/resources/style_box_flat.cpp
+#: scene/gui/rich_text_effect.cpp scene/main/canvas_layer.cpp
+#: scene/resources/3d/primitive_meshes.cpp scene/resources/font.cpp
+#: scene/resources/label_settings.cpp scene/resources/material.cpp
+#: scene/resources/style_box_flat.cpp
 #, fuzzy
 msgid "Offset"
 msgstr "Μετατόπιση:"
@@ -1125,8 +1096,6 @@ msgid "Diagonal Mode"
 msgstr "Λειτουργία Προτεραιότητας"
 
 #: core/math/random_number_generator.cpp modules/noise/fastnoise_lite.cpp
-#: scene/2d/cpu_particles_2d.cpp scene/2d/gpu_particles_2d.cpp
-#: scene/3d/cpu_particles_3d.cpp scene/3d/gpu_particles_3d.cpp
 msgid "Seed"
 msgstr "Seed"
 
@@ -1140,7 +1109,6 @@ msgid "Memory"
 msgstr ""
 
 #: core/object/message_queue.cpp core/register_core_types.cpp main/main.cpp
-#: modules/jolt_physics/jolt_project_settings.cpp
 #: modules/webrtc/register_types.cpp scene/main/window.cpp
 #: servers/rendering_server.cpp
 msgid "Limits"
@@ -1160,7 +1128,7 @@ msgstr "Βήμα"
 #: editor/debugger/debug_adapter/debug_adapter_server.cpp
 #: editor/editor_settings.cpp main/main.cpp
 #: modules/gdscript/language_server/gdscript_language_server.cpp
-#: modules/mbedtls/register_types.cpp modules/webrtc/register_types.cpp
+#: modules/webrtc/register_types.cpp
 msgid "Network"
 msgstr "Δίκτυο"
 
@@ -1182,7 +1150,6 @@ msgid "Max Buffer (Power of 2)"
 msgstr ""
 
 #: core/register_core_types.cpp editor/editor_settings.cpp
-#: modules/mbedtls/register_types.cpp
 msgid "TLS"
 msgstr ""
 
@@ -1200,7 +1167,7 @@ msgstr "Νήματα"
 msgid "Worker Pool"
 msgstr ""
 
-#: core/register_core_types.cpp servers/navigation_server_3d.cpp
+#: core/register_core_types.cpp
 #, fuzzy
 msgid "Max Threads"
 msgstr "Νήματα"
@@ -1278,8 +1245,9 @@ msgstr "Φόρτωση ως μέσο κράτησης"
 #: modules/gltf/structures/gltf_node.cpp scene/2d/node_2d.cpp
 #: scene/2d/polygon_2d.cpp scene/2d/remote_transform_2d.cpp
 #: scene/3d/node_3d.cpp scene/3d/physics/physical_bone_3d.cpp
-#: scene/3d/remote_transform_3d.cpp scene/gui/control.cpp
-#: scene/main/canvas_layer.cpp scene/resources/environment.cpp
+#: scene/3d/remote_transform_3d.cpp scene/3d/skeleton_3d.cpp
+#: scene/gui/control.cpp scene/main/canvas_layer.cpp
+#: scene/resources/environment.cpp
 msgid "Rotation"
 msgstr "Περιστροφή"
 
@@ -1297,9 +1265,9 @@ msgid "Args"
 msgstr ""
 
 #: editor/animation_track_editor.cpp editor/editor_settings.cpp
-#: modules/noise/fastnoise_lite.cpp scene/3d/physics/physical_bone_3d.cpp
-#: scene/gui/text_edit.cpp scene/resources/visual_shader_nodes.cpp
-#: servers/xr/xr_tracker.cpp
+#: modules/noise/fastnoise_lite.cpp platform/web/export/export_plugin.cpp
+#: scene/3d/physics/physical_bone_3d.cpp scene/gui/text_edit.cpp
+#: scene/resources/visual_shader_nodes.cpp servers/xr/xr_tracker.cpp
 msgid "Type"
 msgstr "Τύπος"
 
@@ -1361,11 +1329,6 @@ msgstr "Το αίτημα απέτυχε, λήξη χρονικού ορίου"
 msgid "Sync Breakpoints"
 msgstr "Σημεία Διακοπής"
 
-#: editor/editor_feature_profile.cpp
-#, fuzzy
-msgid "Default Feature Profile"
-msgstr "Προφίλ Χαρακτηριστικών του Godot"
-
 #: editor/editor_inspector.cpp editor/gui/editor_spin_slider.cpp
 #, fuzzy
 msgid "Label"
@@ -1376,16 +1339,6 @@ msgstr "Τιμή"
 #, fuzzy
 msgid "Read Only"
 msgstr "Μόνο μεθόδοι"
-
-#: editor/editor_inspector.cpp
-#, fuzzy
-msgid "Draw Label"
-msgstr "Κλήσεις σχεδίασης"
-
-#: editor/editor_inspector.cpp
-#, fuzzy
-msgid "Draw Background"
-msgstr "Άκυρο χρώμα παρασκηνίου."
 
 #: editor/editor_inspector.cpp
 #, fuzzy
@@ -1411,20 +1364,6 @@ msgstr "Αναπαραγωγή"
 #, fuzzy
 msgid "Deletable"
 msgstr "Διαγραφή"
-
-#: editor/editor_inspector.cpp scene/gui/graph_element.cpp
-#, fuzzy
-msgid "Selectable"
-msgstr "Επιλογή"
-
-#: editor/editor_inspector.cpp
-#, fuzzy
-msgid "Use Folding"
-msgstr "Απενεργοποιημένο Κουμπί"
-
-#: editor/editor_inspector.cpp
-msgid "Name Split Ratio"
-msgstr ""
 
 #: editor/editor_interface.cpp
 msgid "Distraction Free Mode"
@@ -1541,10 +1480,6 @@ msgid "Font Disable Embedded Bitmaps"
 msgstr "Στοιχειοθέτηση Δεξιά"
 
 #: editor/editor_settings.cpp
-msgid "Font Allow MSDF"
-msgstr ""
-
-#: editor/editor_settings.cpp
 #, fuzzy
 msgid "Main Font"
 msgstr "Κύρια σκηνή"
@@ -1571,6 +1506,10 @@ msgstr ""
 #, fuzzy
 msgid "Single Window Mode"
 msgstr "Ελάχιστο Μέγεθος Παραθύρου"
+
+#: editor/editor_settings.cpp
+msgid "Remember Window Size and Position"
+msgstr ""
 
 #: editor/editor_settings.cpp
 msgid "Mouse Extra Buttons Navigate History"
@@ -1712,6 +1651,7 @@ msgid "Border Size"
 msgstr "Εικονοστοιχεία Περιγράμματος"
 
 #: editor/editor_settings.cpp scene/resources/style_box_flat.cpp
+#: scene/theme/theme_db.cpp
 #, fuzzy
 msgid "Corner Radius"
 msgstr "Αλλαγή Εσωτερική Ακτίνας Τόρου"
@@ -1844,41 +1784,6 @@ msgstr "Λειτουργία Οθόνης"
 msgid "Thumbnail Size"
 msgstr "Μικρογραφία..."
 
-#: editor/editor_settings.cpp
-#, fuzzy
-msgid "Quick Open Dialog"
-msgstr "Διάλογος XForm"
-
-#: editor/editor_settings.cpp scene/2d/physics/shape_cast_2d.cpp
-#: scene/3d/physics/shape_cast_3d.cpp
-#, fuzzy
-msgid "Max Results"
-msgstr "Αποτελέσματα Αναζήτησης"
-
-#: editor/editor_settings.cpp
-#, fuzzy
-msgid "Show Search Highlight"
-msgstr "Επισημαντής Σύνταξης"
-
-#: editor/editor_settings.cpp
-#, fuzzy
-msgid "Enable Fuzzy Matching"
-msgstr "Ενεργοποίηση Φίλτρου"
-
-#: editor/editor_settings.cpp
-msgid "Max Fuzzy Misses"
-msgstr ""
-
-#: editor/editor_settings.cpp
-#, fuzzy
-msgid "Include Addons"
-msgstr "Εναλλαγή κρυμμένων αρχείων"
-
-#: editor/editor_settings.cpp
-#, fuzzy
-msgid "Default Display Mode"
-msgstr "Λειτουργία Οθόνης"
-
 #: editor/editor_settings.cpp editor/import/3d/resource_importer_scene.cpp
 #: editor/register_editor_types.cpp modules/fbx/register_types.cpp
 #: modules/gltf/register_types.cpp
@@ -1945,10 +1850,6 @@ msgid "Center Node on Reparent"
 msgstr ""
 
 #: editor/editor_settings.cpp
-msgid "Hide Filtered Out Parents"
-msgstr ""
-
-#: editor/editor_settings.cpp
 #, fuzzy
 msgid "Always Show Folders"
 msgstr "Πάντα Εμφάνιση Πλέγματος"
@@ -1983,7 +1884,7 @@ msgstr "Επεξεργαστής Κειμένου"
 
 #: editor/editor_settings.cpp scene/3d/label_3d.cpp
 #: scene/resources/3d/primitive_meshes.cpp scene/resources/label_settings.cpp
-#: scene/resources/text_paragraph.cpp scene/theme/default_theme.cpp
+#: scene/theme/default_theme.cpp
 msgid "Line Spacing"
 msgstr ""
 
@@ -2097,11 +1998,6 @@ msgstr "Κλήσεις σχεδίασης"
 msgid "Behavior"
 msgstr ""
 
-#: editor/editor_settings.cpp
-#, fuzzy
-msgid "Empty Selection Clipboard"
-msgstr "Μόνο στην επιλογή"
-
 #: editor/editor_settings.cpp main/performance.cpp modules/gridmap/grid_map.cpp
 #: scene/2d/tile_map_layer.cpp scene/resources/2d/tile_set.cpp
 #: servers/navigation_server_3d.cpp
@@ -2206,16 +2102,6 @@ msgstr ""
 
 #: editor/editor_settings.cpp
 #, fuzzy
-msgid "Documentation"
-msgstr "Άνοιγμα Τεκμηρίωσης"
-
-#: editor/editor_settings.cpp
-#, fuzzy
-msgid "Enable Tooltips"
-msgstr "Δεν είναι δυνατή η επίλυση"
-
-#: editor/editor_settings.cpp
-#, fuzzy
 msgid "Script List"
 msgstr "Επεξεργαστής Δεσμών Ενεργειών"
 
@@ -2234,10 +2120,6 @@ msgstr "Επιλογή Αρχείου Προτύπων"
 
 #: editor/editor_settings.cpp
 msgid "Script Temperature History Size"
-msgstr ""
-
-#: editor/editor_settings.cpp
-msgid "Highlight Scene Scripts"
 msgstr ""
 
 #: editor/editor_settings.cpp
@@ -2274,10 +2156,6 @@ msgstr "Ολοκλήρωση"
 
 #: editor/editor_settings.cpp
 msgid "Idle Parse Delay"
-msgstr ""
-
-#: editor/editor_settings.cpp
-msgid "Idle Parse Delay With Errors Found"
 msgstr ""
 
 #: editor/editor_settings.cpp
@@ -2355,6 +2233,16 @@ msgstr "Επιλογή απόστασης:"
 #: editor/editor_settings.cpp
 msgid "Palette Min Width"
 msgstr ""
+
+#: editor/editor_settings.cpp
+#, fuzzy
+msgid "Preview Size"
+msgstr "Προεπισκόπηση"
+
+#: editor/editor_settings.cpp
+#, fuzzy
+msgid "Editor Side"
+msgstr "Επεξεργαστής"
 
 #: editor/editor_settings.cpp
 #, fuzzy
@@ -2476,25 +2364,6 @@ msgstr "Επιλογή"
 
 #: editor/editor_settings.cpp
 msgid "CSG"
-msgstr ""
-
-#: editor/editor_settings.cpp
-#, fuzzy
-msgid "GridMap Grid"
-msgstr "Χάρτης δικτύου"
-
-#: editor/editor_settings.cpp
-#, fuzzy
-msgid "Spring Bone Joint"
-msgstr "Μετακίνηση Σημείων"
-
-#: editor/editor_settings.cpp
-#, fuzzy
-msgid "Spring Bone Collision"
-msgstr "Απενεργοποιημένο Κουμπί"
-
-#: editor/editor_settings.cpp
-msgid "Spring Bone Inside Collision"
 msgstr ""
 
 #: editor/editor_settings.cpp
@@ -2882,7 +2751,7 @@ msgid "Platforms"
 msgstr "Αποκοπή κόμβων"
 
 #: editor/editor_settings.cpp
-msgid "Linux/*BSD"
+msgid "Linuxbsd"
 msgstr ""
 
 #: editor/editor_settings.cpp
@@ -2922,10 +2791,6 @@ msgstr ""
 #, fuzzy
 msgid "Profiler Frame Max Functions"
 msgstr "Μετονομασία συνάρτησης"
-
-#: editor/editor_settings.cpp
-msgid "Profiler Target FPS"
-msgstr ""
 
 #: editor/editor_settings.cpp
 msgid "Remote Scene Tree Refresh Interval"
@@ -3248,11 +3113,6 @@ msgstr "Μόνο στην επιλογή"
 msgid "Particle Color"
 msgstr "Απενεργοποιημένο Κουμπί"
 
-#: editor/editor_settings_dialog.cpp
-#, fuzzy
-msgid "Editor Settings Advanced Mode"
-msgstr "Ρυθμίσεις επεξεργαστή"
-
 #: editor/export/editor_export_platform_pc.cpp
 #: platform/android/export/export_plugin.cpp
 #: platform/ios/export/export_plugin.cpp
@@ -3302,10 +3162,6 @@ msgstr "Εισαγωγή"
 msgid "ETC2 ASTC"
 msgstr "Εισαγωγή"
 
-#: editor/export/export_template_manager.cpp
-msgid "Export Template Download Directory"
-msgstr ""
-
 #: editor/export/project_export.cpp
 msgid "Export Path"
 msgstr "Διαδρομή Εξαγωγής"
@@ -3335,7 +3191,7 @@ msgid "Disable Overwrite Warning"
 msgstr ""
 
 #: editor/gui/editor_spin_slider.cpp scene/gui/button.cpp
-#: scene/gui/line_edit.cpp scene/gui/menu_bar.cpp
+#: scene/gui/color_button.cpp scene/gui/line_edit.cpp scene/gui/menu_bar.cpp
 #, fuzzy
 msgid "Flat"
 msgstr "Επίπεδο 0"
@@ -3344,10 +3200,6 @@ msgstr "Επίπεδο 0"
 #, fuzzy
 msgid "Hide Slider"
 msgstr "Λειτουργία Σύγκρουσης"
-
-#: editor/gui/editor_spin_slider.cpp
-msgid "Editing Integer"
-msgstr ""
 
 #: editor/gui/editor_zoom_widget.cpp scene/2d/camera_2d.cpp
 #: scene/gui/graph_edit.cpp
@@ -3407,23 +3259,12 @@ msgstr ""
 
 #: editor/import/3d/post_import_plugin_skeleton_rest_fixer.cpp
 #, fuzzy
-msgid "Retarget Method"
-msgstr "Απόδοση"
+msgid "Overwrite Axis"
+msgstr "Παρακάμπτει"
 
 #: editor/import/3d/post_import_plugin_skeleton_rest_fixer.cpp
 msgid "Keep Global Rest on Leftovers"
 msgstr ""
-
-#: editor/import/3d/post_import_plugin_skeleton_rest_fixer.cpp
-#: scene/3d/retarget_modifier_3d.cpp
-#, fuzzy
-msgid "Use Global Pose"
-msgstr "Επόμενη Συντεταγμένη"
-
-#: editor/import/3d/post_import_plugin_skeleton_rest_fixer.cpp
-#, fuzzy
-msgid "Original Skeleton Name"
-msgstr "Σκελετός"
 
 #: editor/import/3d/post_import_plugin_skeleton_rest_fixer.cpp
 msgid "Fix Silhouette"
@@ -3439,7 +3280,6 @@ msgstr "Φίλτρα:"
 
 #: editor/import/3d/post_import_plugin_skeleton_rest_fixer.cpp
 #: editor/import/resource_importer_bitmask.cpp
-#: modules/openxr/extensions/openxr_dpad_binding_extension.cpp
 #: servers/audio/effects/audio_effect_compressor.cpp
 msgid "Threshold"
 msgstr ""
@@ -3471,27 +3311,6 @@ msgstr ""
 #, fuzzy
 msgid "Generate Tangents"
 msgstr "Αριθμός δημιουργημένων σημείων:"
-
-#: editor/import/3d/resource_importer_obj.cpp
-#: editor/import/3d/resource_importer_scene.cpp
-#, fuzzy
-msgid "Generate LODs"
-msgstr "Αριθμός δημιουργημένων σημείων:"
-
-#: editor/import/3d/resource_importer_obj.cpp
-#, fuzzy
-msgid "Generate Shadow Mesh"
-msgstr "Δημιουργία Κόμβου Σκίασης"
-
-#: editor/import/3d/resource_importer_obj.cpp
-#, fuzzy
-msgid "Generate Lightmap UV2"
-msgstr "Δημιουργία χαρτών φωτός"
-
-#: editor/import/3d/resource_importer_obj.cpp
-#, fuzzy
-msgid "Generate Lightmap UV2 Texel Size"
-msgstr "Προετοιμασία Lightmaps"
 
 #: editor/import/3d/resource_importer_obj.cpp
 #, fuzzy
@@ -3680,7 +3499,6 @@ msgstr "Λειτουργία Προτεραιότητας"
 #: modules/gltf/structures/gltf_node.cpp modules/noise/noise_texture_2d.cpp
 #: modules/noise/noise_texture_3d.cpp scene/2d/light_2d.cpp
 #: scene/3d/navigation_agent_3d.cpp scene/3d/navigation_obstacle_3d.cpp
-#: scene/3d/spring_bone_collision_capsule_3d.cpp
 #: scene/resources/2d/capsule_shape_2d.cpp
 #: scene/resources/3d/capsule_shape_3d.cpp
 #: scene/resources/3d/cylinder_shape_3d.cpp
@@ -3698,10 +3516,8 @@ msgstr "Φως"
 #: scene/2d/navigation_agent_2d.cpp scene/2d/navigation_obstacle_2d.cpp
 #: scene/3d/gpu_particles_collision_3d.cpp scene/3d/navigation_agent_3d.cpp
 #: scene/3d/navigation_obstacle_3d.cpp scene/3d/occluder_instance_3d.cpp
-#: scene/3d/physics/vehicle_body_3d.cpp
-#: scene/3d/spring_bone_collision_capsule_3d.cpp
-#: scene/3d/spring_bone_collision_sphere_3d.cpp
-#: scene/animation/root_motion_view.cpp scene/resources/2d/capsule_shape_2d.cpp
+#: scene/3d/physics/vehicle_body_3d.cpp scene/animation/root_motion_view.cpp
+#: scene/resources/2d/capsule_shape_2d.cpp
 #: scene/resources/2d/circle_shape_2d.cpp
 #: scene/resources/2d/navigation_polygon.cpp
 #: scene/resources/3d/capsule_shape_3d.cpp
@@ -3741,8 +3557,8 @@ msgstr "Αποθήκευση αρχείου"
 #: scene/3d/navigation_region_3d.cpp scene/3d/physics/area_3d.cpp
 #: scene/3d/physics/joints/generic_6dof_joint_3d.cpp
 #: scene/3d/physics/ray_cast_3d.cpp scene/3d/physics/shape_cast_3d.cpp
-#: scene/3d/sprite_3d.cpp scene/gui/code_edit.cpp scene/gui/graph_edit.cpp
-#: scene/main/canvas_layer.cpp
+#: scene/3d/skeleton_3d.cpp scene/3d/sprite_3d.cpp scene/gui/code_edit.cpp
+#: scene/gui/graph_edit.cpp scene/main/canvas_layer.cpp
 #: scene/resources/2d/skeleton/skeleton_modification_2d.cpp
 #: scene/resources/2d/skeleton/skeleton_modification_stack_2d.cpp
 #: scene/resources/camera_attributes.cpp scene/resources/compositor.cpp
@@ -3769,8 +3585,18 @@ msgstr ""
 
 #: editor/import/3d/resource_importer_scene.cpp
 #, fuzzy
+msgid "Normal Split Angle"
+msgstr "Πηγή εκπομπής: "
+
+#: editor/import/3d/resource_importer_scene.cpp
+#, fuzzy
 msgid "Normal Merge Angle"
 msgstr "Πηγή εκπομπής: "
+
+#: editor/import/3d/resource_importer_scene.cpp
+#, fuzzy
+msgid "Raycast Normals"
+msgstr "Υποστήριξη"
 
 #: editor/import/3d/resource_importer_scene.cpp
 #, fuzzy
@@ -3896,10 +3722,6 @@ msgstr "Κλιμάκωση:"
 msgid "Import as Skeleton Bones"
 msgstr ""
 
-#: editor/import/3d/resource_importer_scene.cpp
-msgid "Use Node Type Suffixes"
-msgstr ""
-
 #: editor/import/3d/resource_importer_scene.cpp modules/gltf/gltf_state.cpp
 #, fuzzy
 msgid "Meshes"
@@ -3909,6 +3731,11 @@ msgstr "Πλέγμα..."
 #, fuzzy
 msgid "Ensure Tangents"
 msgstr "Τροποπίηση εφαπτομένης καμπύλης"
+
+#: editor/import/3d/resource_importer_scene.cpp
+#, fuzzy
+msgid "Generate LODs"
+msgstr "Αριθμός δημιουργημένων σημείων:"
 
 #: editor/import/3d/resource_importer_scene.cpp
 #, fuzzy
@@ -3964,7 +3791,7 @@ msgid "Import Script"
 msgstr "Εισαγωγή σκηνής"
 
 #: editor/import/dynamic_font_import_settings.cpp
-#: editor/import/resource_importer_dynamic_font.cpp
+#: editor/import/resource_importer_dynamic_font.cpp scene/resources/font.cpp
 #, fuzzy
 msgid "Antialiasing"
 msgstr "Αρχικοποιήστε"
@@ -4021,6 +3848,12 @@ msgstr "Υπαινίχθηκε"
 msgid "Subpixel Positioning"
 msgstr "Διαμερισμός..."
 
+#: editor/import/dynamic_font_import_settings.cpp scene/resources/font.cpp
+#: scene/theme/theme_db.cpp
+#, fuzzy
+msgid "LCD Subpixel Layout"
+msgstr "Διαγραφή διάταξης"
+
 #: editor/import/dynamic_font_import_settings.cpp
 #: editor/import/resource_importer_dynamic_font.cpp scene/resources/font.cpp
 msgid "Keep Rounding Remainders"
@@ -4072,8 +3905,8 @@ msgid "Compress"
 msgstr "Συστατικά"
 
 #: editor/import/dynamic_font_import_settings.cpp scene/3d/label_3d.cpp
-#: scene/gui/button.cpp scene/gui/label.cpp scene/gui/line_edit.cpp
-#: scene/gui/link_button.cpp scene/gui/menu_bar.cpp
+#: scene/gui/button.cpp scene/gui/foldable_container.cpp scene/gui/label.cpp
+#: scene/gui/line_edit.cpp scene/gui/link_button.cpp scene/gui/menu_bar.cpp
 #: scene/gui/rich_text_label.cpp scene/gui/text_edit.cpp
 #: scene/resources/3d/primitive_meshes.cpp
 #: servers/rendering/rendering_device_binds.h
@@ -4453,16 +4286,9 @@ msgid "Frames Count"
 msgstr "Προσθήκη Θύρας Εισόδου"
 
 #: editor/plugins/tiles/tile_set_atlas_source_editor.cpp
-#: modules/openxr/action_map/openxr_haptic_feedback.cpp
-#: scene/3d/look_at_modifier_3d.cpp
 #, fuzzy
 msgid "Duration"
 msgstr "Διαχωρισμός:"
-
-#: editor/project_settings_editor.cpp
-#, fuzzy
-msgid "Project Settings Advanced Mode"
-msgstr "Παράκαμψη Ρυθμίσεων Έργου"
 
 #: editor/register_editor_types.cpp
 msgid "Main Run Args"
@@ -4528,54 +4354,9 @@ msgstr "Όνομα προσθέτου:"
 msgid "Autoload on Startup"
 msgstr "Σύστημα Ελέγχου Έκδοσης"
 
-#: editor/scene_tree_dock.cpp
-#, fuzzy
-msgid "Use Favorites Root Selection"
-msgstr "Καρέ Επιλογής"
-
-#: editor/script_create_dialog.cpp
-msgid "Script Setup Use Script Templates"
-msgstr ""
-
-#: editor/script_create_dialog.cpp
-msgid "Script Setup Templates Dictionary"
-msgstr ""
-
 #: main/main.cpp
 msgid "Flush stdout on Print"
 msgstr ""
-
-#: main/main.cpp
-msgid "Low Processor Mode"
-msgstr "Λειτουργεία Χαμηλής Χρήσης Επεξεργαστή"
-
-#: main/main.cpp
-msgid "stdout"
-msgstr ""
-
-#: main/main.cpp
-msgid "Print FPS"
-msgstr "Δείξε Καρέ ανα Δευτερόλεπτο"
-
-#: main/main.cpp
-#, fuzzy
-msgid "Print GPU Profile"
-msgstr "Τρέχων Προφίλ:"
-
-#: main/main.cpp
-msgid "Verbose stdout"
-msgstr ""
-
-#: main/main.cpp scene/main/node.cpp scene/main/scene_tree.cpp
-#: scene/resources/multimesh.cpp
-#, fuzzy
-msgid "Physics Interpolation"
-msgstr "Παρεμβολή"
-
-#: main/main.cpp
-#, fuzzy
-msgid "Enable Warnings"
-msgstr "Προειδοποιήσεις"
 
 #: main/main.cpp
 msgid "Max Chars per Second"
@@ -4630,7 +4411,7 @@ msgstr "Εμφάνιση περιβάλλοντος"
 
 #: main/main.cpp
 #, fuzzy
-msgid "Fallback to OpenGL 3"
+msgid "Fallback to Opengl 3"
 msgstr "Εμφάνιση περιβάλλοντος"
 
 #: main/main.cpp servers/rendering_server.cpp
@@ -4654,7 +4435,7 @@ msgstr "Εμφάνιση περιβάλλοντος"
 
 #: main/main.cpp
 #, fuzzy
-msgid "Fallback to GLES"
+msgid "Fallback to Gles"
 msgstr "Εμφάνιση περιβάλλοντος"
 
 #: main/main.cpp
@@ -4727,8 +4508,29 @@ msgid "Output Latency"
 msgstr "Έξοδος"
 
 #: main/main.cpp
+msgid "stdout"
+msgstr ""
+
+#: main/main.cpp
+msgid "Print FPS"
+msgstr "Δείξε Καρέ ανα Δευτερόλεπτο"
+
+#: main/main.cpp
+#, fuzzy
+msgid "Print GPU Profile"
+msgstr "Τρέχων Προφίλ:"
+
+#: main/main.cpp
+msgid "Verbose stdout"
+msgstr ""
+
+#: main/main.cpp
 msgid "Frame Delay Msec"
 msgstr ""
+
+#: main/main.cpp
+msgid "Low Processor Mode"
+msgstr "Λειτουργεία Χαμηλής Χρήσης Επεξεργαστή"
 
 #: main/main.cpp
 msgid "Allow High Refresh Rate"
@@ -4840,20 +4642,6 @@ msgid "Eye Gaze Interaction"
 msgstr "Κάνε Συνάρτηση"
 
 #: main/main.cpp
-#, fuzzy
-msgid "Binding Modifiers"
-msgstr "Λειτουργία Μετακίνησης Κάμερας"
-
-#: main/main.cpp
-msgid "Analog Threshold"
-msgstr ""
-
-#: main/main.cpp
-#, fuzzy
-msgid "Dpad Binding"
-msgstr "Δεσμός"
-
-#: main/main.cpp
 msgid "Boot Splash"
 msgstr ""
 
@@ -4931,6 +4719,11 @@ msgstr "Μετατόπιση Περιστροφής:"
 msgid "Show Image"
 msgstr "Εμφάνιση Οστών"
 
+#: main/main.cpp platform/web/export/export_plugin.cpp
+#: scene/resources/image_texture.cpp
+msgid "Image"
+msgstr "Εικόνα"
+
 #: main/main.cpp
 msgid "Fullsize"
 msgstr "Πλήρης Μέγεθος"
@@ -4939,10 +4732,6 @@ msgstr "Πλήρης Μέγεθος"
 #, fuzzy
 msgid "Use Filter"
 msgstr "Φίλτρο: "
-
-#: main/main.cpp scene/resources/image_texture.cpp
-msgid "Image"
-msgstr "Εικόνα"
 
 #: main/main.cpp
 #, fuzzy
@@ -5121,44 +4910,14 @@ msgstr "Μέγιστος Αριθμός Συνδέσεων σε εκκρεμότ
 msgid "Edges Free"
 msgstr ""
 
-#: main/performance.cpp
-msgid "Obstacles"
-msgstr ""
-
-#: main/performance.cpp
-#, fuzzy
-msgid "Pipeline"
-msgstr "Μέγεθος Σελίδας"
-
-#: main/performance.cpp
-#, fuzzy
-msgid "Compilations Canvas"
-msgstr "Αντιγραφή Επιλογής"
-
-#: main/performance.cpp
-#, fuzzy
-msgid "Compilations Mesh"
-msgstr "Αντιγραφή Επιλογής"
-
-#: main/performance.cpp
-#, fuzzy
-msgid "Compilations Surface"
-msgstr "Αντιγραφή Επιλογής"
-
-#: main/performance.cpp
-#, fuzzy
-msgid "Compilations Draw"
-msgstr "Ολοκλήρωση"
-
-#: main/performance.cpp
-#, fuzzy
-msgid "Compilations Specialization"
-msgstr "Εισαγωγή σκηνής"
-
 #: modules/csg/csg_shape.cpp
 #, fuzzy
 msgid "Operation"
 msgstr "Επιλογές"
+
+#: modules/csg/csg_shape.cpp scene/main/scene_tree.cpp
+msgid "Snap"
+msgstr "Κούμπωμα"
 
 #: modules/csg/csg_shape.cpp
 msgid "Calculate Tangents"
@@ -5304,11 +5063,6 @@ msgstr "Τυχαία περιστροφή:"
 
 #: modules/csg/csg_shape.cpp
 #, fuzzy
-msgid "Path Rotation Accurate"
-msgstr "Τυχαία περιστροφή:"
-
-#: modules/csg/csg_shape.cpp
-#, fuzzy
 msgid "Path Local"
 msgstr "Κάνε τοπικό"
 
@@ -5422,10 +5176,6 @@ msgstr ""
 msgid "Exclude Addons"
 msgstr ""
 
-#: modules/gdscript/gdscript.cpp
-msgid "Renamed in Godot 4 Hint"
-msgstr ""
-
 #: modules/gdscript/language_server/gdscript_language_server.cpp
 #, fuzzy
 msgid "Language Server"
@@ -5474,11 +5224,11 @@ msgstr "Έκδοση:"
 #: scene/2d/cpu_particles_2d.cpp scene/2d/light_2d.cpp scene/2d/polygon_2d.cpp
 #: scene/3d/cpu_particles_3d.cpp scene/3d/light_3d.cpp
 #: scene/3d/reflection_probe.cpp scene/animation/root_motion_view.cpp
-#: scene/gui/color_picker.cpp scene/gui/color_rect.cpp
-#: scene/gui/rich_text_effect.cpp scene/main/canvas_item.cpp
-#: scene/resources/3d/sky_material.cpp scene/resources/environment.cpp
-#: scene/resources/label_settings.cpp scene/resources/material.cpp
-#: scene/resources/particle_process_material.cpp
+#: scene/gui/color_button.cpp scene/gui/color_picker.cpp
+#: scene/gui/color_rect.cpp scene/gui/rich_text_effect.cpp
+#: scene/main/canvas_item.cpp scene/resources/3d/sky_material.cpp
+#: scene/resources/environment.cpp scene/resources/label_settings.cpp
+#: scene/resources/material.cpp scene/resources/particle_process_material.cpp
 #: scene/resources/style_box_flat.cpp scene/resources/style_box_line.cpp
 #: scene/resources/style_box_texture.cpp
 #, fuzzy
@@ -5849,7 +5599,7 @@ msgstr "Προετοιμασία Lightmaps"
 msgid "Instance Materials"
 msgstr "Αλλαγές υλικού"
 
-#: modules/gltf/structures/gltf_node.cpp
+#: modules/gltf/structures/gltf_node.cpp scene/3d/skeleton_3d.cpp
 #, fuzzy
 msgid "Parent"
 msgstr "Επαναπροσδιορισμός Γονέα"
@@ -5873,36 +5623,8 @@ msgstr "Επεξεργάσιμα παιδιά"
 msgid "Light"
 msgstr "Φως"
 
-#: modules/gltf/structures/gltf_object_model_property.cpp
-msgid "glTF to Godot Expression"
-msgstr ""
-
-#: modules/gltf/structures/gltf_object_model_property.cpp
-msgid "Godot to glTF Expression"
-msgstr ""
-
-#: modules/gltf/structures/gltf_object_model_property.cpp
-#, fuzzy
-msgid "Node Paths"
-msgstr "Αντιγραφή διαδρομής κόμβου"
-
-#: modules/gltf/structures/gltf_object_model_property.cpp
-msgid "Object Model Type"
-msgstr ""
-
-#: modules/gltf/structures/gltf_object_model_property.cpp
-#, fuzzy
-msgid "Json Pointers"
-msgstr "Μετακίνηση Άρθρωσης"
-
-#: modules/gltf/structures/gltf_object_model_property.cpp
-#, fuzzy
-msgid "Variant Type"
-msgstr "Αλλαγή τύπου"
-
 #: modules/gltf/structures/gltf_skeleton.cpp
 #: modules/gltf/structures/gltf_skin.cpp
-#: modules/jolt_physics/jolt_project_settings.cpp
 #, fuzzy
 msgid "Joints"
 msgstr "Σημείο"
@@ -6009,13 +5731,13 @@ msgstr "Πλοήγηση"
 
 #: modules/interactive_music/audio_stream_interactive.cpp
 #, fuzzy
-msgid "Clip Count"
-msgstr "Σταθερή"
+msgid "Initial Clip"
+msgstr "Αρχικοποιήστε"
 
 #: modules/interactive_music/audio_stream_interactive.cpp
 #, fuzzy
-msgid "Initial Clip"
-msgstr "Αρχικοποιήστε"
+msgid "Clip Count"
+msgstr "Σταθερή"
 
 #: modules/interactive_music/audio_stream_playlist.cpp
 msgid "Shuffle"
@@ -6031,171 +5753,6 @@ msgstr "Χρόνος συνδιασμού (s):"
 #, fuzzy
 msgid "Stream Count"
 msgstr "Προσθήκη Θύρας Εισόδου"
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "Jolt Physics 3D"
-msgstr "3D Φυσική"
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "Simulation"
-msgstr "Κίνηση"
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "Velocity Steps"
-msgstr "Ταχύτητα"
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "Position Steps"
-msgstr "Θέση"
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Use Enhanced Internal Edge Removal"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Areas Detect Static Bodies"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Generate All Kinematic Contacts"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "Penetration Slop"
-msgstr "Συναρτήσεις"
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "Speculative Contact Distance"
-msgstr "Απλοποίηση: "
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Baumgarte Stabilization Factor"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "Soft Body Point Radius"
-msgstr "Μάσκα εκπομπής"
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Bounce Velocity Threshold"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "Allow Sleep"
-msgstr "Αναζήτηση"
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "Sleep Velocity Threshold"
-msgstr "Αρχικοποιήστε"
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Sleep Time Threshold"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Continuous CD Movement Threshold"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "Continuous CD Max Penetration"
-msgstr "Διαχωρισμός:"
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Body Pair Contact Cache Enabled"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Body Pair Contact Cache Distance Threshold"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Body Pair Contact Cache Angle Threshold"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Queries"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Enable Ray Cast Face Index"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "Motion Queries"
-msgstr "Λειτουργία Περιστροφής"
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "Recovery Iterations"
-msgstr "Κάνε Συνάρτηση"
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "Recovery Amount"
-msgstr "Δημιουργία Πολυγώνου Σύγκρουσης"
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "Collisions"
-msgstr "Σύγκρουση"
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "Collision Margin Fraction"
-msgstr "Δημιουργία Πολυγώνου Σύγκρουσης"
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Active Edge Threshold"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "World Node"
-msgstr "Τυχαία κλιμάκωση:"
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "Temporary Memory Buffer Size"
-msgstr "Πίσω όψη"
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "World Boundary Shape Size"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "Max Linear Velocity"
-msgstr "Αρχικοποιήστε"
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "Max Angular Velocity"
-msgstr "Γωνιακή ταχύτητα"
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "Max Bodies"
-msgstr "Σώματα"
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Max Body Pairs"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "Max Contact Constraints"
-msgstr "σταθερές"
 
 #: modules/lightmapper_rd/register_types.cpp servers/rendering_server.cpp
 #, fuzzy
@@ -6240,11 +5797,6 @@ msgstr "Μέγεθος περιγράμματος:"
 
 #: modules/lightmapper_rd/register_types.cpp
 #, fuzzy
-msgid "Max Transparency Rays"
-msgstr "Μετατόπιση"
-
-#: modules/lightmapper_rd/register_types.cpp
-#, fuzzy
 msgid "Low Quality Probe Ray Count"
 msgstr "Αριθμός Ακτινών Χαμηλής Ποιότητας"
 
@@ -6276,11 +5828,6 @@ msgstr "Αφαίρεση Απόντων"
 #, fuzzy
 msgid "Denoiser"
 msgstr "Φίλτρο: "
-
-#: modules/mbedtls/register_types.cpp
-#, fuzzy
-msgid "Enable TLS V 1"
-msgstr "Ενεργοποίηση"
 
 #: modules/minimp3/audio_stream_mp3.cpp
 #: modules/minimp3/resource_importer_mp3.cpp
@@ -6361,11 +5908,6 @@ msgstr "Μάσκα εκπομπής"
 
 #: modules/multiplayer/multiplayer_spawner.cpp
 #, fuzzy
-msgid "Spawnable Scenes"
-msgstr "Αποθηκεύση σκηνής"
-
-#: modules/multiplayer/multiplayer_spawner.cpp
-#, fuzzy
 msgid "Spawn Path"
 msgstr "Διαχωρισμός διαδρομής"
 
@@ -6437,7 +5979,6 @@ msgid "Noise Type"
 msgstr "Αλλαγή βασικού τύπου"
 
 #: modules/noise/fastnoise_lite.cpp
-#: modules/openxr/action_map/openxr_haptic_feedback.cpp
 #: scene/resources/particle_process_material.cpp
 msgid "Frequency"
 msgstr ""
@@ -6494,7 +6035,6 @@ msgid "Domain Warp"
 msgstr ""
 
 #: modules/noise/fastnoise_lite.cpp
-#: modules/openxr/action_map/openxr_haptic_feedback.cpp
 #, fuzzy
 msgid "Amplitude"
 msgstr "Διαίρεση Καμπύλης"
@@ -6582,9 +6122,10 @@ msgid "Toplevel Paths"
 msgstr "Αντιγραφή διαδρομής κόμβου"
 
 #: modules/openxr/action_map/openxr_interaction_profile.cpp
+#: scene/main/scene_tree.cpp
 #, fuzzy
-msgid "Binding Path"
-msgstr "Διαδρομή σκηνής:"
+msgid "Paths"
+msgstr "Διαδρομή"
 
 #: modules/openxr/action_map/openxr_interaction_profile.cpp
 #, fuzzy
@@ -6595,53 +6136,6 @@ msgstr "Μέθοδος παρεμβολής"
 #, fuzzy
 msgid "Runtime Paths"
 msgstr "Αφαίρεση Σημείου"
-
-#: modules/openxr/extensions/openxr_dpad_binding_extension.cpp
-#, fuzzy
-msgid "Action Set"
-msgstr "Λειτουργία Εικονιδίων"
-
-#: modules/openxr/extensions/openxr_dpad_binding_extension.cpp
-#, fuzzy
-msgid "Input Path"
-msgstr "Χάρτης εισόδου"
-
-#: modules/openxr/extensions/openxr_dpad_binding_extension.cpp
-#, fuzzy
-msgid "Threshold Released"
-msgstr "Λειτουργία εξαγωγής:"
-
-#: modules/openxr/extensions/openxr_dpad_binding_extension.cpp
-#, fuzzy
-msgid "Center Region"
-msgstr "Ορισμός Περιοχής Πλακιδίου"
-
-#: modules/openxr/extensions/openxr_dpad_binding_extension.cpp
-#, fuzzy
-msgid "Wedge Angle"
-msgstr "Πεζά"
-
-#: modules/openxr/extensions/openxr_dpad_binding_extension.cpp
-msgid "Is Sticky"
-msgstr ""
-
-#: modules/openxr/extensions/openxr_dpad_binding_extension.cpp
-#: modules/openxr/extensions/openxr_valve_analog_threshold_extension.cpp
-msgid "On Haptic"
-msgstr ""
-
-#: modules/openxr/extensions/openxr_dpad_binding_extension.cpp
-#: modules/openxr/extensions/openxr_valve_analog_threshold_extension.cpp
-msgid "Off Haptic"
-msgstr ""
-
-#: modules/openxr/extensions/openxr_valve_analog_threshold_extension.cpp
-msgid "On Threshold"
-msgstr ""
-
-#: modules/openxr/extensions/openxr_valve_analog_threshold_extension.cpp
-msgid "Off Threshold"
-msgstr ""
 
 #: modules/openxr/openxr_interface.cpp
 #, fuzzy
@@ -6657,16 +6151,6 @@ msgstr "Ορισμός πολλών:"
 #, fuzzy
 msgid "Layer Viewport"
 msgstr "1 Οπτική γωνία"
-
-#: modules/openxr/scene/openxr_composition_layer.cpp
-#, fuzzy
-msgid "Use Android Surface"
-msgstr "Συμπλήρωση επιφάνειας"
-
-#: modules/openxr/scene/openxr_composition_layer.cpp
-#, fuzzy
-msgid "Android Surface Size"
-msgstr "Μέγιστο Μέγεθος Buffer Εισόδου"
 
 #: modules/openxr/scene/openxr_composition_layer.cpp
 #, fuzzy
@@ -6845,11 +6329,6 @@ msgstr "Λήξη χρονικού ορίου."
 #: modules/websocket/websocket_peer.cpp
 msgid "Max Queued Packets"
 msgstr ""
-
-#: modules/websocket/websocket_peer.cpp
-#, fuzzy
-msgid "Heartbeat Interval"
-msgstr "Μεταφράσεις"
 
 #: modules/webxr/webxr_interface.cpp
 #, fuzzy
@@ -7065,15 +6544,6 @@ msgid "XR Mode"
 msgstr "Λειτουργία Μετακίνησης Κάμερας"
 
 #: platform/android/export/export_plugin.cpp
-#, fuzzy
-msgid "Gesture"
-msgstr "Κείμενο"
-
-#: platform/android/export/export_plugin.cpp
-msgid "Swipe to Dismiss"
-msgstr ""
-
-#: platform/android/export/export_plugin.cpp
 msgid "Screen"
 msgstr ""
 
@@ -7156,6 +6626,40 @@ msgid "Icons"
 msgstr "Εικονίδιο"
 
 #: platform/ios/export/export_plugin.cpp
+msgid "iPhone 120 X 120"
+msgstr ""
+
+#: platform/ios/export/export_plugin.cpp
+msgid "iPhone 180 X 180"
+msgstr ""
+
+#: platform/ios/export/export_plugin.cpp
+#, fuzzy
+msgid "iPad 76 X 76"
+msgstr "Τυχαία περιστροφή:"
+
+#: platform/ios/export/export_plugin.cpp
+msgid "iPad 152 X 152"
+msgstr ""
+
+#: platform/ios/export/export_plugin.cpp
+msgid "iPad 167 X 167"
+msgstr ""
+
+#: platform/ios/export/export_plugin.cpp
+msgid "App Store 1024 X 1024"
+msgstr ""
+
+#: platform/ios/export/export_plugin.cpp
+#, fuzzy
+msgid "Spotlight 40 X 40"
+msgstr "Τυχαία περιστροφή:"
+
+#: platform/ios/export/export_plugin.cpp
+msgid "Spotlight 80 X 80"
+msgstr ""
+
+#: platform/ios/export/export_plugin.cpp
 #, fuzzy
 msgid "Settings 58 X 58"
 msgstr "Ρυθμίσεις"
@@ -7176,57 +6680,15 @@ msgid "Notification 60 X 60"
 msgstr "Τυχαία περιστροφή:"
 
 #: platform/ios/export/export_plugin.cpp
-#, fuzzy
-msgid "Notification 76 X 76"
-msgstr "Τυχαία περιστροφή:"
-
-#: platform/ios/export/export_plugin.cpp
-#, fuzzy
-msgid "Notification 114 X 114"
-msgstr "Τυχαία περιστροφή:"
-
-#: platform/ios/export/export_plugin.cpp
-msgid "Spotlight 80 X 80"
-msgstr ""
-
-#: platform/ios/export/export_plugin.cpp
-msgid "Spotlight 120 X 120"
-msgstr ""
-
-#: platform/ios/export/export_plugin.cpp
-msgid "iPhone 120 X 120"
-msgstr ""
-
-#: platform/ios/export/export_plugin.cpp
-msgid "iPhone 180 X 180"
-msgstr ""
-
-#: platform/ios/export/export_plugin.cpp
-msgid "iPad 167 X 167"
-msgstr ""
-
-#: platform/ios/export/export_plugin.cpp
-msgid "iPad 152 X 152"
-msgstr ""
-
-#: platform/ios/export/export_plugin.cpp
-msgid "iOS 128 X 128"
-msgstr ""
-
-#: platform/ios/export/export_plugin.cpp
-msgid "iOS 192 X 192"
-msgstr ""
-
-#: platform/ios/export/export_plugin.cpp
-msgid "iOS 136 X 136"
-msgstr ""
-
-#: platform/ios/export/export_plugin.cpp
-msgid "App Store 1024 X 1024"
-msgstr ""
-
-#: platform/ios/export/export_plugin.cpp
 msgid "App Store Team ID"
+msgstr ""
+
+#: platform/ios/export/export_plugin.cpp
+msgid "Provisioning Profile UUID Debug"
+msgstr ""
+
+#: platform/ios/export/export_plugin.cpp
+msgid "Code Sign Identity Debug"
 msgstr ""
 
 #: platform/ios/export/export_plugin.cpp
@@ -7235,30 +6697,12 @@ msgid "Export Method Debug"
 msgstr "Εξαγωγή με αποσφαλμάτωση"
 
 #: platform/ios/export/export_plugin.cpp
-msgid "Code Sign Identity Debug"
+msgid "Provisioning Profile UUID Release"
 msgstr ""
 
 #: platform/ios/export/export_plugin.cpp
 msgid "Code Sign Identity Release"
 msgstr ""
-
-#: platform/ios/export/export_plugin.cpp
-msgid "Provisioning Profile UUID Debug"
-msgstr ""
-
-#: platform/ios/export/export_plugin.cpp
-msgid "Provisioning Profile UUID Release"
-msgstr ""
-
-#: platform/ios/export/export_plugin.cpp
-#, fuzzy
-msgid "Provisioning Profile Specifier Debug"
-msgstr "Τρέχων Προφίλ:"
-
-#: platform/ios/export/export_plugin.cpp
-#, fuzzy
-msgid "Provisioning Profile Specifier Release"
-msgstr "Τρέχων Προφίλ:"
 
 #: platform/ios/export/export_plugin.cpp
 #, fuzzy
@@ -7312,6 +6756,10 @@ msgstr "Έργο"
 
 #: platform/ios/export/export_plugin.cpp
 msgid "Delete Old Export Files Unconditionally"
+msgstr ""
+
+#: platform/ios/export/export_plugin.cpp
+msgid "Generate Simulator Library If Missing"
 msgstr ""
 
 #: platform/ios/export/export_plugin.cpp
@@ -7422,18 +6870,6 @@ msgstr "Ενεργοποίηση"
 #, fuzzy
 msgid "Tracking Domains"
 msgstr "Πακετάρισμα"
-
-#: platform/ios/export/export_plugin.cpp
-msgid "Icon 1024 X 1024"
-msgstr ""
-
-#: platform/ios/export/export_plugin.cpp
-msgid "Icon 1024 X 1024 Dark"
-msgstr ""
-
-#: platform/ios/export/export_plugin.cpp
-msgid "Icon 1024 X 1024 Tinted"
-msgstr ""
 
 #: platform/ios/export/export_plugin.cpp
 msgid "Storyboard"
@@ -7931,6 +7367,65 @@ msgstr ""
 msgid "Icon 512 X 512"
 msgstr ""
 
+#: platform/web/export/export_plugin.cpp
+msgid "Blazium"
+msgstr ""
+
+#: platform/web/export/export_plugin.cpp
+#, fuzzy
+msgid "Web Headers"
+msgstr "Λήξη χρονικού ορίου."
+
+#: platform/web/export/export_plugin.cpp scene/gui/graph_frame.cpp
+#: scene/gui/graph_node.cpp scene/main/window.cpp
+#: scene/resources/visual_shader.cpp
+msgid "Title"
+msgstr ""
+
+#: platform/web/export/export_plugin.cpp
+#, fuzzy
+msgid "URL"
+msgstr "Γραφική Διεπαφή Χρήσης"
+
+#: platform/web/export/export_plugin.cpp
+#, fuzzy
+msgid "Site Name"
+msgstr "Διαδρομή σκηνής:"
+
+#: platform/web/export/export_plugin.cpp
+#, fuzzy
+msgid "Social Headers"
+msgstr "Εκτύπωση Κεφαλίδας"
+
+#: platform/web/export/export_plugin.cpp
+msgid "Site"
+msgstr ""
+
+#: platform/web/export/export_plugin.cpp
+msgid "Card"
+msgstr ""
+
+#: platform/web/export/export_plugin.cpp
+msgid "Discord Embed"
+msgstr ""
+
+#: platform/web/export/export_plugin.cpp
+#, fuzzy
+msgid "Autodetect"
+msgstr "Αυτόματη Στοιχειοθέτηση"
+
+#: platform/web/export/export_plugin.cpp
+msgid "Youtube Playable"
+msgstr ""
+
+#: platform/web/export/export_plugin.cpp
+msgid "Export Gzip Compressed Wasm"
+msgstr ""
+
+#: platform/web/export/export_plugin.cpp
+msgid "Keep Uncompressed Wasm"
+msgstr ""
+
 #: platform/windows/export/export_plugin.cpp
 msgid "Identity Type"
 msgstr ""
@@ -8291,12 +7786,6 @@ msgstr "Εκρηκτικότητα"
 msgid "Randomness"
 msgstr "Τυχαία επανεκκίνηση (δευτερόλεπτα):"
 
-#: scene/2d/cpu_particles_2d.cpp scene/2d/gpu_particles_2d.cpp
-#: scene/3d/cpu_particles_3d.cpp scene/3d/gpu_particles_3d.cpp
-#, fuzzy
-msgid "Use Fixed Seed"
-msgstr "Εμπρόσθια όψη"
-
 #: scene/2d/cpu_particles_2d.cpp scene/3d/cpu_particles_3d.cpp
 #: scene/resources/particle_process_material.cpp
 msgid "Lifetime Randomness"
@@ -8367,8 +7856,7 @@ msgid "Normals"
 msgstr "Μορφή"
 
 #: scene/2d/cpu_particles_2d.cpp scene/3d/cpu_particles_3d.cpp
-#: scene/gui/control.cpp scene/main/window.cpp
-#: scene/resources/color_palette.cpp scene/resources/gradient.cpp
+#: scene/gui/control.cpp scene/main/window.cpp scene/resources/gradient.cpp
 #, fuzzy
 msgid "Colors"
 msgstr "Χρώμα"
@@ -8614,13 +8102,17 @@ msgid "Sub Emitter"
 msgstr "Δημιουργία πομπού"
 
 #: scene/2d/gpu_particles_2d.cpp scene/3d/gpu_particles_3d.cpp
-#, fuzzy
-msgid "Interp to End"
-msgstr "Παρεμβολή"
+msgid "Process Material"
+msgstr "Επεξεργασία Υλικού"
 
 #: scene/2d/gpu_particles_2d.cpp scene/3d/gpu_particles_3d.cpp
 #, fuzzy
 msgid "Interpolate"
+msgstr "Παρεμβολή"
+
+#: scene/2d/gpu_particles_2d.cpp scene/3d/gpu_particles_3d.cpp
+#, fuzzy
+msgid "Interp to End"
 msgstr "Παρεμβολή"
 
 #: scene/2d/gpu_particles_2d.cpp scene/3d/gpu_particles_3d.cpp
@@ -8646,10 +8138,6 @@ msgstr "Κατευθήνσεις"
 #: scene/2d/gpu_particles_2d.cpp
 msgid "Section Subdivisions"
 msgstr ""
-
-#: scene/2d/gpu_particles_2d.cpp scene/3d/gpu_particles_3d.cpp
-msgid "Process Material"
-msgstr "Επεξεργασία Υλικού"
 
 #: scene/2d/light_2d.cpp scene/3d/light_3d.cpp scene/gui/reference_rect.cpp
 #, fuzzy
@@ -8706,7 +8194,6 @@ msgid "Texture Scale"
 msgstr "TextureRegion"
 
 #: scene/2d/light_occluder_2d.cpp scene/2d/line_2d.cpp
-#: scene/resources/curve.cpp
 #, fuzzy
 msgid "Closed"
 msgstr "Κλείσιμο"
@@ -8799,7 +8286,6 @@ msgid "Multimesh"
 msgstr ""
 
 #: scene/2d/navigation_agent_2d.cpp scene/3d/navigation_agent_3d.cpp
-#: servers/navigation_server_3d.cpp
 #, fuzzy
 msgid "Pathfinding"
 msgstr "Δεσμός"
@@ -9259,14 +8745,16 @@ msgstr "Στρώμα"
 msgid "Wall Layers"
 msgstr "Στρώμα"
 
-#: scene/2d/physics/character_body_2d.cpp scene/3d/look_at_modifier_3d.cpp
+#: scene/2d/physics/character_body_2d.cpp
 #: scene/3d/physics/character_body_3d.cpp
 #, fuzzy
 msgid "Safe Margin"
 msgstr "Ορισμός Περιθωρίου"
 
 #: scene/2d/physics/collision_object_2d.cpp
-#: scene/3d/physics/collision_object_3d.cpp scene/3d/soft_body_3d.cpp
+#: scene/2d/physics/joints/joint_2d.cpp
+#: scene/3d/physics/collision_object_3d.cpp
+#: scene/3d/physics/joints/joint_3d.cpp scene/3d/soft_body_3d.cpp
 #, fuzzy
 msgid "Disable Mode"
 msgstr "Απενεργοποιημένο Στοιχείο"
@@ -9302,8 +8790,6 @@ msgid "One Way Collision Margin"
 msgstr "Δημιουργία Πολυγώνου Σύγκρουσης"
 
 #: scene/2d/physics/collision_shape_2d.cpp
-#: scene/3d/physics/collision_polygon_3d.cpp
-#: scene/3d/physics/collision_shape_3d.cpp
 #, fuzzy
 msgid "Debug Color"
 msgstr "Προεπιλεγμένο"
@@ -9565,10 +9051,15 @@ msgstr ""
 #: scene/2d/physics/shape_cast_2d.cpp scene/3d/physics/collision_polygon_3d.cpp
 #: scene/3d/physics/shape_cast_3d.cpp scene/3d/physics/spring_arm_3d.cpp
 #: scene/resources/3d/shape_3d.cpp scene/resources/atlas_texture.cpp
-#: scene/theme/default_theme.cpp servers/physics_server_2d.cpp
-#: servers/physics_server_3d.cpp
+#: scene/theme/default_theme.cpp scene/theme/theme_db.cpp
+#: servers/physics_server_2d.cpp servers/physics_server_3d.cpp
 msgid "Margin"
 msgstr "Περιθώριο"
+
+#: scene/2d/physics/shape_cast_2d.cpp scene/3d/physics/shape_cast_3d.cpp
+#, fuzzy
+msgid "Max Results"
+msgstr "Αποτελέσματα Αναζήτησης"
 
 #: scene/2d/physics/static_body_2d.cpp scene/3d/physics/static_body_3d.cpp
 #, fuzzy
@@ -9626,7 +9117,7 @@ msgstr "Ρυθμίσεις επεξεργαστή"
 msgid "Show Bone Gizmo"
 msgstr "Εμφάνιση Οστών"
 
-#: scene/2d/skeleton_2d.cpp
+#: scene/2d/skeleton_2d.cpp scene/3d/skeleton_3d.cpp
 #, fuzzy
 msgid "Rest"
 msgstr "Επανεκκίνηση"
@@ -9678,11 +9169,6 @@ msgstr "Λειτουργία Προτεραιότητας"
 #, fuzzy
 msgid "Navigation Visibility Mode"
 msgstr "Λειτουργία Προτεραιότητας"
-
-#: scene/2d/tile_map_layer.cpp
-#, fuzzy
-msgid "Occlusion Enabled"
-msgstr "Λειτουργία Σύγκρουσης"
 
 #: scene/2d/tile_map_layer.cpp scene/resources/2d/tile_set.cpp
 #, fuzzy
@@ -9807,8 +9293,11 @@ msgstr "Ενεργοποίηση Doppler"
 msgid "Tracking"
 msgstr "Πακετάρισμα"
 
-#: scene/3d/bone_attachment_3d.cpp scene/3d/look_at_modifier_3d.cpp
-#: scene/3d/physics/physical_bone_3d.cpp scene/3d/spring_bone_collision_3d.cpp
+#: scene/3d/audio_stream_player_3d.cpp
+msgid "Clamp"
+msgstr ""
+
+#: scene/3d/bone_attachment_3d.cpp scene/3d/physics/physical_bone_3d.cpp
 #, fuzzy
 msgid "Bone Name"
 msgstr "Όνομα κόμβου:"
@@ -10025,11 +9514,6 @@ msgstr "(Απ)ενεργοποίηση Κομματιού"
 
 #: scene/3d/gpu_particles_collision_3d.cpp
 #, fuzzy
-msgid "Heightfield Mask"
-msgstr "Φως"
-
-#: scene/3d/gpu_particles_collision_3d.cpp
-#, fuzzy
 msgid "Directionality"
 msgstr "Κατευθήνσεις"
 
@@ -10135,9 +9619,10 @@ msgid "Outline Render Priority"
 msgstr "Επεξεργασία Προτεραιότητας"
 
 #: scene/3d/label_3d.cpp scene/gui/button.cpp scene/gui/control.cpp
-#: scene/gui/dialogs.cpp scene/gui/label.cpp scene/gui/line_edit.cpp
-#: scene/gui/link_button.cpp scene/gui/rich_text_label.cpp
-#: scene/gui/text_edit.cpp scene/resources/3d/primitive_meshes.cpp
+#: scene/gui/dialogs.cpp scene/gui/foldable_container.cpp scene/gui/label.cpp
+#: scene/gui/line_edit.cpp scene/gui/link_button.cpp
+#: scene/gui/rich_text_label.cpp scene/gui/text_edit.cpp
+#: scene/resources/3d/primitive_meshes.cpp
 msgid "Text"
 msgstr "Κείμενο"
 
@@ -10164,7 +9649,7 @@ msgstr "Εμπρόσθια όψη"
 msgid "Horizontal Alignment"
 msgstr "Οριζόντια:"
 
-#: scene/3d/label_3d.cpp scene/gui/label.cpp scene/gui/rich_text_label.cpp
+#: scene/3d/label_3d.cpp scene/gui/label.cpp
 #: scene/resources/3d/primitive_meshes.cpp
 #, fuzzy
 msgid "Vertical Alignment"
@@ -10181,16 +9666,16 @@ msgstr "Κεφαλαία"
 msgid "Justification Flags"
 msgstr "Τυχαία περιστροφή:"
 
-#: scene/3d/label_3d.cpp scene/gui/button.cpp scene/gui/label.cpp
-#: scene/gui/line_edit.cpp scene/gui/link_button.cpp scene/gui/menu_bar.cpp
-#: scene/gui/rich_text_label.cpp scene/gui/text_edit.cpp
+#: scene/3d/label_3d.cpp scene/gui/button.cpp scene/gui/foldable_container.cpp
+#: scene/gui/label.cpp scene/gui/line_edit.cpp scene/gui/link_button.cpp
+#: scene/gui/menu_bar.cpp scene/gui/rich_text_label.cpp scene/gui/text_edit.cpp
 #: scene/resources/3d/primitive_meshes.cpp
 msgid "BiDi"
 msgstr ""
 
-#: scene/3d/label_3d.cpp scene/gui/button.cpp scene/gui/label.cpp
-#: scene/gui/line_edit.cpp scene/gui/link_button.cpp scene/gui/menu_bar.cpp
-#: scene/gui/rich_text_label.cpp scene/gui/text_edit.cpp
+#: scene/3d/label_3d.cpp scene/gui/button.cpp scene/gui/foldable_container.cpp
+#: scene/gui/label.cpp scene/gui/line_edit.cpp scene/gui/link_button.cpp
+#: scene/gui/menu_bar.cpp scene/gui/rich_text_label.cpp scene/gui/text_edit.cpp
 #: scene/resources/3d/primitive_meshes.cpp
 #, fuzzy
 msgid "Text Direction"
@@ -10279,11 +9764,6 @@ msgstr ""
 msgid "Blur"
 msgstr "Θόλωση"
 
-#: scene/3d/light_3d.cpp
-#, fuzzy
-msgid "Caster Mask"
-msgstr "Στρώμα"
-
 #: scene/3d/light_3d.cpp servers/rendering_server.cpp
 #, fuzzy
 msgid "Directional Shadow"
@@ -10344,28 +9824,13 @@ msgstr "Κίνηση"
 
 #: scene/3d/lightmap_gi.cpp
 #, fuzzy
-msgid "Lightmap Textures"
+msgid "Light Texture"
 msgstr "Σημεία εκπομπής:"
 
-#: scene/3d/lightmap_gi.cpp
-#, fuzzy
-msgid "Shadowmask Textures"
-msgstr "Αφαίρεση Υφής"
-
 #: scene/3d/lightmap_gi.cpp scene/main/scene_tree.cpp
-#: scene/resources/multimesh.cpp servers/rendering_server.cpp
+#: servers/rendering_server.cpp
 msgid "Quality"
 msgstr "Ποιότητα"
-
-#: scene/3d/lightmap_gi.cpp
-#, fuzzy
-msgid "Supersampling"
-msgstr "Υπερδειγματοληψία"
-
-#: scene/3d/lightmap_gi.cpp
-#, fuzzy
-msgid "Supersampling Factor"
-msgstr "Βαθμωτός τελεστής."
 
 #: scene/3d/lightmap_gi.cpp
 msgid "Bounces"
@@ -10380,11 +9845,6 @@ msgstr "Χρώματα εκπομπής"
 #, fuzzy
 msgid "Directional"
 msgstr "Κατευθήνσεις"
-
-#: scene/3d/lightmap_gi.cpp
-#, fuzzy
-msgid "Shadowmask Mode"
-msgstr "Πρόγραμμα Σκίασης"
 
 #: scene/3d/lightmap_gi.cpp
 #, fuzzy
@@ -10455,120 +9915,6 @@ msgstr "Υποδιαίρεση"
 #, fuzzy
 msgid "Light Data"
 msgstr "Φως"
-
-#: scene/3d/look_at_modifier_3d.cpp scene/3d/skeleton_ik_3d.cpp
-#, fuzzy
-msgid "Target Node"
-msgstr "Επαναπροσδιορισμός Γονέα Κόμβου"
-
-#: scene/3d/look_at_modifier_3d.cpp
-#, fuzzy
-msgid "Forward Axis"
-msgstr "Δημιουργία φακέλου"
-
-#: scene/3d/look_at_modifier_3d.cpp
-#, fuzzy
-msgid "Primary Rotation Axis"
-msgstr "Τυχαία περιστροφή:"
-
-#: scene/3d/look_at_modifier_3d.cpp
-msgid "Use Secondary Rotation"
-msgstr ""
-
-#: scene/3d/look_at_modifier_3d.cpp
-#, fuzzy
-msgid "Origin Settings"
-msgstr "Ρυθμίσεις"
-
-#: scene/3d/look_at_modifier_3d.cpp scene/resources/gradient_texture.cpp
-#: servers/physics_server_2d.cpp servers/physics_server_3d.cpp
-#, fuzzy
-msgid "From"
-msgstr "Λειτουργία Αναπαραγωγής:"
-
-#: scene/3d/look_at_modifier_3d.cpp
-#, fuzzy
-msgid "External Node"
-msgstr "Άνοιγμα αρχείου"
-
-#: scene/3d/look_at_modifier_3d.cpp
-#, fuzzy
-msgid "Time Based Interpolation"
-msgstr "Παρεμβολή"
-
-#: scene/3d/look_at_modifier_3d.cpp
-#, fuzzy
-msgid "Transition Type"
-msgstr "Ορισμός τύπου μεταβλητής"
-
-#: scene/3d/look_at_modifier_3d.cpp
-#, fuzzy
-msgid "Ease Type"
-msgstr "Αλλαγή βασικού τύπου"
-
-#: scene/3d/look_at_modifier_3d.cpp
-#, fuzzy
-msgid "Angle Limitation"
-msgstr "Κίνηση"
-
-#: scene/3d/look_at_modifier_3d.cpp
-#, fuzzy
-msgid "Use Angle Limitation"
-msgstr "Κίνηση"
-
-#: scene/3d/look_at_modifier_3d.cpp
-msgid "Symmetry Limitation"
-msgstr ""
-
-#: scene/3d/look_at_modifier_3d.cpp
-#, fuzzy
-msgid "Primary Limit Angle"
-msgstr "Γραμμική"
-
-#: scene/3d/look_at_modifier_3d.cpp
-msgid "Primary Damp Threshold"
-msgstr ""
-
-#: scene/3d/look_at_modifier_3d.cpp
-msgid "Primary Positive Limit Angle"
-msgstr ""
-
-#: scene/3d/look_at_modifier_3d.cpp
-msgid "Primary Positive Damp Threshold"
-msgstr ""
-
-#: scene/3d/look_at_modifier_3d.cpp
-msgid "Primary Negative Limit Angle"
-msgstr ""
-
-#: scene/3d/look_at_modifier_3d.cpp
-msgid "Primary Negative Damp Threshold"
-msgstr ""
-
-#: scene/3d/look_at_modifier_3d.cpp
-#, fuzzy
-msgid "Secondary Limit Angle"
-msgstr "Γραμμική"
-
-#: scene/3d/look_at_modifier_3d.cpp
-msgid "Secondary Damp Threshold"
-msgstr ""
-
-#: scene/3d/look_at_modifier_3d.cpp
-msgid "Secondary Positive Limit Angle"
-msgstr ""
-
-#: scene/3d/look_at_modifier_3d.cpp
-msgid "Secondary Positive Damp Threshold"
-msgstr ""
-
-#: scene/3d/look_at_modifier_3d.cpp
-msgid "Secondary Negative Limit Angle"
-msgstr ""
-
-#: scene/3d/look_at_modifier_3d.cpp
-msgid "Secondary Negative Damp Threshold"
-msgstr ""
 
 #: scene/3d/mesh_instance_3d.cpp
 #, fuzzy
@@ -10690,12 +10036,6 @@ msgstr "Επιλέξημη Ακτίνα"
 #, fuzzy
 msgid "Capture on Drag"
 msgstr "Καταγραφή"
-
-#: scene/3d/physics/collision_polygon_3d.cpp
-#: scene/3d/physics/collision_shape_3d.cpp
-#, fuzzy
-msgid "Debug Fill"
-msgstr "Προεπιλεγμένο"
 
 #: scene/3d/physics/joints/cone_twist_joint_3d.cpp
 #: scene/3d/physics/physical_bone_3d.cpp
@@ -11114,11 +10454,6 @@ msgstr "Σφάλμα"
 
 #: scene/3d/reflection_probe.cpp
 #, fuzzy
-msgid "Blend Distance"
-msgstr "Επιλογή απόστασης:"
-
-#: scene/3d/reflection_probe.cpp
-#, fuzzy
 msgid "Origin Offset"
 msgstr "Μετατόπιση Πλέγματος:"
 
@@ -11151,11 +10486,10 @@ msgstr "Επιλογή χρώματος"
 msgid "Color Energy"
 msgstr "Μετακίνηση εφέ διαύλου ήχου"
 
-#: scene/3d/retarget_modifier_3d.cpp scene/resources/bone_map.cpp
-#: servers/xr/xr_positional_tracker.cpp
+#: scene/3d/skeleton_3d.cpp
 #, fuzzy
-msgid "Profile"
-msgstr "Πρόγραμμα Δημιουργίας Προφίλ"
+msgid "Bones"
+msgstr "Οστά"
 
 #: scene/3d/skeleton_3d.cpp
 #, fuzzy
@@ -11212,6 +10546,11 @@ msgstr ""
 #: scene/3d/skeleton_ik_3d.cpp
 msgid "Magnet"
 msgstr ""
+
+#: scene/3d/skeleton_ik_3d.cpp
+#, fuzzy
+msgid "Target Node"
+msgstr "Επαναπροσδιορισμός Γονέα Κόμβου"
 
 #: scene/3d/skeleton_ik_3d.cpp scene/resources/material.cpp
 #, fuzzy
@@ -11284,21 +10623,6 @@ msgstr ""
 msgid "Drag Coefficient"
 msgstr ""
 
-#: scene/3d/spring_bone_collision_3d.cpp scene/gui/graph_element.cpp
-#, fuzzy
-msgid "Position Offset"
-msgstr "Μετατόπιση Περιστροφής:"
-
-#: scene/3d/spring_bone_collision_3d.cpp
-#, fuzzy
-msgid "Rotation Offset"
-msgstr "Μετατόπιση Περιστροφής:"
-
-#: scene/3d/spring_bone_collision_capsule_3d.cpp
-#: scene/3d/spring_bone_collision_sphere_3d.cpp
-msgid "Inside"
-msgstr ""
-
 #: scene/3d/velocity_tracker_3d.cpp
 #, fuzzy
 msgid "Track Physics Step"
@@ -11357,11 +10681,6 @@ msgstr "Ρυθμίσεις οπτικής γωνίας"
 #, fuzzy
 msgid "Global Illumination"
 msgstr "Σταθερή"
-
-#: scene/3d/visual_instance_3d.cpp
-#, fuzzy
-msgid "Lightmap Texel Scale"
-msgstr "Προετοιμασία Lightmaps"
 
 #: scene/3d/visual_instance_3d.cpp
 msgid "Lightmap Scale"
@@ -11425,11 +10744,6 @@ msgstr "Τυχαία κλιμάκωση:"
 #, fuzzy
 msgid "Play Mode"
 msgstr "Λειτουργία Αναπαραγωγής:"
-
-#: scene/animation/animation_blend_tree.cpp
-#, fuzzy
-msgid "Advance on Start"
-msgstr "Σύστημα Ελέγχου Έκδοσης"
 
 #: scene/animation/animation_blend_tree.cpp
 #, fuzzy
@@ -11499,10 +10813,6 @@ msgstr ""
 #, fuzzy
 msgid "Random Delay"
 msgstr "Τυχαία κλίση:"
-
-#: scene/animation/animation_blend_tree.cpp
-msgid "Explicit Elapse"
-msgstr ""
 
 #: scene/animation/animation_blend_tree.cpp
 #: scene/animation/animation_node_state_machine.cpp
@@ -11597,11 +10907,6 @@ msgstr ""
 #: scene/animation/animation_mixer.cpp
 msgid "Track"
 msgstr "Ιχνος"
-
-#: scene/animation/animation_mixer.cpp
-#, fuzzy
-msgid "Local"
-msgstr "Μικρός λοβός"
 
 #: scene/animation/animation_mixer.cpp
 #, fuzzy
@@ -11756,6 +11061,11 @@ msgid "Action Mode"
 msgstr "Λειτουργία Εικονιδίων"
 
 #: scene/gui/base_button.cpp
+#, fuzzy
+msgid "Size Mode"
+msgstr "Φιλτράρισμα κόμβων"
+
+#: scene/gui/base_button.cpp
 msgid "Keep Pressed Outside"
 msgstr ""
 
@@ -11788,7 +11098,13 @@ msgstr "Επιτρεπτό"
 msgid "Text Behavior"
 msgstr "Επεξεργαστής Κειμένου"
 
-#: scene/gui/button.cpp scene/gui/item_list.cpp scene/gui/label.cpp
+#: scene/gui/button.cpp
+#, fuzzy
+msgid "Expand Text"
+msgstr "Λειτουργία Μετακίνησης Κάμερας"
+
+#: scene/gui/button.cpp scene/gui/foldable_container.cpp
+#: scene/gui/item_list.cpp scene/gui/label.cpp scene/gui/link_button.cpp
 #: scene/resources/text_line.cpp scene/resources/text_paragraph.cpp
 msgid "Text Overrun Behavior"
 msgstr ""
@@ -11825,10 +11141,6 @@ msgstr "Πάνω Αριστερά"
 
 #: scene/gui/code_edit.cpp
 msgid "Symbol Lookup on Click"
-msgstr ""
-
-#: scene/gui/code_edit.cpp
-msgid "Symbol Tooltip on Hover"
 msgstr ""
 
 #: scene/gui/code_edit.cpp
@@ -11924,7 +11236,7 @@ msgstr "Κατευθήνσεις"
 msgid "Pairs"
 msgstr ""
 
-#: scene/gui/color_picker.cpp
+#: scene/gui/color_button.cpp scene/gui/color_picker.cpp
 #, fuzzy
 msgid "Edit Alpha"
 msgstr "Επεγεργασία πολυγώνου"
@@ -12065,11 +11377,6 @@ msgstr ""
 msgid "Tooltip"
 msgstr "Επεξήγηση εργαλείου"
 
-#: scene/gui/control.cpp
-#, fuzzy
-msgid "Auto Translate Mode"
-msgstr "Μετατόπιση:"
-
 #: scene/gui/control.cpp scene/theme/default_theme.cpp
 msgid "Focus"
 msgstr "Εστίαση"
@@ -12185,6 +11492,35 @@ msgstr "Φιλτράρισμα σημάτων"
 msgid "Reverse Fill"
 msgstr "Επαναφορά Έντασης Διαύλου"
 
+#: scene/gui/foldable_container.cpp scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Folded"
+msgstr "Φάκελος:"
+
+#: scene/gui/foldable_container.cpp
+#, fuzzy
+msgid "Title Alignment"
+msgstr "Φιλτράρισμα σημάτων"
+
+#: scene/gui/foldable_container.cpp
+#, fuzzy
+msgid "Title Position"
+msgstr "Αρχική Θέση"
+
+#: scene/gui/foldable_container.cpp
+#, fuzzy
+msgid "Foldable Group"
+msgstr "Φάκελος:"
+
+#: scene/gui/foldable_container.cpp
+#, fuzzy
+msgid "Buttons"
+msgstr "Κουμπί"
+
+#: scene/gui/foldable_container.cpp
+msgid "Allow Folding All"
+msgstr ""
+
 #: scene/gui/graph_edit.cpp
 msgid "Show Grid"
 msgstr ""
@@ -12218,11 +11554,6 @@ msgstr "Αντιγραφή Επιλογής"
 #, fuzzy
 msgid "Curvature"
 msgstr "Καταγραφή"
-
-#: scene/gui/graph_edit.cpp
-#, fuzzy
-msgid "Connections"
-msgstr "Αντιγραφή Επιλογής"
 
 #: scene/gui/graph_edit.cpp
 #, fuzzy
@@ -12275,19 +11606,24 @@ msgstr "Δεξί Κουμπί Ροδέλας"
 
 #: scene/gui/graph_element.cpp
 #, fuzzy
+msgid "Position Offset"
+msgstr "Μετατόπιση Περιστροφής:"
+
+#: scene/gui/graph_element.cpp
+#, fuzzy
 msgid "Draggable"
 msgstr "Ορισμός Περιθωρίου"
+
+#: scene/gui/graph_element.cpp
+#, fuzzy
+msgid "Selectable"
+msgstr "Επιλογή"
 
 #: scene/gui/graph_element.cpp scene/gui/option_button.cpp
 #: scene/theme/default_theme.cpp
 #, fuzzy
 msgid "Selected"
 msgstr "Επιλογή"
-
-#: scene/gui/graph_frame.cpp scene/gui/graph_node.cpp scene/main/window.cpp
-#: scene/resources/visual_shader.cpp
-msgid "Title"
-msgstr ""
 
 #: scene/gui/graph_frame.cpp
 #, fuzzy
@@ -12343,17 +11679,8 @@ msgstr ""
 
 #: scene/gui/item_list.cpp
 #, fuzzy
-msgid "Auto Width"
-msgstr "Ευρεία Αριστερά"
-
-#: scene/gui/item_list.cpp
-#, fuzzy
 msgid "Auto Height"
 msgstr "Δοκιμαστικά"
-
-#: scene/gui/item_list.cpp
-msgid "Wraparound Items"
-msgstr ""
 
 #: scene/gui/item_list.cpp scene/gui/menu_button.cpp
 #: scene/gui/option_button.cpp scene/gui/popup_menu.cpp
@@ -12390,11 +11717,6 @@ msgstr "Εμπρόσθια όψη"
 #, fuzzy
 msgid "Label Settings"
 msgstr "Τοπικές Ρυθμίσεις"
-
-#: scene/gui/label.cpp
-#, fuzzy
-msgid "Paragraph Separator"
-msgstr "Διαχωρισμός:"
 
 #: scene/gui/label.cpp scene/resources/text_line.cpp
 #: scene/resources/text_paragraph.cpp
@@ -12455,11 +11777,6 @@ msgstr "Επεξεργασία Διαβάθμισης"
 #: scene/gui/text_edit.cpp
 #, fuzzy
 msgid "Context Menu Enabled"
-msgstr "Βοήθεια ανάλογα με τα συμφραζόμενα"
-
-#: scene/gui/line_edit.cpp scene/gui/text_edit.cpp
-#, fuzzy
-msgid "Emoji Menu Enabled"
 msgstr "Βοήθεια ανάλογα με τα συμφραζόμενα"
 
 #: scene/gui/line_edit.cpp scene/gui/text_edit.cpp
@@ -12559,6 +11876,11 @@ msgstr ""
 #, fuzzy
 msgid "URI"
 msgstr "Γραφική Διεπαφή Χρήσης"
+
+#: scene/gui/link_button.cpp
+#, fuzzy
+msgid "Text Alignment"
+msgstr "Φιλτράρισμα σημάτων"
 
 #: scene/gui/menu_bar.cpp
 #, fuzzy
@@ -12690,6 +12012,7 @@ msgid "Border Color"
 msgstr "Αφαίρεση στοιχείων κλάσης"
 
 #: scene/gui/reference_rect.cpp scene/resources/style_box_flat.cpp
+#: scene/theme/theme_db.cpp
 #, fuzzy
 msgid "Border Width"
 msgstr "Εικονοστοιχεία Περιγράμματος"
@@ -12800,11 +12123,6 @@ msgstr "Συμπλήρωση επιφάνειας"
 
 #: scene/gui/scroll_container.cpp
 #, fuzzy
-msgid "Draw Focus Border"
-msgstr "Λειτουργία Μετακίνησης"
-
-#: scene/gui/scroll_container.cpp
-#, fuzzy
 msgid "Horizontal Custom Step"
 msgstr "Οριζόντια:"
 
@@ -12858,6 +12176,11 @@ msgstr "Αποκοπή κόμβων"
 
 #: scene/gui/split_container.cpp
 #, fuzzy
+msgid "Dragging Enabled"
+msgstr "Ενεργοποίηση"
+
+#: scene/gui/split_container.cpp
+#, fuzzy
 msgid "Split Offset"
 msgstr "Μετατόπιση Πλέγματος:"
 
@@ -12868,43 +12191,23 @@ msgstr "Σύμπτυξη Όλων"
 
 #: scene/gui/split_container.cpp
 #, fuzzy
-msgid "Dragging Enabled"
-msgstr "Ενεργοποίηση"
-
-#: scene/gui/split_container.cpp
-#, fuzzy
 msgid "Dragger Visibility"
 msgstr "Εναλλαγή ορατότητας"
 
 #: scene/gui/split_container.cpp
 #, fuzzy
-msgid "Drag Area"
-msgstr "Ορισμός Περιθωρίου"
+msgid "Collapse Mode"
+msgstr "Σύμπτυξη Όλων"
 
 #: scene/gui/split_container.cpp
 #, fuzzy
-msgid "Margin Begin"
-msgstr "Ορισμός Περιθωρίου"
-
-#: scene/gui/split_container.cpp
-#, fuzzy
-msgid "Margin End"
-msgstr "Περιθώριο"
-
-#: scene/gui/split_container.cpp
-#, fuzzy
-msgid "Highlight in Editor"
+msgid "Drag Area Highlight in Editor"
 msgstr "Κατευθήνσεις"
 
 #: scene/gui/subviewport_container.cpp
 #, fuzzy
 msgid "Stretch Shrink"
 msgstr "Επιλογή Λειτουργίας"
-
-#: scene/gui/subviewport_container.cpp
-#, fuzzy
-msgid "Mouse Target"
-msgstr "Στόχος"
 
 #: scene/gui/tab_bar.cpp scene/gui/tab_container.cpp
 #, fuzzy
@@ -12990,11 +12293,6 @@ msgstr "Λειτουργία Μετακίνησης"
 
 #: scene/gui/text_edit.cpp
 #, fuzzy
-msgid "Empty Selection Clipboard Enabled"
-msgstr "Μόνο στην επιλογή"
-
-#: scene/gui/text_edit.cpp
-#, fuzzy
 msgid "Wrap Mode"
 msgstr "Λειτουργία κουμπώματος:"
 
@@ -13010,11 +12308,6 @@ msgstr ""
 #: scene/gui/text_edit.cpp
 #, fuzzy
 msgid "Fit Content Height"
-msgstr "Ζωγράφισμα Βαρών Οστών"
-
-#: scene/gui/text_edit.cpp
-#, fuzzy
-msgid "Fit Content Width"
 msgstr "Ζωγράφισμα Βαρών Οστών"
 
 #: scene/gui/text_edit.cpp
@@ -13069,7 +12362,7 @@ msgctxt "Ordinary"
 msgid "Normal"
 msgstr "Μορφή"
 
-#: scene/gui/texture_button.cpp
+#: scene/gui/texture_button.cpp scene/theme/default_theme.cpp
 msgid "Hover"
 msgstr ""
 
@@ -13176,11 +12469,6 @@ msgstr "Οριζόντια:"
 #, fuzzy
 msgid "Scroll Vertical Enabled"
 msgstr "Φιλτράρισμα σημάτων"
-
-#: scene/gui/tree.cpp
-#, fuzzy
-msgid "Auto Tooltip"
-msgstr "Επεξήγηση εργαλείου"
 
 #: scene/gui/video_stream_player.cpp
 #, fuzzy
@@ -13331,6 +12619,11 @@ msgstr "Σειρά Σχεδίασης"
 msgid "Messages"
 msgstr "Μήνυμα"
 
+#: scene/main/node.cpp scene/main/scene_tree.cpp
+#, fuzzy
+msgid "Physics Interpolation"
+msgstr "Παρεμβολή"
+
 #: scene/main/node.cpp
 #, fuzzy
 msgid "Auto Translate"
@@ -13381,11 +12674,6 @@ msgid "Contact Color"
 msgstr "Επιλογή χρώματος"
 
 #: scene/main/scene_tree.cpp
-#, fuzzy
-msgid "Paths"
-msgstr "Διαδρομή"
-
-#: scene/main/scene_tree.cpp
 msgid "Geometry Color"
 msgstr ""
 
@@ -13404,7 +12692,21 @@ msgstr "Εμφάνιση όλων"
 msgid "Draw 2D Outlines"
 msgstr "Δημιουργία περιγράμματος"
 
-#: scene/main/scene_tree.cpp servers/rendering_server.cpp
+#: scene/main/scene_tree.cpp scene/resources/style_box_flat.cpp
+#: servers/rendering_server.cpp
+msgid "Anti Aliasing"
+msgstr ""
+
+#: scene/main/scene_tree.cpp scene/main/viewport.cpp
+msgid "MSAA 2D"
+msgstr ""
+
+#: scene/main/scene_tree.cpp scene/main/viewport.cpp
+#: servers/rendering/storage/render_scene_buffers.cpp
+msgid "MSAA 3D"
+msgstr ""
+
+#: scene/main/scene_tree.cpp
 #, fuzzy
 msgid "Viewport"
 msgstr "1 Οπτική γωνία"
@@ -13414,9 +12716,8 @@ msgstr "1 Οπτική γωνία"
 msgid "Transparent Background"
 msgstr "Μετατόπιση"
 
-#: scene/main/scene_tree.cpp scene/resources/style_box_flat.cpp
-#: servers/rendering_server.cpp
-msgid "Anti Aliasing"
+#: scene/main/scene_tree.cpp
+msgid "HDR 2D"
 msgstr ""
 
 #: scene/main/scene_tree.cpp scene/main/viewport.cpp
@@ -13453,10 +12754,6 @@ msgstr ""
 msgid "Threshold Pixels"
 msgstr ""
 
-#: scene/main/scene_tree.cpp
-msgid "Snap"
-msgstr "Κούμπωμα"
-
 #: scene/main/scene_tree.cpp scene/main/viewport.cpp
 #, fuzzy
 msgid "Snap 2D Transforms to Pixel"
@@ -13484,6 +12781,11 @@ msgstr "Κατευθήνσεις"
 #: scene/main/scene_tree.cpp
 #, fuzzy
 msgid "Atlas Size"
+msgstr "Μέγεθος περιγράμματος:"
+
+#: scene/main/scene_tree.cpp
+#, fuzzy
+msgid "Atlas 16 Bits"
 msgstr "Μέγεθος περιγράμματος:"
 
 #: scene/main/scene_tree.cpp
@@ -13539,11 +12841,6 @@ msgstr "Βάψιμο πλακιδίου"
 msgid "Autostart"
 msgstr "Αυτόματη επανεκκίνηση:"
 
-#: scene/main/timer.cpp
-#, fuzzy
-msgid "Ignore Time Scale"
-msgstr "Χρονοδιάγραμμα"
-
 #: scene/main/viewport.cpp
 #, fuzzy
 msgid "Viewport Path"
@@ -13577,15 +12874,6 @@ msgstr "Μετατόπιση"
 #, fuzzy
 msgid "Handle Input Locally"
 msgstr "Αλλαγή τιμής εισόδου"
-
-#: scene/main/viewport.cpp servers/rendering_server.cpp
-msgid "MSAA 2D"
-msgstr ""
-
-#: scene/main/viewport.cpp servers/rendering/storage/render_scene_buffers.cpp
-#: servers/rendering_server.cpp
-msgid "MSAA 3D"
-msgstr ""
 
 #: scene/main/viewport.cpp
 #, fuzzy
@@ -13770,11 +13058,6 @@ msgstr ""
 
 #: scene/main/window.cpp
 #, fuzzy
-msgid "Exclude From Capture"
-msgstr "Διαγραφή Κόμβων"
-
-#: scene/main/window.cpp
-#, fuzzy
 msgid "Force Native"
 msgstr "Κλήσεις σχεδίασης"
 
@@ -13842,18 +13125,6 @@ msgstr "Πλοήγηση"
 #, fuzzy
 msgid "Segments"
 msgstr "Ορίσματα κύριας σκηνής:"
-
-#: scene/resources/2d/navigation_polygon.cpp scene/resources/material.cpp
-#: scene/resources/navigation_mesh.cpp
-#, fuzzy
-msgid "Sampling"
-msgstr "Κλιμάκωση: "
-
-#: scene/resources/2d/navigation_polygon.cpp
-#: scene/resources/navigation_mesh.cpp
-#, fuzzy
-msgid "Partition Type"
-msgstr "Ορισμός τύπου μεταβλητής"
 
 #: scene/resources/2d/navigation_polygon.cpp
 #: scene/resources/navigation_mesh.cpp
@@ -14076,6 +13347,26 @@ msgstr "Χρήση Προσαρμοσμένης Διεύθυνση Καταλό�
 
 #: scene/resources/2d/tile_set.cpp
 #, fuzzy
+msgid "Tile Proxies"
+msgstr "TileSet"
+
+#: scene/resources/2d/tile_set.cpp
+#, fuzzy
+msgid "Source Level"
+msgstr "Πάνω Αριστερά"
+
+#: scene/resources/2d/tile_set.cpp
+#, fuzzy
+msgid "Coords Level"
+msgstr "Επίπεδο Συμπίεσης"
+
+#: scene/resources/2d/tile_set.cpp
+#, fuzzy
+msgid "Alternative Level"
+msgstr "Ορισμός έκφρασης"
+
+#: scene/resources/2d/tile_set.cpp
+#, fuzzy
 msgid "Tile Shape"
 msgstr "TileSet"
 
@@ -14228,11 +13519,6 @@ msgstr "Στοιχείο"
 #, fuzzy
 msgid "Mesh Transform"
 msgstr "Μετασχηματισμός"
-
-#: scene/resources/3d/mesh_library.cpp
-#, fuzzy
-msgid "Mesh Cast Shadow"
-msgstr "Δημιουργία Κόμβου Σκίασης"
 
 #: scene/resources/3d/mesh_library.cpp
 #, fuzzy
@@ -14474,6 +13760,11 @@ msgstr "Κόμβος μείξης"
 msgid "Stereo"
 msgstr ""
 
+#: scene/resources/bone_map.cpp servers/xr/xr_positional_tracker.cpp
+#, fuzzy
+msgid "Profile"
+msgstr "Πρόγραμμα Δημιουργίας Προφίλ"
+
 #: scene/resources/bone_map.cpp
 #, fuzzy
 msgid "Bonemap"
@@ -14649,16 +13940,6 @@ msgstr "Μετακίνηση εφέ διαύλου ήχου"
 #, fuzzy
 msgid "Load Path"
 msgstr "Φόρτωση Διαμόρφωσης"
-
-#: scene/resources/curve.cpp
-#, fuzzy
-msgid "Min Domain"
-msgstr "Πακετάρισμα"
-
-#: scene/resources/curve.cpp
-#, fuzzy
-msgid "Max Domain"
-msgstr "Επιλογή απόστασης:"
 
 #: scene/resources/curve.cpp
 #, fuzzy
@@ -14993,7 +14274,7 @@ msgstr ""
 msgid "Brightness"
 msgstr "Φως"
 
-#: scene/resources/environment.cpp
+#: scene/resources/environment.cpp scene/theme/theme_db.cpp
 msgid "Contrast"
 msgstr ""
 
@@ -15081,13 +14362,14 @@ msgstr ""
 #: scene/resources/gradient_texture.cpp servers/physics_server_2d.cpp
 #: servers/physics_server_3d.cpp
 #, fuzzy
+msgid "From"
+msgstr "Λειτουργία Αναπαραγωγής:"
+
+#: scene/resources/gradient_texture.cpp servers/physics_server_2d.cpp
+#: servers/physics_server_3d.cpp
+#, fuzzy
 msgid "To"
 msgstr "Κορυφή"
-
-#: scene/resources/label_settings.cpp
-#, fuzzy
-msgid "Paragraph Spacing"
-msgstr "Επιλογές υφής"
 
 #: scene/resources/material.cpp
 #, fuzzy
@@ -15283,6 +14565,11 @@ msgstr ""
 msgid "UV2"
 msgstr "UV"
 
+#: scene/resources/material.cpp scene/resources/navigation_mesh.cpp
+#, fuzzy
+msgid "Sampling"
+msgstr "Κλιμάκωση: "
+
 #: scene/resources/material.cpp
 #, fuzzy
 msgid "Shadows"
@@ -15409,6 +14696,11 @@ msgstr "Στιγμιότυπο"
 #: scene/resources/multimesh.cpp
 msgid "Visible Instance Count"
 msgstr ""
+
+#: scene/resources/navigation_mesh.cpp
+#, fuzzy
+msgid "Partition Type"
+msgstr "Ορισμός τύπου μεταβλητής"
 
 #: scene/resources/navigation_mesh.cpp
 #, fuzzy
@@ -15675,11 +14967,6 @@ msgstr "Δημιουργία Πολυγώνου Σύγκρουσης"
 
 #: scene/resources/particle_process_material.cpp
 #, fuzzy
-msgid "Amount at Start"
-msgstr "Ποσότητα:"
-
-#: scene/resources/particle_process_material.cpp
-#, fuzzy
 msgid "Keep Velocity"
 msgstr "Ταχύτητα"
 
@@ -15847,6 +15134,16 @@ msgstr "Λειτουργία Μετακίνησης Κάμερας"
 
 #: scene/resources/visual_shader.cpp
 #, fuzzy
+msgid "Varyings"
+msgstr "Προειδοποιήσεις"
+
+#: scene/resources/visual_shader.cpp
+#, fuzzy
+msgid "Preview Params"
+msgstr "Προεπισκόπηση"
+
+#: scene/resources/visual_shader.cpp
+#, fuzzy
 msgid "Input Name"
 msgstr "Χάρτης εισόδου"
 
@@ -15919,11 +15216,6 @@ msgstr "Αλλαγή τιμής εισόδου"
 
 #: scene/resources/visual_shader_nodes.cpp
 #, fuzzy
-msgid "Enum Names"
-msgstr "Απομακρυσμένο "
-
-#: scene/resources/visual_shader_nodes.cpp
-#, fuzzy
 msgid "Color Default"
 msgstr "Φόρτωση προεπιλογής"
 
@@ -15987,7 +15279,7 @@ msgstr "Αφαίρεση στοιχείων κλάσης"
 msgid "Font Disabled Color"
 msgstr "Επιλογή χρώματος"
 
-#: scene/theme/default_theme.cpp
+#: scene/theme/default_theme.cpp scene/theme/theme_db.cpp
 #, fuzzy
 msgid "Font Outline Color"
 msgstr "Συναρτήσεις"
@@ -16228,11 +15520,6 @@ msgstr "Δημιουργία φακέλου"
 
 #: scene/theme/default_theme.cpp
 #, fuzzy
-msgid "Folded"
-msgstr "Φάκελος:"
-
-#: scene/theme/default_theme.cpp
-#, fuzzy
 msgid "Can Fold Code Region"
 msgstr "Ορισμός Περιοχής Πλακιδίου"
 
@@ -16244,11 +15531,6 @@ msgstr "Ορισμός Περιοχής Πλακιδίου"
 #: scene/theme/default_theme.cpp
 msgid "Folded EOL Icon"
 msgstr ""
-
-#: scene/theme/default_theme.cpp
-#, fuzzy
-msgid "Completion Color BG"
-msgstr "Εισαγωγή σκηνής"
 
 #: scene/theme/default_theme.cpp
 #, fuzzy
@@ -16562,16 +15844,6 @@ msgstr "Διαχωρισμός:"
 
 #: scene/theme/default_theme.cpp
 #, fuzzy
-msgid "Load"
-msgstr "Φόρτωση Διαμόρφωσης"
-
-#: scene/theme/default_theme.cpp
-#, fuzzy
-msgid "Save"
-msgstr "Αποθήκευση"
-
-#: scene/theme/default_theme.cpp
-#, fuzzy
 msgid "Parent Folder"
 msgstr "Δημιουργία φακέλου"
 
@@ -16728,16 +16000,6 @@ msgstr "Μετατόπιση Πλέγματος:"
 
 #: scene/theme/default_theme.cpp
 #, fuzzy
-msgid "Hovered"
-msgstr "Προρύθμιση"
-
-#: scene/theme/default_theme.cpp
-#, fuzzy
-msgid "Hovered Dimmed"
-msgstr "Προρύθμιση"
-
-#: scene/theme/default_theme.cpp
-#, fuzzy
 msgid "Selected Focus"
 msgstr "Επιλογή"
 
@@ -16748,11 +16010,6 @@ msgstr ""
 #: scene/theme/default_theme.cpp
 msgid "Cursor Unfocused"
 msgstr ""
-
-#: scene/theme/default_theme.cpp
-#, fuzzy
-msgid "Button Hover"
-msgstr "Εναλλαγή Κουμπιού"
 
 #: scene/theme/default_theme.cpp
 #, fuzzy
@@ -16818,16 +16075,6 @@ msgstr "Εναλλαγή Κουμπιού"
 #, fuzzy
 msgid "Title Button Color"
 msgstr "Μόνο στην επιλογή"
-
-#: scene/theme/default_theme.cpp
-#, fuzzy
-msgid "Font Hovered Color"
-msgstr "Επιλογή χρώματος"
-
-#: scene/theme/default_theme.cpp
-#, fuzzy
-msgid "Font Hovered Dimmed Color"
-msgstr "Επιλογή χρώματος"
 
 #: scene/theme/default_theme.cpp
 #, fuzzy
@@ -16964,18 +16211,13 @@ msgstr "Ορισμός Περιθωρίου"
 
 #: scene/theme/default_theme.cpp
 #, fuzzy
-msgid "Font Hovered Selected Color"
-msgstr "Τρέχων Προφίλ:"
+msgid "Font Hovered Color"
+msgstr "Επιλογή χρώματος"
 
 #: scene/theme/default_theme.cpp
 #, fuzzy
-msgid "Hovered Selected"
-msgstr "Επιλογή"
-
-#: scene/theme/default_theme.cpp
-#, fuzzy
-msgid "Hovered Selected Focus"
-msgstr "Επιλογή"
+msgid "Hovered"
+msgstr "Προρύθμιση"
 
 #: scene/theme/default_theme.cpp
 #, fuzzy
@@ -17044,6 +16286,15 @@ msgstr "Κατευθήνσεις"
 
 #: scene/theme/default_theme.cpp
 #, fuzzy
+msgid "BG"
+msgstr "B"
+
+#: scene/theme/default_theme.cpp
+msgid "Overbright Indicator"
+msgstr ""
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
 msgid "SV Width"
 msgstr "Ευρεία Αριστερά"
 
@@ -17054,13 +16305,23 @@ msgstr "Φως"
 
 #: scene/theme/default_theme.cpp
 #, fuzzy
+msgid "Label Width"
+msgstr "Ευρεία Αριστερά"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
 msgid "H Width"
 msgstr "Ευρεία Αριστερά"
 
 #: scene/theme/default_theme.cpp
 #, fuzzy
-msgid "Label Width"
-msgstr "Ευρεία Αριστερά"
+msgid "Sample Height"
+msgstr "Φως"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Preset Size"
+msgstr "Μέγεθος Σελίδας"
 
 #: scene/theme/default_theme.cpp
 msgid "Center Slider Grabbers"
@@ -17068,8 +16329,13 @@ msgstr ""
 
 #: scene/theme/default_theme.cpp
 #, fuzzy
-msgid "Menu Option"
-msgstr "Επιλογές"
+msgid "Colorize Sliders"
+msgstr "Ορισμός Περιοχής Πλακιδίου"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Expanded Arrow"
+msgstr "Ανάπτυξη Όλων"
 
 #: scene/theme/default_theme.cpp
 #, fuzzy
@@ -17078,8 +16344,8 @@ msgstr "Φάκελος:"
 
 #: scene/theme/default_theme.cpp
 #, fuzzy
-msgid "Expanded Arrow"
-msgstr "Ανάπτυξη Όλων"
+msgid "Folded Arrow Mirrored"
+msgstr "Φάκελος:"
 
 #: scene/theme/default_theme.cpp
 #, fuzzy
@@ -17117,10 +16383,6 @@ msgid "Sample Revert"
 msgstr "Δειγματολήπτης"
 
 #: scene/theme/default_theme.cpp
-msgid "Overbright Indicator"
-msgstr ""
-
-#: scene/theme/default_theme.cpp
 #, fuzzy
 msgid "Bar Arrow"
 msgstr "Βέλος"
@@ -17137,23 +16399,18 @@ msgstr "Επιλογή χρώματος"
 
 #: scene/theme/default_theme.cpp
 #, fuzzy
+msgid "Hex Icon"
+msgstr "Εικονίδιο"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Hex Code Icon"
+msgstr "Προσθήκη Σημείου Κόμβου"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
 msgid "Color Hue"
 msgstr "Επεξεργασία Θέματος"
-
-#: scene/theme/default_theme.cpp
-#, fuzzy
-msgid "BG"
-msgstr "B"
-
-#: scene/theme/default_theme.cpp
-#, fuzzy
-msgid "Preset FG"
-msgstr "Προρύθμιση"
-
-#: scene/theme/default_theme.cpp
-#, fuzzy
-msgid "Preset BG"
-msgstr "Προρύθμιση"
 
 #: scene/theme/default_theme.cpp
 #, fuzzy
@@ -17247,6 +16504,31 @@ msgstr ""
 
 #: scene/theme/default_theme.cpp
 #, fuzzy
+msgid "H Split Bar Background"
+msgstr "Άκυρο χρώμα παρασκηνίου."
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "V Split Bar Background"
+msgstr "Άκυρο χρώμα παρασκηνίου."
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Split Bar Background"
+msgstr "Άκυρο χρώμα παρασκηνίου."
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Grabber Icon Normal"
+msgstr "Υποστήριξη"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Grabber Icon Pressed"
+msgstr "Προρύθμιση"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
 msgid "Margin Left"
 msgstr "Ορισμός Περιθωρίου"
 
@@ -17277,8 +16559,17 @@ msgstr "Αυτόματο κόψιμο"
 
 #: scene/theme/default_theme.cpp
 #, fuzzy
-msgid "Split Bar Background"
-msgstr "Άκυρο χρώμα παρασκηνίου."
+msgid "Autohide Split Bar"
+msgstr "Αυτόματο κόψιμο"
+
+#: scene/theme/default_theme.cpp
+msgid "Draw Grabber Icon"
+msgstr ""
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Draw Split Bar"
+msgstr "Κλήσεις σχεδίασης"
 
 #: scene/theme/default_theme.cpp
 #, fuzzy
@@ -17345,11 +16636,6 @@ msgstr "Κορυφή"
 
 #: scene/theme/default_theme.cpp
 #, fuzzy
-msgid "Connection Hover Thickness"
-msgstr "Κορυφή"
-
-#: scene/theme/default_theme.cpp
-#, fuzzy
 msgid "Connection Valid Target Tint Color"
 msgstr "Εισαγωγή σκηνής"
 
@@ -17357,6 +16643,95 @@ msgstr "Εισαγωγή σκηνής"
 #, fuzzy
 msgid "Connection Rim Color"
 msgstr "Επεξεργασία Σύνδεσης:"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Title Panel"
+msgstr "Προσθήκη Σημείου Κόμβου"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Title Hover Panel"
+msgstr "Εναλλαγή Κουμπιού"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Title Collapsed Panel"
+msgstr "Σύμπτυξη Όλων"
+
+#: scene/theme/default_theme.cpp
+msgid "Title Collapsed Hover Panel"
+msgstr ""
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Button Normal Style"
+msgstr "Εναλλαγή Κουμπιού"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Button Hovered Style"
+msgstr "Εναλλαγή Κουμπιού"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Button Pressed Style"
+msgstr "Προρύθμιση"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Button Disabled Style"
+msgstr "Απενεργοποιημένο Στοιχείο"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Hover Font Color"
+msgstr "Αρχείο αποθήκευσης:"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Collapsed Font Color"
+msgstr "Επιλογή χρώματος"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Button Icon Normal"
+msgstr "Εναλλαγή Κουμπιού"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Button Icon Hovered"
+msgstr "Εναλλαγή Κουμπιού"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Button Icon Pressed"
+msgstr "Προρύθμιση"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Button Icon Disabled"
+msgstr "Απενεργοποιημένο Στοιχείο"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Arrow Normal Color"
+msgstr "Αγαπημένα"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Arrow Hover Color"
+msgstr "Επιλογή χρώματος"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Arrow Collapsed Color"
+msgstr "Σύμπτυξη Όλων"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Expanded Arrow Mirrored"
+msgstr "Ανάπτυξη Όλων"
 
 #: scene/theme/default_theme.cpp
 msgid "Port Hotzone Inner Extent"
@@ -17374,11 +16749,6 @@ msgstr "Κόμβος"
 #, fuzzy
 msgid "Default Theme Scale"
 msgstr "Προφίλ Χαρακτηριστικών του Godot"
-
-#: scene/theme/theme_db.cpp
-#, fuzzy
-msgid "Custom"
-msgstr "Αποκοπή κόμβων"
 
 #: scene/theme/theme_db.cpp
 #, fuzzy
@@ -17411,13 +16781,86 @@ msgstr "Προεπιλεγμένο Βήμα Κινητής Υποδιαστολ�
 
 #: scene/theme/theme_db.cpp
 #, fuzzy
-msgid "LCD Subpixel Layout"
-msgstr "Διαγραφή διάταξης"
+msgid "Custom"
+msgstr "Αποκοπή κόμβων"
 
 #: scene/theme/theme_db.cpp
 #, fuzzy
 msgid "Fallback values"
 msgstr "Εμφάνιση περιβάλλοντος"
+
+#: scene/theme/theme_db.cpp
+#, fuzzy
+msgid "Base Color"
+msgstr "Αλλαγή βασικού τύπου"
+
+#: scene/theme/theme_db.cpp
+#, fuzzy
+msgid "Accent Color"
+msgstr "Επόμενο πάτωμα"
+
+#: scene/theme/theme_db.cpp
+#, fuzzy
+msgid "Font Color Override"
+msgstr "Παρακάμπτει"
+
+#: scene/theme/theme_db.cpp
+#, fuzzy
+msgid "Custom Font Color"
+msgstr "Αποκοπή κόμβων"
+
+#: scene/theme/theme_db.cpp
+#, fuzzy
+msgid "Normal Contrast"
+msgstr "Μορφή"
+
+#: scene/theme/theme_db.cpp
+#, fuzzy
+msgid "Hover Contrast"
+msgstr "Επιλογή χρώματος"
+
+#: scene/theme/theme_db.cpp
+#, fuzzy
+msgid "Pressed Contrast"
+msgstr "Έλεγχος έκδοσης"
+
+#: scene/theme/theme_db.cpp
+#, fuzzy
+msgid "BG Contrast"
+msgstr "Χρώμα"
+
+#: scene/theme/theme_db.cpp
+#, fuzzy
+msgid "Padding"
+msgstr "Αναπλήρωση"
+
+#: scene/theme/theme_db.cpp
+#, fuzzy
+msgid "Font Outline Size"
+msgstr "Μέγεθος περιγράμματος Κοκάλου"
+
+#: scene/theme/theme_db.cpp
+#, fuzzy
+msgid "Font Embolden"
+msgstr "Απομακρυσμένο "
+
+#: scene/theme/theme_db.cpp
+msgid "Font Spacing Glyph"
+msgstr ""
+
+#: scene/theme/theme_db.cpp
+msgid "Font Spacing Space"
+msgstr ""
+
+#: scene/theme/theme_db.cpp
+#, fuzzy
+msgid "Font Spacing Top"
+msgstr "Επιλογές υφής"
+
+#: scene/theme/theme_db.cpp
+#, fuzzy
+msgid "Font Spacing Bottom"
+msgstr "Επιλογή Λειτουργίας"
 
 #: servers/audio/audio_stream.cpp
 #, fuzzy
@@ -17616,11 +17059,6 @@ msgstr "Λήξη χρονικού ορίου."
 msgid "Surround"
 msgstr ""
 
-#: servers/audio/effects/audio_stream_generator.cpp
-#, fuzzy
-msgid "Mix Rate Mode"
-msgstr "Κόμβος μείξης"
-
 #: servers/audio_server.cpp
 #, fuzzy
 msgid "Enable Input"
@@ -17743,16 +17181,6 @@ msgstr "Προεπιλεγμένο"
 #: servers/navigation_server_3d.cpp
 msgid "Merge Rasterizer Cell Scale"
 msgstr ""
-
-#: servers/navigation_server_3d.cpp
-#, fuzzy
-msgid "World"
-msgstr "Τυχαία κλιμάκωση:"
-
-#: servers/navigation_server_3d.cpp
-#, fuzzy
-msgid "Map Use Async Iterations"
-msgstr "Κάνε Συνάρτηση"
 
 #: servers/navigation_server_3d.cpp
 #, fuzzy
@@ -18286,11 +17714,6 @@ msgid "Compress With GPU"
 msgstr "Συστατικά"
 
 #: servers/rendering_server.cpp
-#, fuzzy
-msgid "Cache GPU Compressor"
-msgstr "Ορισμός έκφρασης"
-
-#: servers/rendering_server.cpp
 msgid "Lossless Compression"
 msgstr ""
 
@@ -18328,27 +17751,13 @@ msgstr ""
 
 #: servers/rendering_server.cpp
 #, fuzzy
-msgid "Atlas 16 Bits"
-msgstr "Μέγεθος περιγράμματος:"
-
-#: servers/rendering_server.cpp
-#, fuzzy
 msgid "Shadow Atlas"
 msgstr "Νέος Άτλαντας"
 
 #: servers/rendering_server.cpp
 #, fuzzy
-msgid "Batching"
-msgstr "Ορισμός Περιθωρίου"
-
-#: servers/rendering_server.cpp
-#, fuzzy
 msgid "Item Buffer Size"
 msgstr "Πίσω όψη"
-
-#: servers/rendering_server.cpp
-msgid "Uniform Set Cache Size"
-msgstr ""
 
 #: servers/rendering_server.cpp
 #, fuzzy
@@ -18497,10 +17906,6 @@ msgstr "Χρόνος συνδιασμού (s):"
 #, fuzzy
 msgid "Fadeout To"
 msgstr "Χρόνος συνδιασμού (s):"
-
-#: servers/rendering_server.cpp
-msgid "HDR 2D"
-msgstr ""
 
 #: servers/rendering_server.cpp
 msgid "Screen Space Roughness Limiter"
@@ -18717,19 +18122,10 @@ msgstr "Μάσκα εκπομπής"
 msgid "VRS Strength"
 msgstr "Δύναμη"
 
-#: servers/xr/xr_vrs.cpp
-#, fuzzy
-msgid "VRS Render Region"
-msgstr "Απόδοση"
-
 #: servers/xr_server.cpp
 #, fuzzy
 msgid "World Origin"
 msgstr "Προβολή Προέλευσης"
-
-#: servers/xr_server.cpp
-msgid "Camera Locked to Origin"
-msgstr ""
 
 #: servers/xr_server.cpp
 #, fuzzy

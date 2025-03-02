@@ -8,7 +8,7 @@ LANGS = $(POFILES:%.po=%)
 all: update merge
 
 update:
-	@cd ../godot; python3 ../scripts/extract_properties.py
+	@cd ../blazium; python3 ../scripts/extract_properties.py
 
 merge:
 	@for po in $(POFILES); do \
@@ -26,7 +26,7 @@ check:
 # 2775 translated messages, 272 fuzzy translations, 151 untranslated messages.
 # First number can be 0, second and third numbers are only present if non-zero.
 export:
-	@dest=../godot/editor/translations/properties; \
+	@dest=../blazium/editor/translations/properties; \
 	mkdir -p $$dest; \
 	for po in $(POFILES); do \
 	  res=`msgfmt --statistics $$po -o /dev/null 2>&1 | sed 's/[^0-9,]*//g'`; \

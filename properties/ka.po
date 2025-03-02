@@ -10,7 +10,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Godot Engine properties\n"
-"Report-Msgid-Bugs-To: https://github.com/godotengine/godot\n"
+"Report-Msgid-Bugs-To: https://github.com/blazium-engine/blazium\n"
 "POT-Creation-Date: \n"
 "PO-Revision-Date: 2025-02-11 01:03+0000\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
@@ -38,8 +38,9 @@ msgstr "კონფიგურაცია"
 #: editor/animation_track_editor.cpp
 #: editor/plugins/tiles/tile_set_atlas_source_editor.cpp
 #: platform/android/export/export_plugin.cpp scene/2d/physics/area_2d.cpp
-#: scene/3d/physics/area_3d.cpp scene/resources/3d/mesh_library.cpp
-#: scene/resources/3d/skin.cpp servers/xr/xr_pose.cpp servers/xr/xr_tracker.cpp
+#: scene/3d/physics/area_3d.cpp scene/3d/skeleton_3d.cpp
+#: scene/resources/3d/mesh_library.cpp scene/resources/3d/skin.cpp
+#: servers/xr/xr_pose.cpp servers/xr/xr_tracker.cpp
 msgid "Name"
 msgstr "სახელი"
 
@@ -47,9 +48,9 @@ msgstr "სახელი"
 msgid "Name Localized"
 msgstr "ლოკალიზებული სახელი"
 
-#: core/config/project_settings.cpp platform/windows/export/export_plugin.cpp
-#: scene/main/node.cpp scene/resources/visual_shader.cpp
-#: servers/xr/xr_tracker.cpp
+#: core/config/project_settings.cpp platform/web/export/export_plugin.cpp
+#: platform/windows/export/export_plugin.cpp scene/main/node.cpp
+#: scene/resources/visual_shader.cpp servers/xr/xr_tracker.cpp
 msgid "Description"
 msgstr "აღწერა"
 
@@ -134,9 +135,9 @@ msgstr "ფანჯარა"
 #: scene/gui/control.cpp scene/gui/graph_edit.cpp scene/main/viewport.cpp
 #: scene/main/window.cpp scene/resources/2d/rectangle_shape_2d.cpp
 #: scene/resources/3d/box_shape_3d.cpp scene/resources/3d/primitive_meshes.cpp
-#: scene/resources/external_texture.cpp scene/resources/label_settings.cpp
-#: scene/resources/placeholder_textures.cpp scene/resources/style_box_flat.cpp
-#: scene/resources/visual_shader.cpp servers/rendering_server.cpp
+#: scene/resources/label_settings.cpp scene/resources/placeholder_textures.cpp
+#: scene/resources/style_box_flat.cpp scene/resources/visual_shader.cpp
+#: servers/rendering_server.cpp
 msgid "Size"
 msgstr "ზომა"
 
@@ -206,11 +207,6 @@ msgstr "სათაურამდე გაფართოება"
 msgid "No Focus"
 msgstr "ფოკუსის გარეშე"
 
-#: core/config/project_settings.cpp scene/main/window.cpp
-#, fuzzy
-msgid "Sharp Corners"
-msgstr "სიმკვეთრე"
-
 #: core/config/project_settings.cpp
 msgid "Window Width Override"
 msgstr "ფანჯრის სიგანის გადაფარვა"
@@ -263,7 +259,7 @@ msgstr "ავტობუსები"
 msgid "Default Bus Layout"
 msgstr "ნაგულისხმევი მატარებლის განლაგება"
 
-#: core/config/project_settings.cpp editor/editor_settings.cpp
+#: core/config/project_settings.cpp
 msgid "General"
 msgstr "ძირითადი"
 
@@ -305,30 +301,10 @@ msgid "Embed Subwindows"
 msgstr "ქვეფანჯრების ჩაშენება"
 
 #: core/config/project_settings.cpp
-#, fuzzy
-msgid "Frame Pacing"
-msgstr "საბაზისო დაშორება"
-
-#: core/config/project_settings.cpp platform/android/export/export.cpp
-msgid "Android"
-msgstr "Android"
-
-#: core/config/project_settings.cpp
-#, fuzzy
-msgid "Enable Frame Pacing"
-msgstr "ფაილის ჟურნალის ჩართვა"
-
-#: core/config/project_settings.cpp
-#, fuzzy
-msgid "Swappy Mode"
-msgstr "ცის რეჟიმი"
-
-#: core/config/project_settings.cpp
 #: editor/import/3d/resource_importer_scene.cpp main/main.cpp
-#: modules/jolt_physics/jolt_project_settings.cpp scene/2d/tile_map_layer.cpp
-#: scene/main/scene_tree.cpp scene/main/viewport.cpp
-#: scene/resources/2d/tile_set.cpp servers/physics_server_2d.cpp
-#: servers/physics_server_3d.cpp
+#: scene/2d/tile_map_layer.cpp scene/main/scene_tree.cpp
+#: scene/main/viewport.cpp scene/resources/2d/tile_set.cpp
+#: servers/physics_server_2d.cpp servers/physics_server_3d.cpp
 msgid "Physics"
 msgstr "ფიზიკა"
 
@@ -364,8 +340,8 @@ msgstr "ასპექტი"
 #: scene/2d/parallax_layer.cpp scene/2d/polygon_2d.cpp
 #: scene/2d/remote_transform_2d.cpp scene/3d/cpu_particles_3d.cpp
 #: scene/3d/node_3d.cpp scene/3d/remote_transform_3d.cpp
-#: scene/animation/animation_blend_tree.h scene/gui/control.cpp
-#: scene/main/canvas_layer.cpp scene/main/scene_tree.cpp
+#: scene/3d/skeleton_3d.cpp scene/animation/animation_blend_tree.h
+#: scene/gui/control.cpp scene/main/canvas_layer.cpp scene/main/scene_tree.cpp
 #: scene/main/viewport.cpp scene/resources/camera_attributes.cpp
 #: scene/resources/material.cpp scene/resources/particle_process_material.cpp
 #: servers/rendering_server.cpp
@@ -390,7 +366,7 @@ msgstr "გამართვა"
 
 #: core/config/project_settings.cpp
 #: editor/import/3d/resource_importer_scene.cpp main/main.cpp
-#: modules/gdscript/gdscript.cpp scene/3d/spring_bone_simulator_3d.cpp
+#: modules/gdscript/gdscript.cpp
 msgid "Settings"
 msgstr "მორგება"
 
@@ -563,11 +539,6 @@ msgid "Texture Upload Region Size Px"
 msgstr "ტექსტური ატვირთვის რეგიონის ზომა პქს"
 
 #: core/config/project_settings.cpp
-#, fuzzy
-msgid "Texture Download Region Size Px"
-msgstr "ტექსტური ატვირთვის რეგიონის ზომა პქს"
-
-#: core/config/project_settings.cpp
 msgid "Pipeline Cache"
 msgstr "ფაიფლაინის კეში"
 
@@ -575,8 +546,7 @@ msgstr "ფაიფლაინის კეში"
 #: editor/import/3d/post_import_plugin_skeleton_rest_fixer.cpp
 #: modules/gdscript/gdscript.cpp platform/android/export/export_plugin.cpp
 #: platform/windows/export/export_plugin.cpp
-#: scene/3d/physics/joints/hinge_joint_3d.cpp scene/3d/retarget_modifier_3d.cpp
-#: servers/rendering_server.cpp
+#: scene/3d/physics/joints/hinge_joint_3d.cpp servers/rendering_server.cpp
 msgid "Enable"
 msgstr "ჩართვა"
 
@@ -646,6 +616,10 @@ msgstr "შემომტანი მოწყობილობები"
 msgid "Pointing"
 msgstr ""
 
+#: core/config/project_settings.cpp platform/android/export/export.cpp
+msgid "Android"
+msgstr "Android"
+
 #: core/config/project_settings.cpp editor/editor_settings.cpp
 msgid "Enable Long Press as Right Click"
 msgstr ""
@@ -673,10 +647,6 @@ msgstr "დელტას მოგლუვება"
 #: core/core_bind.cpp
 msgid "Print Error Messages"
 msgstr "შეცდომის შეტყობინებების დაბეჭდვა"
-
-#: core/core_bind.cpp
-msgid "Print to stdout"
-msgstr ""
 
 #: core/core_bind.cpp main/main.cpp
 msgid "Physics Ticks per Second"
@@ -808,7 +778,8 @@ msgstr "ღილაკის ნიღაბი"
 #: editor/import/3d/resource_importer_scene.cpp
 #: modules/gltf/structures/gltf_node.cpp scene/2d/node_2d.cpp
 #: scene/2d/remote_transform_2d.cpp scene/3d/node_3d.cpp
-#: scene/3d/remote_transform_3d.cpp scene/gui/control.cpp scene/main/window.cpp
+#: scene/3d/remote_transform_3d.cpp scene/3d/skeleton_3d.cpp
+#: scene/gui/control.cpp scene/main/window.cpp
 #: scene/resources/particle_process_material.cpp servers/physics_server_2d.cpp
 #: servers/physics_server_3d.cpp
 msgid "Position"
@@ -887,7 +858,8 @@ msgid "Action"
 msgstr "ქმედება"
 
 #: core/input/input_event.cpp modules/mobile_vr/mobile_vr_interface.cpp
-#: modules/openxr/openxr_interface.cpp scene/3d/gpu_particles_collision_3d.cpp
+#: modules/openxr/openxr_interface.cpp scene/3d/audio_stream_player_3d.cpp
+#: scene/3d/gpu_particles_collision_3d.cpp
 #: scene/resources/2d/skeleton/skeleton_modification_stack_2d.cpp
 #: scene/resources/environment.cpp scene/resources/material.cpp
 msgid "Strength"
@@ -1001,13 +973,12 @@ msgstr "რეგიონი"
 #: scene/2d/animated_sprite_2d.cpp scene/2d/camera_2d.cpp scene/2d/light_2d.cpp
 #: scene/2d/parallax_background.cpp scene/2d/parallax_layer.cpp
 #: scene/2d/polygon_2d.cpp scene/2d/sprite_2d.cpp scene/3d/label_3d.cpp
-#: scene/3d/look_at_modifier_3d.cpp scene/3d/physics/physical_bone_3d.cpp
-#: scene/3d/soft_body_3d.cpp scene/3d/spring_bone_collision_3d.cpp
+#: scene/3d/physics/physical_bone_3d.cpp scene/3d/soft_body_3d.cpp
 #: scene/3d/sprite_3d.cpp scene/3d/visual_instance_3d.cpp
-#: scene/gui/rich_text_effect.cpp scene/gui/split_container.cpp
-#: scene/main/canvas_layer.cpp scene/resources/3d/primitive_meshes.cpp
-#: scene/resources/font.cpp scene/resources/label_settings.cpp
-#: scene/resources/material.cpp scene/resources/style_box_flat.cpp
+#: scene/gui/rich_text_effect.cpp scene/main/canvas_layer.cpp
+#: scene/resources/3d/primitive_meshes.cpp scene/resources/font.cpp
+#: scene/resources/label_settings.cpp scene/resources/material.cpp
+#: scene/resources/style_box_flat.cpp
 msgid "Offset"
 msgstr "წანაცვლება"
 
@@ -1038,8 +1009,6 @@ msgid "Diagonal Mode"
 msgstr "დიაგონალური რეჟიმი"
 
 #: core/math/random_number_generator.cpp modules/noise/fastnoise_lite.cpp
-#: scene/2d/cpu_particles_2d.cpp scene/2d/gpu_particles_2d.cpp
-#: scene/3d/cpu_particles_3d.cpp scene/3d/gpu_particles_3d.cpp
 msgid "Seed"
 msgstr "თესლი"
 
@@ -1052,7 +1021,6 @@ msgid "Memory"
 msgstr "მეხსიერება"
 
 #: core/object/message_queue.cpp core/register_core_types.cpp main/main.cpp
-#: modules/jolt_physics/jolt_project_settings.cpp
 #: modules/webrtc/register_types.cpp scene/main/window.cpp
 #: servers/rendering_server.cpp
 msgid "Limits"
@@ -1070,7 +1038,7 @@ msgstr "მაქს ნაბიჯები"
 #: editor/debugger/debug_adapter/debug_adapter_server.cpp
 #: editor/editor_settings.cpp main/main.cpp
 #: modules/gdscript/language_server/gdscript_language_server.cpp
-#: modules/mbedtls/register_types.cpp modules/webrtc/register_types.cpp
+#: modules/webrtc/register_types.cpp
 msgid "Network"
 msgstr "ქსელი"
 
@@ -1091,7 +1059,6 @@ msgid "Max Buffer (Power of 2)"
 msgstr "მაქს ბუფერი (ორის ხარისხი)"
 
 #: core/register_core_types.cpp editor/editor_settings.cpp
-#: modules/mbedtls/register_types.cpp
 msgid "TLS"
 msgstr "TLS"
 
@@ -1107,7 +1074,7 @@ msgstr ""
 msgid "Worker Pool"
 msgstr ""
 
-#: core/register_core_types.cpp servers/navigation_server_3d.cpp
+#: core/register_core_types.cpp
 msgid "Max Threads"
 msgstr "მაქს ნაკადები"
 
@@ -1174,8 +1141,9 @@ msgstr "ადგილმჭერების გამოტოვება"
 #: modules/gltf/structures/gltf_node.cpp scene/2d/node_2d.cpp
 #: scene/2d/polygon_2d.cpp scene/2d/remote_transform_2d.cpp
 #: scene/3d/node_3d.cpp scene/3d/physics/physical_bone_3d.cpp
-#: scene/3d/remote_transform_3d.cpp scene/gui/control.cpp
-#: scene/main/canvas_layer.cpp scene/resources/environment.cpp
+#: scene/3d/remote_transform_3d.cpp scene/3d/skeleton_3d.cpp
+#: scene/gui/control.cpp scene/main/canvas_layer.cpp
+#: scene/resources/environment.cpp
 msgid "Rotation"
 msgstr "შემობრუნება"
 
@@ -1192,9 +1160,9 @@ msgid "Args"
 msgstr ""
 
 #: editor/animation_track_editor.cpp editor/editor_settings.cpp
-#: modules/noise/fastnoise_lite.cpp scene/3d/physics/physical_bone_3d.cpp
-#: scene/gui/text_edit.cpp scene/resources/visual_shader_nodes.cpp
-#: servers/xr/xr_tracker.cpp
+#: modules/noise/fastnoise_lite.cpp platform/web/export/export_plugin.cpp
+#: scene/3d/physics/physical_bone_3d.cpp scene/gui/text_edit.cpp
+#: scene/resources/visual_shader_nodes.cpp servers/xr/xr_tracker.cpp
 msgid "Type"
 msgstr "ტიპი"
 
@@ -1246,10 +1214,6 @@ msgstr "მოთხოვნის მოლოდინის ვადა"
 msgid "Sync Breakpoints"
 msgstr "წყვეტის წერტილების სინქრონიზაცია"
 
-#: editor/editor_feature_profile.cpp
-msgid "Default Feature Profile"
-msgstr "ნაგულისხმევი თვისების პროფილი"
-
 #: editor/editor_inspector.cpp editor/gui/editor_spin_slider.cpp
 msgid "Label"
 msgstr "ჭდე"
@@ -1258,16 +1222,6 @@ msgstr "ჭდე"
 #: scene/theme/default_theme.cpp
 msgid "Read Only"
 msgstr "მხოლოდ კითხვისთვის"
-
-#: editor/editor_inspector.cpp
-#, fuzzy
-msgid "Draw Label"
-msgstr "ჭდე"
-
-#: editor/editor_inspector.cpp
-#, fuzzy
-msgid "Draw Background"
-msgstr "ფონი"
 
 #: editor/editor_inspector.cpp
 msgid "Checkable"
@@ -1288,19 +1242,6 @@ msgstr ""
 #: editor/editor_inspector.cpp
 msgid "Deletable"
 msgstr "წაშლადი"
-
-#: editor/editor_inspector.cpp scene/gui/graph_element.cpp
-msgid "Selectable"
-msgstr "მონიშვნადი"
-
-#: editor/editor_inspector.cpp
-#, fuzzy
-msgid "Use Folding"
-msgstr "კოდის გადატანა"
-
-#: editor/editor_inspector.cpp
-msgid "Name Split Ratio"
-msgstr ""
 
 #: editor/editor_interface.cpp
 msgid "Distraction Free Mode"
@@ -1403,10 +1344,6 @@ msgid "Font Disable Embedded Bitmaps"
 msgstr "ფონტში ჩაშენებული სურათების გათიშვა"
 
 #: editor/editor_settings.cpp
-msgid "Font Allow MSDF"
-msgstr ""
-
-#: editor/editor_settings.cpp
 msgid "Main Font"
 msgstr "მთავარი ფონტი"
 
@@ -1429,6 +1366,10 @@ msgstr ""
 #: editor/editor_settings.cpp
 msgid "Single Window Mode"
 msgstr "ერთფანჯრიანი რეჟიმი"
+
+#: editor/editor_settings.cpp
+msgid "Remember Window Size and Position"
+msgstr ""
 
 #: editor/editor_settings.cpp
 msgid "Mouse Extra Buttons Navigate History"
@@ -1558,6 +1499,7 @@ msgid "Border Size"
 msgstr "საზღვრის ზომა"
 
 #: editor/editor_settings.cpp scene/resources/style_box_flat.cpp
+#: scene/theme/theme_db.cpp
 msgid "Corner Radius"
 msgstr ""
 
@@ -1673,40 +1615,6 @@ msgstr "ჩვენების რეჟიმი"
 msgid "Thumbnail Size"
 msgstr ""
 
-#: editor/editor_settings.cpp
-#, fuzzy
-msgid "Quick Open Dialog"
-msgstr "ფაილის ფანჯარა"
-
-#: editor/editor_settings.cpp scene/2d/physics/shape_cast_2d.cpp
-#: scene/3d/physics/shape_cast_3d.cpp
-msgid "Max Results"
-msgstr "მაქს. შედეგები"
-
-#: editor/editor_settings.cpp
-#, fuzzy
-msgid "Show Search Highlight"
-msgstr "მენიუს გამოკვეთა"
-
-#: editor/editor_settings.cpp
-#, fuzzy
-msgid "Enable Fuzzy Matching"
-msgstr "ფაილის ჟურნალის ჩართვა"
-
-#: editor/editor_settings.cpp
-msgid "Max Fuzzy Misses"
-msgstr ""
-
-#: editor/editor_settings.cpp
-#, fuzzy
-msgid "Include Addons"
-msgstr "დამალულების ჩასმა"
-
-#: editor/editor_settings.cpp
-#, fuzzy
-msgid "Default Display Mode"
-msgstr "ჩვენების რეჟიმი"
-
 #: editor/editor_settings.cpp editor/import/3d/resource_importer_scene.cpp
 #: editor/register_editor_types.cpp modules/fbx/register_types.cpp
 #: modules/gltf/register_types.cpp
@@ -1767,10 +1675,6 @@ msgid "Center Node on Reparent"
 msgstr ""
 
 #: editor/editor_settings.cpp
-msgid "Hide Filtered Out Parents"
-msgstr ""
-
-#: editor/editor_settings.cpp
 msgid "Always Show Folders"
 msgstr ""
 
@@ -1801,7 +1705,7 @@ msgstr "ტექსტური რედაქტორი"
 
 #: editor/editor_settings.cpp scene/3d/label_3d.cpp
 #: scene/resources/3d/primitive_meshes.cpp scene/resources/label_settings.cpp
-#: scene/resources/text_paragraph.cpp scene/theme/default_theme.cpp
+#: scene/theme/default_theme.cpp
 msgid "Line Spacing"
 msgstr "ხაზებს შუა მანძილი"
 
@@ -1907,11 +1811,6 @@ msgstr "გამოტოვებების დახატვა"
 msgid "Behavior"
 msgstr "ქცევა"
 
-#: editor/editor_settings.cpp
-#, fuzzy
-msgid "Empty Selection Clipboard"
-msgstr "მონიშნულის ფერი"
-
 #: editor/editor_settings.cpp main/performance.cpp modules/gridmap/grid_map.cpp
 #: scene/2d/tile_map_layer.cpp scene/resources/2d/tile_set.cpp
 #: servers/navigation_server_3d.cpp
@@ -2009,16 +1908,6 @@ msgid "Open Dominant Script on Scene Change"
 msgstr ""
 
 #: editor/editor_settings.cpp
-#, fuzzy
-msgid "Documentation"
-msgstr "ორიენტაცია"
-
-#: editor/editor_settings.cpp
-#, fuzzy
-msgid "Enable Tooltips"
-msgstr "ჩრდილების ჩართვა"
-
-#: editor/editor_settings.cpp
 msgid "Script List"
 msgstr "სკრიპტების სია"
 
@@ -2037,11 +1926,6 @@ msgstr "სკრიპტის ტემპერატურა ჩართ�
 #: editor/editor_settings.cpp
 msgid "Script Temperature History Size"
 msgstr ""
-
-#: editor/editor_settings.cpp
-#, fuzzy
-msgid "Highlight Scene Scripts"
-msgstr "მიმდინარე ხაზის გამოკვეთა"
 
 #: editor/editor_settings.cpp
 msgid "Group Help Pages"
@@ -2073,10 +1957,6 @@ msgstr "დასრულება"
 
 #: editor/editor_settings.cpp
 msgid "Idle Parse Delay"
-msgstr ""
-
-#: editor/editor_settings.cpp
-msgid "Idle Parse Delay With Errors Found"
 msgstr ""
 
 #: editor/editor_settings.cpp
@@ -2147,6 +2027,16 @@ msgstr ""
 #: editor/editor_settings.cpp
 msgid "Palette Min Width"
 msgstr ""
+
+#: editor/editor_settings.cpp
+#, fuzzy
+msgid "Preview Size"
+msgstr "პორტის მინიატურის ზომა"
+
+#: editor/editor_settings.cpp
+#, fuzzy
+msgid "Editor Side"
+msgstr "რედაქტორის ეკრანი"
 
 #: editor/editor_settings.cpp
 msgid "Selection Box Color"
@@ -2255,24 +2145,6 @@ msgstr "არჩეული ძვალი"
 #: editor/editor_settings.cpp
 msgid "CSG"
 msgstr "CSG"
-
-#: editor/editor_settings.cpp
-msgid "GridMap Grid"
-msgstr ""
-
-#: editor/editor_settings.cpp
-#, fuzzy
-msgid "Spring Bone Joint"
-msgstr "მიმაგრებული წერტილები"
-
-#: editor/editor_settings.cpp
-#, fuzzy
-msgid "Spring Bone Collision"
-msgstr "ნაწილაკების შეჯახება"
-
-#: editor/editor_settings.cpp
-msgid "Spring Bone Inside Collision"
-msgstr ""
 
 #: editor/editor_settings.cpp
 msgid "Gizmo Settings"
@@ -2613,7 +2485,7 @@ msgid "Platforms"
 msgstr "პლატფორმები"
 
 #: editor/editor_settings.cpp
-msgid "Linux/*BSD"
+msgid "Linuxbsd"
 msgstr ""
 
 #: editor/editor_settings.cpp
@@ -2650,10 +2522,6 @@ msgstr ""
 #: editor/editor_settings.cpp
 msgid "Profiler Frame Max Functions"
 msgstr "მაქსიმალური ფუნქციები პროფაილერის კადრში"
-
-#: editor/editor_settings.cpp
-msgid "Profiler Target FPS"
-msgstr ""
 
 #: editor/editor_settings.cpp
 msgid "Remote Scene Tree Refresh Interval"
@@ -2950,11 +2818,6 @@ msgstr "მონიშნულის ფერი"
 msgid "Particle Color"
 msgstr "ნაწილაკების შეჯახება"
 
-#: editor/editor_settings_dialog.cpp
-#, fuzzy
-msgid "Editor Settings Advanced Mode"
-msgstr "რედაქტორის პარამეტრი"
-
 #: editor/export/editor_export_platform_pc.cpp
 #: platform/android/export/export_plugin.cpp
 #: platform/ios/export/export_plugin.cpp
@@ -2999,10 +2862,6 @@ msgstr "S3TC BPTC"
 msgid "ETC2 ASTC"
 msgstr "ETC2 ASTC"
 
-#: editor/export/export_template_manager.cpp
-msgid "Export Template Download Directory"
-msgstr ""
-
 #: editor/export/project_export.cpp
 msgid "Export Path"
 msgstr "გატანის ბილიკი"
@@ -3030,17 +2889,13 @@ msgid "Disable Overwrite Warning"
 msgstr ""
 
 #: editor/gui/editor_spin_slider.cpp scene/gui/button.cpp
-#: scene/gui/line_edit.cpp scene/gui/menu_bar.cpp
+#: scene/gui/color_button.cpp scene/gui/line_edit.cpp scene/gui/menu_bar.cpp
 msgid "Flat"
 msgstr "ბრტყელი"
 
 #: editor/gui/editor_spin_slider.cpp
 msgid "Hide Slider"
 msgstr "ჩოჩიის დამალვა"
-
-#: editor/gui/editor_spin_slider.cpp
-msgid "Editing Integer"
-msgstr ""
 
 #: editor/gui/editor_zoom_widget.cpp scene/2d/camera_2d.cpp
 #: scene/gui/graph_edit.cpp
@@ -3092,23 +2947,12 @@ msgstr ""
 
 #: editor/import/3d/post_import_plugin_skeleton_rest_fixer.cpp
 #, fuzzy
-msgid "Retarget Method"
-msgstr "რენდერის მეთოდი"
+msgid "Overwrite Axis"
+msgstr "გადაფარავს"
 
 #: editor/import/3d/post_import_plugin_skeleton_rest_fixer.cpp
 msgid "Keep Global Rest on Leftovers"
 msgstr ""
-
-#: editor/import/3d/post_import_plugin_skeleton_rest_fixer.cpp
-#: scene/3d/retarget_modifier_3d.cpp
-#, fuzzy
-msgid "Use Global Pose"
-msgstr "გლობალური კოორდინატების გამოყენება"
-
-#: editor/import/3d/post_import_plugin_skeleton_rest_fixer.cpp
-#, fuzzy
-msgid "Original Skeleton Name"
-msgstr "ჩონჩხის სახლი"
 
 #: editor/import/3d/post_import_plugin_skeleton_rest_fixer.cpp
 msgid "Fix Silhouette"
@@ -3123,7 +2967,6 @@ msgstr "ფილტრი"
 
 #: editor/import/3d/post_import_plugin_skeleton_rest_fixer.cpp
 #: editor/import/resource_importer_bitmask.cpp
-#: modules/openxr/extensions/openxr_dpad_binding_extension.cpp
 #: servers/audio/effects/audio_effect_compressor.cpp
 msgid "Threshold"
 msgstr "ზღვარი"
@@ -3151,25 +2994,6 @@ msgstr ""
 #: editor/import/3d/resource_importer_obj.cpp
 msgid "Generate Tangents"
 msgstr "მხებების გენერაცია"
-
-#: editor/import/3d/resource_importer_obj.cpp
-#: editor/import/3d/resource_importer_scene.cpp
-msgid "Generate LODs"
-msgstr "LOD-ების გენერაცია"
-
-#: editor/import/3d/resource_importer_obj.cpp
-#, fuzzy
-msgid "Generate Shadow Mesh"
-msgstr "ჩრდილის ბადეების შექმნა"
-
-#: editor/import/3d/resource_importer_obj.cpp
-#, fuzzy
-msgid "Generate Lightmap UV2"
-msgstr "მიპმაპების შექმნა"
-
-#: editor/import/3d/resource_importer_obj.cpp
-msgid "Generate Lightmap UV2 Texel Size"
-msgstr ""
 
 #: editor/import/3d/resource_importer_obj.cpp
 msgid "Scale Mesh"
@@ -3332,7 +3156,6 @@ msgstr ""
 #: modules/gltf/structures/gltf_node.cpp modules/noise/noise_texture_2d.cpp
 #: modules/noise/noise_texture_3d.cpp scene/2d/light_2d.cpp
 #: scene/3d/navigation_agent_3d.cpp scene/3d/navigation_obstacle_3d.cpp
-#: scene/3d/spring_bone_collision_capsule_3d.cpp
 #: scene/resources/2d/capsule_shape_2d.cpp
 #: scene/resources/3d/capsule_shape_3d.cpp
 #: scene/resources/3d/cylinder_shape_3d.cpp
@@ -3349,10 +3172,8 @@ msgstr "სიმაღლე"
 #: scene/2d/navigation_agent_2d.cpp scene/2d/navigation_obstacle_2d.cpp
 #: scene/3d/gpu_particles_collision_3d.cpp scene/3d/navigation_agent_3d.cpp
 #: scene/3d/navigation_obstacle_3d.cpp scene/3d/occluder_instance_3d.cpp
-#: scene/3d/physics/vehicle_body_3d.cpp
-#: scene/3d/spring_bone_collision_capsule_3d.cpp
-#: scene/3d/spring_bone_collision_sphere_3d.cpp
-#: scene/animation/root_motion_view.cpp scene/resources/2d/capsule_shape_2d.cpp
+#: scene/3d/physics/vehicle_body_3d.cpp scene/animation/root_motion_view.cpp
+#: scene/resources/2d/capsule_shape_2d.cpp
 #: scene/resources/2d/circle_shape_2d.cpp
 #: scene/resources/2d/navigation_polygon.cpp
 #: scene/resources/3d/capsule_shape_3d.cpp
@@ -3389,8 +3210,8 @@ msgstr "ფაილში შენახვა"
 #: scene/3d/navigation_region_3d.cpp scene/3d/physics/area_3d.cpp
 #: scene/3d/physics/joints/generic_6dof_joint_3d.cpp
 #: scene/3d/physics/ray_cast_3d.cpp scene/3d/physics/shape_cast_3d.cpp
-#: scene/3d/sprite_3d.cpp scene/gui/code_edit.cpp scene/gui/graph_edit.cpp
-#: scene/main/canvas_layer.cpp
+#: scene/3d/skeleton_3d.cpp scene/3d/sprite_3d.cpp scene/gui/code_edit.cpp
+#: scene/gui/graph_edit.cpp scene/main/canvas_layer.cpp
 #: scene/resources/2d/skeleton/skeleton_modification_2d.cpp
 #: scene/resources/2d/skeleton/skeleton_modification_stack_2d.cpp
 #: scene/resources/camera_attributes.cpp scene/resources/compositor.cpp
@@ -3413,8 +3234,18 @@ msgid "LODs"
 msgstr ""
 
 #: editor/import/3d/resource_importer_scene.cpp
+#, fuzzy
+msgid "Normal Split Angle"
+msgstr "ნორმალის შერწყმის კუთხე"
+
+#: editor/import/3d/resource_importer_scene.cpp
 msgid "Normal Merge Angle"
 msgstr "ნორმალის შერწყმის კუთხე"
+
+#: editor/import/3d/resource_importer_scene.cpp
+#, fuzzy
+msgid "Raycast Normals"
+msgstr "წყარო ნორმალი"
 
 #: editor/import/3d/resource_importer_scene.cpp
 msgid "Use External"
@@ -3524,10 +3355,6 @@ msgstr "საწყისი მასშტაბი"
 msgid "Import as Skeleton Bones"
 msgstr ""
 
-#: editor/import/3d/resource_importer_scene.cpp
-msgid "Use Node Type Suffixes"
-msgstr ""
-
 #: editor/import/3d/resource_importer_scene.cpp modules/gltf/gltf_state.cpp
 msgid "Meshes"
 msgstr "ბადეები"
@@ -3535,6 +3362,10 @@ msgstr "ბადეები"
 #: editor/import/3d/resource_importer_scene.cpp
 msgid "Ensure Tangents"
 msgstr ""
+
+#: editor/import/3d/resource_importer_scene.cpp
+msgid "Generate LODs"
+msgstr "LOD-ების გენერაცია"
 
 #: editor/import/3d/resource_importer_scene.cpp
 msgid "Create Shadow Meshes"
@@ -3583,7 +3414,7 @@ msgid "Import Script"
 msgstr "სკრიპტის შემოტანა"
 
 #: editor/import/dynamic_font_import_settings.cpp
-#: editor/import/resource_importer_dynamic_font.cpp
+#: editor/import/resource_importer_dynamic_font.cpp scene/resources/font.cpp
 msgid "Antialiasing"
 msgstr "მომრგვალება"
 
@@ -3634,6 +3465,11 @@ msgstr "მომრგვალება"
 msgid "Subpixel Positioning"
 msgstr "ქვეპიქსელის მოთავსება"
 
+#: editor/import/dynamic_font_import_settings.cpp scene/resources/font.cpp
+#: scene/theme/theme_db.cpp
+msgid "LCD Subpixel Layout"
+msgstr "LCD ქვეპიქსელის განლაგება"
+
 #: editor/import/dynamic_font_import_settings.cpp
 #: editor/import/resource_importer_dynamic_font.cpp scene/resources/font.cpp
 msgid "Keep Rounding Remainders"
@@ -3680,8 +3516,8 @@ msgid "Compress"
 msgstr "შეკუმშვა"
 
 #: editor/import/dynamic_font_import_settings.cpp scene/3d/label_3d.cpp
-#: scene/gui/button.cpp scene/gui/label.cpp scene/gui/line_edit.cpp
-#: scene/gui/link_button.cpp scene/gui/menu_bar.cpp
+#: scene/gui/button.cpp scene/gui/foldable_container.cpp scene/gui/label.cpp
+#: scene/gui/line_edit.cpp scene/gui/link_button.cpp scene/gui/menu_bar.cpp
 #: scene/gui/rich_text_label.cpp scene/gui/text_edit.cpp
 #: scene/resources/3d/primitive_meshes.cpp
 #: servers/rendering/rendering_device_binds.h
@@ -4014,15 +3850,8 @@ msgid "Frames Count"
 msgstr "კადრების რაოდენობა"
 
 #: editor/plugins/tiles/tile_set_atlas_source_editor.cpp
-#: modules/openxr/action_map/openxr_haptic_feedback.cpp
-#: scene/3d/look_at_modifier_3d.cpp
 msgid "Duration"
 msgstr "ხანგრძლივობა"
-
-#: editor/project_settings_editor.cpp
-#, fuzzy
-msgid "Project Settings Advanced Mode"
-msgstr "პროექტის პარამეტრების გადაფარვა"
 
 #: editor/register_editor_types.cpp
 msgid "Main Run Args"
@@ -4082,52 +3911,9 @@ msgstr "დამატების სახელი"
 msgid "Autoload on Startup"
 msgstr ""
 
-#: editor/scene_tree_dock.cpp
-msgid "Use Favorites Root Selection"
-msgstr ""
-
-#: editor/script_create_dialog.cpp
-msgid "Script Setup Use Script Templates"
-msgstr ""
-
-#: editor/script_create_dialog.cpp
-msgid "Script Setup Templates Dictionary"
-msgstr ""
-
 #: main/main.cpp
 msgid "Flush stdout on Print"
 msgstr ""
-
-#: main/main.cpp
-msgid "Low Processor Mode"
-msgstr ""
-
-#: main/main.cpp
-msgid "stdout"
-msgstr "stdout"
-
-#: main/main.cpp
-msgid "Print FPS"
-msgstr ""
-
-#: main/main.cpp
-msgid "Print GPU Profile"
-msgstr "GPU-ის პროფილის გამოტანა"
-
-#: main/main.cpp
-msgid "Verbose stdout"
-msgstr ""
-
-#: main/main.cpp scene/main/node.cpp scene/main/scene_tree.cpp
-#: scene/resources/multimesh.cpp
-#, fuzzy
-msgid "Physics Interpolation"
-msgstr "ხატულის ინტერპოლაცია"
-
-#: main/main.cpp
-#, fuzzy
-msgid "Enable Warnings"
-msgstr "გაფრთხილებები"
 
 #: main/main.cpp
 msgid "Max Chars per Second"
@@ -4178,7 +3964,7 @@ msgstr "გადართვა Gles-ზე"
 
 #: main/main.cpp
 #, fuzzy
-msgid "Fallback to OpenGL 3"
+msgid "Fallback to Opengl 3"
 msgstr "გადართვა Gles-ზე"
 
 #: main/main.cpp servers/rendering_server.cpp
@@ -4199,8 +3985,8 @@ msgstr "გადართვა საუთარზე"
 
 #: main/main.cpp
 #, fuzzy
-msgid "Fallback to GLES"
-msgstr "გადართვა Gles-ზე"
+msgid "Fallback to Gles"
+msgstr "გადართვა კუთხეზე"
 
 #: main/main.cpp
 msgid "Force Angle on Devices"
@@ -4265,7 +4051,27 @@ msgid "Output Latency"
 msgstr ""
 
 #: main/main.cpp
+msgid "stdout"
+msgstr "stdout"
+
+#: main/main.cpp
+msgid "Print FPS"
+msgstr ""
+
+#: main/main.cpp
+msgid "Print GPU Profile"
+msgstr "GPU-ის პროფილის გამოტანა"
+
+#: main/main.cpp
+msgid "Verbose stdout"
+msgstr ""
+
+#: main/main.cpp
 msgid "Frame Delay Msec"
+msgstr ""
+
+#: main/main.cpp
+msgid "Low Processor Mode"
 msgstr ""
 
 #: main/main.cpp
@@ -4367,21 +4173,6 @@ msgid "Eye Gaze Interaction"
 msgstr "ურთიერთქმედებაზე მიჩერება"
 
 #: main/main.cpp
-#, fuzzy
-msgid "Binding Modifiers"
-msgstr "პანორამის მოდიფიკატორი"
-
-#: main/main.cpp
-#, fuzzy
-msgid "Analog Threshold"
-msgstr "ზღვარი"
-
-#: main/main.cpp
-#, fuzzy
-msgid "Dpad Binding"
-msgstr "ბილიკის პოვნა"
-
-#: main/main.cpp
 msgid "Boot Splash"
 msgstr ""
 
@@ -4449,6 +4240,11 @@ msgstr ""
 msgid "Show Image"
 msgstr "გამოსახულების ჩვენება"
 
+#: main/main.cpp platform/web/export/export_plugin.cpp
+#: scene/resources/image_texture.cpp
+msgid "Image"
+msgstr "გამოსახულება"
+
 #: main/main.cpp
 msgid "Fullsize"
 msgstr ""
@@ -4456,10 +4252,6 @@ msgstr ""
 #: main/main.cpp servers/rendering_server.cpp
 msgid "Use Filter"
 msgstr "ფილტრის გამოყენება"
-
-#: main/main.cpp scene/resources/image_texture.cpp
-msgid "Image"
-msgstr "გამოსახულება"
 
 #: main/main.cpp
 msgid "Minimum Display Time"
@@ -4630,43 +4422,13 @@ msgstr "წიბო მიერთებების გამოყენე�
 msgid "Edges Free"
 msgstr "წიბოები"
 
-#: main/performance.cpp
-msgid "Obstacles"
-msgstr ""
-
-#: main/performance.cpp
-#, fuzzy
-msgid "Pipeline"
-msgstr "ფაიფლაინის კეში"
-
-#: main/performance.cpp
-#, fuzzy
-msgid "Compilations Canvas"
-msgstr "დასრულების ხაზები"
-
-#: main/performance.cpp
-#, fuzzy
-msgid "Compilations Mesh"
-msgstr "დასრულების ხაზები"
-
-#: main/performance.cpp
-#, fuzzy
-msgid "Compilations Surface"
-msgstr "დასრულების ხაზები"
-
-#: main/performance.cpp
-#, fuzzy
-msgid "Compilations Draw"
-msgstr "დასრულება"
-
-#: main/performance.cpp
-#, fuzzy
-msgid "Compilations Specialization"
-msgstr "დასრულების ჩოჩიის სიგანე"
-
 #: modules/csg/csg_shape.cpp
 msgid "Operation"
 msgstr "ოპერაცია"
+
+#: modules/csg/csg_shape.cpp scene/main/scene_tree.cpp
+msgid "Snap"
+msgstr "მიბმა"
 
 #: modules/csg/csg_shape.cpp
 msgid "Calculate Tangents"
@@ -4795,11 +4557,6 @@ msgid "Path Rotation"
 msgstr "ბილიკის შემობრუნება"
 
 #: modules/csg/csg_shape.cpp
-#, fuzzy
-msgid "Path Rotation Accurate"
-msgstr "ბილიკის შემობრუნება"
-
-#: modules/csg/csg_shape.cpp
 msgid "Path Local"
 msgstr "ბილიკი ლოკალურია"
 
@@ -4897,10 +4654,6 @@ msgstr ""
 msgid "Exclude Addons"
 msgstr ""
 
-#: modules/gdscript/gdscript.cpp
-msgid "Renamed in Godot 4 Hint"
-msgstr ""
-
 #: modules/gdscript/language_server/gdscript_language_server.cpp
 msgid "Language Server"
 msgstr ""
@@ -4945,11 +4698,11 @@ msgstr "დასახელების ვერსია"
 #: scene/2d/cpu_particles_2d.cpp scene/2d/light_2d.cpp scene/2d/polygon_2d.cpp
 #: scene/3d/cpu_particles_3d.cpp scene/3d/light_3d.cpp
 #: scene/3d/reflection_probe.cpp scene/animation/root_motion_view.cpp
-#: scene/gui/color_picker.cpp scene/gui/color_rect.cpp
-#: scene/gui/rich_text_effect.cpp scene/main/canvas_item.cpp
-#: scene/resources/3d/sky_material.cpp scene/resources/environment.cpp
-#: scene/resources/label_settings.cpp scene/resources/material.cpp
-#: scene/resources/particle_process_material.cpp
+#: scene/gui/color_button.cpp scene/gui/color_picker.cpp
+#: scene/gui/color_rect.cpp scene/gui/rich_text_effect.cpp
+#: scene/main/canvas_item.cpp scene/resources/3d/sky_material.cpp
+#: scene/resources/environment.cpp scene/resources/label_settings.cpp
+#: scene/resources/material.cpp scene/resources/particle_process_material.cpp
 #: scene/resources/style_box_flat.cpp scene/resources/style_box_line.cpp
 #: scene/resources/style_box_texture.cpp
 msgid "Color"
@@ -5274,7 +5027,7 @@ msgstr "წონების შერევა"
 msgid "Instance Materials"
 msgstr "გაშვებული ასლის მასალები"
 
-#: modules/gltf/structures/gltf_node.cpp
+#: modules/gltf/structures/gltf_node.cpp scene/3d/skeleton_3d.cpp
 msgid "Parent"
 msgstr "მშობელი"
 
@@ -5295,36 +5048,8 @@ msgstr "ბავშვები"
 msgid "Light"
 msgstr "მსუბუქი"
 
-#: modules/gltf/structures/gltf_object_model_property.cpp
-msgid "glTF to Godot Expression"
-msgstr ""
-
-#: modules/gltf/structures/gltf_object_model_property.cpp
-msgid "Godot to glTF Expression"
-msgstr ""
-
-#: modules/gltf/structures/gltf_object_model_property.cpp
-#, fuzzy
-msgid "Node Paths"
-msgstr "კვანძის ბილიკი"
-
-#: modules/gltf/structures/gltf_object_model_property.cpp
-msgid "Object Model Type"
-msgstr ""
-
-#: modules/gltf/structures/gltf_object_model_property.cpp
-#, fuzzy
-msgid "Json Pointers"
-msgstr "წერტილები"
-
-#: modules/gltf/structures/gltf_object_model_property.cpp
-#, fuzzy
-msgid "Variant Type"
-msgstr "ცვალებადი ტიპი"
-
 #: modules/gltf/structures/gltf_skeleton.cpp
 #: modules/gltf/structures/gltf_skin.cpp
-#: modules/jolt_physics/jolt_project_settings.cpp
 msgid "Joints"
 msgstr "შეერთებები"
 
@@ -5418,13 +5143,13 @@ msgstr "ცხობის ნავიგაცია"
 
 #: modules/interactive_music/audio_stream_interactive.cpp
 #, fuzzy
-msgid "Clip Count"
-msgstr "კლიპის შემცველობა"
+msgid "Initial Clip"
+msgstr "საწყისი სიჩქარე"
 
 #: modules/interactive_music/audio_stream_interactive.cpp
 #, fuzzy
-msgid "Initial Clip"
-msgstr "საწყისი სიჩქარე"
+msgid "Clip Count"
+msgstr "კლიპის შემცველობა"
 
 #: modules/interactive_music/audio_stream_playlist.cpp
 msgid "Shuffle"
@@ -5440,172 +5165,6 @@ msgstr "გამოჩენის დრო"
 #, fuzzy
 msgid "Stream Count"
 msgstr "კადრების რაოდენობა"
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "Jolt Physics 3D"
-msgstr "ფიზიკა"
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "Simulation"
-msgstr "ანიმაცია"
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "Velocity Steps"
-msgstr "სიჩქარე"
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "Position Steps"
-msgstr "მდებარეობა"
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Use Enhanced Internal Edge Removal"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Areas Detect Static Bodies"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Generate All Kinematic Contacts"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "Penetration Slop"
-msgstr "ანოტაციის ფერი"
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "Speculative Contact Distance"
-msgstr "გამარტივების მანძილი"
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Baumgarte Stabilization Factor"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "Soft Body Point Radius"
-msgstr "რგოლის რადიუსი"
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Bounce Velocity Threshold"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "Allow Sleep"
-msgstr "ძებნის დაშვება"
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "Sleep Velocity Threshold"
-msgstr "მასშტაბი სიჩქარის მრუდზე"
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "Sleep Time Threshold"
-msgstr "ზღვარი"
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Continuous CD Movement Threshold"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "Continuous CD Max Penetration"
-msgstr "კონტაქტი მაქს გაცალკევება"
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Body Pair Contact Cache Enabled"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Body Pair Contact Cache Distance Threshold"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Body Pair Contact Cache Angle Threshold"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Queries"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Enable Ray Cast Face Index"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "Motion Queries"
-msgstr "მოძრაობის რეჟიმი"
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "Recovery Iterations"
-msgstr "ამომხსნელის იტერაციები"
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "Recovery Amount"
-msgstr "აღდგენა შეჯახებასთან"
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "Collisions"
-msgstr "შეჯახება"
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "Collision Margin Fraction"
-msgstr "ერთმხრივი დაჯახების საზღვარი"
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "Active Edge Threshold"
-msgstr "ზღვარი"
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "World Node"
-msgstr "სამყაროს მასშტაბი"
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Temporary Memory Buffer Size"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "World Boundary Shape Size"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "Max Linear Velocity"
-msgstr "წრფივი იჩქარე"
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "Max Angular Velocity"
-msgstr "მუდმივი კუთხური სიჩქარე"
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "Max Bodies"
-msgstr "მაქს ჟურნალის ფაილები"
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Max Body Pairs"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "Max Contact Constraints"
-msgstr "შეერთების შეზღუდვები"
 
 #: modules/lightmapper_rd/register_types.cpp servers/rendering_server.cpp
 msgid "Lightmapping"
@@ -5644,11 +5203,6 @@ msgid "Region Size"
 msgstr "რეგიონის ზომა"
 
 #: modules/lightmapper_rd/register_types.cpp
-#, fuzzy
-msgid "Max Transparency Rays"
-msgstr "გამჭვირვალობა"
-
-#: modules/lightmapper_rd/register_types.cpp
 msgid "Low Quality Probe Ray Count"
 msgstr ""
 
@@ -5675,11 +5229,6 @@ msgstr "ხმაურის მოცილება"
 #: modules/lightmapper_rd/register_types.cpp
 msgid "Denoiser"
 msgstr "დენოიზერი"
-
-#: modules/mbedtls/register_types.cpp
-#, fuzzy
-msgid "Enable TLS V 1"
-msgstr "2D-ის ჩართვა"
 
 #: modules/minimp3/audio_stream_mp3.cpp
 #: modules/minimp3/resource_importer_mp3.cpp
@@ -5755,10 +5304,6 @@ msgid "Min Radius"
 msgstr "რგოლის რადიუსი"
 
 #: modules/multiplayer/multiplayer_spawner.cpp
-msgid "Spawnable Scenes"
-msgstr ""
-
-#: modules/multiplayer/multiplayer_spawner.cpp
 msgid "Spawn Path"
 msgstr "აღმოცენების ბილიკი"
 
@@ -5820,7 +5365,6 @@ msgid "Noise Type"
 msgstr "ხმაურის ტიპი"
 
 #: modules/noise/fastnoise_lite.cpp
-#: modules/openxr/action_map/openxr_haptic_feedback.cpp
 #: scene/resources/particle_process_material.cpp
 msgid "Frequency"
 msgstr "სიხშირე"
@@ -5872,7 +5416,6 @@ msgid "Domain Warp"
 msgstr ""
 
 #: modules/noise/fastnoise_lite.cpp
-#: modules/openxr/action_map/openxr_haptic_feedback.cpp
 msgid "Amplitude"
 msgstr "ამპლიტუდა"
 
@@ -5949,9 +5492,9 @@ msgid "Toplevel Paths"
 msgstr "ზედა დონის ბილიკები"
 
 #: modules/openxr/action_map/openxr_interaction_profile.cpp
-#, fuzzy
-msgid "Binding Path"
-msgstr "Blender-ის ბილიკი"
+#: scene/main/scene_tree.cpp
+msgid "Paths"
+msgstr "ბილიკები"
 
 #: modules/openxr/action_map/openxr_interaction_profile.cpp
 msgid "Interaction Profile Path"
@@ -5960,55 +5503,6 @@ msgstr "ინტერაქციის პროფილის ბილი�
 #: modules/openxr/editor/openxr_select_runtime.cpp
 msgid "Runtime Paths"
 msgstr "გაშვების გარემოს ბილიკები"
-
-#: modules/openxr/extensions/openxr_dpad_binding_extension.cpp
-#, fuzzy
-msgid "Action Set"
-msgstr "ქმედების ტიპი"
-
-#: modules/openxr/extensions/openxr_dpad_binding_extension.cpp
-#, fuzzy
-msgid "Input Path"
-msgstr "გატანის ბილიკი"
-
-#: modules/openxr/extensions/openxr_dpad_binding_extension.cpp
-#, fuzzy
-msgid "Threshold Released"
-msgstr "ზღვარი"
-
-#: modules/openxr/extensions/openxr_dpad_binding_extension.cpp
-#, fuzzy
-msgid "Center Region"
-msgstr "ფერის რეგიონები"
-
-#: modules/openxr/extensions/openxr_dpad_binding_extension.cpp
-#, fuzzy
-msgid "Wedge Angle"
-msgstr "ძვლის კუთხე"
-
-#: modules/openxr/extensions/openxr_dpad_binding_extension.cpp
-msgid "Is Sticky"
-msgstr ""
-
-#: modules/openxr/extensions/openxr_dpad_binding_extension.cpp
-#: modules/openxr/extensions/openxr_valve_analog_threshold_extension.cpp
-msgid "On Haptic"
-msgstr ""
-
-#: modules/openxr/extensions/openxr_dpad_binding_extension.cpp
-#: modules/openxr/extensions/openxr_valve_analog_threshold_extension.cpp
-msgid "Off Haptic"
-msgstr ""
-
-#: modules/openxr/extensions/openxr_valve_analog_threshold_extension.cpp
-#, fuzzy
-msgid "On Threshold"
-msgstr "ზღვარი"
-
-#: modules/openxr/extensions/openxr_valve_analog_threshold_extension.cpp
-#, fuzzy
-msgid "Off Threshold"
-msgstr "ზღვარი"
 
 #: modules/openxr/openxr_interface.cpp
 msgid "Display Refresh Rate"
@@ -6022,15 +5516,6 @@ msgstr ""
 #, fuzzy
 msgid "Layer Viewport"
 msgstr "ჩვენების არე"
-
-#: modules/openxr/scene/openxr_composition_layer.cpp
-#, fuzzy
-msgid "Use Android Surface"
-msgstr "ყველა ზედაპირის გამოყენება"
-
-#: modules/openxr/scene/openxr_composition_layer.cpp
-msgid "Android Surface Size"
-msgstr ""
 
 #: modules/openxr/scene/openxr_composition_layer.cpp
 #, fuzzy
@@ -6192,11 +5677,6 @@ msgstr ""
 #: modules/websocket/websocket_peer.cpp
 msgid "Max Queued Packets"
 msgstr ""
-
-#: modules/websocket/websocket_peer.cpp
-#, fuzzy
-msgid "Heartbeat Interval"
-msgstr "დელტას ინტერვალი"
 
 #: modules/webxr/webxr_interface.cpp
 msgid "Session Mode"
@@ -6387,15 +5867,6 @@ msgid "XR Mode"
 msgstr "XR რეჟიმი"
 
 #: platform/android/export/export_plugin.cpp
-#, fuzzy
-msgid "Gesture"
-msgstr "ტექსტურა"
-
-#: platform/android/export/export_plugin.cpp
-msgid "Swipe to Dismiss"
-msgstr ""
-
-#: platform/android/export/export_plugin.cpp
 msgid "Screen"
 msgstr "ეკრანი"
 
@@ -6465,6 +5936,40 @@ msgid "Icons"
 msgstr "ხატულები"
 
 #: platform/ios/export/export_plugin.cpp
+msgid "iPhone 120 X 120"
+msgstr "iPhone 120 X 120"
+
+#: platform/ios/export/export_plugin.cpp
+msgid "iPhone 180 X 180"
+msgstr "iPhone 180 X 180"
+
+#: platform/ios/export/export_plugin.cpp
+#, fuzzy
+msgid "iPad 76 X 76"
+msgstr "iPad 167 X 167"
+
+#: platform/ios/export/export_plugin.cpp
+msgid "iPad 152 X 152"
+msgstr "iPad 152 X 152"
+
+#: platform/ios/export/export_plugin.cpp
+msgid "iPad 167 X 167"
+msgstr "iPad 167 X 167"
+
+#: platform/ios/export/export_plugin.cpp
+msgid "App Store 1024 X 1024"
+msgstr "App Store 1024 X 1024"
+
+#: platform/ios/export/export_plugin.cpp
+#, fuzzy
+msgid "Spotlight 40 X 40"
+msgstr "Spotlight 80 X 80"
+
+#: platform/ios/export/export_plugin.cpp
+msgid "Spotlight 80 X 80"
+msgstr "Spotlight 80 X 80"
+
+#: platform/ios/export/export_plugin.cpp
 msgid "Settings 58 X 58"
 msgstr "პარამეტრები 58 X 58"
 
@@ -6481,73 +5986,7 @@ msgid "Notification 60 X 60"
 msgstr "გაფრთხილება 60 X 60"
 
 #: platform/ios/export/export_plugin.cpp
-#, fuzzy
-msgid "Notification 76 X 76"
-msgstr "გაფრთხილება 60 X 60"
-
-#: platform/ios/export/export_plugin.cpp
-#, fuzzy
-msgid "Notification 114 X 114"
-msgstr "გაფრთხილება 40 X 40"
-
-#: platform/ios/export/export_plugin.cpp
-msgid "Spotlight 80 X 80"
-msgstr "Spotlight 80 X 80"
-
-#: platform/ios/export/export_plugin.cpp
-#, fuzzy
-msgid "Spotlight 120 X 120"
-msgstr "Spotlight 40 X 40"
-
-#: platform/ios/export/export_plugin.cpp
-msgid "iPhone 120 X 120"
-msgstr "iPhone 120 X 120"
-
-#: platform/ios/export/export_plugin.cpp
-msgid "iPhone 180 X 180"
-msgstr "iPhone 180 X 180"
-
-#: platform/ios/export/export_plugin.cpp
-msgid "iPad 167 X 167"
-msgstr "iPad 167 X 167"
-
-#: platform/ios/export/export_plugin.cpp
-msgid "iPad 152 X 152"
-msgstr "iPad 152 X 152"
-
-#: platform/ios/export/export_plugin.cpp
-#, fuzzy
-msgid "iOS 128 X 128"
-msgstr "iPad 152 X 152"
-
-#: platform/ios/export/export_plugin.cpp
-#, fuzzy
-msgid "iOS 192 X 192"
-msgstr "iPad 152 X 152"
-
-#: platform/ios/export/export_plugin.cpp
-#, fuzzy
-msgid "iOS 136 X 136"
-msgstr "iPad 167 X 167"
-
-#: platform/ios/export/export_plugin.cpp
-msgid "App Store 1024 X 1024"
-msgstr "App Store 1024 X 1024"
-
-#: platform/ios/export/export_plugin.cpp
 msgid "App Store Team ID"
-msgstr ""
-
-#: platform/ios/export/export_plugin.cpp
-msgid "Export Method Debug"
-msgstr ""
-
-#: platform/ios/export/export_plugin.cpp
-msgid "Code Sign Identity Debug"
-msgstr ""
-
-#: platform/ios/export/export_plugin.cpp
-msgid "Code Sign Identity Release"
 msgstr ""
 
 #: platform/ios/export/export_plugin.cpp
@@ -6555,18 +5994,20 @@ msgid "Provisioning Profile UUID Debug"
 msgstr ""
 
 #: platform/ios/export/export_plugin.cpp
+msgid "Code Sign Identity Debug"
+msgstr ""
+
+#: platform/ios/export/export_plugin.cpp
+msgid "Export Method Debug"
+msgstr ""
+
+#: platform/ios/export/export_plugin.cpp
 msgid "Provisioning Profile UUID Release"
 msgstr ""
 
 #: platform/ios/export/export_plugin.cpp
-#, fuzzy
-msgid "Provisioning Profile Specifier Debug"
-msgstr "მუშაობისთვის მომზადების პროფილი"
-
-#: platform/ios/export/export_plugin.cpp
-#, fuzzy
-msgid "Provisioning Profile Specifier Release"
-msgstr "მუშაობისთვის მომზადების პროფილი"
+msgid "Code Sign Identity Release"
+msgstr ""
 
 #: platform/ios/export/export_plugin.cpp
 msgid "Export Method Release"
@@ -6614,6 +6055,10 @@ msgstr "მხოლოდ, პროექტის გატანა"
 
 #: platform/ios/export/export_plugin.cpp
 msgid "Delete Old Export Files Unconditionally"
+msgstr ""
+
+#: platform/ios/export/export_plugin.cpp
+msgid "Generate Simulator Library If Missing"
 msgstr ""
 
 #: platform/ios/export/export_plugin.cpp
@@ -6712,20 +6157,6 @@ msgstr "მიბმა ჩართულია"
 #, fuzzy
 msgid "Tracking Domains"
 msgstr "აქვს ტრეკინგის მონაცემები"
-
-#: platform/ios/export/export_plugin.cpp
-#, fuzzy
-msgid "Icon 1024 X 1024"
-msgstr "App Store 1024 X 1024"
-
-#: platform/ios/export/export_plugin.cpp
-#, fuzzy
-msgid "Icon 1024 X 1024 Dark"
-msgstr "App Store 1024 X 1024"
-
-#: platform/ios/export/export_plugin.cpp
-msgid "Icon 1024 X 1024 Tinted"
-msgstr ""
 
 #: platform/ios/export/export_plugin.cpp
 msgid "Storyboard"
@@ -7160,6 +6591,65 @@ msgstr ""
 msgid "Icon 512 X 512"
 msgstr ""
 
+#: platform/web/export/export_plugin.cpp
+msgid "Blazium"
+msgstr ""
+
+#: platform/web/export/export_plugin.cpp
+#, fuzzy
+msgid "Web Headers"
+msgstr "თავსართის დაბეჭდვა"
+
+#: platform/web/export/export_plugin.cpp scene/gui/graph_frame.cpp
+#: scene/gui/graph_node.cpp scene/main/window.cpp
+#: scene/resources/visual_shader.cpp
+msgid "Title"
+msgstr "სათაური"
+
+#: platform/web/export/export_plugin.cpp
+#, fuzzy
+msgid "URL"
+msgstr "URI"
+
+#: platform/web/export/export_plugin.cpp
+#, fuzzy
+msgid "Site Name"
+msgstr "სცენის სახელი"
+
+#: platform/web/export/export_plugin.cpp
+#, fuzzy
+msgid "Social Headers"
+msgstr "თავსართის დაბეჭდვა"
+
+#: platform/web/export/export_plugin.cpp
+msgid "Site"
+msgstr ""
+
+#: platform/web/export/export_plugin.cpp
+msgid "Card"
+msgstr ""
+
+#: platform/web/export/export_plugin.cpp
+msgid "Discord Embed"
+msgstr ""
+
+#: platform/web/export/export_plugin.cpp
+#, fuzzy
+msgid "Autodetect"
+msgstr "ავტომატური სწორება"
+
+#: platform/web/export/export_plugin.cpp
+msgid "Youtube Playable"
+msgstr ""
+
+#: platform/web/export/export_plugin.cpp
+msgid "Export Gzip Compressed Wasm"
+msgstr ""
+
+#: platform/web/export/export_plugin.cpp
+msgid "Keep Uncompressed Wasm"
+msgstr ""
+
 #: platform/windows/export/export_plugin.cpp
 msgid "Identity Type"
 msgstr ""
@@ -7472,12 +6962,6 @@ msgstr ""
 msgid "Randomness"
 msgstr "შემთხვევითობა"
 
-#: scene/2d/cpu_particles_2d.cpp scene/2d/gpu_particles_2d.cpp
-#: scene/3d/cpu_particles_3d.cpp scene/3d/gpu_particles_3d.cpp
-#, fuzzy
-msgid "Use Fixed Seed"
-msgstr "ფიქსირებული ზომა"
-
 #: scene/2d/cpu_particles_2d.cpp scene/3d/cpu_particles_3d.cpp
 #: scene/resources/particle_process_material.cpp
 msgid "Lifetime Randomness"
@@ -7542,8 +7026,7 @@ msgid "Normals"
 msgstr ""
 
 #: scene/2d/cpu_particles_2d.cpp scene/3d/cpu_particles_3d.cpp
-#: scene/gui/control.cpp scene/main/window.cpp
-#: scene/resources/color_palette.cpp scene/resources/gradient.cpp
+#: scene/gui/control.cpp scene/main/window.cpp scene/resources/gradient.cpp
 msgid "Colors"
 msgstr "ფერები"
 
@@ -7755,12 +7238,16 @@ msgid "Sub Emitter"
 msgstr ""
 
 #: scene/2d/gpu_particles_2d.cpp scene/3d/gpu_particles_3d.cpp
-msgid "Interp to End"
-msgstr "ინტერპოლაცია ბოლომდე"
+msgid "Process Material"
+msgstr ""
 
 #: scene/2d/gpu_particles_2d.cpp scene/3d/gpu_particles_3d.cpp
 msgid "Interpolate"
 msgstr "ინტერპოლაცია"
+
+#: scene/2d/gpu_particles_2d.cpp scene/3d/gpu_particles_3d.cpp
+msgid "Interp to End"
+msgstr "ინტერპოლაცია ბოლომდე"
 
 #: scene/2d/gpu_particles_2d.cpp scene/3d/gpu_particles_3d.cpp
 msgid "Base Size"
@@ -7780,10 +7267,6 @@ msgstr "ჭრილები"
 
 #: scene/2d/gpu_particles_2d.cpp
 msgid "Section Subdivisions"
-msgstr ""
-
-#: scene/2d/gpu_particles_2d.cpp scene/3d/gpu_particles_3d.cpp
-msgid "Process Material"
 msgstr ""
 
 #: scene/2d/light_2d.cpp scene/3d/light_3d.cpp scene/gui/reference_rect.cpp
@@ -7834,7 +7317,6 @@ msgid "Texture Scale"
 msgstr ""
 
 #: scene/2d/light_occluder_2d.cpp scene/2d/line_2d.cpp
-#: scene/resources/curve.cpp
 msgid "Closed"
 msgstr "დახურულია"
 
@@ -7913,7 +7395,6 @@ msgid "Multimesh"
 msgstr ""
 
 #: scene/2d/navigation_agent_2d.cpp scene/3d/navigation_agent_3d.cpp
-#: servers/navigation_server_3d.cpp
 msgid "Pathfinding"
 msgstr "ბილიკის პოვნა"
 
@@ -8311,13 +7792,15 @@ msgstr "სართულის ფენები"
 msgid "Wall Layers"
 msgstr "კედლის ფენები"
 
-#: scene/2d/physics/character_body_2d.cpp scene/3d/look_at_modifier_3d.cpp
+#: scene/2d/physics/character_body_2d.cpp
 #: scene/3d/physics/character_body_3d.cpp
 msgid "Safe Margin"
 msgstr ""
 
 #: scene/2d/physics/collision_object_2d.cpp
-#: scene/3d/physics/collision_object_3d.cpp scene/3d/soft_body_3d.cpp
+#: scene/2d/physics/joints/joint_2d.cpp
+#: scene/3d/physics/collision_object_3d.cpp
+#: scene/3d/physics/joints/joint_3d.cpp scene/3d/soft_body_3d.cpp
 msgid "Disable Mode"
 msgstr "რეჟიმის გათიშვა"
 
@@ -8348,8 +7831,6 @@ msgid "One Way Collision Margin"
 msgstr "ერთმხრივი დაჯახების საზღვარი"
 
 #: scene/2d/physics/collision_shape_2d.cpp
-#: scene/3d/physics/collision_polygon_3d.cpp
-#: scene/3d/physics/collision_shape_3d.cpp
 msgid "Debug Color"
 msgstr "გამართვის ფერი"
 
@@ -8584,10 +8065,14 @@ msgstr ""
 #: scene/2d/physics/shape_cast_2d.cpp scene/3d/physics/collision_polygon_3d.cpp
 #: scene/3d/physics/shape_cast_3d.cpp scene/3d/physics/spring_arm_3d.cpp
 #: scene/resources/3d/shape_3d.cpp scene/resources/atlas_texture.cpp
-#: scene/theme/default_theme.cpp servers/physics_server_2d.cpp
-#: servers/physics_server_3d.cpp
+#: scene/theme/default_theme.cpp scene/theme/theme_db.cpp
+#: servers/physics_server_2d.cpp servers/physics_server_3d.cpp
 msgid "Margin"
 msgstr "ზღვარი"
+
+#: scene/2d/physics/shape_cast_2d.cpp scene/3d/physics/shape_cast_3d.cpp
+msgid "Max Results"
+msgstr "მაქს. შედეგები"
 
 #: scene/2d/physics/static_body_2d.cpp scene/3d/physics/static_body_3d.cpp
 msgid "Constant Linear Velocity"
@@ -8637,7 +8122,7 @@ msgstr "რედაქტორის პარამეტრი"
 msgid "Show Bone Gizmo"
 msgstr ""
 
-#: scene/2d/skeleton_2d.cpp
+#: scene/2d/skeleton_2d.cpp scene/3d/skeleton_3d.cpp
 msgid "Rest"
 msgstr "პაუზა"
 
@@ -8680,11 +8165,6 @@ msgstr "შეჯახების ხილვადობის რეჟი�
 #: scene/2d/tile_map.cpp scene/2d/tile_map_layer.cpp
 msgid "Navigation Visibility Mode"
 msgstr "ნავიგაციის ხილვადობის რეჟიმი"
-
-#: scene/2d/tile_map_layer.cpp
-#, fuzzy
-msgid "Occlusion Enabled"
-msgstr "შეჯახება ანიმირებადია"
 
 #: scene/2d/tile_map_layer.cpp scene/resources/2d/tile_set.cpp
 msgid "Y Sort Origin"
@@ -8793,8 +8273,11 @@ msgstr "დოპლერი"
 msgid "Tracking"
 msgstr "ტრეკინგი"
 
-#: scene/3d/bone_attachment_3d.cpp scene/3d/look_at_modifier_3d.cpp
-#: scene/3d/physics/physical_bone_3d.cpp scene/3d/spring_bone_collision_3d.cpp
+#: scene/3d/audio_stream_player_3d.cpp
+msgid "Clamp"
+msgstr ""
+
+#: scene/3d/bone_attachment_3d.cpp scene/3d/physics/physical_bone_3d.cpp
 msgid "Bone Name"
 msgstr "ძვლის სახელი"
 
@@ -8978,10 +8461,6 @@ msgid "Follow Camera Enabled"
 msgstr "კამერის მიყოლა ჩართულია"
 
 #: scene/3d/gpu_particles_collision_3d.cpp
-msgid "Heightfield Mask"
-msgstr ""
-
-#: scene/3d/gpu_particles_collision_3d.cpp
 msgid "Directionality"
 msgstr "მიმართულება"
 
@@ -9074,9 +8553,10 @@ msgid "Outline Render Priority"
 msgstr ""
 
 #: scene/3d/label_3d.cpp scene/gui/button.cpp scene/gui/control.cpp
-#: scene/gui/dialogs.cpp scene/gui/label.cpp scene/gui/line_edit.cpp
-#: scene/gui/link_button.cpp scene/gui/rich_text_label.cpp
-#: scene/gui/text_edit.cpp scene/resources/3d/primitive_meshes.cpp
+#: scene/gui/dialogs.cpp scene/gui/foldable_container.cpp scene/gui/label.cpp
+#: scene/gui/line_edit.cpp scene/gui/link_button.cpp
+#: scene/gui/rich_text_label.cpp scene/gui/text_edit.cpp
+#: scene/resources/3d/primitive_meshes.cpp
 msgid "Text"
 msgstr "ტექსტი"
 
@@ -9099,7 +8579,7 @@ msgstr "ფონტის ზომა"
 msgid "Horizontal Alignment"
 msgstr "ჰორიზონტალური სწორება"
 
-#: scene/3d/label_3d.cpp scene/gui/label.cpp scene/gui/rich_text_label.cpp
+#: scene/3d/label_3d.cpp scene/gui/label.cpp
 #: scene/resources/3d/primitive_meshes.cpp
 msgid "Vertical Alignment"
 msgstr "ვერტიკალური სწორება"
@@ -9114,16 +8594,16 @@ msgstr "მაღალირეგისტრი"
 msgid "Justification Flags"
 msgstr "დამტკიცების ალმები"
 
-#: scene/3d/label_3d.cpp scene/gui/button.cpp scene/gui/label.cpp
-#: scene/gui/line_edit.cpp scene/gui/link_button.cpp scene/gui/menu_bar.cpp
-#: scene/gui/rich_text_label.cpp scene/gui/text_edit.cpp
+#: scene/3d/label_3d.cpp scene/gui/button.cpp scene/gui/foldable_container.cpp
+#: scene/gui/label.cpp scene/gui/line_edit.cpp scene/gui/link_button.cpp
+#: scene/gui/menu_bar.cpp scene/gui/rich_text_label.cpp scene/gui/text_edit.cpp
 #: scene/resources/3d/primitive_meshes.cpp
 msgid "BiDi"
 msgstr "BiDi"
 
-#: scene/3d/label_3d.cpp scene/gui/button.cpp scene/gui/label.cpp
-#: scene/gui/line_edit.cpp scene/gui/link_button.cpp scene/gui/menu_bar.cpp
-#: scene/gui/rich_text_label.cpp scene/gui/text_edit.cpp
+#: scene/3d/label_3d.cpp scene/gui/button.cpp scene/gui/foldable_container.cpp
+#: scene/gui/label.cpp scene/gui/line_edit.cpp scene/gui/link_button.cpp
+#: scene/gui/menu_bar.cpp scene/gui/rich_text_label.cpp scene/gui/text_edit.cpp
 #: scene/resources/3d/primitive_meshes.cpp
 msgid "Text Direction"
 msgstr "ტექსტის მიმართულება"
@@ -9201,11 +8681,6 @@ msgstr ""
 msgid "Blur"
 msgstr "ბუნდოვნება"
 
-#: scene/3d/light_3d.cpp
-#, fuzzy
-msgid "Caster Mask"
-msgstr "ფენის ნიღაბი"
-
 #: scene/3d/light_3d.cpp servers/rendering_server.cpp
 msgid "Directional Shadow"
 msgstr ""
@@ -9256,27 +8731,13 @@ msgstr "კუთხის ატენუაცია"
 
 #: scene/3d/lightmap_gi.cpp
 #, fuzzy
-msgid "Lightmap Textures"
+msgid "Light Texture"
 msgstr "სინათლის ტექსტურა"
 
-#: scene/3d/lightmap_gi.cpp
-#, fuzzy
-msgid "Shadowmask Textures"
-msgstr "ტილოს ტექსტურები"
-
 #: scene/3d/lightmap_gi.cpp scene/main/scene_tree.cpp
-#: scene/resources/multimesh.cpp servers/rendering_server.cpp
+#: servers/rendering_server.cpp
 msgid "Quality"
 msgstr "ხარისხი"
-
-#: scene/3d/lightmap_gi.cpp
-#, fuzzy
-msgid "Supersampling"
-msgstr "სემპლინგი"
-
-#: scene/3d/lightmap_gi.cpp
-msgid "Supersampling Factor"
-msgstr ""
 
 #: scene/3d/lightmap_gi.cpp
 msgid "Bounces"
@@ -9289,11 +8750,6 @@ msgstr ""
 #: scene/3d/lightmap_gi.cpp
 msgid "Directional"
 msgstr "მიმართული"
-
-#: scene/3d/lightmap_gi.cpp
-#, fuzzy
-msgid "Shadowmask Mode"
-msgstr "ჩრდილის რეჟიმი"
 
 #: scene/3d/lightmap_gi.cpp
 msgid "Use Texture for Bounces"
@@ -9352,118 +8808,6 @@ msgstr ""
 
 #: scene/3d/lightmap_gi.cpp
 msgid "Light Data"
-msgstr ""
-
-#: scene/3d/look_at_modifier_3d.cpp scene/3d/skeleton_ik_3d.cpp
-msgid "Target Node"
-msgstr "სამიზნე კვანძი"
-
-#: scene/3d/look_at_modifier_3d.cpp
-#, fuzzy
-msgid "Forward Axis"
-msgstr "შემდეგი საქაღალდე"
-
-#: scene/3d/look_at_modifier_3d.cpp
-#, fuzzy
-msgid "Primary Rotation Axis"
-msgstr "ბილიკის შემობრუნება"
-
-#: scene/3d/look_at_modifier_3d.cpp
-msgid "Use Secondary Rotation"
-msgstr ""
-
-#: scene/3d/look_at_modifier_3d.cpp
-#, fuzzy
-msgid "Origin Settings"
-msgstr "მორგება"
-
-#: scene/3d/look_at_modifier_3d.cpp scene/resources/gradient_texture.cpp
-#: servers/physics_server_2d.cpp servers/physics_server_3d.cpp
-msgid "From"
-msgstr "ვისგან"
-
-#: scene/3d/look_at_modifier_3d.cpp
-#, fuzzy
-msgid "External Node"
-msgstr "გარე"
-
-#: scene/3d/look_at_modifier_3d.cpp
-#, fuzzy
-msgid "Time Based Interpolation"
-msgstr "ხატულის ინტერპოლაცია"
-
-#: scene/3d/look_at_modifier_3d.cpp
-#, fuzzy
-msgid "Transition Type"
-msgstr "დანაყოფის ტიპი"
-
-#: scene/3d/look_at_modifier_3d.cpp
-#, fuzzy
-msgid "Ease Type"
-msgstr "საბაზისო ტიპი"
-
-#: scene/3d/look_at_modifier_3d.cpp
-#, fuzzy
-msgid "Angle Limitation"
-msgstr "კუთხური შეზღუდვის მოშვება"
-
-#: scene/3d/look_at_modifier_3d.cpp
-#, fuzzy
-msgid "Use Angle Limitation"
-msgstr "კუთხური შეზღუდვის მოშვება"
-
-#: scene/3d/look_at_modifier_3d.cpp
-msgid "Symmetry Limitation"
-msgstr ""
-
-#: scene/3d/look_at_modifier_3d.cpp
-#, fuzzy
-msgid "Primary Limit Angle"
-msgstr "წრფივი ლიმიტი ჩართულია"
-
-#: scene/3d/look_at_modifier_3d.cpp
-msgid "Primary Damp Threshold"
-msgstr ""
-
-#: scene/3d/look_at_modifier_3d.cpp
-msgid "Primary Positive Limit Angle"
-msgstr ""
-
-#: scene/3d/look_at_modifier_3d.cpp
-msgid "Primary Positive Damp Threshold"
-msgstr ""
-
-#: scene/3d/look_at_modifier_3d.cpp
-msgid "Primary Negative Limit Angle"
-msgstr ""
-
-#: scene/3d/look_at_modifier_3d.cpp
-msgid "Primary Negative Damp Threshold"
-msgstr ""
-
-#: scene/3d/look_at_modifier_3d.cpp
-#, fuzzy
-msgid "Secondary Limit Angle"
-msgstr "წრფივი ლიმიტი ჩართულია"
-
-#: scene/3d/look_at_modifier_3d.cpp
-msgid "Secondary Damp Threshold"
-msgstr ""
-
-#: scene/3d/look_at_modifier_3d.cpp
-msgid "Secondary Positive Limit Angle"
-msgstr ""
-
-#: scene/3d/look_at_modifier_3d.cpp
-msgid "Secondary Positive Damp Threshold"
-msgstr ""
-
-#: scene/3d/look_at_modifier_3d.cpp
-msgid "Secondary Negative Limit Angle"
-msgstr ""
-
-#: scene/3d/look_at_modifier_3d.cpp
-msgid "Secondary Negative Damp Threshold"
 msgstr ""
 
 #: scene/3d/mesh_instance_3d.cpp
@@ -9567,12 +8911,6 @@ msgstr ""
 #: scene/3d/physics/collision_object_3d.cpp
 msgid "Capture on Drag"
 msgstr "გადაღება გადათრევისას"
-
-#: scene/3d/physics/collision_polygon_3d.cpp
-#: scene/3d/physics/collision_shape_3d.cpp
-#, fuzzy
-msgid "Debug Fill"
-msgstr "გამართვის ფერი"
 
 #: scene/3d/physics/joints/cone_twist_joint_3d.cpp
 #: scene/3d/physics/physical_bone_3d.cpp
@@ -9927,11 +9265,6 @@ msgid "Max Force"
 msgstr "მაქს ძალა"
 
 #: scene/3d/reflection_probe.cpp
-#, fuzzy
-msgid "Blend Distance"
-msgstr "მინ. დაშორება"
-
-#: scene/3d/reflection_probe.cpp
 msgid "Origin Offset"
 msgstr ""
 
@@ -9959,10 +9292,10 @@ msgstr "გარემოს განათება"
 msgid "Color Energy"
 msgstr "ფერის ენერგია"
 
-#: scene/3d/retarget_modifier_3d.cpp scene/resources/bone_map.cpp
-#: servers/xr/xr_positional_tracker.cpp
-msgid "Profile"
-msgstr "პროფილი"
+#: scene/3d/skeleton_3d.cpp
+#, fuzzy
+msgid "Bones"
+msgstr "ძვალი"
 
 #: scene/3d/skeleton_3d.cpp
 msgid "Motion Scale"
@@ -10013,6 +9346,10 @@ msgstr ""
 #: scene/3d/skeleton_ik_3d.cpp
 msgid "Magnet"
 msgstr "მაგნიტი"
+
+#: scene/3d/skeleton_ik_3d.cpp
+msgid "Target Node"
+msgstr "სამიზნე კვანძი"
 
 #: scene/3d/skeleton_ik_3d.cpp scene/resources/material.cpp
 msgid "Min Distance"
@@ -10076,20 +9413,6 @@ msgstr ""
 msgid "Drag Coefficient"
 msgstr ""
 
-#: scene/3d/spring_bone_collision_3d.cpp scene/gui/graph_element.cpp
-msgid "Position Offset"
-msgstr "მდებარეობის წანაცვლება"
-
-#: scene/3d/spring_bone_collision_3d.cpp
-#, fuzzy
-msgid "Rotation Offset"
-msgstr "მდებარეობის წანაცვლება"
-
-#: scene/3d/spring_bone_collision_capsule_3d.cpp
-#: scene/3d/spring_bone_collision_sphere_3d.cpp
-msgid "Inside"
-msgstr ""
-
 #: scene/3d/velocity_tracker_3d.cpp
 msgid "Track Physics Step"
 msgstr ""
@@ -10139,11 +9462,6 @@ msgstr ""
 #: scene/3d/visual_instance_3d.cpp servers/rendering_server.cpp
 msgid "Global Illumination"
 msgstr "გლობალური განათება"
-
-#: scene/3d/visual_instance_3d.cpp
-#, fuzzy
-msgid "Lightmap Texel Scale"
-msgstr "ტექსტურის მასშტაბი"
 
 #: scene/3d/visual_instance_3d.cpp
 msgid "Lightmap Scale"
@@ -10200,11 +9518,6 @@ msgstr "სამყაროს მასშტაბი"
 #: scene/animation/animation_blend_tree.cpp
 msgid "Play Mode"
 msgstr "დაკვრის რეჟიმი"
-
-#: scene/animation/animation_blend_tree.cpp
-#, fuzzy
-msgid "Advance on Start"
-msgstr "დამატებით"
 
 #: scene/animation/animation_blend_tree.cpp
 #, fuzzy
@@ -10266,10 +9579,6 @@ msgstr "დაყოვნება"
 #: scene/animation/animation_blend_tree.cpp
 msgid "Random Delay"
 msgstr "შემთხვევითი დაყოვნება"
-
-#: scene/animation/animation_blend_tree.cpp
-msgid "Explicit Elapse"
-msgstr ""
 
 #: scene/animation/animation_blend_tree.cpp
 #: scene/animation/animation_node_state_machine.cpp
@@ -10349,11 +9658,6 @@ msgstr ""
 #: scene/animation/animation_mixer.cpp
 msgid "Track"
 msgstr "ტრეკი"
-
-#: scene/animation/animation_mixer.cpp
-#, fuzzy
-msgid "Local"
-msgstr "ენა"
 
 #: scene/animation/animation_mixer.cpp
 msgid "Callback Mode"
@@ -10487,6 +9791,11 @@ msgid "Action Mode"
 msgstr "ქმედების რეჟიმი"
 
 #: scene/gui/base_button.cpp
+#, fuzzy
+msgid "Size Mode"
+msgstr "ფაილის რეჟიმი"
+
+#: scene/gui/base_button.cpp
 msgid "Keep Pressed Outside"
 msgstr ""
 
@@ -10514,7 +9823,13 @@ msgstr ""
 msgid "Text Behavior"
 msgstr "ტექსტის ქცევა"
 
-#: scene/gui/button.cpp scene/gui/item_list.cpp scene/gui/label.cpp
+#: scene/gui/button.cpp
+#, fuzzy
+msgid "Expand Text"
+msgstr "გაფართოების რეჟიმი"
+
+#: scene/gui/button.cpp scene/gui/foldable_container.cpp
+#: scene/gui/item_list.cpp scene/gui/label.cpp scene/gui/link_button.cpp
 #: scene/resources/text_line.cpp scene/resources/text_paragraph.cpp
 msgid "Text Overrun Behavior"
 msgstr ""
@@ -10545,10 +9860,6 @@ msgstr ""
 
 #: scene/gui/code_edit.cpp
 msgid "Symbol Lookup on Click"
-msgstr ""
-
-#: scene/gui/code_edit.cpp
-msgid "Symbol Tooltip on Hover"
 msgstr ""
 
 #: scene/gui/code_edit.cpp
@@ -10627,7 +9938,7 @@ msgstr "დამთხვევის გამოკვეთა"
 msgid "Pairs"
 msgstr "წყვილები"
 
-#: scene/gui/color_picker.cpp
+#: scene/gui/color_button.cpp scene/gui/color_picker.cpp
 msgid "Edit Alpha"
 msgstr ""
 
@@ -10743,11 +10054,6 @@ msgstr ""
 msgid "Tooltip"
 msgstr "მინიშნება"
 
-#: scene/gui/control.cpp
-#, fuzzy
-msgid "Auto Translate Mode"
-msgstr "ავტომატური თარგმანი"
-
 #: scene/gui/control.cpp scene/theme/default_theme.cpp
 msgid "Focus"
 msgstr "ფოკუსი"
@@ -10846,6 +10152,35 @@ msgstr "ჩანართის სწორება"
 msgid "Reverse Fill"
 msgstr ""
 
+#: scene/gui/foldable_container.cpp scene/theme/default_theme.cpp
+msgid "Folded"
+msgstr "გაკეცილი"
+
+#: scene/gui/foldable_container.cpp
+#, fuzzy
+msgid "Title Alignment"
+msgstr "ჩანართის სწორება"
+
+#: scene/gui/foldable_container.cpp
+#, fuzzy
+msgid "Title Position"
+msgstr "საწყისი მდებარეობა"
+
+#: scene/gui/foldable_container.cpp
+#, fuzzy
+msgid "Foldable Group"
+msgstr "გაკეცილი ისარი"
+
+#: scene/gui/foldable_container.cpp
+#, fuzzy
+msgid "Buttons"
+msgstr "ღილაკის ნიღაბი"
+
+#: scene/gui/foldable_container.cpp
+#, fuzzy
+msgid "Allow Folding All"
+msgstr "კოდის გადატანა"
+
 #: scene/gui/graph_edit.cpp
 msgid "Show Grid"
 msgstr "ბადის ჩვენება"
@@ -10873,11 +10208,6 @@ msgstr "მიერთების ხაზები"
 #: scene/gui/graph_edit.cpp
 msgid "Curvature"
 msgstr "სიმრუდე"
-
-#: scene/gui/graph_edit.cpp
-#, fuzzy
-msgid "Connections"
-msgstr "მიერთება"
 
 #: scene/gui/graph_edit.cpp
 msgid "Zoom Min"
@@ -10920,18 +10250,21 @@ msgid "Show Arrange Button"
 msgstr ""
 
 #: scene/gui/graph_element.cpp
+msgid "Position Offset"
+msgstr "მდებარეობის წანაცვლება"
+
+#: scene/gui/graph_element.cpp
 msgid "Draggable"
 msgstr ""
+
+#: scene/gui/graph_element.cpp
+msgid "Selectable"
+msgstr "მონიშვნადი"
 
 #: scene/gui/graph_element.cpp scene/gui/option_button.cpp
 #: scene/theme/default_theme.cpp
 msgid "Selected"
 msgstr "მონიშნული"
-
-#: scene/gui/graph_frame.cpp scene/gui/graph_node.cpp scene/main/window.cpp
-#: scene/resources/visual_shader.cpp
-msgid "Title"
-msgstr "სათაური"
 
 #: scene/gui/graph_frame.cpp
 #, fuzzy
@@ -10983,16 +10316,7 @@ msgid "Max Text Lines"
 msgstr ""
 
 #: scene/gui/item_list.cpp
-#, fuzzy
-msgid "Auto Width"
-msgstr "H სიგანე"
-
-#: scene/gui/item_list.cpp
 msgid "Auto Height"
-msgstr ""
-
-#: scene/gui/item_list.cpp
-msgid "Wraparound Items"
 msgstr ""
 
 #: scene/gui/item_list.cpp scene/gui/menu_button.cpp
@@ -11027,11 +10351,6 @@ msgstr "ფიქსირებული ხატულის ზომა"
 #: scene/gui/label.cpp
 msgid "Label Settings"
 msgstr "ჭდის მორგება"
-
-#: scene/gui/label.cpp
-#, fuzzy
-msgid "Paragraph Separator"
-msgstr "გამყოფი"
 
 #: scene/gui/label.cpp scene/resources/text_line.cpp
 #: scene/resources/text_paragraph.cpp
@@ -11086,11 +10405,6 @@ msgstr "გაფართოება ტექსტის სიგრძე�
 #: scene/gui/text_edit.cpp
 msgid "Context Menu Enabled"
 msgstr ""
-
-#: scene/gui/line_edit.cpp scene/gui/text_edit.cpp
-#, fuzzy
-msgid "Emoji Menu Enabled"
-msgstr "Movie Maker ჩართულია"
 
 #: scene/gui/line_edit.cpp scene/gui/text_edit.cpp
 msgid "Virtual Keyboard Enabled"
@@ -11174,6 +10488,11 @@ msgstr "ხაზგასმული"
 #: scene/gui/link_button.cpp
 msgid "URI"
 msgstr "URI"
+
+#: scene/gui/link_button.cpp
+#, fuzzy
+msgid "Text Alignment"
+msgstr "ჩანართის სწორება"
 
 #: scene/gui/menu_bar.cpp
 msgid "Start Index"
@@ -11288,6 +10607,7 @@ msgid "Border Color"
 msgstr "საზღვრის ფერი"
 
 #: scene/gui/reference_rect.cpp scene/resources/style_box_flat.cpp
+#: scene/theme/theme_db.cpp
 msgid "Border Width"
 msgstr "საზღვრის სიგანე"
 
@@ -11380,11 +10700,6 @@ msgid "Follow Focus"
 msgstr "ფოკუსის მიყოლა"
 
 #: scene/gui/scroll_container.cpp
-#, fuzzy
-msgid "Draw Focus Border"
-msgstr "ჩანართის ფოკუსის რეჟიმი"
-
-#: scene/gui/scroll_container.cpp
 msgid "Horizontal Custom Step"
 msgstr "ჰორიზონტალური მომხმარებლის ნაბიჯი"
 
@@ -11429,6 +10744,11 @@ msgid "Custom Arrow Step"
 msgstr "მომხმარებლის ისრის ნაბიჯი"
 
 #: scene/gui/split_container.cpp
+#, fuzzy
+msgid "Dragging Enabled"
+msgstr "მიბმა ჩართულია"
+
+#: scene/gui/split_container.cpp
 msgid "Split Offset"
 msgstr "გაყოფის წანაცვლება"
 
@@ -11437,42 +10757,22 @@ msgid "Collapsed"
 msgstr "აკეცვა"
 
 #: scene/gui/split_container.cpp
-#, fuzzy
-msgid "Dragging Enabled"
-msgstr "მიბმა ჩართულია"
-
-#: scene/gui/split_container.cpp
 msgid "Dragger Visibility"
 msgstr ""
 
 #: scene/gui/split_container.cpp
 #, fuzzy
-msgid "Drag Area"
-msgstr "გადათრევა"
+msgid "Collapse Mode"
+msgstr "აკეცვა"
 
 #: scene/gui/split_container.cpp
 #, fuzzy
-msgid "Margin Begin"
-msgstr "საზღვარი მარცხნივ"
-
-#: scene/gui/split_container.cpp
-#, fuzzy
-msgid "Margin End"
-msgstr "ზღვარი"
-
-#: scene/gui/split_container.cpp
-#, fuzzy
-msgid "Highlight in Editor"
+msgid "Drag Area Highlight in Editor"
 msgstr "გამოკვეთა"
 
 #: scene/gui/subviewport_container.cpp
 msgid "Stretch Shrink"
 msgstr "გაწელვა შემჭიდროვება"
-
-#: scene/gui/subviewport_container.cpp
-#, fuzzy
-msgid "Mouse Target"
-msgstr "სამიზნე"
 
 #: scene/gui/tab_bar.cpp scene/gui/tab_container.cpp
 msgid "Current Tab"
@@ -11545,11 +10845,6 @@ msgid "Tab Focus Mode"
 msgstr "ჩანართის ფოკუსის რეჟიმი"
 
 #: scene/gui/text_edit.cpp
-#, fuzzy
-msgid "Empty Selection Clipboard Enabled"
-msgstr "მონიშვნა ჩართულია"
-
-#: scene/gui/text_edit.cpp
 msgid "Wrap Mode"
 msgstr "გადატანის რეჟიმი"
 
@@ -11564,11 +10859,6 @@ msgstr ""
 #: scene/gui/text_edit.cpp
 msgid "Fit Content Height"
 msgstr ""
-
-#: scene/gui/text_edit.cpp
-#, fuzzy
-msgid "Fit Content Width"
-msgstr "შემცველობის ჩატევა"
 
 #: scene/gui/text_edit.cpp
 msgid "Draw"
@@ -11615,7 +10905,7 @@ msgctxt "Ordinary"
 msgid "Normal"
 msgstr "ნორმალური"
 
-#: scene/gui/texture_button.cpp
+#: scene/gui/texture_button.cpp scene/theme/default_theme.cpp
 msgid "Hover"
 msgstr "გადატარება"
 
@@ -11706,11 +10996,6 @@ msgstr "გადახვევა ჰორიზონტალურად �
 #: scene/gui/tree.cpp
 msgid "Scroll Vertical Enabled"
 msgstr "გადახვევა ვერტიკალურად ჩართულია"
-
-#: scene/gui/tree.cpp
-#, fuzzy
-msgid "Auto Tooltip"
-msgstr "მინიშნება"
 
 #: scene/gui/video_stream_player.cpp
 msgid "Audio Track"
@@ -11840,6 +11125,11 @@ msgstr "ჯგუფის მიმდევრობა"
 msgid "Messages"
 msgstr "შეტყობინებები"
 
+#: scene/main/node.cpp scene/main/scene_tree.cpp
+#, fuzzy
+msgid "Physics Interpolation"
+msgstr "ხატულის ინტერპოლაცია"
+
 #: scene/main/node.cpp
 msgid "Auto Translate"
 msgstr "ავტომატური თარგმანი"
@@ -11882,10 +11172,6 @@ msgid "Contact Color"
 msgstr ""
 
 #: scene/main/scene_tree.cpp
-msgid "Paths"
-msgstr "ბილიკები"
-
-#: scene/main/scene_tree.cpp
 msgid "Geometry Color"
 msgstr ""
 
@@ -11901,7 +11187,21 @@ msgstr "მაქს ნაჩვენები კონტაქტები"
 msgid "Draw 2D Outlines"
 msgstr ""
 
-#: scene/main/scene_tree.cpp servers/rendering_server.cpp
+#: scene/main/scene_tree.cpp scene/resources/style_box_flat.cpp
+#: servers/rendering_server.cpp
+msgid "Anti Aliasing"
+msgstr "მომრგვალება"
+
+#: scene/main/scene_tree.cpp scene/main/viewport.cpp
+msgid "MSAA 2D"
+msgstr "MSAA 2D"
+
+#: scene/main/scene_tree.cpp scene/main/viewport.cpp
+#: servers/rendering/storage/render_scene_buffers.cpp
+msgid "MSAA 3D"
+msgstr "MSAA 3D"
+
+#: scene/main/scene_tree.cpp
 msgid "Viewport"
 msgstr "ჩვენების არე"
 
@@ -11909,10 +11209,9 @@ msgstr "ჩვენების არე"
 msgid "Transparent Background"
 msgstr "გამჭვირვალე ფონი"
 
-#: scene/main/scene_tree.cpp scene/resources/style_box_flat.cpp
-#: servers/rendering_server.cpp
-msgid "Anti Aliasing"
-msgstr "მომრგვალება"
+#: scene/main/scene_tree.cpp
+msgid "HDR 2D"
+msgstr "HDR 2D"
 
 #: scene/main/scene_tree.cpp scene/main/viewport.cpp
 #: servers/rendering/storage/render_scene_buffers.cpp
@@ -11944,10 +11243,6 @@ msgstr ""
 msgid "Threshold Pixels"
 msgstr ""
 
-#: scene/main/scene_tree.cpp
-msgid "Snap"
-msgstr "მიბმა"
-
 #: scene/main/scene_tree.cpp scene/main/viewport.cpp
 msgid "Snap 2D Transforms to Pixel"
 msgstr "2D გარდაქმნების მიბმა პიქსელზე"
@@ -11972,6 +11267,10 @@ msgstr "პოზიციური ჩრდილი"
 #: scene/main/scene_tree.cpp
 msgid "Atlas Size"
 msgstr ""
+
+#: scene/main/scene_tree.cpp
+msgid "Atlas 16 Bits"
+msgstr "Atlas 16 Bits"
 
 #: scene/main/scene_tree.cpp
 msgid "Atlas Quadrant 0 Subdiv"
@@ -12017,11 +11316,6 @@ msgstr ""
 msgid "Autostart"
 msgstr "ავტოგაშვება"
 
-#: scene/main/timer.cpp
-#, fuzzy
-msgid "Ignore Time Scale"
-msgstr "დროის მასშტაბი"
-
 #: scene/main/viewport.cpp
 msgid "Viewport Path"
 msgstr "ჩვენების არის ბილიკი"
@@ -12049,15 +11343,6 @@ msgstr ""
 #: scene/main/viewport.cpp
 msgid "Handle Input Locally"
 msgstr ""
-
-#: scene/main/viewport.cpp servers/rendering_server.cpp
-msgid "MSAA 2D"
-msgstr "MSAA 2D"
-
-#: scene/main/viewport.cpp servers/rendering/storage/render_scene_buffers.cpp
-#: servers/rendering_server.cpp
-msgid "MSAA 3D"
-msgstr "MSAA 3D"
 
 #: scene/main/viewport.cpp
 msgid "Debug Draw"
@@ -12217,11 +11502,6 @@ msgstr ""
 
 #: scene/main/window.cpp
 #, fuzzy
-msgid "Exclude From Capture"
-msgstr "უახლესებიდან ამოღება"
-
-#: scene/main/window.cpp
-#, fuzzy
 msgid "Force Native"
 msgstr "წყაროს ბილიკი"
 
@@ -12276,16 +11556,6 @@ msgstr "3D ნავიგაცია"
 #: scene/resources/2d/concave_polygon_shape_2d.cpp
 msgid "Segments"
 msgstr "სეგმენტები"
-
-#: scene/resources/2d/navigation_polygon.cpp scene/resources/material.cpp
-#: scene/resources/navigation_mesh.cpp
-msgid "Sampling"
-msgstr "სემპლინგი"
-
-#: scene/resources/2d/navigation_polygon.cpp
-#: scene/resources/navigation_mesh.cpp
-msgid "Partition Type"
-msgstr "დანაყოფის ტიპი"
 
 #: scene/resources/2d/navigation_polygon.cpp
 #: scene/resources/navigation_mesh.cpp
@@ -12474,6 +11744,26 @@ msgid "Custom Data"
 msgstr "მომხმარებლის მონაცემები"
 
 #: scene/resources/2d/tile_set.cpp
+#, fuzzy
+msgid "Tile Proxies"
+msgstr "ფილის ზომა"
+
+#: scene/resources/2d/tile_set.cpp
+#, fuzzy
+msgid "Source Level"
+msgstr "ზედა დონე"
+
+#: scene/resources/2d/tile_set.cpp
+#, fuzzy
+msgid "Coords Level"
+msgstr "შეკუმშვის დონე"
+
+#: scene/resources/2d/tile_set.cpp
+#, fuzzy
+msgid "Alternative Level"
+msgstr "ჩაღრმავების დონე"
+
+#: scene/resources/2d/tile_set.cpp
 msgid "Tile Shape"
 msgstr "ფილის მოხაზულობა"
 
@@ -12604,11 +11894,6 @@ msgstr "ელემენტი"
 #: scene/resources/3d/mesh_library.cpp
 msgid "Mesh Transform"
 msgstr "ბადის გარდაქმნა"
-
-#: scene/resources/3d/mesh_library.cpp
-#, fuzzy
-msgid "Mesh Cast Shadow"
-msgstr "ჩრდილის დადება"
 
 #: scene/resources/3d/mesh_library.cpp
 msgid "Navigation Mesh Transform"
@@ -12814,6 +12099,10 @@ msgstr ""
 msgid "Stereo"
 msgstr "სტერეო"
 
+#: scene/resources/bone_map.cpp servers/xr/xr_positional_tracker.cpp
+msgid "Profile"
+msgstr "პროფილი"
+
 #: scene/resources/bone_map.cpp
 msgid "Bonemap"
 msgstr "ძვლების რუკა"
@@ -12964,16 +12253,6 @@ msgstr "მომხმარებლის ეფექტები"
 #: scene/resources/compressed_texture.cpp
 msgid "Load Path"
 msgstr "ბილიკის ჩატვირთვა"
-
-#: scene/resources/curve.cpp
-#, fuzzy
-msgid "Min Domain"
-msgstr "აქვს ტრეკინგის მონაცემები"
-
-#: scene/resources/curve.cpp
-#, fuzzy
-msgid "Max Domain"
-msgstr "მაქს ჟურნალის ფაილები"
 
 #: scene/resources/curve.cpp
 msgid "Bake Resolution"
@@ -13270,7 +12549,7 @@ msgstr "მორგება"
 msgid "Brightness"
 msgstr "სიკაშკაშე"
 
-#: scene/resources/environment.cpp
+#: scene/resources/environment.cpp scene/theme/theme_db.cpp
 msgid "Contrast"
 msgstr "კონტრასტი"
 
@@ -13344,13 +12623,13 @@ msgstr ""
 
 #: scene/resources/gradient_texture.cpp servers/physics_server_2d.cpp
 #: servers/physics_server_3d.cpp
+msgid "From"
+msgstr "ვისგან"
+
+#: scene/resources/gradient_texture.cpp servers/physics_server_2d.cpp
+#: servers/physics_server_3d.cpp
 msgid "To"
 msgstr ""
-
-#: scene/resources/label_settings.cpp
-#, fuzzy
-msgid "Paragraph Spacing"
-msgstr "დამატებითი გამოტოვება"
 
 #: scene/resources/material.cpp
 msgid "Next Pass"
@@ -13520,6 +12799,10 @@ msgstr ""
 msgid "UV2"
 msgstr "UV2"
 
+#: scene/resources/material.cpp scene/resources/navigation_mesh.cpp
+msgid "Sampling"
+msgstr "სემპლინგი"
+
 #: scene/resources/material.cpp
 msgid "Shadows"
 msgstr "ჩრდილები"
@@ -13623,6 +12906,10 @@ msgstr "გაშვებული ასლების რაოდენო�
 #: scene/resources/multimesh.cpp
 msgid "Visible Instance Count"
 msgstr ""
+
+#: scene/resources/navigation_mesh.cpp
+msgid "Partition Type"
+msgstr "დანაყოფის ტიპი"
 
 #: scene/resources/navigation_mesh.cpp
 msgid "Source Group Name"
@@ -13843,11 +13130,6 @@ msgid "Amount at Collision"
 msgstr "რაოდენობა შეჯახებისას"
 
 #: scene/resources/particle_process_material.cpp
-#, fuzzy
-msgid "Amount at Start"
-msgstr "რაოდენობის პროპორცია"
-
-#: scene/resources/particle_process_material.cpp
 msgid "Keep Velocity"
 msgstr "სიჩქარის შენარჩუნება"
 
@@ -13992,6 +13274,16 @@ msgid "Modes"
 msgstr "რეჟიმები"
 
 #: scene/resources/visual_shader.cpp
+#, fuzzy
+msgid "Varyings"
+msgstr "გაფრთხილებები"
+
+#: scene/resources/visual_shader.cpp
+#, fuzzy
+msgid "Preview Params"
+msgstr "მინიატურა"
+
+#: scene/resources/visual_shader.cpp
 msgid "Input Name"
 msgstr ""
 
@@ -14053,11 +13345,6 @@ msgid "Default Value"
 msgstr "ნაგულისხმევი მნიშვნელობა"
 
 #: scene/resources/visual_shader_nodes.cpp
-#, fuzzy
-msgid "Enum Names"
-msgstr "ფონტის სახელები"
-
-#: scene/resources/visual_shader_nodes.cpp
 msgid "Color Default"
 msgstr "ნაგულისხმევი ფერი"
 
@@ -14109,7 +13396,7 @@ msgstr "ფონტის გადატარების დაწოლი�
 msgid "Font Disabled Color"
 msgstr "ფონტის გათიშულის ფერი"
 
-#: scene/theme/default_theme.cpp
+#: scene/theme/default_theme.cpp scene/theme/theme_db.cpp
 msgid "Font Outline Color"
 msgstr "ფონტის კონტურის ფერი"
 
@@ -14306,10 +13593,6 @@ msgid "Can Fold"
 msgstr "შეიძლება დაკეცვა"
 
 #: scene/theme/default_theme.cpp
-msgid "Folded"
-msgstr "გაკეცილი"
-
-#: scene/theme/default_theme.cpp
 msgid "Can Fold Code Region"
 msgstr "შეუძლია გაკეცოს კოდის რეგიონი"
 
@@ -14320,11 +13603,6 @@ msgstr "გაკეცილი კოდის რეგიონი"
 #: scene/theme/default_theme.cpp
 msgid "Folded EOL Icon"
 msgstr ""
-
-#: scene/theme/default_theme.cpp
-#, fuzzy
-msgid "Completion Color BG"
-msgstr "დასრულების არჩეული ფერი"
 
 #: scene/theme/default_theme.cpp
 msgid "Completion Lines"
@@ -14610,16 +13888,6 @@ msgid "Buttons Separation"
 msgstr "ღილაკების განცალკევება"
 
 #: scene/theme/default_theme.cpp
-#, fuzzy
-msgid "Load"
-msgstr "ბილიკის ჩატვირთვა"
-
-#: scene/theme/default_theme.cpp
-#, fuzzy
-msgid "Save"
-msgstr "ავტომატური შენახვა"
-
-#: scene/theme/default_theme.cpp
 msgid "Parent Folder"
 msgstr "მშობელი საქაღალდე"
 
@@ -14749,15 +14017,6 @@ msgid "Port H Offset"
 msgstr "პორტის ჰ წანაცვლება"
 
 #: scene/theme/default_theme.cpp
-msgid "Hovered"
-msgstr "გადაატარეს"
-
-#: scene/theme/default_theme.cpp
-#, fuzzy
-msgid "Hovered Dimmed"
-msgstr "გადაატარეს"
-
-#: scene/theme/default_theme.cpp
 msgid "Selected Focus"
 msgstr "მონიშნული ფოკუსი"
 
@@ -14768,11 +14027,6 @@ msgstr "კურსორი"
 #: scene/theme/default_theme.cpp
 msgid "Cursor Unfocused"
 msgstr ""
-
-#: scene/theme/default_theme.cpp
-#, fuzzy
-msgid "Button Hover"
-msgstr "სათაური ღილაკზე გადატარება"
 
 #: scene/theme/default_theme.cpp
 msgid "Title Button Normal"
@@ -14826,15 +14080,6 @@ msgstr "სათაური ღილაკის ფონტის ზომ
 #: scene/theme/default_theme.cpp
 msgid "Title Button Color"
 msgstr "სათაურის ღილაკის ფერი"
-
-#: scene/theme/default_theme.cpp
-msgid "Font Hovered Color"
-msgstr "ფონტი გადატარების ფერი"
-
-#: scene/theme/default_theme.cpp
-#, fuzzy
-msgid "Font Hovered Dimmed Color"
-msgstr "ფონტი გადატარების ფერი"
 
 #: scene/theme/default_theme.cpp
 msgid "Guide Color"
@@ -14945,19 +14190,12 @@ msgid "Icon Margin"
 msgstr "ხატულის საზღვარი"
 
 #: scene/theme/default_theme.cpp
-#, fuzzy
-msgid "Font Hovered Selected Color"
-msgstr "ფონტის მონიშნულის ფერი"
+msgid "Font Hovered Color"
+msgstr "ფონტი გადატარების ფერი"
 
 #: scene/theme/default_theme.cpp
-#, fuzzy
-msgid "Hovered Selected"
-msgstr "პანელი არჩეულია"
-
-#: scene/theme/default_theme.cpp
-#, fuzzy
-msgid "Hovered Selected Focus"
-msgstr "მონიშნული ფოკუსი"
+msgid "Hovered"
+msgstr "გადაატარეს"
 
 #: scene/theme/default_theme.cpp
 msgid "Tab Selected"
@@ -15012,6 +14250,14 @@ msgid "Button Highlight"
 msgstr "ღილაკის გამოკვეთა"
 
 #: scene/theme/default_theme.cpp
+msgid "BG"
+msgstr "ფ"
+
+#: scene/theme/default_theme.cpp
+msgid "Overbright Indicator"
+msgstr ""
+
+#: scene/theme/default_theme.cpp
 msgid "SV Width"
 msgstr "SV სიგანე"
 
@@ -15020,12 +14266,22 @@ msgid "SV Height"
 msgstr "SV სიმაღლე"
 
 #: scene/theme/default_theme.cpp
+msgid "Label Width"
+msgstr "ჭდის სიგანე"
+
+#: scene/theme/default_theme.cpp
 msgid "H Width"
 msgstr "H სიგანე"
 
 #: scene/theme/default_theme.cpp
-msgid "Label Width"
-msgstr "ჭდის სიგანე"
+#, fuzzy
+msgid "Sample Height"
+msgstr "SV სიმაღლე"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Preset Size"
+msgstr "სამიზნის ზომა"
 
 #: scene/theme/default_theme.cpp
 msgid "Center Slider Grabbers"
@@ -15033,16 +14289,21 @@ msgstr ""
 
 #: scene/theme/default_theme.cpp
 #, fuzzy
-msgid "Menu Option"
-msgstr "მორგება"
+msgid "Colorize Sliders"
+msgstr "მინიშნებების გაფერადება"
+
+#: scene/theme/default_theme.cpp
+msgid "Expanded Arrow"
+msgstr ""
 
 #: scene/theme/default_theme.cpp
 msgid "Folded Arrow"
 msgstr "გაკეცილი ისარი"
 
 #: scene/theme/default_theme.cpp
-msgid "Expanded Arrow"
-msgstr ""
+#, fuzzy
+msgid "Folded Arrow Mirrored"
+msgstr "გაკეცილი ისარი"
 
 #: scene/theme/default_theme.cpp
 msgid "Screen Picker"
@@ -15074,10 +14335,6 @@ msgid "Sample Revert"
 msgstr "მართკუთხედი მოხაზულობა"
 
 #: scene/theme/default_theme.cpp
-msgid "Overbright Indicator"
-msgstr ""
-
-#: scene/theme/default_theme.cpp
 msgid "Bar Arrow"
 msgstr ""
 
@@ -15091,20 +14348,18 @@ msgid "Picker Cursor BG"
 msgstr "ამრჩევი კურსორი"
 
 #: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Hex Icon"
+msgstr "ხატულა"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Hex Code Icon"
+msgstr "კოდის ფონტი"
+
+#: scene/theme/default_theme.cpp
 msgid "Color Hue"
 msgstr "ფერის ტონი"
-
-#: scene/theme/default_theme.cpp
-msgid "BG"
-msgstr "ფ"
-
-#: scene/theme/default_theme.cpp
-msgid "Preset FG"
-msgstr "პრესეტის წინა პლანი"
-
-#: scene/theme/default_theme.cpp
-msgid "Preset BG"
-msgstr "პრესეტის ფონი"
 
 #: scene/theme/default_theme.cpp
 msgid "Normal Font"
@@ -15183,6 +14438,31 @@ msgid "V Grabber"
 msgstr ""
 
 #: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "H Split Bar Background"
+msgstr "ჩანართების პანელის ფონი"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "V Split Bar Background"
+msgstr "ჩანართების პანელის ფონი"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Split Bar Background"
+msgstr "ჩანართების პანელის ფონი"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Grabber Icon Normal"
+msgstr "წყარო ნორმალი"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Grabber Icon Pressed"
+msgstr "დამთრევი დაწოლილია"
+
+#: scene/theme/default_theme.cpp
 msgid "Margin Left"
 msgstr "საზღვარი მარცხნივ"
 
@@ -15208,8 +14488,17 @@ msgstr "ავტომატური დამალვა"
 
 #: scene/theme/default_theme.cpp
 #, fuzzy
-msgid "Split Bar Background"
-msgstr "ჩანართების პანელის ფონი"
+msgid "Autohide Split Bar"
+msgstr "ავტომატური დამალვა"
+
+#: scene/theme/default_theme.cpp
+msgid "Draw Grabber Icon"
+msgstr ""
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Draw Split Bar"
+msgstr "გამოტოვებების დახატვა"
 
 #: scene/theme/default_theme.cpp
 msgid "Zoom Out"
@@ -15266,11 +14555,6 @@ msgstr "ხატულის ფერი გადატარებისა�
 
 #: scene/theme/default_theme.cpp
 #, fuzzy
-msgid "Connection Hover Thickness"
-msgstr "ხატულის ფერი გადატარებისას"
-
-#: scene/theme/default_theme.cpp
-#, fuzzy
 msgid "Connection Valid Target Tint Color"
 msgstr "ბმულის მიერთება გათიშულიას ფერი"
 
@@ -15278,6 +14562,95 @@ msgstr "ბმულის მიერთება გათიშულია�
 #, fuzzy
 msgid "Connection Rim Color"
 msgstr "წიბოს მიერთების ფერი"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Title Panel"
+msgstr "სათაურის ფონტი"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Title Hover Panel"
+msgstr "სათაური ღილაკზე გადატარება"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Title Collapsed Panel"
+msgstr "აკეცვა"
+
+#: scene/theme/default_theme.cpp
+msgid "Title Collapsed Hover Panel"
+msgstr ""
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Button Normal Style"
+msgstr "სათაურის ღილაკი ნორმალური"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Button Hovered Style"
+msgstr "სათაური ღილაკზე გადატარება"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Button Pressed Style"
+msgstr "ღილაკი დაჭერილია"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Button Disabled Style"
+msgstr "ხატულის გათიშული ფერი"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Hover Font Color"
+msgstr "ჰორიზონტის ფერი"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Collapsed Font Color"
+msgstr "ხატულისა და ფონტის ფერი"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Button Icon Normal"
+msgstr "სათაურის ღილაკი ნორმალური"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Button Icon Hovered"
+msgstr "სათაური ღილაკზე გადატარება"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Button Icon Pressed"
+msgstr "ღილაკი დაჭერილია"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Button Icon Disabled"
+msgstr "ჩაურთავია გათიშულია"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Arrow Normal Color"
+msgstr "ხატულის ნორმალური ფერი"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Arrow Hover Color"
+msgstr "ფონტის გადატარების ფერი"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Arrow Collapsed Color"
+msgstr "ისარი აკეცილია"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Expanded Arrow Mirrored"
+msgstr "გათიშული არეკლილი"
 
 #: scene/theme/default_theme.cpp
 msgid "Port Hotzone Inner Extent"
@@ -15294,10 +14667,6 @@ msgstr "კვანძი"
 #: scene/theme/theme_db.cpp
 msgid "Default Theme Scale"
 msgstr "ნაგულისხმები თემის მასშტაბი"
-
-#: scene/theme/theme_db.cpp
-msgid "Custom"
-msgstr "მორგებული"
 
 #: scene/theme/theme_db.cpp
 msgid "Custom Font"
@@ -15324,12 +14693,86 @@ msgid "Default Font Generate Mipmaps"
 msgstr ""
 
 #: scene/theme/theme_db.cpp
-msgid "LCD Subpixel Layout"
-msgstr "LCD ქვეპიქსელის განლაგება"
+msgid "Custom"
+msgstr "მორგებული"
 
 #: scene/theme/theme_db.cpp
 msgid "Fallback values"
 msgstr ""
+
+#: scene/theme/theme_db.cpp
+#, fuzzy
+msgid "Base Color"
+msgstr "ძირითადი ტიპის ფერი"
+
+#: scene/theme/theme_db.cpp
+#, fuzzy
+msgid "Accent Color"
+msgstr "სათაურის ფერი"
+
+#: scene/theme/theme_db.cpp
+msgid "Font Color Override"
+msgstr ""
+
+#: scene/theme/theme_db.cpp
+#, fuzzy
+msgid "Custom Font Color"
+msgstr "ფერის არჩევა"
+
+#: scene/theme/theme_db.cpp
+#, fuzzy
+msgid "Normal Contrast"
+msgstr "ნორმალური ფონტი"
+
+#: scene/theme/theme_db.cpp
+#, fuzzy
+msgid "Hover Contrast"
+msgstr "კონტრასტი"
+
+#: scene/theme/theme_db.cpp
+#, fuzzy
+msgid "Pressed Contrast"
+msgstr "კონტრასტი"
+
+#: scene/theme/theme_db.cpp
+#, fuzzy
+msgid "BG Contrast"
+msgstr "კონტრასტი"
+
+#: scene/theme/theme_db.cpp
+#, fuzzy
+msgid "Padding"
+msgstr "დაჩრდილვა"
+
+#: scene/theme/theme_db.cpp
+#, fuzzy
+msgid "Font Outline Size"
+msgstr "სათაურის კონტურის ზომა"
+
+#: scene/theme/theme_db.cpp
+#, fuzzy
+msgid "Font Embolden"
+msgstr "ფონტის სახელები"
+
+#: scene/theme/theme_db.cpp
+#, fuzzy
+msgid "Font Spacing Glyph"
+msgstr "ხაზებს შუა მანძილი"
+
+#: scene/theme/theme_db.cpp
+#, fuzzy
+msgid "Font Spacing Space"
+msgstr "ხაზებს შუა მანძილი"
+
+#: scene/theme/theme_db.cpp
+#, fuzzy
+msgid "Font Spacing Top"
+msgstr "ხაზებს შუა მანძილი"
+
+#: scene/theme/theme_db.cpp
+#, fuzzy
+msgid "Font Spacing Bottom"
+msgstr "ქვედა საზღვარი"
 
 #: servers/audio/audio_stream.cpp
 msgid "Playback Mode"
@@ -15513,11 +14956,6 @@ msgstr ""
 msgid "Surround"
 msgstr "სივრცული ხმა"
 
-#: servers/audio/effects/audio_stream_generator.cpp
-#, fuzzy
-msgid "Mix Rate Mode"
-msgstr "შერევის რეჟიმი"
-
 #: servers/audio_server.cpp
 msgid "Enable Input"
 msgstr "შეყვანის ჩართვა"
@@ -15621,16 +15059,6 @@ msgstr "ნაგულისხმევი მაღლა"
 #: servers/navigation_server_3d.cpp
 msgid "Merge Rasterizer Cell Scale"
 msgstr ""
-
-#: servers/navigation_server_3d.cpp
-#, fuzzy
-msgid "World"
-msgstr "სამყარო 3D"
-
-#: servers/navigation_server_3d.cpp
-#, fuzzy
-msgid "Map Use Async Iterations"
-msgstr "მაქს. იტერაციები"
 
 #: servers/navigation_server_3d.cpp
 msgid "Avoidance Use Multiple Threads"
@@ -16086,11 +15514,6 @@ msgid "Compress With GPU"
 msgstr "შეკუმშვა სად"
 
 #: servers/rendering_server.cpp
-#, fuzzy
-msgid "Cache GPU Compressor"
-msgstr "WebP შეკუმშვა"
-
-#: servers/rendering_server.cpp
 msgid "Lossless Compression"
 msgstr ""
 
@@ -16123,23 +15546,11 @@ msgid "Soft Shadow Filter Quality"
 msgstr ""
 
 #: servers/rendering_server.cpp
-msgid "Atlas 16 Bits"
-msgstr "Atlas 16 Bits"
-
-#: servers/rendering_server.cpp
 msgid "Shadow Atlas"
 msgstr ""
 
 #: servers/rendering_server.cpp
-msgid "Batching"
-msgstr ""
-
-#: servers/rendering_server.cpp
 msgid "Item Buffer Size"
-msgstr ""
-
-#: servers/rendering_server.cpp
-msgid "Uniform Set Cache Size"
 msgstr ""
 
 #: servers/rendering_server.cpp
@@ -16265,10 +15676,6 @@ msgstr "მინავლება საიდან"
 #: servers/rendering_server.cpp
 msgid "Fadeout To"
 msgstr "მინავლება სადამდე"
-
-#: servers/rendering_server.cpp
-msgid "HDR 2D"
-msgstr "HDR 2D"
 
 #: servers/rendering_server.cpp
 msgid "Screen Space Roughness Limiter"
@@ -16462,18 +15869,9 @@ msgstr "რგოლის რადიუსი"
 msgid "VRS Strength"
 msgstr "სიძლიერე"
 
-#: servers/xr/xr_vrs.cpp
-#, fuzzy
-msgid "VRS Render Region"
-msgstr "რენდერი"
-
 #: servers/xr_server.cpp
 msgid "World Origin"
 msgstr "სამყაროს წყარო"
-
-#: servers/xr_server.cpp
-msgid "Camera Locked to Origin"
-msgstr ""
 
 #: servers/xr_server.cpp
 msgid "Primary Interface"

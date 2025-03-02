@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Godot Engine extractable strings\n"
-"Report-Msgid-Bugs-To: https://github.com/godotengine/godot\n"
+"Report-Msgid-Bugs-To: https://github.com/blazium-engine/blazium\n"
 "POT-Creation-Date: \n"
 "PO-Revision-Date: 2024-02-26 06:02+0000\n"
 "Last-Translator: Luka van der Plas <lukavdplas@users.noreply.hosted.weblate."
@@ -18,10 +18,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.5-dev\n"
-
-#: editor/gui/editor_file_dialog.cpp scene/gui/file_dialog.cpp
-msgid "All Recognized"
-msgstr "Alles Herkend"
 
 #: scene/gui/code_edit.cpp
 #, fuzzy
@@ -60,29 +56,7 @@ msgstr ""
 "RMK: Voorinstelling verwijderen"
 
 #: scene/gui/color_picker.cpp
-msgid "The changes to this palette have not been saved to a file."
-msgstr ""
-
-#: scene/gui/color_picker.cpp
 msgid "Enter a hex code (\"#ff0000\") or named color (\"red\")."
-msgstr ""
-
-#: scene/gui/color_picker.cpp
-#, fuzzy
-msgid "Save the current color palette to reuse later."
-msgstr "Huidige kleur als voorkeuze toevoegen."
-
-#: scene/gui/color_picker.cpp
-#, fuzzy
-msgid "Save the current color palette as a new to reuse later."
-msgstr "Huidige kleur als voorkeuze toevoegen."
-
-#: scene/gui/color_picker.cpp
-msgid "Load existing color palette."
-msgstr ""
-
-#: scene/gui/color_picker.cpp
-msgid "Clear the currently loaded color palettes in the picker."
 msgstr ""
 
 #: scene/gui/color_picker.cpp
@@ -91,28 +65,7 @@ msgid "Select a picker shape."
 msgstr "Selecteer een Bron Mesh:"
 
 #: scene/gui/color_picker.cpp
-#, fuzzy
-msgid "Select a picker mode."
-msgstr "Knoop uitkiezen"
-
-#: scene/gui/color_picker.cpp
-msgid "Colorized Sliders"
-msgstr ""
-
-#: scene/gui/color_picker.cpp
-msgid "Hex"
-msgstr ""
-
-#: scene/gui/color_picker.cpp
 msgid "Hex code or named color"
-msgstr ""
-
-#: scene/gui/color_picker.cpp
-msgid "Show all options available."
-msgstr ""
-
-#: scene/gui/color_picker.cpp
-msgid "Recent Colors"
 msgstr ""
 
 #: scene/gui/color_picker.cpp
@@ -154,25 +107,16 @@ msgid "Select Current Folder"
 msgstr "Huidige Map Selecteren"
 
 #: scene/gui/file_dialog.cpp
-msgid "Save"
-msgstr "Opslaan"
-
-#: scene/gui/file_dialog.cpp
 msgid "Select This Folder"
 msgstr "Deze map selecteren"
 
 #: scene/gui/file_dialog.cpp
-#, fuzzy
-msgid "Open in File Manager"
-msgstr "Open een Bestand"
-
-#: scene/gui/file_dialog.cpp
-msgid "Show Package Contents"
-msgstr ""
-
-#: scene/gui/file_dialog.cpp
 msgid "You don't have permission to access contents of this folder."
 msgstr ""
+
+#: scene/gui/file_dialog.cpp
+msgid "All Recognized"
+msgstr "Alles Herkend"
 
 #: scene/gui/file_dialog.cpp
 #, fuzzy
@@ -194,6 +138,10 @@ msgstr "Map openen"
 #: scene/gui/file_dialog.cpp
 msgid "Open a File or Directory"
 msgstr "Bestand of map openen"
+
+#: scene/gui/file_dialog.cpp
+msgid "Save"
+msgstr "Opslaan"
 
 #: scene/gui/file_dialog.cpp
 msgid "Save a File"
@@ -369,10 +317,6 @@ msgstr ""
 
 #: scene/gui/line_edit.cpp scene/gui/text_edit.cpp
 msgid "Soft Hyphen (SHY)"
-msgstr ""
-
-#: scene/gui/line_edit.cpp scene/gui/text_edit.cpp
-msgid "Emoji & Symbols"
 msgstr ""
 
 #: scene/gui/line_edit.cpp scene/gui/text_edit.cpp

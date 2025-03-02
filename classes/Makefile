@@ -9,7 +9,7 @@ SOURCES = doc/classes `ls -d modules/*/doc_classes 2> /dev/null` `ls -d platform
 all: update merge
 
 update:
-	@cd ../godot; \
+	@cd ../blazium; \
 	python3 ../scripts/extract_classes.py \
 	  --path $(SOURCES) \
 	  --output ../classes/$(TEMPLATE)
@@ -30,7 +30,7 @@ check:
 # 2775 translated messages, 272 fuzzy translations, 151 untranslated messages.
 # First number can be 0, second and third numbers are only present if non-zero.
 export:
-	@dest=../godot/doc/translations; \
+	@dest=../blazium/doc/translations; \
 	mkdir -p $$dest; \
 	for po in $(POFILES); do \
 	  res=`msgfmt --statistics $$po -o /dev/null 2>&1 | sed 's/[^0-9,]*//g'`; \

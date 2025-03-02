@@ -1,18 +1,18 @@
 # Localization of the Godot Engine editor
 
 This repository contains the localization templates and catalogs for the
-[Godot Engine](https://godotengine.org) editor, including the in-editor
+[Blazium Engine](https://blazium.app) editor, including the in-editor
 class reference.
 
-The translations are contributed through three projects on [Hosted
+<!-- The translations are contributed through three projects on [Hosted
 Weblate](https://hosted.weblate.org/projects/godot-engine/):
 
-- [godot](https://hosted.weblate.org/projects/godot-engine/godot/):
+- [blazium](https://hosted.weblate.org/projects/blazium-engine/blazium/):
   Strings from the editor interface.
-- [godot-properties](https://hosted.weblate.org/projects/godot-engine/godot-properties/):
+- [blazium-properties](https://hosted.weblate.org/projects/blazium-engine/blazium-properties/):
   Strings extracted from property names and project/editor settings.
-- [godot-class-reference](https://hosted.weblate.org/projects/godot-engine/godot-class-reference/):
-  Class reference for the Godot API.
+- [blazium-class-reference](https://hosted.weblate.org/projects/blazium-engine/blazium-class-reference/):
+  Class reference for the Godot API. -->
 
 ## License
 

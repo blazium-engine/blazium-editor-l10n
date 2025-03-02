@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Godot Engine extractable strings\n"
-"Report-Msgid-Bugs-To: https://github.com/godotengine/godot\n"
+"Report-Msgid-Bugs-To: https://github.com/blazium-engine/blazium\n"
 "POT-Creation-Date: \n"
 "PO-Revision-Date: 2024-02-29 19:48+0000\n"
 "Last-Translator: Tomek <kobewi4e@gmail.com>\n"
@@ -18,10 +18,6 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
 "X-Generator: Weblate 5.5-dev\n"
-
-#: editor/gui/editor_file_dialog.cpp scene/gui/file_dialog.cpp
-msgid "All Recognized"
-msgstr "Wszystkie rozpoznane"
 
 #: scene/gui/code_edit.cpp
 msgid "New Code Region"
@@ -54,58 +50,16 @@ msgstr ""
 "LPM: Ustaw ten kolor"
 
 #: scene/gui/color_picker.cpp
-msgid "The changes to this palette have not been saved to a file."
-msgstr "Zmiany w tej palecie nie zostały zapisane do pliku."
-
-#: scene/gui/color_picker.cpp
 msgid "Enter a hex code (\"#ff0000\") or named color (\"red\")."
 msgstr "Wprowadź kod szesnastkowy (\"#ff0000\") lub nazwany kolor (\"red\")."
-
-#: scene/gui/color_picker.cpp
-#, fuzzy
-msgid "Save the current color palette to reuse later."
-msgstr "Dodaj bieżący kolor do zapisanych."
-
-#: scene/gui/color_picker.cpp
-#, fuzzy
-msgid "Save the current color palette as a new to reuse later."
-msgstr "Dodaj bieżący kolor do zapisanych."
-
-#: scene/gui/color_picker.cpp
-msgid "Load existing color palette."
-msgstr "Wczytaj instniejącą paletę kolorów."
-
-#: scene/gui/color_picker.cpp
-msgid "Clear the currently loaded color palettes in the picker."
-msgstr "Wyczyść aktualnie wczytaną w próbniku paletę."
 
 #: scene/gui/color_picker.cpp
 msgid "Select a picker shape."
 msgstr "Wybierz kształt próbnika."
 
 #: scene/gui/color_picker.cpp
-msgid "Select a picker mode."
-msgstr "Wybierz tryb próbnika."
-
-#: scene/gui/color_picker.cpp
-msgid "Colorized Sliders"
-msgstr "Kolorowe suwaki"
-
-#: scene/gui/color_picker.cpp
-msgid "Hex"
-msgstr "Heks"
-
-#: scene/gui/color_picker.cpp
 msgid "Hex code or named color"
 msgstr "Kod szesnastkowy lub nazwany kolor"
-
-#: scene/gui/color_picker.cpp
-msgid "Show all options available."
-msgstr "Pokaż wszystkie dostępne opcje."
-
-#: scene/gui/color_picker.cpp
-msgid "Recent Colors"
-msgstr "Ostatnie kolory"
 
 #: scene/gui/color_picker.cpp
 msgid "Add current color as a preset."
@@ -148,25 +102,16 @@ msgid "Select Current Folder"
 msgstr "Wybierz bieżący katalog"
 
 #: scene/gui/file_dialog.cpp
-msgid "Save"
-msgstr "Zapisz"
-
-#: scene/gui/file_dialog.cpp
 msgid "Select This Folder"
 msgstr "Wybierz ten folder"
 
 #: scene/gui/file_dialog.cpp
-#, fuzzy
-msgid "Open in File Manager"
-msgstr "Otwórz plik"
-
-#: scene/gui/file_dialog.cpp
-msgid "Show Package Contents"
-msgstr "Pokaż zawartość pakietu"
-
-#: scene/gui/file_dialog.cpp
 msgid "You don't have permission to access contents of this folder."
 msgstr "Nie masz uprawnień, by uzyskać dostęp do tego folderu."
+
+#: scene/gui/file_dialog.cpp
+msgid "All Recognized"
+msgstr "Wszystkie rozpoznane"
 
 #: scene/gui/file_dialog.cpp
 msgid "All Files"
@@ -187,6 +132,10 @@ msgstr "Otwórz katalog"
 #: scene/gui/file_dialog.cpp
 msgid "Open a File or Directory"
 msgstr "Otwórz plik lub katalog"
+
+#: scene/gui/file_dialog.cpp
+msgid "Save"
+msgstr "Zapisz"
 
 #: scene/gui/file_dialog.cpp
 msgid "Save a File"
@@ -356,10 +305,6 @@ msgstr "Łącznik wyrazów (WJ)"
 #: scene/gui/line_edit.cpp scene/gui/text_edit.cpp
 msgid "Soft Hyphen (SHY)"
 msgstr "Miękki łącznik (SHY)"
-
-#: scene/gui/line_edit.cpp scene/gui/text_edit.cpp
-msgid "Emoji & Symbols"
-msgstr "Emoji i symbole"
 
 #: scene/gui/line_edit.cpp scene/gui/text_edit.cpp
 msgid "Cut"

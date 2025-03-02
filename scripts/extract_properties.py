@@ -23,23 +23,24 @@ for arg in sys.argv[1:]:
 
 
 if not os.path.exists("editor"):
-    sys.exit("ERROR: This script should be started from the root of the Godot git repo.")
+    sys.exit("ERROR: This script should be started from the root of the Blazium git repo.")
 
 processor = PropertyNameProcessor()
 
 main_po = """
-# LANGUAGE translation of the Godot Engine editor properties.
+# LANGUAGE translation of the Blazium Engine editor properties.
+# Copyright (c) 2024-present Blazium Engine contributors.
 # Copyright (c) 2014-present Godot Engine contributors (see AUTHORS.md).
 # Copyright (c) 2007-2014 Juan Linietsky, Ariel Manzur.
-# This file is distributed under the same license as the Godot source code.
+# This file is distributed under the same license as the Blazium source code.
 #
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Godot Engine editor properties\\n"
-"Report-Msgid-Bugs-To: https://github.com/godotengine/godot\\n"
+"Project-Id-Version: Blazium Engine editor properties\\n"
+"Report-Msgid-Bugs-To: https://github.com/blazium-engine/blazium\\n"
 "MIME-Version: 1.0\\n"
 "Content-Type: text/plain; charset=UTF-8\\n"
 "Content-Transfer-Encoding: 8-bit\\n"\n

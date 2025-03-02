@@ -56,7 +56,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Godot Engine properties\n"
-"Report-Msgid-Bugs-To: https://github.com/godotengine/godot\n"
+"Report-Msgid-Bugs-To: https://github.com/blazium-engine/blazium\n"
 "POT-Creation-Date: \n"
 "PO-Revision-Date: 2024-12-07 12:00+0000\n"
 "Last-Translator: Fakhri Roihan <archerlimit1@gmail.com>\n"
@@ -84,8 +84,9 @@ msgstr "Konfigurasi"
 #: editor/animation_track_editor.cpp
 #: editor/plugins/tiles/tile_set_atlas_source_editor.cpp
 #: platform/android/export/export_plugin.cpp scene/2d/physics/area_2d.cpp
-#: scene/3d/physics/area_3d.cpp scene/resources/3d/mesh_library.cpp
-#: scene/resources/3d/skin.cpp servers/xr/xr_pose.cpp servers/xr/xr_tracker.cpp
+#: scene/3d/physics/area_3d.cpp scene/3d/skeleton_3d.cpp
+#: scene/resources/3d/mesh_library.cpp scene/resources/3d/skin.cpp
+#: servers/xr/xr_pose.cpp servers/xr/xr_tracker.cpp
 msgid "Name"
 msgstr "Nama"
 
@@ -93,9 +94,9 @@ msgstr "Nama"
 msgid "Name Localized"
 msgstr "Lokalisasi Nama"
 
-#: core/config/project_settings.cpp platform/windows/export/export_plugin.cpp
-#: scene/main/node.cpp scene/resources/visual_shader.cpp
-#: servers/xr/xr_tracker.cpp
+#: core/config/project_settings.cpp platform/web/export/export_plugin.cpp
+#: platform/windows/export/export_plugin.cpp scene/main/node.cpp
+#: scene/resources/visual_shader.cpp servers/xr/xr_tracker.cpp
 msgid "Description"
 msgstr "Deskripsi"
 
@@ -180,9 +181,9 @@ msgstr "Jendela"
 #: scene/gui/control.cpp scene/gui/graph_edit.cpp scene/main/viewport.cpp
 #: scene/main/window.cpp scene/resources/2d/rectangle_shape_2d.cpp
 #: scene/resources/3d/box_shape_3d.cpp scene/resources/3d/primitive_meshes.cpp
-#: scene/resources/external_texture.cpp scene/resources/label_settings.cpp
-#: scene/resources/placeholder_textures.cpp scene/resources/style_box_flat.cpp
-#: scene/resources/visual_shader.cpp servers/rendering_server.cpp
+#: scene/resources/label_settings.cpp scene/resources/placeholder_textures.cpp
+#: scene/resources/style_box_flat.cpp scene/resources/visual_shader.cpp
+#: servers/rendering_server.cpp
 msgid "Size"
 msgstr "Ukuran"
 
@@ -252,11 +253,6 @@ msgstr "Perluas ke Judul"
 msgid "No Focus"
 msgstr "Tidak Fokus"
 
-#: core/config/project_settings.cpp scene/main/window.cpp
-#, fuzzy
-msgid "Sharp Corners"
-msgstr "Ketajaman"
-
 #: core/config/project_settings.cpp
 msgid "Window Width Override"
 msgstr "Penimpaan Lebar Jendela"
@@ -310,7 +306,7 @@ msgstr "Bus"
 msgid "Default Bus Layout"
 msgstr "Tata Letak Bus Default"
 
-#: core/config/project_settings.cpp editor/editor_settings.cpp
+#: core/config/project_settings.cpp
 msgid "General"
 msgstr "Umum"
 
@@ -354,30 +350,10 @@ msgid "Embed Subwindows"
 msgstr "Menyematkan Subjendela"
 
 #: core/config/project_settings.cpp
-#, fuzzy
-msgid "Frame Pacing"
-msgstr "Jarak Baris"
-
-#: core/config/project_settings.cpp platform/android/export/export.cpp
-msgid "Android"
-msgstr "Android"
-
-#: core/config/project_settings.cpp
-#, fuzzy
-msgid "Enable Frame Pacing"
-msgstr "Aktifkan Pengambilan Objek"
-
-#: core/config/project_settings.cpp
-#, fuzzy
-msgid "Swappy Mode"
-msgstr "Mode Langit"
-
-#: core/config/project_settings.cpp
 #: editor/import/3d/resource_importer_scene.cpp main/main.cpp
-#: modules/jolt_physics/jolt_project_settings.cpp scene/2d/tile_map_layer.cpp
-#: scene/main/scene_tree.cpp scene/main/viewport.cpp
-#: scene/resources/2d/tile_set.cpp servers/physics_server_2d.cpp
-#: servers/physics_server_3d.cpp
+#: scene/2d/tile_map_layer.cpp scene/main/scene_tree.cpp
+#: scene/main/viewport.cpp scene/resources/2d/tile_set.cpp
+#: servers/physics_server_2d.cpp servers/physics_server_3d.cpp
 msgid "Physics"
 msgstr "Fisika"
 
@@ -413,8 +389,8 @@ msgstr "Aspek"
 #: scene/2d/parallax_layer.cpp scene/2d/polygon_2d.cpp
 #: scene/2d/remote_transform_2d.cpp scene/3d/cpu_particles_3d.cpp
 #: scene/3d/node_3d.cpp scene/3d/remote_transform_3d.cpp
-#: scene/animation/animation_blend_tree.h scene/gui/control.cpp
-#: scene/main/canvas_layer.cpp scene/main/scene_tree.cpp
+#: scene/3d/skeleton_3d.cpp scene/animation/animation_blend_tree.h
+#: scene/gui/control.cpp scene/main/canvas_layer.cpp scene/main/scene_tree.cpp
 #: scene/main/viewport.cpp scene/resources/camera_attributes.cpp
 #: scene/resources/material.cpp scene/resources/particle_process_material.cpp
 #: servers/rendering_server.cpp
@@ -440,7 +416,7 @@ msgstr "Debug"
 
 #: core/config/project_settings.cpp
 #: editor/import/3d/resource_importer_scene.cpp main/main.cpp
-#: modules/gdscript/gdscript.cpp scene/3d/spring_bone_simulator_3d.cpp
+#: modules/gdscript/gdscript.cpp
 msgid "Settings"
 msgstr "Pengaturan"
 
@@ -616,11 +592,6 @@ msgid "Texture Upload Region Size Px"
 msgstr "Ukuran Wilayah Unggah Tekstur Ukuran Px"
 
 #: core/config/project_settings.cpp
-#, fuzzy
-msgid "Texture Download Region Size Px"
-msgstr "Ukuran Wilayah Unggah Tekstur Ukuran Px"
-
-#: core/config/project_settings.cpp
 msgid "Pipeline Cache"
 msgstr "Cache Alur"
 
@@ -628,8 +599,7 @@ msgstr "Cache Alur"
 #: editor/import/3d/post_import_plugin_skeleton_rest_fixer.cpp
 #: modules/gdscript/gdscript.cpp platform/android/export/export_plugin.cpp
 #: platform/windows/export/export_plugin.cpp
-#: scene/3d/physics/joints/hinge_joint_3d.cpp scene/3d/retarget_modifier_3d.cpp
-#: servers/rendering_server.cpp
+#: scene/3d/physics/joints/hinge_joint_3d.cpp servers/rendering_server.cpp
 msgid "Enable"
 msgstr "Aktifkan"
 
@@ -701,6 +671,10 @@ msgstr "Perangkat Masukan"
 msgid "Pointing"
 msgstr "Menunjuk"
 
+#: core/config/project_settings.cpp platform/android/export/export.cpp
+msgid "Android"
+msgstr "Android"
+
 #: core/config/project_settings.cpp editor/editor_settings.cpp
 msgid "Enable Long Press as Right Click"
 msgstr "Aktifkan Tekan Lama sebagai Klik Kanan"
@@ -729,11 +703,6 @@ msgstr "Penyempurnaan Perubahan"
 #: core/core_bind.cpp
 msgid "Print Error Messages"
 msgstr "Cetak Pesan Kesalahan"
-
-#: core/core_bind.cpp
-#, fuzzy
-msgid "Print to stdout"
-msgstr "Stdout verbose"
 
 #: core/core_bind.cpp main/main.cpp
 msgid "Physics Ticks per Second"
@@ -866,7 +835,8 @@ msgstr "Mask Tombol"
 #: editor/import/3d/resource_importer_scene.cpp
 #: modules/gltf/structures/gltf_node.cpp scene/2d/node_2d.cpp
 #: scene/2d/remote_transform_2d.cpp scene/3d/node_3d.cpp
-#: scene/3d/remote_transform_3d.cpp scene/gui/control.cpp scene/main/window.cpp
+#: scene/3d/remote_transform_3d.cpp scene/3d/skeleton_3d.cpp
+#: scene/gui/control.cpp scene/main/window.cpp
 #: scene/resources/particle_process_material.cpp servers/physics_server_2d.cpp
 #: servers/physics_server_3d.cpp
 msgid "Position"
@@ -945,7 +915,8 @@ msgid "Action"
 msgstr "Aksi"
 
 #: core/input/input_event.cpp modules/mobile_vr/mobile_vr_interface.cpp
-#: modules/openxr/openxr_interface.cpp scene/3d/gpu_particles_collision_3d.cpp
+#: modules/openxr/openxr_interface.cpp scene/3d/audio_stream_player_3d.cpp
+#: scene/3d/gpu_particles_collision_3d.cpp
 #: scene/resources/2d/skeleton/skeleton_modification_stack_2d.cpp
 #: scene/resources/environment.cpp scene/resources/material.cpp
 msgid "Strength"
@@ -1060,13 +1031,12 @@ msgstr "Wilayah"
 #: scene/2d/animated_sprite_2d.cpp scene/2d/camera_2d.cpp scene/2d/light_2d.cpp
 #: scene/2d/parallax_background.cpp scene/2d/parallax_layer.cpp
 #: scene/2d/polygon_2d.cpp scene/2d/sprite_2d.cpp scene/3d/label_3d.cpp
-#: scene/3d/look_at_modifier_3d.cpp scene/3d/physics/physical_bone_3d.cpp
-#: scene/3d/soft_body_3d.cpp scene/3d/spring_bone_collision_3d.cpp
+#: scene/3d/physics/physical_bone_3d.cpp scene/3d/soft_body_3d.cpp
 #: scene/3d/sprite_3d.cpp scene/3d/visual_instance_3d.cpp
-#: scene/gui/rich_text_effect.cpp scene/gui/split_container.cpp
-#: scene/main/canvas_layer.cpp scene/resources/3d/primitive_meshes.cpp
-#: scene/resources/font.cpp scene/resources/label_settings.cpp
-#: scene/resources/material.cpp scene/resources/style_box_flat.cpp
+#: scene/gui/rich_text_effect.cpp scene/main/canvas_layer.cpp
+#: scene/resources/3d/primitive_meshes.cpp scene/resources/font.cpp
+#: scene/resources/label_settings.cpp scene/resources/material.cpp
+#: scene/resources/style_box_flat.cpp
 msgid "Offset"
 msgstr "Pengimbangan"
 
@@ -1098,8 +1068,6 @@ msgid "Diagonal Mode"
 msgstr "Mode Diagonal"
 
 #: core/math/random_number_generator.cpp modules/noise/fastnoise_lite.cpp
-#: scene/2d/cpu_particles_2d.cpp scene/2d/gpu_particles_2d.cpp
-#: scene/3d/cpu_particles_3d.cpp scene/3d/gpu_particles_3d.cpp
 msgid "Seed"
 msgstr "Benih"
 
@@ -1112,7 +1080,6 @@ msgid "Memory"
 msgstr "Memori"
 
 #: core/object/message_queue.cpp core/register_core_types.cpp main/main.cpp
-#: modules/jolt_physics/jolt_project_settings.cpp
 #: modules/webrtc/register_types.cpp scene/main/window.cpp
 #: servers/rendering_server.cpp
 msgid "Limits"
@@ -1130,7 +1097,7 @@ msgstr "Langkah Maksimum"
 #: editor/debugger/debug_adapter/debug_adapter_server.cpp
 #: editor/editor_settings.cpp main/main.cpp
 #: modules/gdscript/language_server/gdscript_language_server.cpp
-#: modules/mbedtls/register_types.cpp modules/webrtc/register_types.cpp
+#: modules/webrtc/register_types.cpp
 msgid "Network"
 msgstr "Jaringan"
 
@@ -1151,7 +1118,6 @@ msgid "Max Buffer (Power of 2)"
 msgstr "Penyangga Maks (Kekuatan 2)"
 
 #: core/register_core_types.cpp editor/editor_settings.cpp
-#: modules/mbedtls/register_types.cpp
 msgid "TLS"
 msgstr "TLS"
 
@@ -1167,7 +1133,7 @@ msgstr "Mengulir"
 msgid "Worker Pool"
 msgstr "Kumpulan Pekerja"
 
-#: core/register_core_types.cpp servers/navigation_server_3d.cpp
+#: core/register_core_types.cpp
 msgid "Max Threads"
 msgstr "Thread Maks"
 
@@ -1234,8 +1200,9 @@ msgstr "Lewati Placeholder"
 #: modules/gltf/structures/gltf_node.cpp scene/2d/node_2d.cpp
 #: scene/2d/polygon_2d.cpp scene/2d/remote_transform_2d.cpp
 #: scene/3d/node_3d.cpp scene/3d/physics/physical_bone_3d.cpp
-#: scene/3d/remote_transform_3d.cpp scene/gui/control.cpp
-#: scene/main/canvas_layer.cpp scene/resources/environment.cpp
+#: scene/3d/remote_transform_3d.cpp scene/3d/skeleton_3d.cpp
+#: scene/gui/control.cpp scene/main/canvas_layer.cpp
+#: scene/resources/environment.cpp
 msgid "Rotation"
 msgstr "Rotasi"
 
@@ -1252,9 +1219,9 @@ msgid "Args"
 msgstr ""
 
 #: editor/animation_track_editor.cpp editor/editor_settings.cpp
-#: modules/noise/fastnoise_lite.cpp scene/3d/physics/physical_bone_3d.cpp
-#: scene/gui/text_edit.cpp scene/resources/visual_shader_nodes.cpp
-#: servers/xr/xr_tracker.cpp
+#: modules/noise/fastnoise_lite.cpp platform/web/export/export_plugin.cpp
+#: scene/3d/physics/physical_bone_3d.cpp scene/gui/text_edit.cpp
+#: scene/resources/visual_shader_nodes.cpp servers/xr/xr_tracker.cpp
 msgid "Type"
 msgstr "Tipe"
 
@@ -1306,10 +1273,6 @@ msgstr "Permintaan diluar Batas Waktu"
 msgid "Sync Breakpoints"
 msgstr "Sinkronisasi Breakpoint"
 
-#: editor/editor_feature_profile.cpp
-msgid "Default Feature Profile"
-msgstr "Profil Fitur Default"
-
 #: editor/editor_inspector.cpp editor/gui/editor_spin_slider.cpp
 msgid "Label"
 msgstr "Label"
@@ -1318,16 +1281,6 @@ msgstr "Label"
 #: scene/theme/default_theme.cpp
 msgid "Read Only"
 msgstr "Hanya Baca"
-
-#: editor/editor_inspector.cpp
-#, fuzzy
-msgid "Draw Label"
-msgstr "Tab Gambar"
-
-#: editor/editor_inspector.cpp
-#, fuzzy
-msgid "Draw Background"
-msgstr "Latar Belakang"
 
 #: editor/editor_inspector.cpp
 msgid "Checkable"
@@ -1348,19 +1301,6 @@ msgstr "Mengunci"
 #: editor/editor_inspector.cpp
 msgid "Deletable"
 msgstr "Dapat dihapus"
-
-#: editor/editor_inspector.cpp scene/gui/graph_element.cpp
-msgid "Selectable"
-msgstr "Dapat dipilih"
-
-#: editor/editor_inspector.cpp
-#, fuzzy
-msgid "Use Folding"
-msgstr "Lipat Kode"
-
-#: editor/editor_inspector.cpp
-msgid "Name Split Ratio"
-msgstr ""
 
 #: editor/editor_interface.cpp
 msgid "Distraction Free Mode"
@@ -1465,10 +1405,6 @@ msgid "Font Disable Embedded Bitmaps"
 msgstr "Matikan Cahaya Lingkungan"
 
 #: editor/editor_settings.cpp
-msgid "Font Allow MSDF"
-msgstr ""
-
-#: editor/editor_settings.cpp
 msgid "Main Font"
 msgstr "Font Utama"
 
@@ -1491,6 +1427,10 @@ msgstr "Buka Screenshoots secara otomatis"
 #: editor/editor_settings.cpp
 msgid "Single Window Mode"
 msgstr "Mode Jendela Tunggal"
+
+#: editor/editor_settings.cpp
+msgid "Remember Window Size and Position"
+msgstr ""
 
 #: editor/editor_settings.cpp
 msgid "Mouse Extra Buttons Navigate History"
@@ -1621,6 +1561,7 @@ msgid "Border Size"
 msgstr "Ukuran Perbatasan"
 
 #: editor/editor_settings.cpp scene/resources/style_box_flat.cpp
+#: scene/theme/theme_db.cpp
 msgid "Corner Radius"
 msgstr "Radius Sudut"
 
@@ -1737,41 +1678,6 @@ msgstr "Mode Tampilan"
 msgid "Thumbnail Size"
 msgstr "Ukuran Gambar kecil"
 
-#: editor/editor_settings.cpp
-#, fuzzy
-msgid "Quick Open Dialog"
-msgstr "Dialog File"
-
-#: editor/editor_settings.cpp scene/2d/physics/shape_cast_2d.cpp
-#: scene/3d/physics/shape_cast_3d.cpp
-msgid "Max Results"
-msgstr "Hasil Maks"
-
-#: editor/editor_settings.cpp
-#, fuzzy
-msgid "Show Search Highlight"
-msgstr "Sorotan Perampas"
-
-#: editor/editor_settings.cpp
-#, fuzzy
-msgid "Enable Fuzzy Matching"
-msgstr "Aktifkan Pencatatan File"
-
-#: editor/editor_settings.cpp
-#, fuzzy
-msgid "Max Fuzzy Misses"
-msgstr "Pesan Antrian Maksimal"
-
-#: editor/editor_settings.cpp
-#, fuzzy
-msgid "Include Addons"
-msgstr "Kecualikan Addon"
-
-#: editor/editor_settings.cpp
-#, fuzzy
-msgid "Default Display Mode"
-msgstr "Mode Tampilan"
-
 #: editor/editor_settings.cpp editor/import/3d/resource_importer_scene.cpp
 #: editor/register_editor_types.cpp modules/fbx/register_types.cpp
 #: modules/gltf/register_types.cpp
@@ -1834,10 +1740,6 @@ msgid "Center Node on Reparent"
 msgstr ""
 
 #: editor/editor_settings.cpp
-msgid "Hide Filtered Out Parents"
-msgstr ""
-
-#: editor/editor_settings.cpp
 msgid "Always Show Folders"
 msgstr "Selalu Tampilkan Folder"
 
@@ -1868,7 +1770,7 @@ msgstr "Editor Teks"
 
 #: editor/editor_settings.cpp scene/3d/label_3d.cpp
 #: scene/resources/3d/primitive_meshes.cpp scene/resources/label_settings.cpp
-#: scene/resources/text_paragraph.cpp scene/theme/default_theme.cpp
+#: scene/theme/default_theme.cpp
 msgid "Line Spacing"
 msgstr "Jarak Baris"
 
@@ -1974,11 +1876,6 @@ msgstr "Gambarkan Spasi"
 msgid "Behavior"
 msgstr "Perilaku"
 
-#: editor/editor_settings.cpp
-#, fuzzy
-msgid "Empty Selection Clipboard"
-msgstr "Warna Seleksi"
-
 #: editor/editor_settings.cpp main/performance.cpp modules/gridmap/grid_map.cpp
 #: scene/2d/tile_map_layer.cpp scene/resources/2d/tile_set.cpp
 #: servers/navigation_server_3d.cpp
@@ -2077,16 +1974,6 @@ msgid "Open Dominant Script on Scene Change"
 msgstr "Buka Skrip Dominan pada Perubahan Adegan"
 
 #: editor/editor_settings.cpp
-#, fuzzy
-msgid "Documentation"
-msgstr "Orientasi"
-
-#: editor/editor_settings.cpp
-#, fuzzy
-msgid "Enable Tooltips"
-msgstr "Mengaktifkan Smart Resolve"
-
-#: editor/editor_settings.cpp
 msgid "Script List"
 msgstr "Daftar Skrip"
 
@@ -2105,11 +1992,6 @@ msgstr "Temperatur Skrip Diaktifkan"
 #: editor/editor_settings.cpp
 msgid "Script Temperature History Size"
 msgstr "Ukuran Riwayat Temperatur Skrip"
-
-#: editor/editor_settings.cpp
-#, fuzzy
-msgid "Highlight Scene Scripts"
-msgstr "Tandai Baris Saat Ini"
 
 #: editor/editor_settings.cpp
 msgid "Group Help Pages"
@@ -2141,11 +2023,6 @@ msgstr "Penyelesaian"
 
 #: editor/editor_settings.cpp
 msgid "Idle Parse Delay"
-msgstr "Penundaan Penguraian Idle"
-
-#: editor/editor_settings.cpp
-#, fuzzy
-msgid "Idle Parse Delay With Errors Found"
 msgstr "Penundaan Penguraian Idle"
 
 #: editor/editor_settings.cpp
@@ -2218,6 +2095,16 @@ msgstr "Pilih Jarak"
 #: editor/editor_settings.cpp
 msgid "Palette Min Width"
 msgstr "Lebar Min Palet"
+
+#: editor/editor_settings.cpp
+#, fuzzy
+msgid "Preview Size"
+msgstr "Ukuran Pratinjau Port"
+
+#: editor/editor_settings.cpp
+#, fuzzy
+msgid "Editor Side"
+msgstr "Layar Editor"
 
 #: editor/editor_settings.cpp
 msgid "Selection Box Color"
@@ -2327,25 +2214,6 @@ msgstr "Tulang yang Dipilih"
 #: editor/editor_settings.cpp
 msgid "CSG"
 msgstr "CSG"
-
-#: editor/editor_settings.cpp
-#, fuzzy
-msgid "GridMap Grid"
-msgstr "Peta Kisi Kisi-kisi"
-
-#: editor/editor_settings.cpp
-#, fuzzy
-msgid "Spring Bone Joint"
-msgstr "Panjang Pegas"
-
-#: editor/editor_settings.cpp
-#, fuzzy
-msgid "Spring Bone Collision"
-msgstr "Tabrakan Partikel"
-
-#: editor/editor_settings.cpp
-msgid "Spring Bone Inside Collision"
-msgstr ""
 
 #: editor/editor_settings.cpp
 msgid "Gizmo Settings"
@@ -2688,7 +2556,7 @@ msgid "Platforms"
 msgstr "Membangun Platform"
 
 #: editor/editor_settings.cpp
-msgid "Linux/*BSD"
+msgid "Linuxbsd"
 msgstr ""
 
 #: editor/editor_settings.cpp
@@ -2726,11 +2594,6 @@ msgstr "Ukuran Riwayat Frame Profiler"
 #: editor/editor_settings.cpp
 msgid "Profiler Frame Max Functions"
 msgstr "Fungsi Maks Frame Profiler"
-
-#: editor/editor_settings.cpp
-#, fuzzy
-msgid "Profiler Target FPS"
-msgstr "Ukuran Riwayat Frame Profiler"
 
 #: editor/editor_settings.cpp
 msgid "Remote Scene Tree Refresh Interval"
@@ -3029,11 +2892,6 @@ msgstr "Warna Bentuk"
 msgid "Particle Color"
 msgstr "Tabrakan Partikel"
 
-#: editor/editor_settings_dialog.cpp
-#, fuzzy
-msgid "Editor Settings Advanced Mode"
-msgstr "Pengaturan Editor"
-
 #: editor/export/editor_export_platform_pc.cpp
 #: platform/android/export/export_plugin.cpp
 #: platform/ios/export/export_plugin.cpp
@@ -3080,10 +2938,6 @@ msgstr "Impor S3TC BPTC"
 msgid "ETC2 ASTC"
 msgstr "Impor ETC2 ASTC"
 
-#: editor/export/export_template_manager.cpp
-msgid "Export Template Download Directory"
-msgstr ""
-
 #: editor/export/project_export.cpp
 msgid "Export Path"
 msgstr "Lokasi Ekspor"
@@ -3112,17 +2966,13 @@ msgid "Disable Overwrite Warning"
 msgstr "Nonaktifkan Peringatan Timpa"
 
 #: editor/gui/editor_spin_slider.cpp scene/gui/button.cpp
-#: scene/gui/line_edit.cpp scene/gui/menu_bar.cpp
+#: scene/gui/color_button.cpp scene/gui/line_edit.cpp scene/gui/menu_bar.cpp
 msgid "Flat"
 msgstr "Rata"
 
 #: editor/gui/editor_spin_slider.cpp
 msgid "Hide Slider"
 msgstr "Sembunyikan Slider"
-
-#: editor/gui/editor_spin_slider.cpp
-msgid "Editing Integer"
-msgstr ""
 
 #: editor/gui/editor_zoom_widget.cpp scene/2d/camera_2d.cpp
 #: scene/gui/graph_edit.cpp
@@ -3174,23 +3024,12 @@ msgstr ""
 
 #: editor/import/3d/post_import_plugin_skeleton_rest_fixer.cpp
 #, fuzzy
-msgid "Retarget Method"
-msgstr "Metode Rendering"
+msgid "Overwrite Axis"
+msgstr "Menimpa"
 
 #: editor/import/3d/post_import_plugin_skeleton_rest_fixer.cpp
 msgid "Keep Global Rest on Leftovers"
 msgstr ""
-
-#: editor/import/3d/post_import_plugin_skeleton_rest_fixer.cpp
-#: scene/3d/retarget_modifier_3d.cpp
-#, fuzzy
-msgid "Use Global Pose"
-msgstr "Gunakan Koordinat Global"
-
-#: editor/import/3d/post_import_plugin_skeleton_rest_fixer.cpp
-#, fuzzy
-msgid "Original Skeleton Name"
-msgstr "Nama Kerangka"
 
 #: editor/import/3d/post_import_plugin_skeleton_rest_fixer.cpp
 msgid "Fix Silhouette"
@@ -3205,7 +3044,6 @@ msgstr "Filter"
 
 #: editor/import/3d/post_import_plugin_skeleton_rest_fixer.cpp
 #: editor/import/resource_importer_bitmask.cpp
-#: modules/openxr/extensions/openxr_dpad_binding_extension.cpp
 #: servers/audio/effects/audio_effect_compressor.cpp
 msgid "Threshold"
 msgstr "Ambang"
@@ -3233,26 +3071,6 @@ msgstr "Tulang yang Belum Dipetakan"
 #: editor/import/3d/resource_importer_obj.cpp
 msgid "Generate Tangents"
 msgstr "Menghasilkan Garis Singgung"
-
-#: editor/import/3d/resource_importer_obj.cpp
-#: editor/import/3d/resource_importer_scene.cpp
-msgid "Generate LODs"
-msgstr "Hasilkan LOD"
-
-#: editor/import/3d/resource_importer_obj.cpp
-#, fuzzy
-msgid "Generate Shadow Mesh"
-msgstr "Buat Mesh Bayangan"
-
-#: editor/import/3d/resource_importer_obj.cpp
-#, fuzzy
-msgid "Generate Lightmap UV2"
-msgstr "Hasilkan Mipmaps"
-
-#: editor/import/3d/resource_importer_obj.cpp
-#, fuzzy
-msgid "Generate Lightmap UV2 Texel Size"
-msgstr "Ukuran Lightmap Texel"
 
 #: editor/import/3d/resource_importer_obj.cpp
 msgid "Scale Mesh"
@@ -3422,7 +3240,6 @@ msgstr "Primitif"
 #: modules/gltf/structures/gltf_node.cpp modules/noise/noise_texture_2d.cpp
 #: modules/noise/noise_texture_3d.cpp scene/2d/light_2d.cpp
 #: scene/3d/navigation_agent_3d.cpp scene/3d/navigation_obstacle_3d.cpp
-#: scene/3d/spring_bone_collision_capsule_3d.cpp
 #: scene/resources/2d/capsule_shape_2d.cpp
 #: scene/resources/3d/capsule_shape_3d.cpp
 #: scene/resources/3d/cylinder_shape_3d.cpp
@@ -3439,10 +3256,8 @@ msgstr "Tinggi"
 #: scene/2d/navigation_agent_2d.cpp scene/2d/navigation_obstacle_2d.cpp
 #: scene/3d/gpu_particles_collision_3d.cpp scene/3d/navigation_agent_3d.cpp
 #: scene/3d/navigation_obstacle_3d.cpp scene/3d/occluder_instance_3d.cpp
-#: scene/3d/physics/vehicle_body_3d.cpp
-#: scene/3d/spring_bone_collision_capsule_3d.cpp
-#: scene/3d/spring_bone_collision_sphere_3d.cpp
-#: scene/animation/root_motion_view.cpp scene/resources/2d/capsule_shape_2d.cpp
+#: scene/3d/physics/vehicle_body_3d.cpp scene/animation/root_motion_view.cpp
+#: scene/resources/2d/capsule_shape_2d.cpp
 #: scene/resources/2d/circle_shape_2d.cpp
 #: scene/resources/2d/navigation_polygon.cpp
 #: scene/resources/3d/capsule_shape_3d.cpp
@@ -3479,8 +3294,8 @@ msgstr "Simpan ke File"
 #: scene/3d/navigation_region_3d.cpp scene/3d/physics/area_3d.cpp
 #: scene/3d/physics/joints/generic_6dof_joint_3d.cpp
 #: scene/3d/physics/ray_cast_3d.cpp scene/3d/physics/shape_cast_3d.cpp
-#: scene/3d/sprite_3d.cpp scene/gui/code_edit.cpp scene/gui/graph_edit.cpp
-#: scene/main/canvas_layer.cpp
+#: scene/3d/skeleton_3d.cpp scene/3d/sprite_3d.cpp scene/gui/code_edit.cpp
+#: scene/gui/graph_edit.cpp scene/main/canvas_layer.cpp
 #: scene/resources/2d/skeleton/skeleton_modification_2d.cpp
 #: scene/resources/2d/skeleton/skeleton_modification_stack_2d.cpp
 #: scene/resources/camera_attributes.cpp scene/resources/compositor.cpp
@@ -3503,8 +3318,18 @@ msgid "LODs"
 msgstr "LOD"
 
 #: editor/import/3d/resource_importer_scene.cpp
+#, fuzzy
+msgid "Normal Split Angle"
+msgstr "Sudut Penggabungan Normal"
+
+#: editor/import/3d/resource_importer_scene.cpp
 msgid "Normal Merge Angle"
 msgstr "Sudut Penggabungan Normal"
+
+#: editor/import/3d/resource_importer_scene.cpp
+#, fuzzy
+msgid "Raycast Normals"
+msgstr "Src Normal"
 
 #: editor/import/3d/resource_importer_scene.cpp
 msgid "Use External"
@@ -3614,10 +3439,6 @@ msgstr "Skala Akar"
 msgid "Import as Skeleton Bones"
 msgstr ""
 
-#: editor/import/3d/resource_importer_scene.cpp
-msgid "Use Node Type Suffixes"
-msgstr ""
-
 #: editor/import/3d/resource_importer_scene.cpp modules/gltf/gltf_state.cpp
 msgid "Meshes"
 msgstr "Mesh"
@@ -3625,6 +3446,10 @@ msgstr "Mesh"
 #: editor/import/3d/resource_importer_scene.cpp
 msgid "Ensure Tangents"
 msgstr "Memastikan Garis Singgung"
+
+#: editor/import/3d/resource_importer_scene.cpp
+msgid "Generate LODs"
+msgstr "Hasilkan LOD"
 
 #: editor/import/3d/resource_importer_scene.cpp
 msgid "Create Shadow Meshes"
@@ -3674,7 +3499,7 @@ msgid "Import Script"
 msgstr "Impor Skrip"
 
 #: editor/import/dynamic_font_import_settings.cpp
-#: editor/import/resource_importer_dynamic_font.cpp
+#: editor/import/resource_importer_dynamic_font.cpp scene/resources/font.cpp
 msgid "Antialiasing"
 msgstr "Antialiasing"
 
@@ -3725,6 +3550,11 @@ msgstr "Petunjuk"
 msgid "Subpixel Positioning"
 msgstr "Pemosisian Subpiksel"
 
+#: editor/import/dynamic_font_import_settings.cpp scene/resources/font.cpp
+#: scene/theme/theme_db.cpp
+msgid "LCD Subpixel Layout"
+msgstr "Tata Letak Subpiksel LCD"
+
 #: editor/import/dynamic_font_import_settings.cpp
 #: editor/import/resource_importer_dynamic_font.cpp scene/resources/font.cpp
 msgid "Keep Rounding Remainders"
@@ -3771,8 +3601,8 @@ msgid "Compress"
 msgstr "Kompres"
 
 #: editor/import/dynamic_font_import_settings.cpp scene/3d/label_3d.cpp
-#: scene/gui/button.cpp scene/gui/label.cpp scene/gui/line_edit.cpp
-#: scene/gui/link_button.cpp scene/gui/menu_bar.cpp
+#: scene/gui/button.cpp scene/gui/foldable_container.cpp scene/gui/label.cpp
+#: scene/gui/line_edit.cpp scene/gui/link_button.cpp scene/gui/menu_bar.cpp
 #: scene/gui/rich_text_label.cpp scene/gui/text_edit.cpp
 #: scene/resources/3d/primitive_meshes.cpp
 #: servers/rendering/rendering_device_binds.h
@@ -4108,15 +3938,8 @@ msgid "Frames Count"
 msgstr "Jumlah Frame"
 
 #: editor/plugins/tiles/tile_set_atlas_source_editor.cpp
-#: modules/openxr/action_map/openxr_haptic_feedback.cpp
-#: scene/3d/look_at_modifier_3d.cpp
 msgid "Duration"
 msgstr "Durasi"
-
-#: editor/project_settings_editor.cpp
-#, fuzzy
-msgid "Project Settings Advanced Mode"
-msgstr "Penggantian Pengaturan Proyek"
 
 #: editor/register_editor_types.cpp
 msgid "Main Run Args"
@@ -4176,53 +3999,9 @@ msgstr "Nama Plugin"
 msgid "Autoload on Startup"
 msgstr "Muat Otomatis Saat Memulai"
 
-#: editor/scene_tree_dock.cpp
-msgid "Use Favorites Root Selection"
-msgstr "Gunakan Pemilihan Root Favorit"
-
-#: editor/script_create_dialog.cpp
-msgid "Script Setup Use Script Templates"
-msgstr ""
-
-#: editor/script_create_dialog.cpp
-#, fuzzy
-msgid "Script Setup Templates Dictionary"
-msgstr "Ukuran Riwayat Temperatur Skrip"
-
 #: main/main.cpp
 msgid "Flush stdout on Print"
 msgstr "Flush stdout pada Print"
-
-#: main/main.cpp
-msgid "Low Processor Mode"
-msgstr "Mode Processor Rendah"
-
-#: main/main.cpp
-msgid "stdout"
-msgstr "stdout"
-
-#: main/main.cpp
-msgid "Print FPS"
-msgstr "Cetak FPS"
-
-#: main/main.cpp
-msgid "Print GPU Profile"
-msgstr "Cetak Profil GPU"
-
-#: main/main.cpp
-msgid "Verbose stdout"
-msgstr "Stdout verbose"
-
-#: main/main.cpp scene/main/node.cpp scene/main/scene_tree.cpp
-#: scene/resources/multimesh.cpp
-#, fuzzy
-msgid "Physics Interpolation"
-msgstr "Interpolasi Ikon"
-
-#: main/main.cpp
-#, fuzzy
-msgid "Enable Warnings"
-msgstr "Peringatan"
 
 #: main/main.cpp
 msgid "Max Chars per Second"
@@ -4273,7 +4052,7 @@ msgstr "Nilai pengganti"
 
 #: main/main.cpp
 #, fuzzy
-msgid "Fallback to OpenGL 3"
+msgid "Fallback to Opengl 3"
 msgstr "Nilai pengganti"
 
 #: main/main.cpp servers/rendering_server.cpp
@@ -4296,7 +4075,7 @@ msgstr "Nilai pengganti"
 
 #: main/main.cpp
 #, fuzzy
-msgid "Fallback to GLES"
+msgid "Fallback to Gles"
 msgstr "Nilai pengganti"
 
 #: main/main.cpp
@@ -4363,8 +4142,28 @@ msgid "Output Latency"
 msgstr "Latensi Keluaran"
 
 #: main/main.cpp
+msgid "stdout"
+msgstr "stdout"
+
+#: main/main.cpp
+msgid "Print FPS"
+msgstr "Cetak FPS"
+
+#: main/main.cpp
+msgid "Print GPU Profile"
+msgstr "Cetak Profil GPU"
+
+#: main/main.cpp
+msgid "Verbose stdout"
+msgstr "Stdout verbose"
+
+#: main/main.cpp
 msgid "Frame Delay Msec"
 msgstr "Penundaan Frame Milidetik"
+
+#: main/main.cpp
+msgid "Low Processor Mode"
+msgstr "Mode Processor Rendah"
 
 #: main/main.cpp
 msgid "Allow High Refresh Rate"
@@ -4470,21 +4269,6 @@ msgid "Eye Gaze Interaction"
 msgstr "Iterasi Maks"
 
 #: main/main.cpp
-#, fuzzy
-msgid "Binding Modifiers"
-msgstr "Pengubah Pan"
-
-#: main/main.cpp
-#, fuzzy
-msgid "Analog Threshold"
-msgstr "Ambang"
-
-#: main/main.cpp
-#, fuzzy
-msgid "Dpad Binding"
-msgstr "Menemukan Jalur"
-
-#: main/main.cpp
 msgid "Boot Splash"
 msgstr "Splash Boot"
 
@@ -4552,6 +4336,11 @@ msgstr "Offset Posisi Tooltip"
 msgid "Show Image"
 msgstr "Tampilkan Gambar"
 
+#: main/main.cpp platform/web/export/export_plugin.cpp
+#: scene/resources/image_texture.cpp
+msgid "Image"
+msgstr "Gambar"
+
 #: main/main.cpp
 msgid "Fullsize"
 msgstr "Ukuran penuh"
@@ -4559,10 +4348,6 @@ msgstr "Ukuran penuh"
 #: main/main.cpp servers/rendering_server.cpp
 msgid "Use Filter"
 msgstr "Gunakan Filter"
-
-#: main/main.cpp scene/resources/image_texture.cpp
-msgid "Image"
-msgstr "Gambar"
 
 #: main/main.cpp
 msgid "Minimum Display Time"
@@ -4738,44 +4523,13 @@ msgstr "unakan Koneksi Tepi"
 msgid "Edges Free"
 msgstr "Pelepasan Tepi"
 
-#: main/performance.cpp
-#, fuzzy
-msgid "Obstacles"
-msgstr "Hambatan yang Mudah Dihindari"
-
-#: main/performance.cpp
-#, fuzzy
-msgid "Pipeline"
-msgstr "Cache Alur"
-
-#: main/performance.cpp
-#, fuzzy
-msgid "Compilations Canvas"
-msgstr "Garis Penyelesaian"
-
-#: main/performance.cpp
-#, fuzzy
-msgid "Compilations Mesh"
-msgstr "Garis Penyelesaian"
-
-#: main/performance.cpp
-#, fuzzy
-msgid "Compilations Surface"
-msgstr "Garis Penyelesaian"
-
-#: main/performance.cpp
-#, fuzzy
-msgid "Compilations Draw"
-msgstr "Penyelesaian"
-
-#: main/performance.cpp
-#, fuzzy
-msgid "Compilations Specialization"
-msgstr "Lebar Gulir Penyelesaian"
-
 #: modules/csg/csg_shape.cpp
 msgid "Operation"
 msgstr "Operasi"
+
+#: modules/csg/csg_shape.cpp scene/main/scene_tree.cpp
+msgid "Snap"
+msgstr "Pengancingan"
 
 #: modules/csg/csg_shape.cpp
 msgid "Calculate Tangents"
@@ -4904,11 +4658,6 @@ msgid "Path Rotation"
 msgstr "Rotasi Path"
 
 #: modules/csg/csg_shape.cpp
-#, fuzzy
-msgid "Path Rotation Accurate"
-msgstr "Rotasi Path"
-
-#: modules/csg/csg_shape.cpp
 msgid "Path Local"
 msgstr "Path Lokal"
 
@@ -5015,10 +4764,6 @@ msgstr "Tumpukan Panggilan Maks"
 msgid "Exclude Addons"
 msgstr "Kecualikan Addon"
 
-#: modules/gdscript/gdscript.cpp
-msgid "Renamed in Godot 4 Hint"
-msgstr ""
-
 #: modules/gdscript/language_server/gdscript_language_server.cpp
 msgid "Language Server"
 msgstr "Server Bahasa"
@@ -5064,11 +4809,11 @@ msgstr "Versi Minor"
 #: scene/2d/cpu_particles_2d.cpp scene/2d/light_2d.cpp scene/2d/polygon_2d.cpp
 #: scene/3d/cpu_particles_3d.cpp scene/3d/light_3d.cpp
 #: scene/3d/reflection_probe.cpp scene/animation/root_motion_view.cpp
-#: scene/gui/color_picker.cpp scene/gui/color_rect.cpp
-#: scene/gui/rich_text_effect.cpp scene/main/canvas_item.cpp
-#: scene/resources/3d/sky_material.cpp scene/resources/environment.cpp
-#: scene/resources/label_settings.cpp scene/resources/material.cpp
-#: scene/resources/particle_process_material.cpp
+#: scene/gui/color_button.cpp scene/gui/color_picker.cpp
+#: scene/gui/color_rect.cpp scene/gui/rich_text_effect.cpp
+#: scene/main/canvas_item.cpp scene/resources/3d/sky_material.cpp
+#: scene/resources/environment.cpp scene/resources/label_settings.cpp
+#: scene/resources/material.cpp scene/resources/particle_process_material.cpp
 #: scene/resources/style_box_flat.cpp scene/resources/style_box_line.cpp
 #: scene/resources/style_box_texture.cpp
 msgid "Color"
@@ -5399,7 +5144,7 @@ msgstr "Campuran Bobot"
 msgid "Instance Materials"
 msgstr "Bahan Instance"
 
-#: modules/gltf/structures/gltf_node.cpp
+#: modules/gltf/structures/gltf_node.cpp scene/3d/skeleton_3d.cpp
 msgid "Parent"
 msgstr "Induk"
 
@@ -5420,36 +5165,8 @@ msgstr "Turunan"
 msgid "Light"
 msgstr "Cahaya"
 
-#: modules/gltf/structures/gltf_object_model_property.cpp
-msgid "glTF to Godot Expression"
-msgstr ""
-
-#: modules/gltf/structures/gltf_object_model_property.cpp
-msgid "Godot to glTF Expression"
-msgstr ""
-
-#: modules/gltf/structures/gltf_object_model_property.cpp
-#, fuzzy
-msgid "Node Paths"
-msgstr "Lokasi Node"
-
-#: modules/gltf/structures/gltf_object_model_property.cpp
-msgid "Object Model Type"
-msgstr ""
-
-#: modules/gltf/structures/gltf_object_model_property.cpp
-#, fuzzy
-msgid "Json Pointers"
-msgstr "Non Sendi"
-
-#: modules/gltf/structures/gltf_object_model_property.cpp
-#, fuzzy
-msgid "Variant Type"
-msgstr "Memvariasikan Tipe"
-
 #: modules/gltf/structures/gltf_skeleton.cpp
 #: modules/gltf/structures/gltf_skin.cpp
-#: modules/jolt_physics/jolt_project_settings.cpp
 msgid "Joints"
 msgstr "Sendi"
 
@@ -5543,13 +5260,13 @@ msgstr "Bake Navigasi"
 
 #: modules/interactive_music/audio_stream_interactive.cpp
 #, fuzzy
-msgid "Clip Count"
-msgstr "Konten Klip"
+msgid "Initial Clip"
+msgstr "Sudut Awal"
 
 #: modules/interactive_music/audio_stream_interactive.cpp
 #, fuzzy
-msgid "Initial Clip"
-msgstr "Sudut Awal"
+msgid "Clip Count"
+msgstr "Konten Klip"
 
 #: modules/interactive_music/audio_stream_playlist.cpp
 msgid "Shuffle"
@@ -5565,173 +5282,6 @@ msgstr "Waktu Fadein"
 #, fuzzy
 msgid "Stream Count"
 msgstr "Jumlah Frame"
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "Jolt Physics 3D"
-msgstr "Fisika"
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "Simulation"
-msgstr "Animasi"
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "Velocity Steps"
-msgstr "Kecepatan"
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "Position Steps"
-msgstr "Posisi"
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Use Enhanced Internal Edge Removal"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Areas Detect Static Bodies"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Generate All Kinematic Contacts"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "Penetration Slop"
-msgstr "Warna Anotasi"
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "Speculative Contact Distance"
-msgstr "Penyederhanaan Jarak"
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Baumgarte Stabilization Factor"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "Soft Body Point Radius"
-msgstr "Radius Titik Ambil"
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Bounce Velocity Threshold"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "Allow Sleep"
-msgstr "Izinkan Penelusuran"
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "Sleep Velocity Threshold"
-msgstr "Kurva Kecepatan"
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "Sleep Time Threshold"
-msgstr "Ambang Tidur Linier"
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Continuous CD Movement Threshold"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "Continuous CD Max Penetration"
-msgstr "Kontak Maksimal yang Diizinkan untuk Penetrasi"
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Body Pair Contact Cache Enabled"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Body Pair Contact Cache Distance Threshold"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Body Pair Contact Cache Angle Threshold"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Queries"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Enable Ray Cast Face Index"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "Motion Queries"
-msgstr "Mode Gerak"
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "Recovery Iterations"
-msgstr "Iterasi Penyelesai"
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "Recovery Amount"
-msgstr "Pemulihan sebagai Tabrakan"
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "Collisions"
-msgstr "Area Tabrakan"
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "Collision Margin Fraction"
-msgstr "Margin Tabrakan Satu Arah"
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "Active Edge Threshold"
-msgstr "Ambang Batas LOD Mesh"
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "World Node"
-msgstr "Skala Dunia"
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "Temporary Memory Buffer Size"
-msgstr "Ukuran Buffer Item"
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "World Boundary Shape Size"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "Max Linear Velocity"
-msgstr "Kecepatan Linear"
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "Max Angular Velocity"
-msgstr "Kecepatan Sudut"
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "Max Bodies"
-msgstr "Tubuh"
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-msgid "Max Body Pairs"
-msgstr ""
-
-#: modules/jolt_physics/jolt_project_settings.cpp
-#, fuzzy
-msgid "Max Contact Constraints"
-msgstr "Kendala Bersama"
 
 #: modules/lightmapper_rd/register_types.cpp servers/rendering_server.cpp
 msgid "Lightmapping"
@@ -5770,11 +5320,6 @@ msgid "Region Size"
 msgstr "Ukuran Wilayah"
 
 #: modules/lightmapper_rd/register_types.cpp
-#, fuzzy
-msgid "Max Transparency Rays"
-msgstr "Transparansi"
-
-#: modules/lightmapper_rd/register_types.cpp
 msgid "Low Quality Probe Ray Count"
 msgstr "Jumlah Ray Probe Berkualitas Rendah"
 
@@ -5803,11 +5348,6 @@ msgstr "Hilang"
 #, fuzzy
 msgid "Denoiser"
 msgstr "Gunakan Denoiser"
-
-#: modules/mbedtls/register_types.cpp
-#, fuzzy
-msgid "Enable TLS V 1"
-msgstr "Aktifkan 2D"
 
 #: modules/minimp3/audio_stream_mp3.cpp
 #: modules/minimp3/resource_importer_mp3.cpp
@@ -5883,10 +5423,6 @@ msgid "Min Radius"
 msgstr "Radius Cincin"
 
 #: modules/multiplayer/multiplayer_spawner.cpp
-msgid "Spawnable Scenes"
-msgstr "Adegan yang Dapat Dimunculkan"
-
-#: modules/multiplayer/multiplayer_spawner.cpp
 msgid "Spawn Path"
 msgstr "Path Spawn"
 
@@ -5948,7 +5484,6 @@ msgid "Noise Type"
 msgstr "Tipe Kebisingan"
 
 #: modules/noise/fastnoise_lite.cpp
-#: modules/openxr/action_map/openxr_haptic_feedback.cpp
 #: scene/resources/particle_process_material.cpp
 msgid "Frequency"
 msgstr "Frekuensi"
@@ -6000,7 +5535,6 @@ msgid "Domain Warp"
 msgstr "Warp Domain"
 
 #: modules/noise/fastnoise_lite.cpp
-#: modules/openxr/action_map/openxr_haptic_feedback.cpp
 msgid "Amplitude"
 msgstr "Amplitudo"
 
@@ -6077,9 +5611,9 @@ msgid "Toplevel Paths"
 msgstr "Path Tingkat Atas"
 
 #: modules/openxr/action_map/openxr_interaction_profile.cpp
-#, fuzzy
-msgid "Binding Path"
-msgstr "Path Blender 3"
+#: scene/main/scene_tree.cpp
+msgid "Paths"
+msgstr "Path"
 
 #: modules/openxr/action_map/openxr_interaction_profile.cpp
 msgid "Interaction Profile Path"
@@ -6089,55 +5623,6 @@ msgstr "Path Profil Interaksi"
 #, fuzzy
 msgid "Runtime Paths"
 msgstr "Path Remot"
-
-#: modules/openxr/extensions/openxr_dpad_binding_extension.cpp
-#, fuzzy
-msgid "Action Set"
-msgstr "Jenis Tindakan"
-
-#: modules/openxr/extensions/openxr_dpad_binding_extension.cpp
-#, fuzzy
-msgid "Input Path"
-msgstr "Nama Masukan"
-
-#: modules/openxr/extensions/openxr_dpad_binding_extension.cpp
-#, fuzzy
-msgid "Threshold Released"
-msgstr "Ambang Piksel"
-
-#: modules/openxr/extensions/openxr_dpad_binding_extension.cpp
-#, fuzzy
-msgid "Center Region"
-msgstr "Wilayah Warna"
-
-#: modules/openxr/extensions/openxr_dpad_binding_extension.cpp
-#, fuzzy
-msgid "Wedge Angle"
-msgstr "Sudut Tulang"
-
-#: modules/openxr/extensions/openxr_dpad_binding_extension.cpp
-msgid "Is Sticky"
-msgstr ""
-
-#: modules/openxr/extensions/openxr_dpad_binding_extension.cpp
-#: modules/openxr/extensions/openxr_valve_analog_threshold_extension.cpp
-msgid "On Haptic"
-msgstr ""
-
-#: modules/openxr/extensions/openxr_dpad_binding_extension.cpp
-#: modules/openxr/extensions/openxr_valve_analog_threshold_extension.cpp
-msgid "Off Haptic"
-msgstr ""
-
-#: modules/openxr/extensions/openxr_valve_analog_threshold_extension.cpp
-#, fuzzy
-msgid "On Threshold"
-msgstr "Ambang"
-
-#: modules/openxr/extensions/openxr_valve_analog_threshold_extension.cpp
-#, fuzzy
-msgid "Off Threshold"
-msgstr "Ambang"
 
 #: modules/openxr/openxr_interface.cpp
 msgid "Display Refresh Rate"
@@ -6151,16 +5636,6 @@ msgstr "Render Pengganda Ukuran Target"
 #, fuzzy
 msgid "Layer Viewport"
 msgstr "Viewport"
-
-#: modules/openxr/scene/openxr_composition_layer.cpp
-#, fuzzy
-msgid "Use Android Surface"
-msgstr "Gunakan Semua Permukaan"
-
-#: modules/openxr/scene/openxr_composition_layer.cpp
-#, fuzzy
-msgid "Android Surface Size"
-msgstr "Jalur Android SDK"
 
 #: modules/openxr/scene/openxr_composition_layer.cpp
 #, fuzzy
@@ -6324,11 +5799,6 @@ msgstr "Batas Waktu Jabat Tangan"
 #: modules/websocket/websocket_peer.cpp
 msgid "Max Queued Packets"
 msgstr "Paket Antrian Maksimal"
-
-#: modules/websocket/websocket_peer.cpp
-#, fuzzy
-msgid "Heartbeat Interval"
-msgstr "Interval Delta"
 
 #: modules/webxr/webxr_interface.cpp
 msgid "Session Mode"
@@ -6524,15 +5994,6 @@ msgid "XR Mode"
 msgstr "Mode XR"
 
 #: platform/android/export/export_plugin.cpp
-#, fuzzy
-msgid "Gesture"
-msgstr "Tekstur"
-
-#: platform/android/export/export_plugin.cpp
-msgid "Swipe to Dismiss"
-msgstr ""
-
-#: platform/android/export/export_plugin.cpp
 msgid "Screen"
 msgstr "Layar"
 
@@ -6602,6 +6063,40 @@ msgid "Icons"
 msgstr "Ikon"
 
 #: platform/ios/export/export_plugin.cpp
+msgid "iPhone 120 X 120"
+msgstr "iPhone 120 × 120"
+
+#: platform/ios/export/export_plugin.cpp
+msgid "iPhone 180 X 180"
+msgstr "iPhone 180 × 180"
+
+#: platform/ios/export/export_plugin.cpp
+#, fuzzy
+msgid "iPad 76 X 76"
+msgstr "iPad 167 × 167"
+
+#: platform/ios/export/export_plugin.cpp
+msgid "iPad 152 X 152"
+msgstr "iPad 152 × 152"
+
+#: platform/ios/export/export_plugin.cpp
+msgid "iPad 167 X 167"
+msgstr "iPad 167 × 167"
+
+#: platform/ios/export/export_plugin.cpp
+msgid "App Store 1024 X 1024"
+msgstr "App Store 1024 X 1024"
+
+#: platform/ios/export/export_plugin.cpp
+#, fuzzy
+msgid "Spotlight 40 X 40"
+msgstr "Spotlight 80 X 80"
+
+#: platform/ios/export/export_plugin.cpp
+msgid "Spotlight 80 X 80"
+msgstr "Spotlight 80 X 80"
+
+#: platform/ios/export/export_plugin.cpp
 msgid "Settings 58 X 58"
 msgstr "Pengaturan 58 X 58"
 
@@ -6618,92 +6113,28 @@ msgid "Notification 60 X 60"
 msgstr "Pemberitahuan 60 X 60"
 
 #: platform/ios/export/export_plugin.cpp
-#, fuzzy
-msgid "Notification 76 X 76"
-msgstr "Pemberitahuan 60 X 60"
-
-#: platform/ios/export/export_plugin.cpp
-#, fuzzy
-msgid "Notification 114 X 114"
-msgstr "Pemberitahuan 40 X 40"
-
-#: platform/ios/export/export_plugin.cpp
-msgid "Spotlight 80 X 80"
-msgstr "Spotlight 80 X 80"
-
-#: platform/ios/export/export_plugin.cpp
-#, fuzzy
-msgid "Spotlight 120 X 120"
-msgstr "Spotlight 40 X 40"
-
-#: platform/ios/export/export_plugin.cpp
-msgid "iPhone 120 X 120"
-msgstr "iPhone 120 × 120"
-
-#: platform/ios/export/export_plugin.cpp
-msgid "iPhone 180 X 180"
-msgstr "iPhone 180 × 180"
-
-#: platform/ios/export/export_plugin.cpp
-msgid "iPad 167 X 167"
-msgstr "iPad 167 × 167"
-
-#: platform/ios/export/export_plugin.cpp
-msgid "iPad 152 X 152"
-msgstr "iPad 152 × 152"
-
-#: platform/ios/export/export_plugin.cpp
-#, fuzzy
-msgid "iOS 128 X 128"
-msgstr "Utama 192 X 192"
-
-#: platform/ios/export/export_plugin.cpp
-#, fuzzy
-msgid "iOS 192 X 192"
-msgstr "Utama 192 X 192"
-
-#: platform/ios/export/export_plugin.cpp
-#, fuzzy
-msgid "iOS 136 X 136"
-msgstr "iPad 167 × 167"
-
-#: platform/ios/export/export_plugin.cpp
-msgid "App Store 1024 X 1024"
-msgstr "App Store 1024 X 1024"
-
-#: platform/ios/export/export_plugin.cpp
 msgid "App Store Team ID"
 msgstr "ID Tim App Store"
-
-#: platform/ios/export/export_plugin.cpp
-msgid "Export Method Debug"
-msgstr "Debug Metode Ekspor"
-
-#: platform/ios/export/export_plugin.cpp
-msgid "Code Sign Identity Debug"
-msgstr "Debug Identitas Tanda Kode"
-
-#: platform/ios/export/export_plugin.cpp
-msgid "Code Sign Identity Release"
-msgstr "Rilis Identitas Tanda Kode"
 
 #: platform/ios/export/export_plugin.cpp
 msgid "Provisioning Profile UUID Debug"
 msgstr "Profil Penyediaan Debug UUID"
 
 #: platform/ios/export/export_plugin.cpp
+msgid "Code Sign Identity Debug"
+msgstr "Debug Identitas Tanda Kode"
+
+#: platform/ios/export/export_plugin.cpp
+msgid "Export Method Debug"
+msgstr "Debug Metode Ekspor"
+
+#: platform/ios/export/export_plugin.cpp
 msgid "Provisioning Profile UUID Release"
 msgstr "Profil Penyediaan Rilis UUID"
 
 #: platform/ios/export/export_plugin.cpp
-#, fuzzy
-msgid "Provisioning Profile Specifier Debug"
-msgstr "Profil Penyediaan Debug UUID"
-
-#: platform/ios/export/export_plugin.cpp
-#, fuzzy
-msgid "Provisioning Profile Specifier Release"
-msgstr "Profil Penyediaan Rilis UUID"
+msgid "Code Sign Identity Release"
+msgstr "Rilis Identitas Tanda Kode"
 
 #: platform/ios/export/export_plugin.cpp
 msgid "Export Method Release"
@@ -6752,6 +6183,10 @@ msgstr "Proyeksi Kotak"
 
 #: platform/ios/export/export_plugin.cpp
 msgid "Delete Old Export Files Unconditionally"
+msgstr ""
+
+#: platform/ios/export/export_plugin.cpp
+msgid "Generate Simulator Library If Missing"
 msgstr ""
 
 #: platform/ios/export/export_plugin.cpp
@@ -6851,21 +6286,6 @@ msgstr "Melompat Diaktifkan"
 #, fuzzy
 msgid "Tracking Domains"
 msgstr "Keyakinan Pelacakan"
-
-#: platform/ios/export/export_plugin.cpp
-#, fuzzy
-msgid "Icon 1024 X 1024"
-msgstr "Ikon 144 X 144"
-
-#: platform/ios/export/export_plugin.cpp
-#, fuzzy
-msgid "Icon 1024 X 1024 Dark"
-msgstr "Ikon 144 X 144"
-
-#: platform/ios/export/export_plugin.cpp
-#, fuzzy
-msgid "Icon 1024 X 1024 Tinted"
-msgstr "Ikon 144 X 144"
 
 #: platform/ios/export/export_plugin.cpp
 msgid "Storyboard"
@@ -7303,6 +6723,66 @@ msgstr "Ikon 180 X 180"
 msgid "Icon 512 X 512"
 msgstr "Ikon 512 X 512"
 
+#: platform/web/export/export_plugin.cpp
+msgid "Blazium"
+msgstr ""
+
+#: platform/web/export/export_plugin.cpp
+#, fuzzy
+msgid "Web Headers"
+msgstr "Tajuk Jabat Tangan"
+
+#: platform/web/export/export_plugin.cpp scene/gui/graph_frame.cpp
+#: scene/gui/graph_node.cpp scene/main/window.cpp
+#: scene/resources/visual_shader.cpp
+msgid "Title"
+msgstr "Judul"
+
+#: platform/web/export/export_plugin.cpp
+#, fuzzy
+msgid "URL"
+msgstr "URI"
+
+#: platform/web/export/export_plugin.cpp
+#, fuzzy
+msgid "Site Name"
+msgstr "Nama Skena"
+
+#: platform/web/export/export_plugin.cpp
+#, fuzzy
+msgid "Social Headers"
+msgstr "cetak judul"
+
+#: platform/web/export/export_plugin.cpp
+msgid "Site"
+msgstr ""
+
+#: platform/web/export/export_plugin.cpp
+msgid "Card"
+msgstr ""
+
+#: platform/web/export/export_plugin.cpp
+msgid "Discord Embed"
+msgstr ""
+
+#: platform/web/export/export_plugin.cpp
+#, fuzzy
+msgid "Autodetect"
+msgstr "Indentasi Otomatis"
+
+#: platform/web/export/export_plugin.cpp
+msgid "Youtube Playable"
+msgstr ""
+
+#: platform/web/export/export_plugin.cpp
+msgid "Export Gzip Compressed Wasm"
+msgstr ""
+
+#: platform/web/export/export_plugin.cpp
+#, fuzzy
+msgid "Keep Uncompressed Wasm"
+msgstr "Menyimpan Buffer yang Tertekan"
+
 #: platform/windows/export/export_plugin.cpp
 msgid "Identity Type"
 msgstr "Tipe Identitas"
@@ -7616,12 +7096,6 @@ msgstr "Daya ledak"
 msgid "Randomness"
 msgstr "Keacakan"
 
-#: scene/2d/cpu_particles_2d.cpp scene/2d/gpu_particles_2d.cpp
-#: scene/3d/cpu_particles_3d.cpp scene/3d/gpu_particles_3d.cpp
-#, fuzzy
-msgid "Use Fixed Seed"
-msgstr "Ukuran Tetap"
-
 #: scene/2d/cpu_particles_2d.cpp scene/3d/cpu_particles_3d.cpp
 #: scene/resources/particle_process_material.cpp
 msgid "Lifetime Randomness"
@@ -7686,8 +7160,7 @@ msgid "Normals"
 msgstr "Normal"
 
 #: scene/2d/cpu_particles_2d.cpp scene/3d/cpu_particles_3d.cpp
-#: scene/gui/control.cpp scene/main/window.cpp
-#: scene/resources/color_palette.cpp scene/resources/gradient.cpp
+#: scene/gui/control.cpp scene/main/window.cpp scene/resources/gradient.cpp
 msgid "Colors"
 msgstr "Warna"
 
@@ -7900,12 +7373,16 @@ msgid "Sub Emitter"
 msgstr "Sub Emitor"
 
 #: scene/2d/gpu_particles_2d.cpp scene/3d/gpu_particles_3d.cpp
-#, fuzzy
-msgid "Interp to End"
-msgstr "Interpolasi"
+msgid "Process Material"
+msgstr "Bahan Proses"
 
 #: scene/2d/gpu_particles_2d.cpp scene/3d/gpu_particles_3d.cpp
 msgid "Interpolate"
+msgstr "Interpolasi"
+
+#: scene/2d/gpu_particles_2d.cpp scene/3d/gpu_particles_3d.cpp
+#, fuzzy
+msgid "Interp to End"
 msgstr "Interpolasi"
 
 #: scene/2d/gpu_particles_2d.cpp scene/3d/gpu_particles_3d.cpp
@@ -7927,10 +7404,6 @@ msgstr "Bagian"
 #: scene/2d/gpu_particles_2d.cpp
 msgid "Section Subdivisions"
 msgstr "Subdivisi Bagian"
-
-#: scene/2d/gpu_particles_2d.cpp scene/3d/gpu_particles_3d.cpp
-msgid "Process Material"
-msgstr "Bahan Proses"
 
 #: scene/2d/light_2d.cpp scene/3d/light_3d.cpp scene/gui/reference_rect.cpp
 msgid "Editor Only"
@@ -7980,7 +7453,6 @@ msgid "Texture Scale"
 msgstr "Skala Tekstur"
 
 #: scene/2d/light_occluder_2d.cpp scene/2d/line_2d.cpp
-#: scene/resources/curve.cpp
 msgid "Closed"
 msgstr "Tertutup"
 
@@ -8059,7 +7531,6 @@ msgid "Multimesh"
 msgstr "Multimesh"
 
 #: scene/2d/navigation_agent_2d.cpp scene/3d/navigation_agent_3d.cpp
-#: servers/navigation_server_3d.cpp
 msgid "Pathfinding"
 msgstr "Menemukan Jalur"
 
@@ -8460,13 +7931,15 @@ msgstr "Lapisan Lantai"
 msgid "Wall Layers"
 msgstr "Lapisan Dinding"
 
-#: scene/2d/physics/character_body_2d.cpp scene/3d/look_at_modifier_3d.cpp
+#: scene/2d/physics/character_body_2d.cpp
 #: scene/3d/physics/character_body_3d.cpp
 msgid "Safe Margin"
 msgstr "Batas Aman"
 
 #: scene/2d/physics/collision_object_2d.cpp
-#: scene/3d/physics/collision_object_3d.cpp scene/3d/soft_body_3d.cpp
+#: scene/2d/physics/joints/joint_2d.cpp
+#: scene/3d/physics/collision_object_3d.cpp
+#: scene/3d/physics/joints/joint_3d.cpp scene/3d/soft_body_3d.cpp
 msgid "Disable Mode"
 msgstr "Mode Nonaktifkan"
 
@@ -8497,8 +7970,6 @@ msgid "One Way Collision Margin"
 msgstr "Margin Tabrakan Satu Arah"
 
 #: scene/2d/physics/collision_shape_2d.cpp
-#: scene/3d/physics/collision_polygon_3d.cpp
-#: scene/3d/physics/collision_shape_3d.cpp
 msgid "Debug Color"
 msgstr "Warna Debug"
 
@@ -8736,10 +8207,14 @@ msgstr "Torsi"
 #: scene/2d/physics/shape_cast_2d.cpp scene/3d/physics/collision_polygon_3d.cpp
 #: scene/3d/physics/shape_cast_3d.cpp scene/3d/physics/spring_arm_3d.cpp
 #: scene/resources/3d/shape_3d.cpp scene/resources/atlas_texture.cpp
-#: scene/theme/default_theme.cpp servers/physics_server_2d.cpp
-#: servers/physics_server_3d.cpp
+#: scene/theme/default_theme.cpp scene/theme/theme_db.cpp
+#: servers/physics_server_2d.cpp servers/physics_server_3d.cpp
 msgid "Margin"
 msgstr "Batas"
+
+#: scene/2d/physics/shape_cast_2d.cpp scene/3d/physics/shape_cast_3d.cpp
+msgid "Max Results"
+msgstr "Hasil Maks"
 
 #: scene/2d/physics/static_body_2d.cpp scene/3d/physics/static_body_3d.cpp
 msgid "Constant Linear Velocity"
@@ -8789,7 +8264,7 @@ msgstr "Pengaturan Editor"
 msgid "Show Bone Gizmo"
 msgstr "Tampilkan Gizmo Tulang"
 
-#: scene/2d/skeleton_2d.cpp
+#: scene/2d/skeleton_2d.cpp scene/3d/skeleton_3d.cpp
 msgid "Rest"
 msgstr "Istirahat"
 
@@ -8833,11 +8308,6 @@ msgstr "Mode Visibilitas Tabrakan"
 #: scene/2d/tile_map.cpp scene/2d/tile_map_layer.cpp
 msgid "Navigation Visibility Mode"
 msgstr "Mode Visibilitas Navigasi"
-
-#: scene/2d/tile_map_layer.cpp
-#, fuzzy
-msgid "Occlusion Enabled"
-msgstr "Tabrakan yang Dapat Dianimasikan"
 
 #: scene/2d/tile_map_layer.cpp scene/resources/2d/tile_set.cpp
 msgid "Y Sort Origin"
@@ -8947,8 +8417,11 @@ msgstr "Doppler"
 msgid "Tracking"
 msgstr "Pelacakan"
 
-#: scene/3d/bone_attachment_3d.cpp scene/3d/look_at_modifier_3d.cpp
-#: scene/3d/physics/physical_bone_3d.cpp scene/3d/spring_bone_collision_3d.cpp
+#: scene/3d/audio_stream_player_3d.cpp
+msgid "Clamp"
+msgstr ""
+
+#: scene/3d/bone_attachment_3d.cpp scene/3d/physics/physical_bone_3d.cpp
 msgid "Bone Name"
 msgstr "Nama Tulang"
 
@@ -9134,11 +8607,6 @@ msgid "Follow Camera Enabled"
 msgstr "Ikuti Kamera Diaktifkan"
 
 #: scene/3d/gpu_particles_collision_3d.cpp
-#, fuzzy
-msgid "Heightfield Mask"
-msgstr "Mask Cahaya"
-
-#: scene/3d/gpu_particles_collision_3d.cpp
 msgid "Directionality"
 msgstr "Arah"
 
@@ -9232,9 +8700,10 @@ msgid "Outline Render Priority"
 msgstr "Prioritas Render Garis Besar"
 
 #: scene/3d/label_3d.cpp scene/gui/button.cpp scene/gui/control.cpp
-#: scene/gui/dialogs.cpp scene/gui/label.cpp scene/gui/line_edit.cpp
-#: scene/gui/link_button.cpp scene/gui/rich_text_label.cpp
-#: scene/gui/text_edit.cpp scene/resources/3d/primitive_meshes.cpp
+#: scene/gui/dialogs.cpp scene/gui/foldable_container.cpp scene/gui/label.cpp
+#: scene/gui/line_edit.cpp scene/gui/link_button.cpp
+#: scene/gui/rich_text_label.cpp scene/gui/text_edit.cpp
+#: scene/resources/3d/primitive_meshes.cpp
 msgid "Text"
 msgstr "Teks"
 
@@ -9257,7 +8726,7 @@ msgstr "Ukuran Fonta"
 msgid "Horizontal Alignment"
 msgstr "Penjajaran Horisontal"
 
-#: scene/3d/label_3d.cpp scene/gui/label.cpp scene/gui/rich_text_label.cpp
+#: scene/3d/label_3d.cpp scene/gui/label.cpp
 #: scene/resources/3d/primitive_meshes.cpp
 msgid "Vertical Alignment"
 msgstr "Penjajaran Vertikal"
@@ -9272,16 +8741,16 @@ msgstr "Huruf Besar"
 msgid "Justification Flags"
 msgstr "Pembenaran Flags"
 
-#: scene/3d/label_3d.cpp scene/gui/button.cpp scene/gui/label.cpp
-#: scene/gui/line_edit.cpp scene/gui/link_button.cpp scene/gui/menu_bar.cpp
-#: scene/gui/rich_text_label.cpp scene/gui/text_edit.cpp
+#: scene/3d/label_3d.cpp scene/gui/button.cpp scene/gui/foldable_container.cpp
+#: scene/gui/label.cpp scene/gui/line_edit.cpp scene/gui/link_button.cpp
+#: scene/gui/menu_bar.cpp scene/gui/rich_text_label.cpp scene/gui/text_edit.cpp
 #: scene/resources/3d/primitive_meshes.cpp
 msgid "BiDi"
 msgstr "BiDi"
 
-#: scene/3d/label_3d.cpp scene/gui/button.cpp scene/gui/label.cpp
-#: scene/gui/line_edit.cpp scene/gui/link_button.cpp scene/gui/menu_bar.cpp
-#: scene/gui/rich_text_label.cpp scene/gui/text_edit.cpp
+#: scene/3d/label_3d.cpp scene/gui/button.cpp scene/gui/foldable_container.cpp
+#: scene/gui/label.cpp scene/gui/line_edit.cpp scene/gui/link_button.cpp
+#: scene/gui/menu_bar.cpp scene/gui/rich_text_label.cpp scene/gui/text_edit.cpp
 #: scene/resources/3d/primitive_meshes.cpp
 msgid "Text Direction"
 msgstr "Arah Teks"
@@ -9359,11 +8828,6 @@ msgstr "Kegelapan"
 msgid "Blur"
 msgstr "Blur"
 
-#: scene/3d/light_3d.cpp
-#, fuzzy
-msgid "Caster Mask"
-msgstr "Lapisan Maksimal"
-
 #: scene/3d/light_3d.cpp servers/rendering_server.cpp
 msgid "Directional Shadow"
 msgstr "Bayangan Arah"
@@ -9414,28 +8878,13 @@ msgstr "Atenuasi Sudut"
 
 #: scene/3d/lightmap_gi.cpp
 #, fuzzy
-msgid "Lightmap Textures"
+msgid "Light Texture"
 msgstr "Tekstur Ringan"
 
-#: scene/3d/lightmap_gi.cpp
-#, fuzzy
-msgid "Shadowmask Textures"
-msgstr "Tekstur Kanvas"
-
 #: scene/3d/lightmap_gi.cpp scene/main/scene_tree.cpp
-#: scene/resources/multimesh.cpp servers/rendering_server.cpp
+#: servers/rendering_server.cpp
 msgid "Quality"
 msgstr "Kualitas"
-
-#: scene/3d/lightmap_gi.cpp
-#, fuzzy
-msgid "Supersampling"
-msgstr "Oversampling"
-
-#: scene/3d/lightmap_gi.cpp
-#, fuzzy
-msgid "Supersampling Factor"
-msgstr "Faktor Specular"
 
 #: scene/3d/lightmap_gi.cpp
 msgid "Bounces"
@@ -9449,11 +8898,6 @@ msgstr "Energi Tidak Langsung"
 #: scene/3d/lightmap_gi.cpp
 msgid "Directional"
 msgstr "Terarah"
-
-#: scene/3d/lightmap_gi.cpp
-#, fuzzy
-msgid "Shadowmask Mode"
-msgstr "Mode Bayangan"
 
 #: scene/3d/lightmap_gi.cpp
 #, fuzzy
@@ -9516,120 +8960,6 @@ msgstr "Subdiv"
 #: scene/3d/lightmap_gi.cpp
 msgid "Light Data"
 msgstr "Data Cahaya"
-
-#: scene/3d/look_at_modifier_3d.cpp scene/3d/skeleton_ik_3d.cpp
-msgid "Target Node"
-msgstr "Target Node"
-
-#: scene/3d/look_at_modifier_3d.cpp
-#, fuzzy
-msgid "Forward Axis"
-msgstr "Teruskan Folder"
-
-#: scene/3d/look_at_modifier_3d.cpp
-#, fuzzy
-msgid "Primary Rotation Axis"
-msgstr "Rotasi Path"
-
-#: scene/3d/look_at_modifier_3d.cpp
-msgid "Use Secondary Rotation"
-msgstr ""
-
-#: scene/3d/look_at_modifier_3d.cpp
-#, fuzzy
-msgid "Origin Settings"
-msgstr "Pengaturan"
-
-#: scene/3d/look_at_modifier_3d.cpp scene/resources/gradient_texture.cpp
-#: servers/physics_server_2d.cpp servers/physics_server_3d.cpp
-msgid "From"
-msgstr "Dari"
-
-#: scene/3d/look_at_modifier_3d.cpp
-#, fuzzy
-msgid "External Node"
-msgstr "Eksternal"
-
-#: scene/3d/look_at_modifier_3d.cpp
-#, fuzzy
-msgid "Time Based Interpolation"
-msgstr "Interpolasi Ikon"
-
-#: scene/3d/look_at_modifier_3d.cpp
-#, fuzzy
-msgid "Transition Type"
-msgstr "Tipe Partisi"
-
-#: scene/3d/look_at_modifier_3d.cpp
-#, fuzzy
-msgid "Ease Type"
-msgstr "Tipe Dasar"
-
-#: scene/3d/look_at_modifier_3d.cpp
-#, fuzzy
-msgid "Angle Limitation"
-msgstr "Relaksasi Batas Sudut"
-
-#: scene/3d/look_at_modifier_3d.cpp
-#, fuzzy
-msgid "Use Angle Limitation"
-msgstr "Relaksasi Batas Sudut"
-
-#: scene/3d/look_at_modifier_3d.cpp
-msgid "Symmetry Limitation"
-msgstr ""
-
-#: scene/3d/look_at_modifier_3d.cpp
-#, fuzzy
-msgid "Primary Limit Angle"
-msgstr "Batas Linear Diaktifkan"
-
-#: scene/3d/look_at_modifier_3d.cpp
-#, fuzzy
-msgid "Primary Damp Threshold"
-msgstr "Ambang Dinamik Tinggi"
-
-#: scene/3d/look_at_modifier_3d.cpp
-msgid "Primary Positive Limit Angle"
-msgstr ""
-
-#: scene/3d/look_at_modifier_3d.cpp
-msgid "Primary Positive Damp Threshold"
-msgstr ""
-
-#: scene/3d/look_at_modifier_3d.cpp
-msgid "Primary Negative Limit Angle"
-msgstr ""
-
-#: scene/3d/look_at_modifier_3d.cpp
-msgid "Primary Negative Damp Threshold"
-msgstr ""
-
-#: scene/3d/look_at_modifier_3d.cpp
-#, fuzzy
-msgid "Secondary Limit Angle"
-msgstr "Warna Kisi-kisi Sekunder"
-
-#: scene/3d/look_at_modifier_3d.cpp
-#, fuzzy
-msgid "Secondary Damp Threshold"
-msgstr "Ambang Batas LOD Mesh"
-
-#: scene/3d/look_at_modifier_3d.cpp
-msgid "Secondary Positive Limit Angle"
-msgstr ""
-
-#: scene/3d/look_at_modifier_3d.cpp
-msgid "Secondary Positive Damp Threshold"
-msgstr ""
-
-#: scene/3d/look_at_modifier_3d.cpp
-msgid "Secondary Negative Limit Angle"
-msgstr ""
-
-#: scene/3d/look_at_modifier_3d.cpp
-msgid "Secondary Negative Damp Threshold"
-msgstr ""
 
 #: scene/3d/mesh_instance_3d.cpp
 msgid "Surface Material Override"
@@ -9733,12 +9063,6 @@ msgstr "Ray yang Dapat Diambil"
 #: scene/3d/physics/collision_object_3d.cpp
 msgid "Capture on Drag"
 msgstr "Tangkap saat Seret"
-
-#: scene/3d/physics/collision_polygon_3d.cpp
-#: scene/3d/physics/collision_shape_3d.cpp
-#, fuzzy
-msgid "Debug Fill"
-msgstr "Warna Debug"
 
 #: scene/3d/physics/joints/cone_twist_joint_3d.cpp
 #: scene/3d/physics/physical_bone_3d.cpp
@@ -10093,11 +9417,6 @@ msgid "Max Force"
 msgstr "Kekuatan Maks"
 
 #: scene/3d/reflection_probe.cpp
-#, fuzzy
-msgid "Blend Distance"
-msgstr "Jarak Min"
-
-#: scene/3d/reflection_probe.cpp
 msgid "Origin Offset"
 msgstr "Offset Asal"
 
@@ -10126,10 +9445,10 @@ msgstr "Sekitar"
 msgid "Color Energy"
 msgstr "Energi Warna"
 
-#: scene/3d/retarget_modifier_3d.cpp scene/resources/bone_map.cpp
-#: servers/xr/xr_positional_tracker.cpp
-msgid "Profile"
-msgstr "Profil"
+#: scene/3d/skeleton_3d.cpp
+#, fuzzy
+msgid "Bones"
+msgstr "Tulang"
 
 #: scene/3d/skeleton_3d.cpp
 msgid "Motion Scale"
@@ -10181,6 +9500,10 @@ msgstr "Gunakan Magnet"
 #: scene/3d/skeleton_ik_3d.cpp
 msgid "Magnet"
 msgstr "Magnet"
+
+#: scene/3d/skeleton_ik_3d.cpp
+msgid "Target Node"
+msgstr "Target Node"
 
 #: scene/3d/skeleton_ik_3d.cpp scene/resources/material.cpp
 msgid "Min Distance"
@@ -10245,20 +9568,6 @@ msgstr "Koefisien Redam"
 msgid "Drag Coefficient"
 msgstr "Koefisien Hambat"
 
-#: scene/3d/spring_bone_collision_3d.cpp scene/gui/graph_element.cpp
-msgid "Position Offset"
-msgstr "Offset Posisi"
-
-#: scene/3d/spring_bone_collision_3d.cpp
-#, fuzzy
-msgid "Rotation Offset"
-msgstr "Offset Posisi"
-
-#: scene/3d/spring_bone_collision_capsule_3d.cpp
-#: scene/3d/spring_bone_collision_sphere_3d.cpp
-msgid "Inside"
-msgstr ""
-
 #: scene/3d/velocity_tracker_3d.cpp
 msgid "Track Physics Step"
 msgstr "Lacak Langkah Fisik"
@@ -10308,11 +9617,6 @@ msgstr "Abaikan Pemusnahan Oklusi"
 #: scene/3d/visual_instance_3d.cpp servers/rendering_server.cpp
 msgid "Global Illumination"
 msgstr "Penerangan Global"
-
-#: scene/3d/visual_instance_3d.cpp
-#, fuzzy
-msgid "Lightmap Texel Scale"
-msgstr "Ukuran Lightmap Texel"
 
 #: scene/3d/visual_instance_3d.cpp
 msgid "Lightmap Scale"
@@ -10369,11 +9673,6 @@ msgstr "Skala Dunia"
 #: scene/animation/animation_blend_tree.cpp
 msgid "Play Mode"
 msgstr "Mode Putar"
-
-#: scene/animation/animation_blend_tree.cpp
-#, fuzzy
-msgid "Advance on Start"
-msgstr "Muat Otomatis Saat Memulai"
 
 #: scene/animation/animation_blend_tree.cpp
 #, fuzzy
@@ -10435,10 +9734,6 @@ msgstr "Penundaan"
 #: scene/animation/animation_blend_tree.cpp
 msgid "Random Delay"
 msgstr "Penundaan Acak"
-
-#: scene/animation/animation_blend_tree.cpp
-msgid "Explicit Elapse"
-msgstr ""
 
 #: scene/animation/animation_blend_tree.cpp
 #: scene/animation/animation_node_state_machine.cpp
@@ -10519,11 +9814,6 @@ msgstr "Gerakan Root"
 #: scene/animation/animation_mixer.cpp
 msgid "Track"
 msgstr "Trek"
-
-#: scene/animation/animation_mixer.cpp
-#, fuzzy
-msgid "Local"
-msgstr "Lokal"
 
 #: scene/animation/animation_mixer.cpp
 #, fuzzy
@@ -10658,6 +9948,11 @@ msgid "Action Mode"
 msgstr "Mode Aksi"
 
 #: scene/gui/base_button.cpp
+#, fuzzy
+msgid "Size Mode"
+msgstr "Mode File"
+
+#: scene/gui/base_button.cpp
 msgid "Keep Pressed Outside"
 msgstr "Terus Ditekan Di Luar"
 
@@ -10685,7 +9980,13 @@ msgstr "Izinkan Pemencetan Ulang"
 msgid "Text Behavior"
 msgstr "Perilaku Teks"
 
-#: scene/gui/button.cpp scene/gui/item_list.cpp scene/gui/label.cpp
+#: scene/gui/button.cpp
+#, fuzzy
+msgid "Expand Text"
+msgstr "Mode Perluas"
+
+#: scene/gui/button.cpp scene/gui/foldable_container.cpp
+#: scene/gui/item_list.cpp scene/gui/label.cpp scene/gui/link_button.cpp
 #: scene/resources/text_line.cpp scene/resources/text_paragraph.cpp
 msgid "Text Overrun Behavior"
 msgstr "Perilaku Overrun Teks"
@@ -10717,11 +10018,6 @@ msgstr "Gunakan Kiri Atas"
 #: scene/gui/code_edit.cpp
 msgid "Symbol Lookup on Click"
 msgstr "Pencarian Simbol pada Klik"
-
-#: scene/gui/code_edit.cpp
-#, fuzzy
-msgid "Symbol Tooltip on Hover"
-msgstr "Warna Simbol"
 
 #: scene/gui/code_edit.cpp
 msgid "Line Folding"
@@ -10799,7 +10095,7 @@ msgstr "Pencocokan Sorotan"
 msgid "Pairs"
 msgstr "Pasangan"
 
-#: scene/gui/color_picker.cpp
+#: scene/gui/color_button.cpp scene/gui/color_picker.cpp
 msgid "Edit Alpha"
 msgstr "Edit Alpha"
 
@@ -10915,11 +10211,6 @@ msgstr "Melokalkan Sistem Bilangan"
 msgid "Tooltip"
 msgstr "Tooltip"
 
-#: scene/gui/control.cpp
-#, fuzzy
-msgid "Auto Translate Mode"
-msgstr "Terjemahan Otomatis"
-
 #: scene/gui/control.cpp scene/theme/default_theme.cpp
 msgid "Focus"
 msgstr "Fokus"
@@ -11020,6 +10311,35 @@ msgstr "Penjajaran Tab"
 msgid "Reverse Fill"
 msgstr "Wajah Cull Terbalik"
 
+#: scene/gui/foldable_container.cpp scene/theme/default_theme.cpp
+msgid "Folded"
+msgstr "Dilipat"
+
+#: scene/gui/foldable_container.cpp
+#, fuzzy
+msgid "Title Alignment"
+msgstr "Penjajaran Tab"
+
+#: scene/gui/foldable_container.cpp
+#, fuzzy
+msgid "Title Position"
+msgstr "Posisi Awal"
+
+#: scene/gui/foldable_container.cpp
+#, fuzzy
+msgid "Foldable Group"
+msgstr "Panah Terlipat"
+
+#: scene/gui/foldable_container.cpp
+#, fuzzy
+msgid "Buttons"
+msgstr "Mask Tombol"
+
+#: scene/gui/foldable_container.cpp
+#, fuzzy
+msgid "Allow Folding All"
+msgstr "Warna Lipatan Kode"
+
 #: scene/gui/graph_edit.cpp
 msgid "Show Grid"
 msgstr ""
@@ -11049,11 +10369,6 @@ msgstr "Jalur Koneksi"
 #: scene/gui/graph_edit.cpp
 msgid "Curvature"
 msgstr "Kelengkungan"
-
-#: scene/gui/graph_edit.cpp
-#, fuzzy
-msgid "Connections"
-msgstr "Koneksi"
 
 #: scene/gui/graph_edit.cpp
 msgid "Zoom Min"
@@ -11101,18 +10416,21 @@ msgid "Show Arrange Button"
 msgstr "Tampilkan Tombol Skrip"
 
 #: scene/gui/graph_element.cpp
+msgid "Position Offset"
+msgstr "Offset Posisi"
+
+#: scene/gui/graph_element.cpp
 msgid "Draggable"
 msgstr "Dapat diseret"
+
+#: scene/gui/graph_element.cpp
+msgid "Selectable"
+msgstr "Dapat dipilih"
 
 #: scene/gui/graph_element.cpp scene/gui/option_button.cpp
 #: scene/theme/default_theme.cpp
 msgid "Selected"
 msgstr "Dipilih"
-
-#: scene/gui/graph_frame.cpp scene/gui/graph_node.cpp scene/main/window.cpp
-#: scene/resources/visual_shader.cpp
-msgid "Title"
-msgstr "Judul"
 
 #: scene/gui/graph_frame.cpp
 #, fuzzy
@@ -11164,17 +10482,8 @@ msgid "Max Text Lines"
 msgstr "Baris Teks Maks"
 
 #: scene/gui/item_list.cpp
-#, fuzzy
-msgid "Auto Width"
-msgstr "Lebar H"
-
-#: scene/gui/item_list.cpp
 msgid "Auto Height"
 msgstr "Tinggi Otomatis"
-
-#: scene/gui/item_list.cpp
-msgid "Wraparound Items"
-msgstr ""
 
 #: scene/gui/item_list.cpp scene/gui/menu_button.cpp
 #: scene/gui/option_button.cpp scene/gui/popup_menu.cpp
@@ -11208,11 +10517,6 @@ msgstr "Ukuran Ikon Tetap"
 #: scene/gui/label.cpp
 msgid "Label Settings"
 msgstr "Pengaturan Label"
-
-#: scene/gui/label.cpp
-#, fuzzy
-msgid "Paragraph Separator"
-msgstr "Pemisah"
 
 #: scene/gui/label.cpp scene/resources/text_line.cpp
 #: scene/resources/text_paragraph.cpp
@@ -11266,11 +10570,6 @@ msgstr "Perluas ke Panjang Teks"
 #: scene/gui/line_edit.cpp scene/gui/rich_text_label.cpp
 #: scene/gui/text_edit.cpp
 msgid "Context Menu Enabled"
-msgstr "Menu Konteks Diaktifkan"
-
-#: scene/gui/line_edit.cpp scene/gui/text_edit.cpp
-#, fuzzy
-msgid "Emoji Menu Enabled"
 msgstr "Menu Konteks Diaktifkan"
 
 #: scene/gui/line_edit.cpp scene/gui/text_edit.cpp
@@ -11355,6 +10654,11 @@ msgstr "Garis Bawah"
 #: scene/gui/link_button.cpp
 msgid "URI"
 msgstr "URI"
+
+#: scene/gui/link_button.cpp
+#, fuzzy
+msgid "Text Alignment"
+msgstr "Penjajaran Tab"
 
 #: scene/gui/menu_bar.cpp
 msgid "Start Index"
@@ -11470,6 +10774,7 @@ msgid "Border Color"
 msgstr "Warna Perbatasan"
 
 #: scene/gui/reference_rect.cpp scene/resources/style_box_flat.cpp
+#: scene/theme/theme_db.cpp
 msgid "Border Width"
 msgstr "Lebar Perbatasan"
 
@@ -11562,11 +10867,6 @@ msgid "Follow Focus"
 msgstr "Ikuti Fokus"
 
 #: scene/gui/scroll_container.cpp
-#, fuzzy
-msgid "Draw Focus Border"
-msgstr "Mode Mouse"
-
-#: scene/gui/scroll_container.cpp
 msgid "Horizontal Custom Step"
 msgstr "Langkah Kustom Horizontal"
 
@@ -11611,6 +10911,11 @@ msgid "Custom Arrow Step"
 msgstr "Langkah Panah Kustom"
 
 #: scene/gui/split_container.cpp
+#, fuzzy
+msgid "Dragging Enabled"
+msgstr "Melompat Diaktifkan"
+
+#: scene/gui/split_container.cpp
 msgid "Split Offset"
 msgstr "Pemisahan Posisi"
 
@@ -11619,42 +10924,22 @@ msgid "Collapsed"
 msgstr "Runtuh"
 
 #: scene/gui/split_container.cpp
-#, fuzzy
-msgid "Dragging Enabled"
-msgstr "Melompat Diaktifkan"
-
-#: scene/gui/split_container.cpp
 msgid "Dragger Visibility"
 msgstr "Visibilitas Penyeret"
 
 #: scene/gui/split_container.cpp
 #, fuzzy
-msgid "Drag Area"
-msgstr "Area Perampas"
+msgid "Collapse Mode"
+msgstr "Runtuh"
 
 #: scene/gui/split_container.cpp
 #, fuzzy
-msgid "Margin Begin"
-msgstr "Jarak Kiri"
-
-#: scene/gui/split_container.cpp
-#, fuzzy
-msgid "Margin End"
-msgstr "Batas"
-
-#: scene/gui/split_container.cpp
-#, fuzzy
-msgid "Highlight in Editor"
+msgid "Drag Area Highlight in Editor"
 msgstr "Menyoroti"
 
 #: scene/gui/subviewport_container.cpp
 msgid "Stretch Shrink"
 msgstr "Peregangan Menyusut"
-
-#: scene/gui/subviewport_container.cpp
-#, fuzzy
-msgid "Mouse Target"
-msgstr "Target Campuran"
 
 #: scene/gui/tab_bar.cpp scene/gui/tab_container.cpp
 msgid "Current Tab"
@@ -11728,11 +11013,6 @@ msgid "Tab Focus Mode"
 msgstr "Mode Mouse"
 
 #: scene/gui/text_edit.cpp
-#, fuzzy
-msgid "Empty Selection Clipboard Enabled"
-msgstr "Pilihan Diaktifkan"
-
-#: scene/gui/text_edit.cpp
 msgid "Wrap Mode"
 msgstr "Mode Bungkus"
 
@@ -11746,11 +11026,6 @@ msgstr "Melewati Akhir File"
 
 #: scene/gui/text_edit.cpp
 msgid "Fit Content Height"
-msgstr "Ketinggian Konten yang Sesuai"
-
-#: scene/gui/text_edit.cpp
-#, fuzzy
-msgid "Fit Content Width"
 msgstr "Ketinggian Konten yang Sesuai"
 
 #: scene/gui/text_edit.cpp
@@ -11802,7 +11077,7 @@ msgctxt "Ordinary"
 msgid "Normal"
 msgstr "Normal"
 
-#: scene/gui/texture_button.cpp
+#: scene/gui/texture_button.cpp scene/theme/default_theme.cpp
 msgid "Hover"
 msgstr "Melayang"
 
@@ -11893,11 +11168,6 @@ msgstr "Gulir Horizontal Diaktifkan"
 #: scene/gui/tree.cpp
 msgid "Scroll Vertical Enabled"
 msgstr "Gulir Vertikal Diaktifkan"
-
-#: scene/gui/tree.cpp
-#, fuzzy
-msgid "Auto Tooltip"
-msgstr "Tooltip"
 
 #: scene/gui/video_stream_player.cpp
 msgid "Audio Track"
@@ -12027,6 +11297,11 @@ msgstr "Pemesanan Kelompok"
 msgid "Messages"
 msgstr "Pesan"
 
+#: scene/main/node.cpp scene/main/scene_tree.cpp
+#, fuzzy
+msgid "Physics Interpolation"
+msgstr "Interpolasi Ikon"
+
 #: scene/main/node.cpp
 msgid "Auto Translate"
 msgstr "Terjemahan Otomatis"
@@ -12069,10 +11344,6 @@ msgid "Contact Color"
 msgstr "Warna Kontak"
 
 #: scene/main/scene_tree.cpp
-msgid "Paths"
-msgstr "Path"
-
-#: scene/main/scene_tree.cpp
 msgid "Geometry Color"
 msgstr "Warna Geometri"
 
@@ -12088,7 +11359,21 @@ msgstr "Kontak Maks Ditampilkan"
 msgid "Draw 2D Outlines"
 msgstr "Gambar Garis Besar 2D"
 
-#: scene/main/scene_tree.cpp servers/rendering_server.cpp
+#: scene/main/scene_tree.cpp scene/resources/style_box_flat.cpp
+#: servers/rendering_server.cpp
+msgid "Anti Aliasing"
+msgstr "Anti Alias"
+
+#: scene/main/scene_tree.cpp scene/main/viewport.cpp
+msgid "MSAA 2D"
+msgstr "MSAA 2D"
+
+#: scene/main/scene_tree.cpp scene/main/viewport.cpp
+#: servers/rendering/storage/render_scene_buffers.cpp
+msgid "MSAA 3D"
+msgstr "MSAA 3D"
+
+#: scene/main/scene_tree.cpp
 msgid "Viewport"
 msgstr "Viewport"
 
@@ -12096,10 +11381,9 @@ msgstr "Viewport"
 msgid "Transparent Background"
 msgstr "Latar Belakang Transparan"
 
-#: scene/main/scene_tree.cpp scene/resources/style_box_flat.cpp
-#: servers/rendering_server.cpp
-msgid "Anti Aliasing"
-msgstr "Anti Alias"
+#: scene/main/scene_tree.cpp
+msgid "HDR 2D"
+msgstr ""
 
 #: scene/main/scene_tree.cpp scene/main/viewport.cpp
 #: servers/rendering/storage/render_scene_buffers.cpp
@@ -12131,10 +11415,6 @@ msgstr "Perubahan LOD"
 msgid "Threshold Pixels"
 msgstr "Ambang Piksel"
 
-#: scene/main/scene_tree.cpp
-msgid "Snap"
-msgstr "Pengancingan"
-
 #: scene/main/scene_tree.cpp scene/main/viewport.cpp
 msgid "Snap 2D Transforms to Pixel"
 msgstr "Jepret Perubahan 2D ke Piksel"
@@ -12159,6 +11439,10 @@ msgstr "Bayangan Posisi"
 #: scene/main/scene_tree.cpp
 msgid "Atlas Size"
 msgstr "Ukuran Atlas"
+
+#: scene/main/scene_tree.cpp
+msgid "Atlas 16 Bits"
+msgstr "Atlas 16 Bit"
 
 #: scene/main/scene_tree.cpp
 msgid "Atlas Quadrant 0 Subdiv"
@@ -12204,11 +11488,6 @@ msgstr "Waktu Tunggu"
 msgid "Autostart"
 msgstr "Mulai Otomatis"
 
-#: scene/main/timer.cpp
-#, fuzzy
-msgid "Ignore Time Scale"
-msgstr "Skala Waktu"
-
 #: scene/main/viewport.cpp
 msgid "Viewport Path"
 msgstr "Path Viewport"
@@ -12236,15 +11515,6 @@ msgstr "BG transparan"
 #: scene/main/viewport.cpp
 msgid "Handle Input Locally"
 msgstr "Tangani Input Secara Lokal"
-
-#: scene/main/viewport.cpp servers/rendering_server.cpp
-msgid "MSAA 2D"
-msgstr "MSAA 2D"
-
-#: scene/main/viewport.cpp servers/rendering/storage/render_scene_buffers.cpp
-#: servers/rendering_server.cpp
-msgid "MSAA 3D"
-msgstr "MSAA 3D"
 
 #: scene/main/viewport.cpp
 msgid "Debug Draw"
@@ -12406,11 +11676,6 @@ msgstr "Mouse Melewati"
 
 #: scene/main/window.cpp
 #, fuzzy
-msgid "Exclude From Capture"
-msgstr "Kecualikan dari Terbaru"
-
-#: scene/main/window.cpp
-#, fuzzy
 msgid "Force Native"
 msgstr "Besaran Gaya"
 
@@ -12466,16 +11731,6 @@ msgstr "Navigasi 3D"
 #: scene/resources/2d/concave_polygon_shape_2d.cpp
 msgid "Segments"
 msgstr "Segmen"
-
-#: scene/resources/2d/navigation_polygon.cpp scene/resources/material.cpp
-#: scene/resources/navigation_mesh.cpp
-msgid "Sampling"
-msgstr "Contoh"
-
-#: scene/resources/2d/navigation_polygon.cpp
-#: scene/resources/navigation_mesh.cpp
-msgid "Partition Type"
-msgstr "Tipe Partisi"
 
 #: scene/resources/2d/navigation_polygon.cpp
 #: scene/resources/navigation_mesh.cpp
@@ -12682,6 +11937,26 @@ msgid "Custom Data"
 msgstr "Data Kustom"
 
 #: scene/resources/2d/tile_set.cpp
+#, fuzzy
+msgid "Tile Proxies"
+msgstr "Ukuran Tile"
+
+#: scene/resources/2d/tile_set.cpp
+#, fuzzy
+msgid "Source Level"
+msgstr "Tingkat Atas"
+
+#: scene/resources/2d/tile_set.cpp
+#, fuzzy
+msgid "Coords Level"
+msgstr "Level Kompresi"
+
+#: scene/resources/2d/tile_set.cpp
+#, fuzzy
+msgid "Alternative Level"
+msgstr "ID Alternatif"
+
+#: scene/resources/2d/tile_set.cpp
 msgid "Tile Shape"
 msgstr "Bentuk Tile"
 
@@ -12814,11 +12089,6 @@ msgstr "Item"
 #: scene/resources/3d/mesh_library.cpp
 msgid "Mesh Transform"
 msgstr "Mesh Transform"
-
-#: scene/resources/3d/mesh_library.cpp
-#, fuzzy
-msgid "Mesh Cast Shadow"
-msgstr "Keluarkan Bayangan"
 
 #: scene/resources/3d/mesh_library.cpp
 msgid "Navigation Mesh Transform"
@@ -13024,6 +12294,10 @@ msgstr "Tingkat Campuran"
 msgid "Stereo"
 msgstr "Stereo"
 
+#: scene/resources/bone_map.cpp servers/xr/xr_positional_tracker.cpp
+msgid "Profile"
+msgstr "Profil"
+
 #: scene/resources/bone_map.cpp
 msgid "Bonemap"
 msgstr "Peta tulang"
@@ -13174,16 +12448,6 @@ msgstr "Efek Kustom"
 #: scene/resources/compressed_texture.cpp
 msgid "Load Path"
 msgstr "Jalur Muat"
-
-#: scene/resources/curve.cpp
-#, fuzzy
-msgid "Min Domain"
-msgstr "Keyakinan Pelacakan"
-
-#: scene/resources/curve.cpp
-#, fuzzy
-msgid "Max Domain"
-msgstr "Kolom Maks"
 
 #: scene/resources/curve.cpp
 msgid "Bake Resolution"
@@ -13480,7 +12744,7 @@ msgstr "Penyesuaian"
 msgid "Brightness"
 msgstr "Kecerahan"
 
-#: scene/resources/environment.cpp
+#: scene/resources/environment.cpp scene/theme/theme_db.cpp
 msgid "Contrast"
 msgstr "Kontras"
 
@@ -13555,13 +12819,13 @@ msgstr "Gunakan HDR"
 
 #: scene/resources/gradient_texture.cpp servers/physics_server_2d.cpp
 #: servers/physics_server_3d.cpp
+msgid "From"
+msgstr "Dari"
+
+#: scene/resources/gradient_texture.cpp servers/physics_server_2d.cpp
+#: servers/physics_server_3d.cpp
 msgid "To"
 msgstr "Ke"
-
-#: scene/resources/label_settings.cpp
-#, fuzzy
-msgid "Paragraph Spacing"
-msgstr "Jarak Tambahan"
 
 #: scene/resources/material.cpp
 msgid "Next Pass"
@@ -13731,6 +12995,10 @@ msgstr "Dunia Tiga Dimensi"
 msgid "UV2"
 msgstr "UV2"
 
+#: scene/resources/material.cpp scene/resources/navigation_mesh.cpp
+msgid "Sampling"
+msgstr "Contoh"
+
 #: scene/resources/material.cpp
 msgid "Shadows"
 msgstr "Bayangan"
@@ -13834,6 +13102,10 @@ msgstr "Jumlah Instance"
 #: scene/resources/multimesh.cpp
 msgid "Visible Instance Count"
 msgstr "Jumlah Instance Terlihat"
+
+#: scene/resources/navigation_mesh.cpp
+msgid "Partition Type"
+msgstr "Tipe Partisi"
 
 #: scene/resources/navigation_mesh.cpp
 msgid "Source Group Name"
@@ -14081,11 +13353,6 @@ msgid "Amount at Collision"
 msgstr "Jumlah saat Tabrakan"
 
 #: scene/resources/particle_process_material.cpp
-#, fuzzy
-msgid "Amount at Start"
-msgstr "Jumlah di Akhir"
-
-#: scene/resources/particle_process_material.cpp
 msgid "Keep Velocity"
 msgstr "Pertahankan Kecepatan"
 
@@ -14230,6 +13497,16 @@ msgid "Modes"
 msgstr "Mode"
 
 #: scene/resources/visual_shader.cpp
+#, fuzzy
+msgid "Varyings"
+msgstr "Peringatan"
+
+#: scene/resources/visual_shader.cpp
+#, fuzzy
+msgid "Preview Params"
+msgstr "Pratinjau"
+
+#: scene/resources/visual_shader.cpp
 msgid "Input Name"
 msgstr "Nama Masukan"
 
@@ -14292,11 +13569,6 @@ msgid "Default Value"
 msgstr "Nilai Bawaan"
 
 #: scene/resources/visual_shader_nodes.cpp
-#, fuzzy
-msgid "Enum Names"
-msgstr "Nama Unik"
-
-#: scene/resources/visual_shader_nodes.cpp
 msgid "Color Default"
 msgstr "Warna Bawaan"
 
@@ -14348,7 +13620,7 @@ msgstr "Warna Hover Font yang Ditekan"
 msgid "Font Disabled Color"
 msgstr "Warna Font Nonaktif"
 
-#: scene/theme/default_theme.cpp
+#: scene/theme/default_theme.cpp scene/theme/theme_db.cpp
 msgid "Font Outline Color"
 msgstr "Warna Outline Font"
 
@@ -14545,10 +13817,6 @@ msgid "Can Fold"
 msgstr "Bisa Dilipat"
 
 #: scene/theme/default_theme.cpp
-msgid "Folded"
-msgstr "Dilipat"
-
-#: scene/theme/default_theme.cpp
 #, fuzzy
 msgid "Can Fold Code Region"
 msgstr "Wilayah Warna"
@@ -14561,11 +13829,6 @@ msgstr "Wilayah Warna"
 #: scene/theme/default_theme.cpp
 msgid "Folded EOL Icon"
 msgstr "Ikon EOL Terlipat"
-
-#: scene/theme/default_theme.cpp
-#, fuzzy
-msgid "Completion Color BG"
-msgstr "Warna Font Penyelesaian"
 
 #: scene/theme/default_theme.cpp
 msgid "Completion Lines"
@@ -14855,16 +14118,6 @@ msgid "Buttons Separation"
 msgstr "Pemisahan Tombol"
 
 #: scene/theme/default_theme.cpp
-#, fuzzy
-msgid "Load"
-msgstr "Jalur Muat"
-
-#: scene/theme/default_theme.cpp
-#, fuzzy
-msgid "Save"
-msgstr "Di Simpan"
-
-#: scene/theme/default_theme.cpp
 msgid "Parent Folder"
 msgstr "Folder Induk"
 
@@ -14998,15 +14251,6 @@ msgid "Port H Offset"
 msgstr "Port Offset"
 
 #: scene/theme/default_theme.cpp
-msgid "Hovered"
-msgstr "Melayang"
-
-#: scene/theme/default_theme.cpp
-#, fuzzy
-msgid "Hovered Dimmed"
-msgstr "Melayang"
-
-#: scene/theme/default_theme.cpp
 msgid "Selected Focus"
 msgstr "Fokus yang Dipilih"
 
@@ -15017,11 +14261,6 @@ msgstr "Kursor"
 #: scene/theme/default_theme.cpp
 msgid "Cursor Unfocused"
 msgstr "Kursor Tidak Fokus"
-
-#: scene/theme/default_theme.cpp
-#, fuzzy
-msgid "Button Hover"
-msgstr "Tombol Judul Hover"
 
 #: scene/theme/default_theme.cpp
 msgid "Title Button Normal"
@@ -15076,15 +14315,6 @@ msgstr "Font Tombol Judul"
 #: scene/theme/default_theme.cpp
 msgid "Title Button Color"
 msgstr "Warna Tombol Judul"
-
-#: scene/theme/default_theme.cpp
-msgid "Font Hovered Color"
-msgstr "Color Font Melayang"
-
-#: scene/theme/default_theme.cpp
-#, fuzzy
-msgid "Font Hovered Dimmed Color"
-msgstr "Color Font Melayang"
 
 #: scene/theme/default_theme.cpp
 msgid "Guide Color"
@@ -15199,19 +14429,12 @@ msgid "Icon Margin"
 msgstr "Ikon Margin"
 
 #: scene/theme/default_theme.cpp
-#, fuzzy
-msgid "Font Hovered Selected Color"
-msgstr "Warna Font yang Dipilih"
+msgid "Font Hovered Color"
+msgstr "Color Font Melayang"
 
 #: scene/theme/default_theme.cpp
-#, fuzzy
-msgid "Hovered Selected"
-msgstr "Tab Dipilih"
-
-#: scene/theme/default_theme.cpp
-#, fuzzy
-msgid "Hovered Selected Focus"
-msgstr "Fokus yang Dipilih"
+msgid "Hovered"
+msgstr "Melayang"
 
 #: scene/theme/default_theme.cpp
 msgid "Tab Selected"
@@ -15267,6 +14490,14 @@ msgid "Button Highlight"
 msgstr "Sorotan Tombol"
 
 #: scene/theme/default_theme.cpp
+msgid "BG"
+msgstr "BG"
+
+#: scene/theme/default_theme.cpp
+msgid "Overbright Indicator"
+msgstr "Indikator Terlalu Terang"
+
+#: scene/theme/default_theme.cpp
 msgid "SV Width"
 msgstr "Lebar SV"
 
@@ -15275,12 +14506,22 @@ msgid "SV Height"
 msgstr "Tinggi SV"
 
 #: scene/theme/default_theme.cpp
+msgid "Label Width"
+msgstr "Lebar Label"
+
+#: scene/theme/default_theme.cpp
 msgid "H Width"
 msgstr "Lebar H"
 
 #: scene/theme/default_theme.cpp
-msgid "Label Width"
-msgstr "Lebar Label"
+#, fuzzy
+msgid "Sample Height"
+msgstr "Tinggi SV"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Preset Size"
+msgstr "Ukuran Halaman"
 
 #: scene/theme/default_theme.cpp
 msgid "Center Slider Grabbers"
@@ -15288,16 +14529,21 @@ msgstr "Pengait Pusat Slider"
 
 #: scene/theme/default_theme.cpp
 #, fuzzy
-msgid "Menu Option"
-msgstr "Operasi"
+msgid "Colorize Sliders"
+msgstr "Wilayah Warna"
+
+#: scene/theme/default_theme.cpp
+msgid "Expanded Arrow"
+msgstr "Panah yang Diperluas"
 
 #: scene/theme/default_theme.cpp
 msgid "Folded Arrow"
 msgstr "Panah Terlipat"
 
 #: scene/theme/default_theme.cpp
-msgid "Expanded Arrow"
-msgstr "Panah yang Diperluas"
+#, fuzzy
+msgid "Folded Arrow Mirrored"
+msgstr "Panah Terlipat"
 
 #: scene/theme/default_theme.cpp
 msgid "Screen Picker"
@@ -15329,10 +14575,6 @@ msgid "Sample Revert"
 msgstr "Contoh Acak"
 
 #: scene/theme/default_theme.cpp
-msgid "Overbright Indicator"
-msgstr "Indikator Terlalu Terang"
-
-#: scene/theme/default_theme.cpp
 msgid "Bar Arrow"
 msgstr "Panah Batang"
 
@@ -15346,20 +14588,18 @@ msgid "Picker Cursor BG"
 msgstr "Kursor Pemilih"
 
 #: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Hex Icon"
+msgstr "Ikon"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Hex Code Icon"
+msgstr "Kode Font"
+
+#: scene/theme/default_theme.cpp
 msgid "Color Hue"
 msgstr "Warna Hue"
-
-#: scene/theme/default_theme.cpp
-msgid "BG"
-msgstr "BG"
-
-#: scene/theme/default_theme.cpp
-msgid "Preset FG"
-msgstr "Prasetel FG"
-
-#: scene/theme/default_theme.cpp
-msgid "Preset BG"
-msgstr "Presetel BG"
 
 #: scene/theme/default_theme.cpp
 msgid "Normal Font"
@@ -15438,6 +14678,31 @@ msgid "V Grabber"
 msgstr "Pengait V"
 
 #: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "H Split Bar Background"
+msgstr "Latar Belakang Bar Tab"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "V Split Bar Background"
+msgstr "Latar Belakang Bar Tab"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Split Bar Background"
+msgstr "Latar Belakang Bar Tab"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Grabber Icon Normal"
+msgstr "Area Perampas"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Grabber Icon Pressed"
+msgstr "Perampas Ditekan"
+
+#: scene/theme/default_theme.cpp
 msgid "Margin Left"
 msgstr "Jarak Kiri"
 
@@ -15463,8 +14728,18 @@ msgstr "Otomatis Tersembunyi"
 
 #: scene/theme/default_theme.cpp
 #, fuzzy
-msgid "Split Bar Background"
-msgstr "Latar Belakang Bar Tab"
+msgid "Autohide Split Bar"
+msgstr "Otomatis Tersembunyi"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Draw Grabber Icon"
+msgstr "Pengait H"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Draw Split Bar"
+msgstr "Gambarkan Spasi"
 
 #: scene/theme/default_theme.cpp
 #, fuzzy
@@ -15527,11 +14802,6 @@ msgstr "Warna Font Penyelesaian"
 
 #: scene/theme/default_theme.cpp
 #, fuzzy
-msgid "Connection Hover Thickness"
-msgstr "Warna Font Penyelesaian"
-
-#: scene/theme/default_theme.cpp
-#, fuzzy
 msgid "Connection Valid Target Tint Color"
 msgstr "Warna Koneksi Tautan Nonaktif"
 
@@ -15539,6 +14809,95 @@ msgstr "Warna Koneksi Tautan Nonaktif"
 #, fuzzy
 msgid "Connection Rim Color"
 msgstr "Color Koneksi Tepi"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Title Panel"
+msgstr "Font Judul"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Title Hover Panel"
+msgstr "Tombol Judul Hover"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Title Collapsed Panel"
+msgstr "Runtuh"
+
+#: scene/theme/default_theme.cpp
+msgid "Title Collapsed Hover Panel"
+msgstr ""
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Button Normal Style"
+msgstr "Tombol Judul Normal"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Button Hovered Style"
+msgstr "Tombol Judul Hover"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Button Pressed Style"
+msgstr "Tombol Ditekan"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Button Disabled Style"
+msgstr "Ikon Warna yang Dinonaktifkan"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Hover Font Color"
+msgstr "Warna Horizon"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Collapsed Font Color"
+msgstr "Warna Font Penyelesaian"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Button Icon Normal"
+msgstr "Tombol Judul Normal"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Button Icon Hovered"
+msgstr "Tombol Judul Hover"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Button Icon Pressed"
+msgstr "Tombol Ditekan"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Button Icon Disabled"
+msgstr "Tidak Dicentang Dinonaktifkan"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Arrow Normal Color"
+msgstr "Ikon Warna Normal"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Arrow Hover Color"
+msgstr "Warna Hover Font"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Arrow Collapsed Color"
+msgstr "Panah Runtuh"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Expanded Arrow Mirrored"
+msgstr "Panah yang Diperluas"
 
 #: scene/theme/default_theme.cpp
 msgid "Port Hotzone Inner Extent"
@@ -15555,10 +14914,6 @@ msgstr "Node"
 #: scene/theme/theme_db.cpp
 msgid "Default Theme Scale"
 msgstr "Skala Tema Bawaan"
-
-#: scene/theme/theme_db.cpp
-msgid "Custom"
-msgstr "Kustom"
 
 #: scene/theme/theme_db.cpp
 msgid "Custom Font"
@@ -15585,12 +14940,87 @@ msgid "Default Font Generate Mipmaps"
 msgstr "Hasilkan Mipmaps Font Bawaan"
 
 #: scene/theme/theme_db.cpp
-msgid "LCD Subpixel Layout"
-msgstr "Tata Letak Subpiksel LCD"
+msgid "Custom"
+msgstr "Kustom"
 
 #: scene/theme/theme_db.cpp
 msgid "Fallback values"
 msgstr "Nilai pengganti"
+
+#: scene/theme/theme_db.cpp
+#, fuzzy
+msgid "Base Color"
+msgstr "Warna Tipe Basis"
+
+#: scene/theme/theme_db.cpp
+#, fuzzy
+msgid "Accent Color"
+msgstr "Warna Judul"
+
+#: scene/theme/theme_db.cpp
+#, fuzzy
+msgid "Font Color Override"
+msgstr "Penimpaan Material"
+
+#: scene/theme/theme_db.cpp
+#, fuzzy
+msgid "Custom Font Color"
+msgstr "Warna Kustom"
+
+#: scene/theme/theme_db.cpp
+#, fuzzy
+msgid "Normal Contrast"
+msgstr "Font Normal"
+
+#: scene/theme/theme_db.cpp
+#, fuzzy
+msgid "Hover Contrast"
+msgstr "Kontras"
+
+#: scene/theme/theme_db.cpp
+#, fuzzy
+msgid "Pressed Contrast"
+msgstr "Pertahankan Kontrol"
+
+#: scene/theme/theme_db.cpp
+#, fuzzy
+msgid "BG Contrast"
+msgstr "Kontras"
+
+#: scene/theme/theme_db.cpp
+#, fuzzy
+msgid "Padding"
+msgstr "Padding UV2"
+
+#: scene/theme/theme_db.cpp
+#, fuzzy
+msgid "Font Outline Size"
+msgstr "Ukuran Garis tepi Tulang"
+
+#: scene/theme/theme_db.cpp
+#, fuzzy
+msgid "Font Embolden"
+msgstr "Memberanikan"
+
+#: scene/theme/theme_db.cpp
+#, fuzzy
+msgid "Font Spacing Glyph"
+msgstr "Jarak Baris"
+
+#: scene/theme/theme_db.cpp
+#, fuzzy
+msgid "Font Spacing Space"
+msgstr "Jarak Baris"
+
+#: scene/theme/theme_db.cpp
+#, fuzzy
+msgid "Font Spacing Top"
+msgstr "Jarak Baris"
+
+#: scene/theme/theme_db.cpp
+#, fuzzy
+msgid "Font Spacing Bottom"
+msgstr "Jarak Bawah"
 
 #: servers/audio/audio_stream.cpp
 msgid "Playback Mode"
@@ -15776,11 +15206,6 @@ msgstr "Penarikan Waktu (ms)"
 msgid "Surround"
 msgstr "Sekitar"
 
-#: servers/audio/effects/audio_stream_generator.cpp
-#, fuzzy
-msgid "Mix Rate Mode"
-msgstr "Tingkat Campuran"
-
 #: servers/audio_server.cpp
 msgid "Enable Input"
 msgstr "Aktifkan Masukan"
@@ -15885,16 +15310,6 @@ msgstr "Default"
 #: servers/navigation_server_3d.cpp
 msgid "Merge Rasterizer Cell Scale"
 msgstr ""
-
-#: servers/navigation_server_3d.cpp
-#, fuzzy
-msgid "World"
-msgstr "Dunia 3D"
-
-#: servers/navigation_server_3d.cpp
-#, fuzzy
-msgid "Map Use Async Iterations"
-msgstr "Iterasi Maks"
 
 #: servers/navigation_server_3d.cpp
 msgid "Avoidance Use Multiple Threads"
@@ -16359,11 +15774,6 @@ msgid "Compress With GPU"
 msgstr "Kompres ke"
 
 #: servers/rendering_server.cpp
-#, fuzzy
-msgid "Cache GPU Compressor"
-msgstr "Kompresi WebP"
-
-#: servers/rendering_server.cpp
 msgid "Lossless Compression"
 msgstr "Kompresi Tanpa Hilang"
 
@@ -16396,25 +15806,12 @@ msgid "Soft Shadow Filter Quality"
 msgstr "Kualitas Filter Bayangan Lembut"
 
 #: servers/rendering_server.cpp
-msgid "Atlas 16 Bits"
-msgstr "Atlas 16 Bit"
-
-#: servers/rendering_server.cpp
 msgid "Shadow Atlas"
 msgstr "Atlas Bayangan"
 
 #: servers/rendering_server.cpp
-#, fuzzy
-msgid "Batching"
-msgstr "Margin Patch"
-
-#: servers/rendering_server.cpp
 msgid "Item Buffer Size"
 msgstr "Ukuran Buffer Item"
-
-#: servers/rendering_server.cpp
-msgid "Uniform Set Cache Size"
-msgstr ""
 
 #: servers/rendering_server.cpp
 msgid "Shader Compiler"
@@ -16539,10 +15936,6 @@ msgstr "Meredupkan Dari"
 #: servers/rendering_server.cpp
 msgid "Fadeout To"
 msgstr "Meredupkan To"
-
-#: servers/rendering_server.cpp
-msgid "HDR 2D"
-msgstr ""
 
 #: servers/rendering_server.cpp
 msgid "Screen Space Roughness Limiter"
@@ -16736,18 +16129,9 @@ msgstr "Radius Cincin"
 msgid "VRS Strength"
 msgstr "Kekuatan"
 
-#: servers/xr/xr_vrs.cpp
-#, fuzzy
-msgid "VRS Render Region"
-msgstr "Proses membuat gambar"
-
 #: servers/xr_server.cpp
 msgid "World Origin"
 msgstr "Pangkal Dunia"
-
-#: servers/xr_server.cpp
-msgid "Camera Locked to Origin"
-msgstr ""
 
 #: servers/xr_server.cpp
 msgid "Primary Interface"

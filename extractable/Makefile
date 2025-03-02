@@ -9,7 +9,7 @@ LANGS = $(POFILES:%.po=%)
 all: update merge
 
 update:
-	@cd ../godot; python3 ../scripts/extract_extractable.py
+	@cd ../blazium; python3 ../scripts/extract_extractable.py
 
 merge:
 	@for po in $(POFILES); do \
@@ -28,7 +28,7 @@ check:
 # First number can be 0, second and third numbers are only present if non-zero.
 # Also export the POT file, as it's necessary for POT creation in the editor.
 export:
-	@dest=../godot/editor/translations/extractable; \
+	@dest=../blazium/editor/translations/extractable; \
 	mkdir -p $$dest; \
 	cp -f $(POTFILE) $$dest; \
 	echo $(POTFILE); \
