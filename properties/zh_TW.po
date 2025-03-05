@@ -78,10 +78,10 @@ msgstr "設置"
 #: core/config/project_settings.cpp core/io/resource.cpp
 #: editor/animation_track_editor.cpp
 #: editor/plugins/tiles/tile_set_atlas_source_editor.cpp
-#: platform/android/export/export_plugin.cpp scene/2d/physics/area_2d.cpp
-#: scene/3d/physics/area_3d.cpp scene/3d/skeleton_3d.cpp
-#: scene/resources/3d/mesh_library.cpp scene/resources/3d/skin.cpp
-#: servers/xr/xr_pose.cpp servers/xr/xr_tracker.cpp
+#: modules/sqlite/src/godot_sqlite.h platform/android/export/export_plugin.cpp
+#: scene/2d/physics/area_2d.cpp scene/3d/physics/area_3d.cpp
+#: scene/3d/skeleton_3d.cpp scene/resources/3d/mesh_library.cpp
+#: scene/resources/3d/skin.cpp servers/xr/xr_pose.cpp servers/xr/xr_tracker.cpp
 msgid "Name"
 msgstr "Name"
 
@@ -89,13 +89,17 @@ msgstr "Name"
 msgid "Name Localized"
 msgstr "名稱在地化"
 
-#: core/config/project_settings.cpp platform/web/export/export_plugin.cpp
+#: core/config/project_settings.cpp
+#: modules/blazium_sdk/master_server/master_server_client.h
+#: platform/web/export/export_plugin.cpp
 #: platform/windows/export/export_plugin.cpp scene/main/node.cpp
 #: scene/resources/visual_shader.cpp servers/xr/xr_tracker.cpp
 msgid "Description"
 msgstr "說明"
 
-#: core/config/project_settings.cpp platform/android/export/export_plugin.cpp
+#: core/config/project_settings.cpp
+#: modules/blazium_sdk/master_server/master_server_client.h
+#: platform/android/export/export_plugin.cpp
 #: platform/ios/export/export_plugin.cpp
 #: platform/macos/export/export_plugin.cpp
 msgid "Version"
@@ -154,6 +158,23 @@ msgstr "自動接受退出"
 #: core/config/project_settings.cpp scene/main/scene_tree.cpp
 msgid "Quit on Go Back"
 msgstr "返回時退出"
+
+#: core/config/project_settings.cpp editor/editor_settings.cpp
+#: editor/register_editor_types.cpp platform/android/export/export.cpp
+#: platform/ios/export/export.cpp platform/macos/export/export_plugin.cpp
+#: platform/web/export/export.cpp
+msgid "Export"
+msgstr "匯出"
+
+#: core/config/project_settings.cpp
+#, fuzzy
+msgid "Global Include Filter"
+msgstr "全域照明"
+
+#: core/config/project_settings.cpp
+#, fuzzy
+msgid "Global Exclude Filter"
+msgstr "預設紋理濾鏡"
 
 #: core/config/project_settings.cpp main/main.cpp
 #: platform/macos/export/export_plugin.cpp
@@ -398,7 +419,8 @@ msgstr "縮放模式"
 
 #: core/config/project_settings.cpp editor/editor_settings.cpp
 #: editor/export/editor_export_platform_pc.cpp main/main.cpp
-#: modules/gdscript/gdscript.cpp platform/android/export/export_plugin.cpp
+#: modules/blazium_sdk/env.cpp modules/gdscript/gdscript.cpp
+#: platform/android/export/export_plugin.cpp
 #: platform/ios/export/export_plugin.cpp
 #: platform/macos/export/export_plugin.cpp
 #: platform/web/export/export_plugin.cpp scene/2d/navigation_agent_2d.cpp
@@ -979,8 +1001,11 @@ msgstr "啟用阻塞模式"
 msgid "Read Chunk Size"
 msgstr "讀取區塊大小"
 
-#: core/io/json.cpp scene/2d/polygon_2d.cpp scene/3d/lightmap_gi.cpp
-#: scene/3d/voxel_gi.cpp
+#: core/io/json.cpp modules/blazium_sdk/discord/discord_embedded_app_response.h
+#: modules/blazium_sdk/lobby/lobby_info.cpp
+#: modules/blazium_sdk/lobby/lobby_peer.cpp
+#: modules/blazium_sdk/youtube/youtube_playables_response.h
+#: scene/2d/polygon_2d.cpp scene/3d/lightmap_gi.cpp scene/3d/voxel_gi.cpp
 msgid "Data"
 msgstr "資料"
 
@@ -1009,6 +1034,10 @@ msgid "Local to Scene"
 msgstr "本地到場景"
 
 #: core/io/resource.cpp editor/import/3d/resource_importer_scene.cpp
+#: modules/blazium_sdk/lobby/lobby_client.cpp
+#: modules/blazium_sdk/lobby/scripted_lobby_client.cpp
+#: modules/blazium_sdk/login/login_client.cpp
+#: modules/blazium_sdk/master_server/master_server_client.h
 #: servers/navigation/navigation_path_query_result_2d.cpp
 #: servers/navigation/navigation_path_query_result_3d.cpp
 msgid "Path"
@@ -1219,9 +1248,10 @@ msgid "Args"
 msgstr ""
 
 #: editor/animation_track_editor.cpp editor/editor_settings.cpp
-#: modules/noise/fastnoise_lite.cpp platform/web/export/export_plugin.cpp
-#: scene/3d/physics/physical_bone_3d.cpp scene/gui/text_edit.cpp
-#: scene/resources/visual_shader_nodes.cpp servers/xr/xr_tracker.cpp
+#: modules/noise/fastnoise_lite.cpp modules/sqlite/src/godot_sqlite.h
+#: platform/web/export/export_plugin.cpp scene/3d/physics/physical_bone_3d.cpp
+#: scene/gui/text_edit.cpp scene/resources/visual_shader_nodes.cpp
+#: servers/xr/xr_tracker.cpp
 msgid "Type"
 msgstr "型別"
 
@@ -1653,7 +1683,9 @@ msgstr "安全儲存備份後重命名"
 msgid "File Server"
 msgstr "檔案伺服器"
 
-#: editor/editor_settings.cpp platform/linuxbsd/export/export_plugin.cpp
+#: editor/editor_settings.cpp
+#: modules/blazium_sdk/master_server/master_server_client.h
+#: platform/linuxbsd/export/export_plugin.cpp
 #: platform/macos/export/export_plugin.cpp
 #: platform/windows/export/export_plugin.cpp scene/theme/default_theme.cpp
 msgid "Port"
@@ -2401,6 +2433,14 @@ msgid "Missing"
 msgstr "遺失"
 
 #: editor/editor_settings.cpp
+#: modules/blazium_sdk/discord/discord_embedded_app_response.h
+#: modules/blazium_sdk/lobby/lobby_response.h
+#: modules/blazium_sdk/lobby/scripted_lobby_response.h
+#: modules/blazium_sdk/login/login_client.h
+#: modules/blazium_sdk/master_server/master_server_client.h
+#: modules/blazium_sdk/pogr/pogr_client.h
+#: modules/blazium_sdk/youtube/youtube_playables_response.h
+#: modules/sqlite/src/godot_sqlite.h
 msgid "Error"
 msgstr "錯誤"
 
@@ -2507,12 +2547,6 @@ msgstr "視覺著色器"
 msgid "Port Preview Size"
 msgstr "埠預覽大小"
 
-#: editor/editor_settings.cpp editor/register_editor_types.cpp
-#: platform/android/export/export.cpp platform/ios/export/export.cpp
-#: platform/macos/export/export_plugin.cpp platform/web/export/export.cpp
-msgid "Export"
-msgstr "匯出"
-
 #: editor/editor_settings.cpp
 msgid "SSH"
 msgstr "SSH"
@@ -2568,7 +2602,8 @@ msgstr "首選全域選單"
 msgid "HTTP Proxy"
 msgstr "HTTP 代理"
 
-#: editor/editor_settings.cpp platform/linuxbsd/export/export_plugin.cpp
+#: editor/editor_settings.cpp modules/blazium_sdk/lobby/lobby_info.cpp
+#: platform/linuxbsd/export/export_plugin.cpp
 #: platform/macos/export/export_plugin.cpp
 #: platform/windows/export/export_plugin.cpp
 msgid "Host"
@@ -3643,6 +3678,7 @@ msgid "Scaling Mode"
 msgstr "縮放 3D 模式"
 
 #: editor/import/resource_importer_csv_translation.cpp
+#: modules/blazium_sdk/csv/resource_importer_csv.cpp
 msgid "Delimiter"
 msgstr "分隔符號"
 
@@ -3662,6 +3698,7 @@ msgid "Columns"
 msgstr "列數"
 
 #: editor/import/resource_importer_imagefont.cpp
+#: modules/blazium_sdk/csv/resource_csv.h
 msgid "Rows"
 msgstr "行數"
 
@@ -3876,6 +3913,9 @@ msgstr "發射形狀"
 
 #: editor/plugins/tiles/tile_set_atlas_source_editor.cpp
 #: editor/plugins/tiles/tile_set_scenes_collection_source_editor.cpp
+#: modules/blazium_sdk/lobby/lobby_info.cpp
+#: modules/blazium_sdk/lobby/lobby_peer.cpp
+#: modules/blazium_sdk/master_server/master_server_client.h
 msgid "ID"
 msgstr "ID"
 
@@ -4513,6 +4553,219 @@ msgstr "使用邊界連接"
 #, fuzzy
 msgid "Edges Free"
 msgstr "邊緣淡化"
+
+#: modules/blazium_sdk/csv/resource_importer_csv.cpp
+#, fuzzy
+msgid "Headers"
+msgstr "Handshake 標頭"
+
+#: modules/blazium_sdk/discord/discord_embedded_app_client.cpp
+#, fuzzy
+msgid "User ID"
+msgstr "使用者資料"
+
+#: modules/blazium_sdk/discord/discord_embedded_app_client.cpp
+#: modules/blazium_sdk/pogr/pogr_client.h
+#, fuzzy
+msgid "Client ID"
+msgstr "常數 ID"
+
+#: modules/blazium_sdk/discord/discord_embedded_app_client.cpp
+#, fuzzy
+msgid "User Instance ID"
+msgstr "畫布實例 ID"
+
+#: modules/blazium_sdk/discord/discord_embedded_app_client.cpp
+#, fuzzy
+msgid "Custom ID"
+msgstr "自訂資料"
+
+#: modules/blazium_sdk/discord/discord_embedded_app_client.cpp
+msgid "Referrer ID"
+msgstr ""
+
+#: modules/blazium_sdk/discord/discord_embedded_app_client.cpp
+#, fuzzy
+msgid "Platform"
+msgstr "平臺構建"
+
+#: modules/blazium_sdk/discord/discord_embedded_app_client.cpp
+msgid "Guild ID"
+msgstr ""
+
+#: modules/blazium_sdk/discord/discord_embedded_app_client.cpp
+#, fuzzy
+msgid "Channel ID"
+msgstr "通道"
+
+#: modules/blazium_sdk/discord/discord_embedded_app_client.cpp
+#, fuzzy
+msgid "Location ID"
+msgstr "位置"
+
+#: modules/blazium_sdk/discord/discord_embedded_app_client.cpp
+#: platform/macos/export/export_plugin.cpp
+msgid "SDK Version"
+msgstr "SDK 版本"
+
+#: modules/blazium_sdk/discord/discord_embedded_app_client.cpp
+#, fuzzy
+msgid "Mobile App Version"
+msgstr "檔版本"
+
+#: modules/blazium_sdk/discord/discord_embedded_app_client.cpp
+#, fuzzy
+msgid "Frame ID"
+msgstr "影格"
+
+#: modules/blazium_sdk/lobby/lobby_client.cpp
+#: modules/blazium_sdk/lobby/scripted_lobby_client.cpp
+#: modules/blazium_sdk/login/login_client.cpp
+#: modules/blazium_sdk/master_server/master_server_client.h
+#, fuzzy
+msgid "Discord Embedded App"
+msgstr "停用環境光"
+
+#: modules/blazium_sdk/lobby/lobby_client.cpp
+#: modules/blazium_sdk/lobby/scripted_lobby_client.cpp
+#: modules/blazium_sdk/login/login_client.cpp
+#: modules/blazium_sdk/master_server/master_server_client.h
+#, fuzzy
+msgid "Server URL"
+msgstr "伺服器中繼"
+
+#: modules/blazium_sdk/lobby/lobby_client.cpp
+#: modules/blazium_sdk/lobby/scripted_lobby_client.cpp
+#, fuzzy
+msgid "Reconnection Token"
+msgstr "連接線"
+
+#: modules/blazium_sdk/lobby/lobby_client.cpp
+#: modules/blazium_sdk/lobby/scripted_lobby_client.cpp
+#: modules/blazium_sdk/login/login_client.cpp
+#: modules/blazium_sdk/master_server/master_server_client.h
+msgid "Game ID"
+msgstr ""
+
+#: modules/blazium_sdk/lobby/lobby_client.cpp
+#: modules/blazium_sdk/lobby/scripted_lobby_client.cpp
+#: modules/blazium_sdk/login/login_client.cpp
+#, fuzzy
+msgid "Connected"
+msgstr "使用邊界連接"
+
+#: modules/blazium_sdk/lobby/lobby_client.cpp
+#: modules/blazium_sdk/lobby/lobby_response.h
+#: modules/blazium_sdk/lobby/scripted_lobby_client.cpp
+msgid "Lobby"
+msgstr ""
+
+#: modules/blazium_sdk/lobby/lobby_client.cpp
+#: modules/blazium_sdk/lobby/scripted_lobby_client.cpp
+msgid "Peer"
+msgstr ""
+
+#: modules/blazium_sdk/lobby/lobby_client.cpp
+#: modules/blazium_sdk/lobby/lobby_response.h
+#: modules/blazium_sdk/lobby/scripted_lobby_client.cpp
+msgid "Peers"
+msgstr ""
+
+#: modules/blazium_sdk/lobby/lobby_client.cpp
+#, fuzzy
+msgid "Host Data"
+msgstr "自訂資料"
+
+#: modules/blazium_sdk/lobby/lobby_client.cpp
+#: modules/blazium_sdk/lobby/scripted_lobby_client.cpp
+#, fuzzy
+msgid "Peer Data"
+msgstr "使用者資料"
+
+#: modules/blazium_sdk/lobby/lobby_info.cpp
+msgid "Tags"
+msgstr ""
+
+#: modules/blazium_sdk/lobby/lobby_info.cpp
+#, fuzzy
+msgid "Lobby Name"
+msgstr "圖層名稱"
+
+#: modules/blazium_sdk/lobby/lobby_info.cpp
+#: modules/blazium_sdk/master_server/master_server_client.h
+#, fuzzy
+msgid "Players"
+msgstr "圖層"
+
+#: modules/blazium_sdk/lobby/lobby_info.cpp
+#: modules/blazium_sdk/master_server/master_server_client.h
+#, fuzzy
+msgid "Max Players"
+msgstr "最大圖層數"
+
+#: modules/blazium_sdk/lobby/lobby_info.cpp
+msgid "Sealed"
+msgstr ""
+
+#: modules/blazium_sdk/lobby/lobby_info.cpp
+#, fuzzy
+msgid "Password Protected"
+msgstr "密碼"
+
+#: modules/blazium_sdk/lobby/lobby_peer.cpp
+#: platform/ios/export/export_plugin.cpp
+msgid "User Data"
+msgstr "使用者資料"
+
+#: modules/blazium_sdk/lobby/lobby_peer.cpp
+#, fuzzy
+msgid "Disconnected"
+msgstr "右側斷開連接"
+
+#: modules/blazium_sdk/lobby/lobby_peer.cpp
+#, fuzzy
+msgid "Ready"
+msgstr "唯讀"
+
+#: modules/blazium_sdk/lobby/lobby_peer.cpp
+#, fuzzy
+msgid "Order ID"
+msgstr "排序"
+
+#: modules/blazium_sdk/login/login_client.h
+msgid "Login URL"
+msgstr ""
+
+#: modules/blazium_sdk/login/login_client.h
+#, fuzzy
+msgid "Login Type"
+msgstr "光源型別"
+
+#: modules/blazium_sdk/master_server/master_server_client.h
+#, fuzzy
+msgid "Game Name"
+msgstr "圖層名稱"
+
+#: modules/blazium_sdk/master_server/master_server_client.h
+#, fuzzy
+msgid "IP Address"
+msgstr "地址簿"
+
+#: modules/blazium_sdk/master_server/master_server_client.h
+#, fuzzy
+msgid "Results"
+msgstr "最大結果"
+
+#: modules/blazium_sdk/master_server/master_server_client.h
+#: modules/blazium_sdk/pogr/pogr_client.h modules/sqlite/src/godot_sqlite.h
+#, fuzzy
+msgid "Result"
+msgstr "最大結果"
+
+#: modules/blazium_sdk/pogr/pogr_client.h
+#, fuzzy
+msgid "Build ID"
+msgstr "建構模式"
 
 #: modules/csg/csg_shape.cpp
 msgid "Operation"
@@ -5200,6 +5453,47 @@ msgstr "包裹 S"
 msgid "Wrap T"
 msgstr "包裹 T"
 
+#: modules/godotsteam/godotsteam.cpp
+#, fuzzy
+msgid "Browser Handle"
+msgstr "當機處理常式"
+
+#: modules/godotsteam/godotsteam.cpp
+#, fuzzy
+msgid "Current Clan ID"
+msgstr "當前骨骼索引"
+
+#: modules/godotsteam/godotsteam.cpp
+#, fuzzy
+msgid "Inventory Handle"
+msgstr "進入控點"
+
+#: modules/godotsteam/godotsteam.cpp
+msgid "Inventory Update Handle"
+msgstr ""
+
+#: modules/godotsteam/godotsteam.cpp
+#, fuzzy
+msgid "Current Steam ID"
+msgstr "目前狀態"
+
+#: modules/godotsteam/godotsteam.cpp
+msgid "Leaderboard Details Max"
+msgstr ""
+
+#: modules/godotsteam/godotsteam.cpp
+msgid "Leaderboard Entries Array"
+msgstr ""
+
+#: modules/godotsteam/godotsteam.cpp
+msgid "Leaderboard Handle"
+msgstr ""
+
+#: modules/godotsteam/godotsteam.cpp
+#, fuzzy
+msgid "Current App ID"
+msgstr "當前分組索引"
+
 #: modules/gridmap/grid_map.cpp
 msgid "Mesh Library"
 msgstr "網格庫"
@@ -5703,6 +5997,53 @@ msgstr "名稱"
 #: modules/regex/regex.cpp scene/gui/code_edit.cpp
 msgid "Strings"
 msgstr "字串"
+
+#: modules/sqlite/src/godot_sqlite.cpp modules/sqlite/src/godot_sqlite.h
+#, fuzzy
+msgid "Arguments"
+msgstr "代理"
+
+#: modules/sqlite/src/godot_sqlite.cpp modules/sqlite/src/godot_sqlite.h
+msgid "Query"
+msgstr ""
+
+#: modules/sqlite/src/godot_sqlite.h scene/resources/visual_shader_nodes.cpp
+msgid "Default Value"
+msgstr "預設值"
+
+#: modules/sqlite/src/godot_sqlite.h
+#, fuzzy
+msgid "Primary Key"
+msgstr "是否主要"
+
+#: modules/sqlite/src/godot_sqlite.h
+#, fuzzy
+msgid "Auto Increment"
+msgstr "自動縮排"
+
+#: modules/sqlite/src/godot_sqlite.h
+msgid "Not Null"
+msgstr ""
+
+#: modules/sqlite/src/godot_sqlite.h
+#, fuzzy
+msgid "Unique"
+msgstr "唯一節點"
+
+#: modules/sqlite/src/godot_sqlite.h
+#, fuzzy
+msgid "Error Code"
+msgstr "錯誤"
+
+#: modules/sqlite/src/node_sqlite.cpp
+#, fuzzy
+msgid "Database"
+msgstr "資料"
+
+#: modules/sqlite/src/resource_sqlite.cpp
+#, fuzzy
+msgid "Tables"
+msgstr "啟用"
 
 #: modules/upnp/upnp.cpp
 msgid "Discover Multicast If"
@@ -6209,10 +6550,6 @@ msgid "Performance A 12"
 msgstr "烘焙性能"
 
 #: platform/ios/export/export_plugin.cpp
-msgid "User Data"
-msgstr "使用者資料"
-
-#: platform/ios/export/export_plugin.cpp
 msgid "Accessible From Files App"
 msgstr "可從檔 App 存取"
 
@@ -6358,10 +6695,6 @@ msgstr "Xcode"
 #: platform/macos/export/export_plugin.cpp
 msgid "Platform Build"
 msgstr "平臺構建"
-
-#: platform/macos/export/export_plugin.cpp
-msgid "SDK Version"
-msgstr "SDK 版本"
 
 #: platform/macos/export/export_plugin.cpp
 msgid "SDK Build"
@@ -13503,10 +13836,6 @@ msgstr "提示"
 #: scene/resources/visual_shader_nodes.cpp
 msgid "Default Value Enabled"
 msgstr "啟用預設值"
-
-#: scene/resources/visual_shader_nodes.cpp
-msgid "Default Value"
-msgstr "預設值"
 
 #: scene/resources/visual_shader_nodes.cpp
 msgid "Color Default"

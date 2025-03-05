@@ -8005,17 +8005,6 @@ msgstr ""
 "برای پیمودن یک برگه شیفت را نگه دارید."
 
 #: editor/gui/editor_scroll_box.cpp
-#, fuzzy
-msgid ""
-"Scroll Right\n"
-"Hold Ctrl to scroll to the End.\n"
-"Hold Shift to scroll one page."
-msgstr ""
-"پیمایش به راست\n"
-"برای پایان دادن به پیمایش کنترل را نگه دارید.\n"
-"برای پیمودن یک برگه شیفت را نگه دارید."
-
-#: editor/gui/editor_scroll_box.cpp
 msgid ""
 "Scroll Right\n"
 "Hold Ctrl to scroll to the end.\n"

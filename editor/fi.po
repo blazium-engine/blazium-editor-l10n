@@ -8139,13 +8139,6 @@ msgstr ""
 #: editor/gui/editor_scroll_box.cpp
 msgid ""
 "Scroll Right\n"
-"Hold Ctrl to scroll to the End.\n"
-"Hold Shift to scroll one page."
-msgstr ""
-
-#: editor/gui/editor_scroll_box.cpp
-msgid ""
-"Scroll Right\n"
 "Hold Ctrl to scroll to the end.\n"
 "Hold Shift to scroll one page."
 msgstr ""

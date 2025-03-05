@@ -33,10 +33,10 @@ msgstr ""
 #: core/config/project_settings.cpp core/io/resource.cpp
 #: editor/animation_track_editor.cpp
 #: editor/plugins/tiles/tile_set_atlas_source_editor.cpp
-#: platform/android/export/export_plugin.cpp scene/2d/physics/area_2d.cpp
-#: scene/3d/physics/area_3d.cpp scene/3d/skeleton_3d.cpp
-#: scene/resources/3d/mesh_library.cpp scene/resources/3d/skin.cpp
-#: servers/xr/xr_pose.cpp servers/xr/xr_tracker.cpp
+#: modules/sqlite/src/godot_sqlite.h platform/android/export/export_plugin.cpp
+#: scene/2d/physics/area_2d.cpp scene/3d/physics/area_3d.cpp
+#: scene/3d/skeleton_3d.cpp scene/resources/3d/mesh_library.cpp
+#: scene/resources/3d/skin.cpp servers/xr/xr_pose.cpp servers/xr/xr_tracker.cpp
 msgid "Name"
 msgstr "Emri"
 
@@ -45,14 +45,18 @@ msgstr "Emri"
 msgid "Name Localized"
 msgstr "Duke u lidhur..."
 
-#: core/config/project_settings.cpp platform/web/export/export_plugin.cpp
+#: core/config/project_settings.cpp
+#: modules/blazium_sdk/master_server/master_server_client.h
+#: platform/web/export/export_plugin.cpp
 #: platform/windows/export/export_plugin.cpp scene/main/node.cpp
 #: scene/resources/visual_shader.cpp servers/xr/xr_tracker.cpp
 #, fuzzy
 msgid "Description"
 msgstr "Përshkrimi:"
 
-#: core/config/project_settings.cpp platform/android/export/export_plugin.cpp
+#: core/config/project_settings.cpp
+#: modules/blazium_sdk/master_server/master_server_client.h
+#: platform/android/export/export_plugin.cpp
 #: platform/ios/export/export_plugin.cpp
 #: platform/macos/export/export_plugin.cpp
 #, fuzzy
@@ -116,6 +120,23 @@ msgstr ""
 #, fuzzy
 msgid "Quit on Go Back"
 msgstr "Shko Pas"
+
+#: core/config/project_settings.cpp editor/editor_settings.cpp
+#: editor/register_editor_types.cpp platform/android/export/export.cpp
+#: platform/ios/export/export.cpp platform/macos/export/export_plugin.cpp
+#: platform/web/export/export.cpp
+msgid "Export"
+msgstr "Eksporto"
+
+#: core/config/project_settings.cpp
+#, fuzzy
+msgid "Global Include Filter"
+msgstr "Konstantet"
+
+#: core/config/project_settings.cpp
+#, fuzzy
+msgid "Global Exclude Filter"
+msgstr "Menaxho Shabllonet e Eksportit"
 
 #: core/config/project_settings.cpp main/main.cpp
 #: platform/macos/export/export_plugin.cpp
@@ -382,7 +403,8 @@ msgstr "Përditëso"
 
 #: core/config/project_settings.cpp editor/editor_settings.cpp
 #: editor/export/editor_export_platform_pc.cpp main/main.cpp
-#: modules/gdscript/gdscript.cpp platform/android/export/export_plugin.cpp
+#: modules/blazium_sdk/env.cpp modules/gdscript/gdscript.cpp
+#: platform/android/export/export_plugin.cpp
 #: platform/ios/export/export_plugin.cpp
 #: platform/macos/export/export_plugin.cpp
 #: platform/web/export/export_plugin.cpp scene/2d/navigation_agent_2d.cpp
@@ -1006,8 +1028,11 @@ msgstr ""
 msgid "Read Chunk Size"
 msgstr ""
 
-#: core/io/json.cpp scene/2d/polygon_2d.cpp scene/3d/lightmap_gi.cpp
-#: scene/3d/voxel_gi.cpp
+#: core/io/json.cpp modules/blazium_sdk/discord/discord_embedded_app_response.h
+#: modules/blazium_sdk/lobby/lobby_info.cpp
+#: modules/blazium_sdk/lobby/lobby_peer.cpp
+#: modules/blazium_sdk/youtube/youtube_playables_response.h
+#: scene/2d/polygon_2d.cpp scene/3d/lightmap_gi.cpp scene/3d/voxel_gi.cpp
 msgid "Data"
 msgstr ""
 
@@ -1037,6 +1062,10 @@ msgid "Local to Scene"
 msgstr "Mbyll Skenën"
 
 #: core/io/resource.cpp editor/import/3d/resource_importer_scene.cpp
+#: modules/blazium_sdk/lobby/lobby_client.cpp
+#: modules/blazium_sdk/lobby/scripted_lobby_client.cpp
+#: modules/blazium_sdk/login/login_client.cpp
+#: modules/blazium_sdk/master_server/master_server_client.h
 #: servers/navigation/navigation_path_query_result_2d.cpp
 #: servers/navigation/navigation_path_query_result_3d.cpp
 msgid "Path"
@@ -1265,9 +1294,10 @@ msgid "Args"
 msgstr ""
 
 #: editor/animation_track_editor.cpp editor/editor_settings.cpp
-#: modules/noise/fastnoise_lite.cpp platform/web/export/export_plugin.cpp
-#: scene/3d/physics/physical_bone_3d.cpp scene/gui/text_edit.cpp
-#: scene/resources/visual_shader_nodes.cpp servers/xr/xr_tracker.cpp
+#: modules/noise/fastnoise_lite.cpp modules/sqlite/src/godot_sqlite.h
+#: platform/web/export/export_plugin.cpp scene/3d/physics/physical_bone_3d.cpp
+#: scene/gui/text_edit.cpp scene/resources/visual_shader_nodes.cpp
+#: servers/xr/xr_tracker.cpp
 msgid "Type"
 msgstr ""
 
@@ -1746,7 +1776,9 @@ msgstr ""
 msgid "File Server"
 msgstr ""
 
-#: editor/editor_settings.cpp platform/linuxbsd/export/export_plugin.cpp
+#: editor/editor_settings.cpp
+#: modules/blazium_sdk/master_server/master_server_client.h
+#: platform/linuxbsd/export/export_plugin.cpp
 #: platform/macos/export/export_plugin.cpp
 #: platform/windows/export/export_plugin.cpp scene/theme/default_theme.cpp
 msgid "Port"
@@ -2546,6 +2578,14 @@ msgid "Missing"
 msgstr "Fshi një Pllakë"
 
 #: editor/editor_settings.cpp
+#: modules/blazium_sdk/discord/discord_embedded_app_response.h
+#: modules/blazium_sdk/lobby/lobby_response.h
+#: modules/blazium_sdk/lobby/scripted_lobby_response.h
+#: modules/blazium_sdk/login/login_client.h
+#: modules/blazium_sdk/master_server/master_server_client.h
+#: modules/blazium_sdk/pogr/pogr_client.h
+#: modules/blazium_sdk/youtube/youtube_playables_response.h
+#: modules/sqlite/src/godot_sqlite.h
 msgid "Error"
 msgstr ""
 
@@ -2661,12 +2701,6 @@ msgstr "Tabi i mëparshëm"
 msgid "Port Preview Size"
 msgstr "Shikim paraprak:"
 
-#: editor/editor_settings.cpp editor/register_editor_types.cpp
-#: platform/android/export/export.cpp platform/ios/export/export.cpp
-#: platform/macos/export/export_plugin.cpp platform/web/export/export.cpp
-msgid "Export"
-msgstr "Eksporto"
-
 #: editor/editor_settings.cpp
 msgid "SSH"
 msgstr ""
@@ -2724,7 +2758,8 @@ msgstr ""
 msgid "HTTP Proxy"
 msgstr ""
 
-#: editor/editor_settings.cpp platform/linuxbsd/export/export_plugin.cpp
+#: editor/editor_settings.cpp modules/blazium_sdk/lobby/lobby_info.cpp
+#: platform/linuxbsd/export/export_plugin.cpp
 #: platform/macos/export/export_plugin.cpp
 #: platform/windows/export/export_plugin.cpp
 msgid "Host"
@@ -3893,6 +3928,7 @@ msgid "Scaling Mode"
 msgstr "Ndrysho Mënyrën"
 
 #: editor/import/resource_importer_csv_translation.cpp
+#: modules/blazium_sdk/csv/resource_importer_csv.cpp
 msgid "Delimiter"
 msgstr ""
 
@@ -3913,6 +3949,7 @@ msgid "Columns"
 msgstr ""
 
 #: editor/import/resource_importer_imagefont.cpp
+#: modules/blazium_sdk/csv/resource_csv.h
 msgid "Rows"
 msgstr ""
 
@@ -4151,6 +4188,9 @@ msgstr "Format e Përplasjes të Dukshme"
 
 #: editor/plugins/tiles/tile_set_atlas_source_editor.cpp
 #: editor/plugins/tiles/tile_set_scenes_collection_source_editor.cpp
+#: modules/blazium_sdk/lobby/lobby_info.cpp
+#: modules/blazium_sdk/lobby/lobby_peer.cpp
+#: modules/blazium_sdk/master_server/master_server_client.h
 msgid "ID"
 msgstr ""
 
@@ -4824,6 +4864,217 @@ msgstr "Modifiko Lidhjen: "
 #: main/performance.cpp
 msgid "Edges Free"
 msgstr ""
+
+#: modules/blazium_sdk/csv/resource_importer_csv.cpp
+#, fuzzy
+msgid "Headers"
+msgstr "Koha"
+
+#: modules/blazium_sdk/discord/discord_embedded_app_client.cpp
+#, fuzzy
+msgid "User ID"
+msgstr "Hap Folderin e të Dhënave të Editorit"
+
+#: modules/blazium_sdk/discord/discord_embedded_app_client.cpp
+#: modules/blazium_sdk/pogr/pogr_client.h
+#, fuzzy
+msgid "Client ID"
+msgstr "Konstantet"
+
+#: modules/blazium_sdk/discord/discord_embedded_app_client.cpp
+#, fuzzy
+msgid "User Instance ID"
+msgstr "Instanco"
+
+#: modules/blazium_sdk/discord/discord_embedded_app_client.cpp
+#, fuzzy
+msgid "Custom ID"
+msgstr "Hap Folderin e të Dhënave të Editorit"
+
+#: modules/blazium_sdk/discord/discord_embedded_app_client.cpp
+msgid "Referrer ID"
+msgstr ""
+
+#: modules/blazium_sdk/discord/discord_embedded_app_client.cpp
+#, fuzzy
+msgid "Platform"
+msgstr "Dyfisho Nyjet"
+
+#: modules/blazium_sdk/discord/discord_embedded_app_client.cpp
+msgid "Guild ID"
+msgstr ""
+
+#: modules/blazium_sdk/discord/discord_embedded_app_client.cpp
+#, fuzzy
+msgid "Channel ID"
+msgstr "Ndrysho"
+
+#: modules/blazium_sdk/discord/discord_embedded_app_client.cpp
+#, fuzzy
+msgid "Location ID"
+msgstr "Animacionet:"
+
+#: modules/blazium_sdk/discord/discord_embedded_app_client.cpp
+#: platform/macos/export/export_plugin.cpp
+#, fuzzy
+msgid "SDK Version"
+msgstr "Versioni:"
+
+#: modules/blazium_sdk/discord/discord_embedded_app_client.cpp
+#, fuzzy
+msgid "Mobile App Version"
+msgstr "Versioni:"
+
+#: modules/blazium_sdk/discord/discord_embedded_app_client.cpp
+#, fuzzy
+msgid "Frame ID"
+msgstr "Hapi %"
+
+#: modules/blazium_sdk/lobby/lobby_client.cpp
+#: modules/blazium_sdk/lobby/scripted_lobby_client.cpp
+#: modules/blazium_sdk/login/login_client.cpp
+#: modules/blazium_sdk/master_server/master_server_client.h
+#, fuzzy
+msgid "Discord Embedded App"
+msgstr "Çaktivizo Rrotulluesin e Përditësimit"
+
+#: modules/blazium_sdk/lobby/lobby_client.cpp
+#: modules/blazium_sdk/lobby/scripted_lobby_client.cpp
+#: modules/blazium_sdk/login/login_client.cpp
+#: modules/blazium_sdk/master_server/master_server_client.h
+msgid "Server URL"
+msgstr ""
+
+#: modules/blazium_sdk/lobby/lobby_client.cpp
+#: modules/blazium_sdk/lobby/scripted_lobby_client.cpp
+#, fuzzy
+msgid "Reconnection Token"
+msgstr "Animacionet:"
+
+#: modules/blazium_sdk/lobby/lobby_client.cpp
+#: modules/blazium_sdk/lobby/scripted_lobby_client.cpp
+#: modules/blazium_sdk/login/login_client.cpp
+#: modules/blazium_sdk/master_server/master_server_client.h
+msgid "Game ID"
+msgstr ""
+
+#: modules/blazium_sdk/lobby/lobby_client.cpp
+#: modules/blazium_sdk/lobby/scripted_lobby_client.cpp
+#: modules/blazium_sdk/login/login_client.cpp
+#, fuzzy
+msgid "Connected"
+msgstr "Modifiko Lidhjen: "
+
+#: modules/blazium_sdk/lobby/lobby_client.cpp
+#: modules/blazium_sdk/lobby/lobby_response.h
+#: modules/blazium_sdk/lobby/scripted_lobby_client.cpp
+msgid "Lobby"
+msgstr ""
+
+#: modules/blazium_sdk/lobby/lobby_client.cpp
+#: modules/blazium_sdk/lobby/scripted_lobby_client.cpp
+msgid "Peer"
+msgstr ""
+
+#: modules/blazium_sdk/lobby/lobby_client.cpp
+#: modules/blazium_sdk/lobby/lobby_response.h
+#: modules/blazium_sdk/lobby/scripted_lobby_client.cpp
+msgid "Peers"
+msgstr ""
+
+#: modules/blazium_sdk/lobby/lobby_client.cpp
+#, fuzzy
+msgid "Host Data"
+msgstr "Hap Folderin e të Dhënave të Editorit"
+
+#: modules/blazium_sdk/lobby/lobby_client.cpp
+#: modules/blazium_sdk/lobby/scripted_lobby_client.cpp
+#, fuzzy
+msgid "Peer Data"
+msgstr "Hap Folderin e të Dhënave të Editorit"
+
+#: modules/blazium_sdk/lobby/lobby_info.cpp
+msgid "Tags"
+msgstr ""
+
+#: modules/blazium_sdk/lobby/lobby_info.cpp
+#, fuzzy
+msgid "Lobby Name"
+msgstr "Emri"
+
+#: modules/blazium_sdk/lobby/lobby_info.cpp
+#: modules/blazium_sdk/master_server/master_server_client.h
+#, fuzzy
+msgid "Players"
+msgstr "Shtresa"
+
+#: modules/blazium_sdk/lobby/lobby_info.cpp
+#: modules/blazium_sdk/master_server/master_server_client.h
+#, fuzzy
+msgid "Max Players"
+msgstr "Shtresa"
+
+#: modules/blazium_sdk/lobby/lobby_info.cpp
+msgid "Sealed"
+msgstr ""
+
+#: modules/blazium_sdk/lobby/lobby_info.cpp
+msgid "Password Protected"
+msgstr ""
+
+#: modules/blazium_sdk/lobby/lobby_peer.cpp
+#: platform/ios/export/export_plugin.cpp
+#, fuzzy
+msgid "User Data"
+msgstr "Hap Folderin e të Dhënave të Editorit"
+
+#: modules/blazium_sdk/lobby/lobby_peer.cpp
+#, fuzzy
+msgid "Disconnected"
+msgstr "Shkëput"
+
+#: modules/blazium_sdk/lobby/lobby_peer.cpp
+#, fuzzy
+msgid "Ready"
+msgstr "Vetëm Metodat"
+
+#: modules/blazium_sdk/lobby/lobby_peer.cpp
+msgid "Order ID"
+msgstr ""
+
+#: modules/blazium_sdk/login/login_client.h
+msgid "Login URL"
+msgstr ""
+
+#: modules/blazium_sdk/login/login_client.h
+#, fuzzy
+msgid "Login Type"
+msgstr "Metoda Pa Shpërqëndrime"
+
+#: modules/blazium_sdk/master_server/master_server_client.h
+#, fuzzy
+msgid "Game Name"
+msgstr "Emri"
+
+#: modules/blazium_sdk/master_server/master_server_client.h
+msgid "IP Address"
+msgstr ""
+
+#: modules/blazium_sdk/master_server/master_server_client.h
+#, fuzzy
+msgid "Results"
+msgstr "Vlerë e Re:"
+
+#: modules/blazium_sdk/master_server/master_server_client.h
+#: modules/blazium_sdk/pogr/pogr_client.h modules/sqlite/src/godot_sqlite.h
+#, fuzzy
+msgid "Result"
+msgstr "Vlerë e Re:"
+
+#: modules/blazium_sdk/pogr/pogr_client.h
+#, fuzzy
+msgid "Build ID"
+msgstr "Ndrysho Mënyrën"
 
 #: modules/csg/csg_shape.cpp
 #, fuzzy
@@ -5567,6 +5818,45 @@ msgstr ""
 msgid "Wrap T"
 msgstr ""
 
+#: modules/godotsteam/godotsteam.cpp
+msgid "Browser Handle"
+msgstr ""
+
+#: modules/godotsteam/godotsteam.cpp
+#, fuzzy
+msgid "Current Clan ID"
+msgstr "Versioni Aktual:"
+
+#: modules/godotsteam/godotsteam.cpp
+msgid "Inventory Handle"
+msgstr ""
+
+#: modules/godotsteam/godotsteam.cpp
+msgid "Inventory Update Handle"
+msgstr ""
+
+#: modules/godotsteam/godotsteam.cpp
+#, fuzzy
+msgid "Current Steam ID"
+msgstr "Versioni Aktual:"
+
+#: modules/godotsteam/godotsteam.cpp
+msgid "Leaderboard Details Max"
+msgstr ""
+
+#: modules/godotsteam/godotsteam.cpp
+msgid "Leaderboard Entries Array"
+msgstr ""
+
+#: modules/godotsteam/godotsteam.cpp
+msgid "Leaderboard Handle"
+msgstr ""
+
+#: modules/godotsteam/godotsteam.cpp
+#, fuzzy
+msgid "Current App ID"
+msgstr "Versioni Aktual:"
+
 #: modules/gridmap/grid_map.cpp
 #, fuzzy
 msgid "Mesh Library"
@@ -6108,6 +6398,49 @@ msgstr "Emri"
 #, fuzzy
 msgid "Strings"
 msgstr "Duke u lidhur..."
+
+#: modules/sqlite/src/godot_sqlite.cpp modules/sqlite/src/godot_sqlite.h
+msgid "Arguments"
+msgstr ""
+
+#: modules/sqlite/src/godot_sqlite.cpp modules/sqlite/src/godot_sqlite.h
+msgid "Query"
+msgstr ""
+
+#: modules/sqlite/src/godot_sqlite.h scene/resources/visual_shader_nodes.cpp
+#, fuzzy
+msgid "Default Value"
+msgstr "E Parazgjedhur"
+
+#: modules/sqlite/src/godot_sqlite.h
+msgid "Primary Key"
+msgstr ""
+
+#: modules/sqlite/src/godot_sqlite.h
+msgid "Auto Increment"
+msgstr ""
+
+#: modules/sqlite/src/godot_sqlite.h
+msgid "Not Null"
+msgstr ""
+
+#: modules/sqlite/src/godot_sqlite.h
+#, fuzzy
+msgid "Unique"
+msgstr "Emri i Nyjes:"
+
+#: modules/sqlite/src/godot_sqlite.h
+msgid "Error Code"
+msgstr ""
+
+#: modules/sqlite/src/node_sqlite.cpp
+msgid "Database"
+msgstr ""
+
+#: modules/sqlite/src/resource_sqlite.cpp
+#, fuzzy
+msgid "Tables"
+msgstr "Lejo"
 
 #: modules/upnp/upnp.cpp
 msgid "Discover Multicast If"
@@ -6661,11 +6994,6 @@ msgid "Performance A 12"
 msgstr ""
 
 #: platform/ios/export/export_plugin.cpp
-#, fuzzy
-msgid "User Data"
-msgstr "Hap Folderin e të Dhënave të Editorit"
-
-#: platform/ios/export/export_plugin.cpp
 msgid "Accessible From Files App"
 msgstr ""
 
@@ -6830,11 +7158,6 @@ msgstr ""
 #, fuzzy
 msgid "Platform Build"
 msgstr "Dyfisho Nyjet"
-
-#: platform/macos/export/export_plugin.cpp
-#, fuzzy
-msgid "SDK Version"
-msgstr "Versioni:"
 
 #: platform/macos/export/export_plugin.cpp
 #, fuzzy
@@ -14769,11 +15092,6 @@ msgstr ""
 #, fuzzy
 msgid "Default Value Enabled"
 msgstr "Menaxho Shabllonet e Eksportit"
-
-#: scene/resources/visual_shader_nodes.cpp
-#, fuzzy
-msgid "Default Value"
-msgstr "E Parazgjedhur"
 
 #: scene/resources/visual_shader_nodes.cpp
 #, fuzzy

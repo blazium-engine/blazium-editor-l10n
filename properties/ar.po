@@ -111,10 +111,10 @@ msgstr "إعداد"
 #: core/config/project_settings.cpp core/io/resource.cpp
 #: editor/animation_track_editor.cpp
 #: editor/plugins/tiles/tile_set_atlas_source_editor.cpp
-#: platform/android/export/export_plugin.cpp scene/2d/physics/area_2d.cpp
-#: scene/3d/physics/area_3d.cpp scene/3d/skeleton_3d.cpp
-#: scene/resources/3d/mesh_library.cpp scene/resources/3d/skin.cpp
-#: servers/xr/xr_pose.cpp servers/xr/xr_tracker.cpp
+#: modules/sqlite/src/godot_sqlite.h platform/android/export/export_plugin.cpp
+#: scene/2d/physics/area_2d.cpp scene/3d/physics/area_3d.cpp
+#: scene/3d/skeleton_3d.cpp scene/resources/3d/mesh_library.cpp
+#: scene/resources/3d/skin.cpp servers/xr/xr_pose.cpp servers/xr/xr_tracker.cpp
 msgid "Name"
 msgstr "الاسم"
 
@@ -122,13 +122,17 @@ msgstr "الاسم"
 msgid "Name Localized"
 msgstr "الاسم المحلي"
 
-#: core/config/project_settings.cpp platform/web/export/export_plugin.cpp
+#: core/config/project_settings.cpp
+#: modules/blazium_sdk/master_server/master_server_client.h
+#: platform/web/export/export_plugin.cpp
 #: platform/windows/export/export_plugin.cpp scene/main/node.cpp
 #: scene/resources/visual_shader.cpp servers/xr/xr_tracker.cpp
 msgid "Description"
 msgstr "الوصف"
 
-#: core/config/project_settings.cpp platform/android/export/export_plugin.cpp
+#: core/config/project_settings.cpp
+#: modules/blazium_sdk/master_server/master_server_client.h
+#: platform/android/export/export_plugin.cpp
 #: platform/ios/export/export_plugin.cpp
 #: platform/macos/export/export_plugin.cpp
 msgid "Version"
@@ -187,6 +191,23 @@ msgstr "قبول الإنهاء التلقائي"
 #: core/config/project_settings.cpp scene/main/scene_tree.cpp
 msgid "Quit on Go Back"
 msgstr "الرجوع للخلف"
+
+#: core/config/project_settings.cpp editor/editor_settings.cpp
+#: editor/register_editor_types.cpp platform/android/export/export.cpp
+#: platform/ios/export/export.cpp platform/macos/export/export_plugin.cpp
+#: platform/web/export/export.cpp
+msgid "Export"
+msgstr "تصدير"
+
+#: core/config/project_settings.cpp
+#, fuzzy
+msgid "Global Include Filter"
+msgstr "ثابت"
+
+#: core/config/project_settings.cpp
+#, fuzzy
+msgid "Global Exclude Filter"
+msgstr "تصفية الملمس الافتراضي"
 
 #: core/config/project_settings.cpp main/main.cpp
 #: platform/macos/export/export_plugin.cpp
@@ -431,7 +452,8 @@ msgstr "وضع المقياس"
 
 #: core/config/project_settings.cpp editor/editor_settings.cpp
 #: editor/export/editor_export_platform_pc.cpp main/main.cpp
-#: modules/gdscript/gdscript.cpp platform/android/export/export_plugin.cpp
+#: modules/blazium_sdk/env.cpp modules/gdscript/gdscript.cpp
+#: platform/android/export/export_plugin.cpp
 #: platform/ios/export/export_plugin.cpp
 #: platform/macos/export/export_plugin.cpp
 #: platform/web/export/export_plugin.cpp scene/2d/navigation_agent_2d.cpp
@@ -1021,8 +1043,11 @@ msgstr "تمكين وضع الحظر"
 msgid "Read Chunk Size"
 msgstr "حجم قطعة القراءة"
 
-#: core/io/json.cpp scene/2d/polygon_2d.cpp scene/3d/lightmap_gi.cpp
-#: scene/3d/voxel_gi.cpp
+#: core/io/json.cpp modules/blazium_sdk/discord/discord_embedded_app_response.h
+#: modules/blazium_sdk/lobby/lobby_info.cpp
+#: modules/blazium_sdk/lobby/lobby_peer.cpp
+#: modules/blazium_sdk/youtube/youtube_playables_response.h
+#: scene/2d/polygon_2d.cpp scene/3d/lightmap_gi.cpp scene/3d/voxel_gi.cpp
 msgid "Data"
 msgstr "بيانات"
 
@@ -1051,6 +1076,10 @@ msgid "Local to Scene"
 msgstr "المحلية للمشهد"
 
 #: core/io/resource.cpp editor/import/3d/resource_importer_scene.cpp
+#: modules/blazium_sdk/lobby/lobby_client.cpp
+#: modules/blazium_sdk/lobby/scripted_lobby_client.cpp
+#: modules/blazium_sdk/login/login_client.cpp
+#: modules/blazium_sdk/master_server/master_server_client.h
 #: servers/navigation/navigation_path_query_result_2d.cpp
 #: servers/navigation/navigation_path_query_result_3d.cpp
 msgid "Path"
@@ -1267,9 +1296,10 @@ msgid "Args"
 msgstr ""
 
 #: editor/animation_track_editor.cpp editor/editor_settings.cpp
-#: modules/noise/fastnoise_lite.cpp platform/web/export/export_plugin.cpp
-#: scene/3d/physics/physical_bone_3d.cpp scene/gui/text_edit.cpp
-#: scene/resources/visual_shader_nodes.cpp servers/xr/xr_tracker.cpp
+#: modules/noise/fastnoise_lite.cpp modules/sqlite/src/godot_sqlite.h
+#: platform/web/export/export_plugin.cpp scene/3d/physics/physical_bone_3d.cpp
+#: scene/gui/text_edit.cpp scene/resources/visual_shader_nodes.cpp
+#: servers/xr/xr_tracker.cpp
 msgid "Type"
 msgstr "النوع"
 
@@ -1729,7 +1759,9 @@ msgstr "حفظ آمن على النسخ الاحتياطي ثم إعادة ال�
 msgid "File Server"
 msgstr "خادم الملفات"
 
-#: editor/editor_settings.cpp platform/linuxbsd/export/export_plugin.cpp
+#: editor/editor_settings.cpp
+#: modules/blazium_sdk/master_server/master_server_client.h
+#: platform/linuxbsd/export/export_plugin.cpp
 #: platform/macos/export/export_plugin.cpp
 #: platform/windows/export/export_plugin.cpp scene/theme/default_theme.cpp
 msgid "Port"
@@ -2526,6 +2558,14 @@ msgid "Missing"
 msgstr "إزالة المفقود"
 
 #: editor/editor_settings.cpp
+#: modules/blazium_sdk/discord/discord_embedded_app_response.h
+#: modules/blazium_sdk/lobby/lobby_response.h
+#: modules/blazium_sdk/lobby/scripted_lobby_response.h
+#: modules/blazium_sdk/login/login_client.h
+#: modules/blazium_sdk/master_server/master_server_client.h
+#: modules/blazium_sdk/pogr/pogr_client.h
+#: modules/blazium_sdk/youtube/youtube_playables_response.h
+#: modules/sqlite/src/godot_sqlite.h
 msgid "Error"
 msgstr "خطأ"
 
@@ -2641,12 +2681,6 @@ msgstr "المُظلل البصري"
 msgid "Port Preview Size"
 msgstr "حجم العرض"
 
-#: editor/editor_settings.cpp editor/register_editor_types.cpp
-#: platform/android/export/export.cpp platform/ios/export/export.cpp
-#: platform/macos/export/export_plugin.cpp platform/web/export/export.cpp
-msgid "Export"
-msgstr "تصدير"
-
 #: editor/editor_settings.cpp
 #, fuzzy
 msgid "SSH"
@@ -2705,7 +2739,8 @@ msgstr ""
 msgid "HTTP Proxy"
 msgstr "وكيل (Proxy) HTTP"
 
-#: editor/editor_settings.cpp platform/linuxbsd/export/export_plugin.cpp
+#: editor/editor_settings.cpp modules/blazium_sdk/lobby/lobby_info.cpp
+#: platform/linuxbsd/export/export_plugin.cpp
 #: platform/macos/export/export_plugin.cpp
 #: platform/windows/export/export_plugin.cpp
 msgid "Host"
@@ -3854,6 +3889,7 @@ msgid "Scaling Mode"
 msgstr "وضع التحجيم"
 
 #: editor/import/resource_importer_csv_translation.cpp
+#: modules/blazium_sdk/csv/resource_importer_csv.cpp
 msgid "Delimiter"
 msgstr "محدد"
 
@@ -3873,6 +3909,7 @@ msgid "Columns"
 msgstr "أعمدة"
 
 #: editor/import/resource_importer_imagefont.cpp
+#: modules/blazium_sdk/csv/resource_csv.h
 msgid "Rows"
 msgstr "الصفوف"
 
@@ -4107,6 +4144,9 @@ msgstr "قناع الانبعاث"
 
 #: editor/plugins/tiles/tile_set_atlas_source_editor.cpp
 #: editor/plugins/tiles/tile_set_scenes_collection_source_editor.cpp
+#: modules/blazium_sdk/lobby/lobby_info.cpp
+#: modules/blazium_sdk/lobby/lobby_peer.cpp
+#: modules/blazium_sdk/master_server/master_server_client.h
 msgid "ID"
 msgstr "بطاقة تعريف"
 
@@ -4789,6 +4829,220 @@ msgstr "الحد الأقصى للاتصالات المعلقة"
 #: main/performance.cpp
 msgid "Edges Free"
 msgstr ""
+
+#: modules/blazium_sdk/csv/resource_importer_csv.cpp
+#, fuzzy
+msgid "Headers"
+msgstr "انتهت المهلة"
+
+#: modules/blazium_sdk/discord/discord_embedded_app_client.cpp
+#, fuzzy
+msgid "User ID"
+msgstr "واجهة المستخدم"
+
+#: modules/blazium_sdk/discord/discord_embedded_app_client.cpp
+#: modules/blazium_sdk/pogr/pogr_client.h
+#, fuzzy
+msgid "Client ID"
+msgstr "ثابت"
+
+#: modules/blazium_sdk/discord/discord_embedded_app_client.cpp
+#, fuzzy
+msgid "User Instance ID"
+msgstr "كائن"
+
+#: modules/blazium_sdk/discord/discord_embedded_app_client.cpp
+#, fuzzy
+msgid "Custom ID"
+msgstr "البيانات مخصصة"
+
+#: modules/blazium_sdk/discord/discord_embedded_app_client.cpp
+msgid "Referrer ID"
+msgstr ""
+
+#: modules/blazium_sdk/discord/discord_embedded_app_client.cpp
+#, fuzzy
+msgid "Platform"
+msgstr "قص العُقد"
+
+#: modules/blazium_sdk/discord/discord_embedded_app_client.cpp
+msgid "Guild ID"
+msgstr ""
+
+#: modules/blazium_sdk/discord/discord_embedded_app_client.cpp
+#, fuzzy
+msgid "Channel ID"
+msgstr "قناة"
+
+#: modules/blazium_sdk/discord/discord_embedded_app_client.cpp
+#, fuzzy
+msgid "Location ID"
+msgstr "توطين"
+
+#: modules/blazium_sdk/discord/discord_embedded_app_client.cpp
+#: platform/macos/export/export_plugin.cpp
+#, fuzzy
+msgid "SDK Version"
+msgstr "الإصدار"
+
+#: modules/blazium_sdk/discord/discord_embedded_app_client.cpp
+#, fuzzy
+msgid "Mobile App Version"
+msgstr "الإصدار"
+
+#: modules/blazium_sdk/discord/discord_embedded_app_client.cpp
+#, fuzzy
+msgid "Frame ID"
+msgstr "نسبة الإطار %"
+
+#: modules/blazium_sdk/lobby/lobby_client.cpp
+#: modules/blazium_sdk/lobby/scripted_lobby_client.cpp
+#: modules/blazium_sdk/login/login_client.cpp
+#: modules/blazium_sdk/master_server/master_server_client.h
+#, fuzzy
+msgid "Discord Embedded App"
+msgstr "المسافة البادئة يميناً"
+
+#: modules/blazium_sdk/lobby/lobby_client.cpp
+#: modules/blazium_sdk/lobby/scripted_lobby_client.cpp
+#: modules/blazium_sdk/login/login_client.cpp
+#: modules/blazium_sdk/master_server/master_server_client.h
+#, fuzzy
+msgid "Server URL"
+msgstr "تناوب الخادم"
+
+#: modules/blazium_sdk/lobby/lobby_client.cpp
+#: modules/blazium_sdk/lobby/scripted_lobby_client.cpp
+#, fuzzy
+msgid "Reconnection Token"
+msgstr "نسخ المُحدد"
+
+#: modules/blazium_sdk/lobby/lobby_client.cpp
+#: modules/blazium_sdk/lobby/scripted_lobby_client.cpp
+#: modules/blazium_sdk/login/login_client.cpp
+#: modules/blazium_sdk/master_server/master_server_client.h
+msgid "Game ID"
+msgstr ""
+
+#: modules/blazium_sdk/lobby/lobby_client.cpp
+#: modules/blazium_sdk/lobby/scripted_lobby_client.cpp
+#: modules/blazium_sdk/login/login_client.cpp
+#, fuzzy
+msgid "Connected"
+msgstr "الحد الأقصى للاتصالات المعلقة"
+
+#: modules/blazium_sdk/lobby/lobby_client.cpp
+#: modules/blazium_sdk/lobby/lobby_response.h
+#: modules/blazium_sdk/lobby/scripted_lobby_client.cpp
+msgid "Lobby"
+msgstr ""
+
+#: modules/blazium_sdk/lobby/lobby_client.cpp
+#: modules/blazium_sdk/lobby/scripted_lobby_client.cpp
+msgid "Peer"
+msgstr ""
+
+#: modules/blazium_sdk/lobby/lobby_client.cpp
+#: modules/blazium_sdk/lobby/lobby_response.h
+#: modules/blazium_sdk/lobby/scripted_lobby_client.cpp
+msgid "Peers"
+msgstr ""
+
+#: modules/blazium_sdk/lobby/lobby_client.cpp
+#, fuzzy
+msgid "Host Data"
+msgstr "البيانات مخصصة"
+
+#: modules/blazium_sdk/lobby/lobby_client.cpp
+#: modules/blazium_sdk/lobby/scripted_lobby_client.cpp
+#, fuzzy
+msgid "Peer Data"
+msgstr "واجهة المستخدم"
+
+#: modules/blazium_sdk/lobby/lobby_info.cpp
+msgid "Tags"
+msgstr ""
+
+#: modules/blazium_sdk/lobby/lobby_info.cpp
+#, fuzzy
+msgid "Lobby Name"
+msgstr "أسماء الطبقات"
+
+#: modules/blazium_sdk/lobby/lobby_info.cpp
+#: modules/blazium_sdk/master_server/master_server_client.h
+#, fuzzy
+msgid "Players"
+msgstr "طبقات"
+
+#: modules/blazium_sdk/lobby/lobby_info.cpp
+#: modules/blazium_sdk/master_server/master_server_client.h
+#, fuzzy
+msgid "Max Players"
+msgstr "طبقة"
+
+#: modules/blazium_sdk/lobby/lobby_info.cpp
+msgid "Sealed"
+msgstr ""
+
+#: modules/blazium_sdk/lobby/lobby_info.cpp
+#, fuzzy
+msgid "Password Protected"
+msgstr "كلمة المرور"
+
+#: modules/blazium_sdk/lobby/lobby_peer.cpp
+#: platform/ios/export/export_plugin.cpp
+#, fuzzy
+msgid "User Data"
+msgstr "واجهة المستخدم"
+
+#: modules/blazium_sdk/lobby/lobby_peer.cpp
+#, fuzzy
+msgid "Disconnected"
+msgstr "قطع الاتصال"
+
+#: modules/blazium_sdk/lobby/lobby_peer.cpp
+#, fuzzy
+msgid "Ready"
+msgstr "الطرق فقط"
+
+#: modules/blazium_sdk/lobby/lobby_peer.cpp
+#, fuzzy
+msgid "Order ID"
+msgstr "استدعاء"
+
+#: modules/blazium_sdk/login/login_client.h
+msgid "Login URL"
+msgstr ""
+
+#: modules/blazium_sdk/login/login_client.h
+#, fuzzy
+msgid "Login Type"
+msgstr "بالعرض يميناً"
+
+#: modules/blazium_sdk/master_server/master_server_client.h
+#, fuzzy
+msgid "Game Name"
+msgstr "أسماء الطبقات"
+
+#: modules/blazium_sdk/master_server/master_server_client.h
+msgid "IP Address"
+msgstr ""
+
+#: modules/blazium_sdk/master_server/master_server_client.h
+#, fuzzy
+msgid "Results"
+msgstr "نتائج البحث"
+
+#: modules/blazium_sdk/master_server/master_server_client.h
+#: modules/blazium_sdk/pogr/pogr_client.h modules/sqlite/src/godot_sqlite.h
+#, fuzzy
+msgid "Result"
+msgstr "نتائج البحث"
+
+#: modules/blazium_sdk/pogr/pogr_client.h
+#, fuzzy
+msgid "Build ID"
+msgstr "وضع المسطرة"
 
 #: modules/csg/csg_shape.cpp
 msgid "Operation"
@@ -5533,6 +5787,47 @@ msgstr ""
 msgid "Wrap T"
 msgstr ""
 
+#: modules/godotsteam/godotsteam.cpp
+#, fuzzy
+msgid "Browser Handle"
+msgstr "معالج الأعطال"
+
+#: modules/godotsteam/godotsteam.cpp
+#, fuzzy
+msgid "Current Clan ID"
+msgstr "المشهد الحالي"
+
+#: modules/godotsteam/godotsteam.cpp
+#, fuzzy
+msgid "Inventory Handle"
+msgstr "حدد المعامل"
+
+#: modules/godotsteam/godotsteam.cpp
+msgid "Inventory Update Handle"
+msgstr ""
+
+#: modules/godotsteam/godotsteam.cpp
+#, fuzzy
+msgid "Current Steam ID"
+msgstr "الحالي"
+
+#: modules/godotsteam/godotsteam.cpp
+msgid "Leaderboard Details Max"
+msgstr ""
+
+#: modules/godotsteam/godotsteam.cpp
+msgid "Leaderboard Entries Array"
+msgstr ""
+
+#: modules/godotsteam/godotsteam.cpp
+msgid "Leaderboard Handle"
+msgstr ""
+
+#: modules/godotsteam/godotsteam.cpp
+#, fuzzy
+msgid "Current App ID"
+msgstr "الحالي"
+
 #: modules/gridmap/grid_map.cpp
 msgid "Mesh Library"
 msgstr "مكتبة المجسم"
@@ -6081,6 +6376,54 @@ msgstr "الأسماء"
 #: modules/regex/regex.cpp scene/gui/code_edit.cpp
 msgid "Strings"
 msgstr "النصوص"
+
+#: modules/sqlite/src/godot_sqlite.cpp modules/sqlite/src/godot_sqlite.h
+#, fuzzy
+msgid "Arguments"
+msgstr "معاملات المشهد الرئيس"
+
+#: modules/sqlite/src/godot_sqlite.cpp modules/sqlite/src/godot_sqlite.h
+msgid "Query"
+msgstr ""
+
+#: modules/sqlite/src/godot_sqlite.h scene/resources/visual_shader_nodes.cpp
+#, fuzzy
+msgid "Default Value"
+msgstr "تعديل قيمة الإدخال"
+
+#: modules/sqlite/src/godot_sqlite.h
+#, fuzzy
+msgid "Primary Key"
+msgstr "الواجهة الأساسية"
+
+#: modules/sqlite/src/godot_sqlite.h
+#, fuzzy
+msgid "Auto Increment"
+msgstr "تصدُّر تلقائي"
+
+#: modules/sqlite/src/godot_sqlite.h
+msgid "Not Null"
+msgstr ""
+
+#: modules/sqlite/src/godot_sqlite.h
+#, fuzzy
+msgid "Unique"
+msgstr "العقدة الفريدة"
+
+#: modules/sqlite/src/godot_sqlite.h
+#, fuzzy
+msgid "Error Code"
+msgstr "خطأ"
+
+#: modules/sqlite/src/node_sqlite.cpp
+#, fuzzy
+msgid "Database"
+msgstr "بيانات"
+
+#: modules/sqlite/src/resource_sqlite.cpp
+#, fuzzy
+msgid "Tables"
+msgstr "تفعيل"
 
 #: modules/upnp/upnp.cpp
 msgid "Discover Multicast If"
@@ -6643,11 +6986,6 @@ msgid "Performance A 12"
 msgstr "طبخ مجس GI"
 
 #: platform/ios/export/export_plugin.cpp
-#, fuzzy
-msgid "User Data"
-msgstr "واجهة المستخدم"
-
-#: platform/ios/export/export_plugin.cpp
 msgid "Accessible From Files App"
 msgstr ""
 
@@ -6815,11 +7153,6 @@ msgstr "يونيكود"
 #, fuzzy
 msgid "Platform Build"
 msgstr "قص العُقد"
-
-#: platform/macos/export/export_plugin.cpp
-#, fuzzy
-msgid "SDK Version"
-msgstr "الإصدار"
 
 #: platform/macos/export/export_plugin.cpp
 #, fuzzy
@@ -15024,11 +15357,6 @@ msgstr ""
 #, fuzzy
 msgid "Default Value Enabled"
 msgstr "ملفات غودوت المُرشّحة"
-
-#: scene/resources/visual_shader_nodes.cpp
-#, fuzzy
-msgid "Default Value"
-msgstr "تعديل قيمة الإدخال"
 
 #: scene/resources/visual_shader_nodes.cpp
 #, fuzzy

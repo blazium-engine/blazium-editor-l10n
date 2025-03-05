@@ -39,10 +39,10 @@ msgstr "Konfiguratsioon"
 #: core/config/project_settings.cpp core/io/resource.cpp
 #: editor/animation_track_editor.cpp
 #: editor/plugins/tiles/tile_set_atlas_source_editor.cpp
-#: platform/android/export/export_plugin.cpp scene/2d/physics/area_2d.cpp
-#: scene/3d/physics/area_3d.cpp scene/3d/skeleton_3d.cpp
-#: scene/resources/3d/mesh_library.cpp scene/resources/3d/skin.cpp
-#: servers/xr/xr_pose.cpp servers/xr/xr_tracker.cpp
+#: modules/sqlite/src/godot_sqlite.h platform/android/export/export_plugin.cpp
+#: scene/2d/physics/area_2d.cpp scene/3d/physics/area_3d.cpp
+#: scene/3d/skeleton_3d.cpp scene/resources/3d/mesh_library.cpp
+#: scene/resources/3d/skin.cpp servers/xr/xr_pose.cpp servers/xr/xr_tracker.cpp
 msgid "Name"
 msgstr "Nimi"
 
@@ -50,13 +50,17 @@ msgstr "Nimi"
 msgid "Name Localized"
 msgstr "Nimi Lokaliseeritud"
 
-#: core/config/project_settings.cpp platform/web/export/export_plugin.cpp
+#: core/config/project_settings.cpp
+#: modules/blazium_sdk/master_server/master_server_client.h
+#: platform/web/export/export_plugin.cpp
 #: platform/windows/export/export_plugin.cpp scene/main/node.cpp
 #: scene/resources/visual_shader.cpp servers/xr/xr_tracker.cpp
 msgid "Description"
 msgstr "Kirjeldus"
 
-#: core/config/project_settings.cpp platform/android/export/export_plugin.cpp
+#: core/config/project_settings.cpp
+#: modules/blazium_sdk/master_server/master_server_client.h
+#: platform/android/export/export_plugin.cpp
 #: platform/ios/export/export_plugin.cpp
 #: platform/macos/export/export_plugin.cpp
 msgid "Version"
@@ -116,6 +120,23 @@ msgstr "Auto Aktsepteeri Lõpeta"
 #, fuzzy
 msgid "Quit on Go Back"
 msgstr "Mine tagasi"
+
+#: core/config/project_settings.cpp editor/editor_settings.cpp
+#: editor/register_editor_types.cpp platform/android/export/export.cpp
+#: platform/ios/export/export.cpp platform/macos/export/export_plugin.cpp
+#: platform/web/export/export.cpp
+msgid "Export"
+msgstr "Ekspordi"
+
+#: core/config/project_settings.cpp
+#, fuzzy
+msgid "Global Include Filter"
+msgstr "Konstant"
+
+#: core/config/project_settings.cpp
+#, fuzzy
+msgid "Global Exclude Filter"
+msgstr "Vaikimisi Tekstuuri Filter"
 
 #: core/config/project_settings.cpp main/main.cpp
 #: platform/macos/export/export_plugin.cpp
@@ -363,7 +384,8 @@ msgstr "Skaleerimisrežiim"
 
 #: core/config/project_settings.cpp editor/editor_settings.cpp
 #: editor/export/editor_export_platform_pc.cpp main/main.cpp
-#: modules/gdscript/gdscript.cpp platform/android/export/export_plugin.cpp
+#: modules/blazium_sdk/env.cpp modules/gdscript/gdscript.cpp
+#: platform/android/export/export_plugin.cpp
 #: platform/ios/export/export_plugin.cpp
 #: platform/macos/export/export_plugin.cpp
 #: platform/web/export/export_plugin.cpp scene/2d/navigation_agent_2d.cpp
@@ -949,8 +971,11 @@ msgstr "Blokeerimisrežiim lubatud"
 msgid "Read Chunk Size"
 msgstr "Loe tüki suurust"
 
-#: core/io/json.cpp scene/2d/polygon_2d.cpp scene/3d/lightmap_gi.cpp
-#: scene/3d/voxel_gi.cpp
+#: core/io/json.cpp modules/blazium_sdk/discord/discord_embedded_app_response.h
+#: modules/blazium_sdk/lobby/lobby_info.cpp
+#: modules/blazium_sdk/lobby/lobby_peer.cpp
+#: modules/blazium_sdk/youtube/youtube_playables_response.h
+#: scene/2d/polygon_2d.cpp scene/3d/lightmap_gi.cpp scene/3d/voxel_gi.cpp
 msgid "Data"
 msgstr "Andmed"
 
@@ -979,6 +1004,10 @@ msgid "Local to Scene"
 msgstr "Kohalikust stseeniks"
 
 #: core/io/resource.cpp editor/import/3d/resource_importer_scene.cpp
+#: modules/blazium_sdk/lobby/lobby_client.cpp
+#: modules/blazium_sdk/lobby/scripted_lobby_client.cpp
+#: modules/blazium_sdk/login/login_client.cpp
+#: modules/blazium_sdk/master_server/master_server_client.h
 #: servers/navigation/navigation_path_query_result_2d.cpp
 #: servers/navigation/navigation_path_query_result_3d.cpp
 msgid "Path"
@@ -1189,9 +1218,10 @@ msgid "Args"
 msgstr ""
 
 #: editor/animation_track_editor.cpp editor/editor_settings.cpp
-#: modules/noise/fastnoise_lite.cpp platform/web/export/export_plugin.cpp
-#: scene/3d/physics/physical_bone_3d.cpp scene/gui/text_edit.cpp
-#: scene/resources/visual_shader_nodes.cpp servers/xr/xr_tracker.cpp
+#: modules/noise/fastnoise_lite.cpp modules/sqlite/src/godot_sqlite.h
+#: platform/web/export/export_plugin.cpp scene/3d/physics/physical_bone_3d.cpp
+#: scene/gui/text_edit.cpp scene/resources/visual_shader_nodes.cpp
+#: servers/xr/xr_tracker.cpp
 msgid "Type"
 msgstr "Tüüp"
 
@@ -1629,7 +1659,9 @@ msgstr "Turvaline Salvestamine Varundades, Seejärel Nimeta Ümber"
 msgid "File Server"
 msgstr "Faili Server"
 
-#: editor/editor_settings.cpp platform/linuxbsd/export/export_plugin.cpp
+#: editor/editor_settings.cpp
+#: modules/blazium_sdk/master_server/master_server_client.h
+#: platform/linuxbsd/export/export_plugin.cpp
 #: platform/macos/export/export_plugin.cpp
 #: platform/windows/export/export_plugin.cpp scene/theme/default_theme.cpp
 msgid "Port"
@@ -2388,6 +2420,14 @@ msgid "Missing"
 msgstr "Puuduvad"
 
 #: editor/editor_settings.cpp
+#: modules/blazium_sdk/discord/discord_embedded_app_response.h
+#: modules/blazium_sdk/lobby/lobby_response.h
+#: modules/blazium_sdk/lobby/scripted_lobby_response.h
+#: modules/blazium_sdk/login/login_client.h
+#: modules/blazium_sdk/master_server/master_server_client.h
+#: modules/blazium_sdk/pogr/pogr_client.h
+#: modules/blazium_sdk/youtube/youtube_playables_response.h
+#: modules/sqlite/src/godot_sqlite.h
 msgid "Error"
 msgstr "Error"
 
@@ -2498,12 +2538,6 @@ msgstr "Visuaal-Shader"
 msgid "Port Preview Size"
 msgstr "Eelvaate Suurus"
 
-#: editor/editor_settings.cpp editor/register_editor_types.cpp
-#: platform/android/export/export.cpp platform/ios/export/export.cpp
-#: platform/macos/export/export_plugin.cpp platform/web/export/export.cpp
-msgid "Export"
-msgstr "Ekspordi"
-
 #: editor/editor_settings.cpp
 msgid "SSH"
 msgstr "SSH"
@@ -2559,7 +2593,8 @@ msgstr ""
 msgid "HTTP Proxy"
 msgstr "HTTP puhverserver"
 
-#: editor/editor_settings.cpp platform/linuxbsd/export/export_plugin.cpp
+#: editor/editor_settings.cpp modules/blazium_sdk/lobby/lobby_info.cpp
+#: platform/linuxbsd/export/export_plugin.cpp
 #: platform/macos/export/export_plugin.cpp
 #: platform/windows/export/export_plugin.cpp
 msgid "Host"
@@ -3664,6 +3699,7 @@ msgid "Scaling Mode"
 msgstr "Skaleerimisrežiim"
 
 #: editor/import/resource_importer_csv_translation.cpp
+#: modules/blazium_sdk/csv/resource_importer_csv.cpp
 msgid "Delimiter"
 msgstr "Eraldaja"
 
@@ -3683,6 +3719,7 @@ msgid "Columns"
 msgstr "Veerud"
 
 #: editor/import/resource_importer_imagefont.cpp
+#: modules/blazium_sdk/csv/resource_csv.h
 msgid "Rows"
 msgstr "Read"
 
@@ -3906,6 +3943,9 @@ msgstr "Osakeste Kokkupõrge"
 
 #: editor/plugins/tiles/tile_set_atlas_source_editor.cpp
 #: editor/plugins/tiles/tile_set_scenes_collection_source_editor.cpp
+#: modules/blazium_sdk/lobby/lobby_info.cpp
+#: modules/blazium_sdk/lobby/lobby_peer.cpp
+#: modules/blazium_sdk/master_server/master_server_client.h
 msgid "ID"
 msgstr "ID"
 
@@ -4573,6 +4613,218 @@ msgstr "Maksimaalne ootel ühenduste arv"
 #: main/performance.cpp
 msgid "Edges Free"
 msgstr ""
+
+#: modules/blazium_sdk/csv/resource_importer_csv.cpp
+#, fuzzy
+msgid "Headers"
+msgstr "Kätluse Päised"
+
+#: modules/blazium_sdk/discord/discord_embedded_app_client.cpp
+#, fuzzy
+msgid "User ID"
+msgstr "Kasutaja Andmed"
+
+#: modules/blazium_sdk/discord/discord_embedded_app_client.cpp
+#: modules/blazium_sdk/pogr/pogr_client.h
+#, fuzzy
+msgid "Client ID"
+msgstr "Konstant"
+
+#: modules/blazium_sdk/discord/discord_embedded_app_client.cpp
+#, fuzzy
+msgid "User Instance ID"
+msgstr "Teisenda..."
+
+#: modules/blazium_sdk/discord/discord_embedded_app_client.cpp
+#, fuzzy
+msgid "Custom ID"
+msgstr "Kohandatud Andmed"
+
+#: modules/blazium_sdk/discord/discord_embedded_app_client.cpp
+msgid "Referrer ID"
+msgstr ""
+
+#: modules/blazium_sdk/discord/discord_embedded_app_client.cpp
+#, fuzzy
+msgid "Platform"
+msgstr "EhIta Platform"
+
+#: modules/blazium_sdk/discord/discord_embedded_app_client.cpp
+msgid "Guild ID"
+msgstr ""
+
+#: modules/blazium_sdk/discord/discord_embedded_app_client.cpp
+#, fuzzy
+msgid "Channel ID"
+msgstr "Kanal"
+
+#: modules/blazium_sdk/discord/discord_embedded_app_client.cpp
+#, fuzzy
+msgid "Location ID"
+msgstr "Asukoht"
+
+#: modules/blazium_sdk/discord/discord_embedded_app_client.cpp
+#: platform/macos/export/export_plugin.cpp
+msgid "SDK Version"
+msgstr "SDK Versioon"
+
+#: modules/blazium_sdk/discord/discord_embedded_app_client.cpp
+#, fuzzy
+msgid "Mobile App Version"
+msgstr "Versioon:"
+
+#: modules/blazium_sdk/discord/discord_embedded_app_client.cpp
+#, fuzzy
+msgid "Frame ID"
+msgstr "Kaader"
+
+#: modules/blazium_sdk/lobby/lobby_client.cpp
+#: modules/blazium_sdk/lobby/scripted_lobby_client.cpp
+#: modules/blazium_sdk/login/login_client.cpp
+#: modules/blazium_sdk/master_server/master_server_client.h
+msgid "Discord Embedded App"
+msgstr ""
+
+#: modules/blazium_sdk/lobby/lobby_client.cpp
+#: modules/blazium_sdk/lobby/scripted_lobby_client.cpp
+#: modules/blazium_sdk/login/login_client.cpp
+#: modules/blazium_sdk/master_server/master_server_client.h
+#, fuzzy
+msgid "Server URL"
+msgstr "ServerI Relee"
+
+#: modules/blazium_sdk/lobby/lobby_client.cpp
+#: modules/blazium_sdk/lobby/scripted_lobby_client.cpp
+#, fuzzy
+msgid "Reconnection Token"
+msgstr "Kopeeri valik"
+
+#: modules/blazium_sdk/lobby/lobby_client.cpp
+#: modules/blazium_sdk/lobby/scripted_lobby_client.cpp
+#: modules/blazium_sdk/login/login_client.cpp
+#: modules/blazium_sdk/master_server/master_server_client.h
+msgid "Game ID"
+msgstr ""
+
+#: modules/blazium_sdk/lobby/lobby_client.cpp
+#: modules/blazium_sdk/lobby/scripted_lobby_client.cpp
+#: modules/blazium_sdk/login/login_client.cpp
+#, fuzzy
+msgid "Connected"
+msgstr "Maksimaalne ootel ühenduste arv"
+
+#: modules/blazium_sdk/lobby/lobby_client.cpp
+#: modules/blazium_sdk/lobby/lobby_response.h
+#: modules/blazium_sdk/lobby/scripted_lobby_client.cpp
+msgid "Lobby"
+msgstr ""
+
+#: modules/blazium_sdk/lobby/lobby_client.cpp
+#: modules/blazium_sdk/lobby/scripted_lobby_client.cpp
+msgid "Peer"
+msgstr ""
+
+#: modules/blazium_sdk/lobby/lobby_client.cpp
+#: modules/blazium_sdk/lobby/lobby_response.h
+#: modules/blazium_sdk/lobby/scripted_lobby_client.cpp
+msgid "Peers"
+msgstr ""
+
+#: modules/blazium_sdk/lobby/lobby_client.cpp
+#, fuzzy
+msgid "Host Data"
+msgstr "Kohandatud Andmed"
+
+#: modules/blazium_sdk/lobby/lobby_client.cpp
+#: modules/blazium_sdk/lobby/scripted_lobby_client.cpp
+#, fuzzy
+msgid "Peer Data"
+msgstr "Kasutaja Andmed"
+
+#: modules/blazium_sdk/lobby/lobby_info.cpp
+msgid "Tags"
+msgstr ""
+
+#: modules/blazium_sdk/lobby/lobby_info.cpp
+#, fuzzy
+msgid "Lobby Name"
+msgstr "Nimi"
+
+#: modules/blazium_sdk/lobby/lobby_info.cpp
+#: modules/blazium_sdk/master_server/master_server_client.h
+#, fuzzy
+msgid "Players"
+msgstr "Kiht"
+
+#: modules/blazium_sdk/lobby/lobby_info.cpp
+#: modules/blazium_sdk/master_server/master_server_client.h
+#, fuzzy
+msgid "Max Players"
+msgstr "Kiht"
+
+#: modules/blazium_sdk/lobby/lobby_info.cpp
+msgid "Sealed"
+msgstr ""
+
+#: modules/blazium_sdk/lobby/lobby_info.cpp
+#, fuzzy
+msgid "Password Protected"
+msgstr "Parool"
+
+#: modules/blazium_sdk/lobby/lobby_peer.cpp
+#: platform/ios/export/export_plugin.cpp
+msgid "User Data"
+msgstr "Kasutaja Andmed"
+
+#: modules/blazium_sdk/lobby/lobby_peer.cpp
+#, fuzzy
+msgid "Disconnected"
+msgstr "Katkesta ühendus"
+
+#: modules/blazium_sdk/lobby/lobby_peer.cpp
+#, fuzzy
+msgid "Ready"
+msgstr "Ainult Loetav"
+
+#: modules/blazium_sdk/lobby/lobby_peer.cpp
+#, fuzzy
+msgid "Order ID"
+msgstr "Renderdamine"
+
+#: modules/blazium_sdk/login/login_client.h
+msgid "Login URL"
+msgstr ""
+
+#: modules/blazium_sdk/login/login_client.h
+#, fuzzy
+msgid "Login Type"
+msgstr "Valguse Tüüp"
+
+#: modules/blazium_sdk/master_server/master_server_client.h
+#, fuzzy
+msgid "Game Name"
+msgstr "Nimi"
+
+#: modules/blazium_sdk/master_server/master_server_client.h
+#, fuzzy
+msgid "IP Address"
+msgstr "Aadressiraamat"
+
+#: modules/blazium_sdk/master_server/master_server_client.h
+#, fuzzy
+msgid "Results"
+msgstr "Tulemus"
+
+#: modules/blazium_sdk/master_server/master_server_client.h
+#: modules/blazium_sdk/pogr/pogr_client.h modules/sqlite/src/godot_sqlite.h
+#, fuzzy
+msgid "Result"
+msgstr "Tulemus"
+
+#: modules/blazium_sdk/pogr/pogr_client.h
+#, fuzzy
+msgid "Build ID"
+msgstr "Skaleerimisrežiim"
 
 #: modules/csg/csg_shape.cpp
 msgid "Operation"
@@ -5307,6 +5559,47 @@ msgstr ""
 msgid "Wrap T"
 msgstr ""
 
+#: modules/godotsteam/godotsteam.cpp
+#, fuzzy
+msgid "Browser Handle"
+msgstr "Krahhi Käitleja"
+
+#: modules/godotsteam/godotsteam.cpp
+#, fuzzy
+msgid "Current Clan ID"
+msgstr "Praegune Kondi Idx"
+
+#: modules/godotsteam/godotsteam.cpp
+#, fuzzy
+msgid "Inventory Handle"
+msgstr "Käepidemes"
+
+#: modules/godotsteam/godotsteam.cpp
+msgid "Inventory Update Handle"
+msgstr ""
+
+#: modules/godotsteam/godotsteam.cpp
+#, fuzzy
+msgid "Current Steam ID"
+msgstr "Praegune profiil:"
+
+#: modules/godotsteam/godotsteam.cpp
+msgid "Leaderboard Details Max"
+msgstr ""
+
+#: modules/godotsteam/godotsteam.cpp
+msgid "Leaderboard Entries Array"
+msgstr ""
+
+#: modules/godotsteam/godotsteam.cpp
+msgid "Leaderboard Handle"
+msgstr ""
+
+#: modules/godotsteam/godotsteam.cpp
+#, fuzzy
+msgid "Current App ID"
+msgstr "Praegune Grupi Idx"
+
 #: modules/gridmap/grid_map.cpp
 msgid "Mesh Library"
 msgstr ""
@@ -5833,6 +6126,54 @@ msgstr "Nimed"
 msgid "Strings"
 msgstr "Sõned"
 
+#: modules/sqlite/src/godot_sqlite.cpp modules/sqlite/src/godot_sqlite.h
+#, fuzzy
+msgid "Arguments"
+msgstr "Vidinad"
+
+#: modules/sqlite/src/godot_sqlite.cpp modules/sqlite/src/godot_sqlite.h
+msgid "Query"
+msgstr ""
+
+#: modules/sqlite/src/godot_sqlite.h scene/resources/visual_shader_nodes.cpp
+#, fuzzy
+msgid "Default Value"
+msgstr "Vaikimisi"
+
+#: modules/sqlite/src/godot_sqlite.h
+#, fuzzy
+msgid "Primary Key"
+msgstr "On Peamine"
+
+#: modules/sqlite/src/godot_sqlite.h
+#, fuzzy
+msgid "Auto Increment"
+msgstr "Automaatne Taane"
+
+#: modules/sqlite/src/godot_sqlite.h
+msgid "Not Null"
+msgstr ""
+
+#: modules/sqlite/src/godot_sqlite.h
+#, fuzzy
+msgid "Unique"
+msgstr "Unikaalne Sõlm"
+
+#: modules/sqlite/src/godot_sqlite.h
+#, fuzzy
+msgid "Error Code"
+msgstr "Error"
+
+#: modules/sqlite/src/node_sqlite.cpp
+#, fuzzy
+msgid "Database"
+msgstr "Andmed"
+
+#: modules/sqlite/src/resource_sqlite.cpp
+#, fuzzy
+msgid "Tables"
+msgstr "Luba"
+
 #: modules/upnp/upnp.cpp
 #, fuzzy
 msgid "Discover Multicast If"
@@ -6353,10 +6694,6 @@ msgid "Performance A 12"
 msgstr "Jõudlus"
 
 #: platform/ios/export/export_plugin.cpp
-msgid "User Data"
-msgstr "Kasutaja Andmed"
-
-#: platform/ios/export/export_plugin.cpp
 msgid "Accessible From Files App"
 msgstr "Juurdepääsetavad Failid Rakendusest"
 
@@ -6511,10 +6848,6 @@ msgstr "Xcode"
 #, fuzzy
 msgid "Platform Build"
 msgstr "EhIta Platform"
-
-#: platform/macos/export/export_plugin.cpp
-msgid "SDK Version"
-msgstr "SDK Versioon"
 
 #: platform/macos/export/export_plugin.cpp
 msgid "SDK Build"
@@ -14468,11 +14801,6 @@ msgstr ""
 #, fuzzy
 msgid "Default Value Enabled"
 msgstr "Godoti funktsiooniprofiil"
-
-#: scene/resources/visual_shader_nodes.cpp
-#, fuzzy
-msgid "Default Value"
-msgstr "Vaikimisi"
 
 #: scene/resources/visual_shader_nodes.cpp
 #, fuzzy

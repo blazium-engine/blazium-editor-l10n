@@ -8084,17 +8084,6 @@ msgstr ""
 "Утримуйте Shift, щоб прокрутити одну сторінку."
 
 #: editor/gui/editor_scroll_box.cpp
-#, fuzzy
-msgid ""
-"Scroll Right\n"
-"Hold Ctrl to scroll to the End.\n"
-"Hold Shift to scroll one page."
-msgstr ""
-"Прокрутити вправо\n"
-"Утримуйте Ctrl, щоб прокрутити до кінця.\n"
-"Утримуйте Shift, щоб прокрутити одну сторінку."
-
-#: editor/gui/editor_scroll_box.cpp
 msgid ""
 "Scroll Right\n"
 "Hold Ctrl to scroll to the end.\n"

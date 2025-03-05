@@ -8299,17 +8299,6 @@ msgstr ""
 #, fuzzy
 msgid ""
 "Scroll Right\n"
-"Hold Ctrl to scroll to the End.\n"
-"Hold Shift to scroll one page."
-msgstr ""
-"Faire défiler vers la gauche\n"
-"Maintenez Ctrl pour défiler jusqu'au début.\n"
-"Maintenez Shift pour défiler d'une page."
-
-#: editor/gui/editor_scroll_box.cpp
-#, fuzzy
-msgid ""
-"Scroll Right\n"
 "Hold Ctrl to scroll to the end.\n"
 "Hold Shift to scroll one page."
 msgstr ""

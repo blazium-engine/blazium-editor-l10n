@@ -8080,17 +8080,6 @@ msgstr ""
 "Przytrzymaj Shift, by przewinąć jedną stronę."
 
 #: editor/gui/editor_scroll_box.cpp
-#, fuzzy
-msgid ""
-"Scroll Right\n"
-"Hold Ctrl to scroll to the End.\n"
-"Hold Shift to scroll one page."
-msgstr ""
-"Przewiń w prawo\n"
-"Przytrzymaj Ctrl, by przewinąć na koniec.\n"
-"Przytrzymaj Shift, by przewinąć jedną stronę."
-
-#: editor/gui/editor_scroll_box.cpp
 msgid ""
 "Scroll Right\n"
 "Hold Ctrl to scroll to the end.\n"

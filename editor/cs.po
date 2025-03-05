@@ -8020,17 +8020,6 @@ msgstr ""
 "Pro posunutí o jednu stránku podržte Shift."
 
 #: editor/gui/editor_scroll_box.cpp
-#, fuzzy
-msgid ""
-"Scroll Right\n"
-"Hold Ctrl to scroll to the End.\n"
-"Hold Shift to scroll one page."
-msgstr ""
-"Posunout doprava\n"
-"Pro posunutí na konec podržte Ctrl.\n"
-"Pro posunutí o jednu stránku podržte Shift."
-
-#: editor/gui/editor_scroll_box.cpp
 msgid ""
 "Scroll Right\n"
 "Hold Ctrl to scroll to the end.\n"

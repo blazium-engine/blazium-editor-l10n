@@ -7927,17 +7927,6 @@ msgstr ""
 "按住 Shift 滚动一页。"
 
 #: editor/gui/editor_scroll_box.cpp
-#, fuzzy
-msgid ""
-"Scroll Right\n"
-"Hold Ctrl to scroll to the End.\n"
-"Hold Shift to scroll one page."
-msgstr ""
-"向右滚动\n"
-"按住 Ctrl 向结尾滚动。\n"
-"按住 Shift 滚动一页。"
-
-#: editor/gui/editor_scroll_box.cpp
 msgid ""
 "Scroll Right\n"
 "Hold Ctrl to scroll to the end.\n"
