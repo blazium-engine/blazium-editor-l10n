@@ -67,9 +67,17 @@ msgid "Hex code or named color"
 msgstr ""
 
 #: scene/gui/color_picker.cpp
+msgid "Swatches"
+msgstr ""
+
+#: scene/gui/color_picker.cpp
 #, fuzzy
 msgid "Add current color as a preset."
 msgstr "Додај тренутну боју као поставку."
+
+#: scene/gui/color_picker.cpp
+msgid "Recent Colors"
+msgstr ""
 
 #: scene/gui/dialogs.cpp
 msgid "Cancel"
@@ -110,6 +118,15 @@ msgstr "Одабери тренутни директоријум"
 #, fuzzy
 msgid "Select This Folder"
 msgstr "Одабери овај директоријум"
+
+#: scene/gui/file_dialog.cpp
+#, fuzzy
+msgid "Open in File Manager"
+msgstr "Отвори датотеку"
+
+#: scene/gui/file_dialog.cpp
+msgid "Show Package Contents"
+msgstr ""
 
 #: scene/gui/file_dialog.cpp
 msgid "You don't have permission to access contents of this folder."

@@ -61,8 +61,16 @@ msgid "Hex code or named color"
 msgstr "헥스 코드 또는 색상 이름"
 
 #: scene/gui/color_picker.cpp
+msgid "Swatches"
+msgstr ""
+
+#: scene/gui/color_picker.cpp
 msgid "Add current color as a preset."
 msgstr "현재 색상을 프리셋으로 추가합니다."
+
+#: scene/gui/color_picker.cpp
+msgid "Recent Colors"
+msgstr ""
 
 #: scene/gui/dialogs.cpp
 msgid "Cancel"
@@ -103,6 +111,15 @@ msgstr "현재 폴더 선택"
 #: scene/gui/file_dialog.cpp
 msgid "Select This Folder"
 msgstr "이 폴더 선택"
+
+#: scene/gui/file_dialog.cpp
+#, fuzzy
+msgid "Open in File Manager"
+msgstr "파일 열기"
+
+#: scene/gui/file_dialog.cpp
+msgid "Show Package Contents"
+msgstr ""
 
 #: scene/gui/file_dialog.cpp
 msgid "You don't have permission to access contents of this folder."

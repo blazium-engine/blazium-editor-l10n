@@ -61,8 +61,16 @@ msgid "Hex code or named color"
 msgstr "16 進コードまたは名前付きの色"
 
 #: scene/gui/color_picker.cpp
+msgid "Swatches"
+msgstr ""
+
+#: scene/gui/color_picker.cpp
 msgid "Add current color as a preset."
 msgstr "現在の色をプリセットとして追加します。"
+
+#: scene/gui/color_picker.cpp
+msgid "Recent Colors"
+msgstr ""
 
 #: scene/gui/dialogs.cpp
 msgid "Cancel"
@@ -103,6 +111,15 @@ msgstr "現在のフォルダーを選択"
 #: scene/gui/file_dialog.cpp
 msgid "Select This Folder"
 msgstr "このフォルダーを選択"
+
+#: scene/gui/file_dialog.cpp
+#, fuzzy
+msgid "Open in File Manager"
+msgstr "ファイルを開く"
+
+#: scene/gui/file_dialog.cpp
+msgid "Show Package Contents"
+msgstr ""
 
 #: scene/gui/file_dialog.cpp
 msgid "You don't have permission to access contents of this folder."

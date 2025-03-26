@@ -78,8 +78,8 @@ msgstr "پیکربندی"
 #: editor/plugins/tiles/tile_set_atlas_source_editor.cpp
 #: modules/sqlite/src/godot_sqlite.h platform/android/export/export_plugin.cpp
 #: scene/2d/physics/area_2d.cpp scene/3d/physics/area_3d.cpp
-#: scene/3d/skeleton_3d.cpp scene/resources/3d/mesh_library.cpp
-#: scene/resources/3d/skin.cpp servers/xr/xr_pose.cpp servers/xr/xr_tracker.cpp
+#: scene/resources/3d/mesh_library.cpp scene/resources/3d/skin.cpp
+#: servers/xr/xr_pose.cpp servers/xr/xr_tracker.cpp
 msgid "Name"
 msgstr "نام"
 
@@ -195,9 +195,9 @@ msgstr "پنجره"
 #: scene/gui/control.cpp scene/gui/graph_edit.cpp scene/main/viewport.cpp
 #: scene/main/window.cpp scene/resources/2d/rectangle_shape_2d.cpp
 #: scene/resources/3d/box_shape_3d.cpp scene/resources/3d/primitive_meshes.cpp
-#: scene/resources/label_settings.cpp scene/resources/placeholder_textures.cpp
-#: scene/resources/style_box_flat.cpp scene/resources/visual_shader.cpp
-#: servers/rendering_server.cpp
+#: scene/resources/external_texture.cpp scene/resources/label_settings.cpp
+#: scene/resources/placeholder_textures.cpp scene/resources/style_box_flat.cpp
+#: scene/resources/visual_shader.cpp servers/rendering_server.cpp
 msgid "Size"
 msgstr "اندازه"
 
@@ -267,6 +267,11 @@ msgstr "گسترش به تایل"
 msgid "No Focus"
 msgstr "بدون تمرکز"
 
+#: core/config/project_settings.cpp scene/main/window.cpp
+#, fuzzy
+msgid "Sharp Corners"
+msgstr "تیز کردن شدت"
+
 #: core/config/project_settings.cpp
 msgid "Window Width Override"
 msgstr "لغو عرض پنجره"
@@ -319,7 +324,7 @@ msgstr "اتوبوس ها"
 msgid "Default Bus Layout"
 msgstr "چیدمان پیش‌فرض باس"
 
-#: core/config/project_settings.cpp
+#: core/config/project_settings.cpp editor/editor_settings.cpp
 msgid "General"
 msgstr "عمومی"
 
@@ -361,10 +366,30 @@ msgid "Embed Subwindows"
 msgstr "نهادینه‌سازی زیرپنجره‌ها"
 
 #: core/config/project_settings.cpp
+#, fuzzy
+msgid "Frame Pacing"
+msgstr "فاصله خطوط"
+
+#: core/config/project_settings.cpp platform/android/export/export.cpp
+msgid "Android"
+msgstr "اندروید"
+
+#: core/config/project_settings.cpp
+#, fuzzy
+msgid "Enable Frame Pacing"
+msgstr "فرزند قابل ویرایش"
+
+#: core/config/project_settings.cpp
+#, fuzzy
+msgid "Swappy Mode"
+msgstr "انتخاب حالت"
+
+#: core/config/project_settings.cpp
 #: editor/import/3d/resource_importer_scene.cpp main/main.cpp
-#: scene/2d/tile_map_layer.cpp scene/main/scene_tree.cpp
-#: scene/main/viewport.cpp scene/resources/2d/tile_set.cpp
-#: servers/physics_server_2d.cpp servers/physics_server_3d.cpp
+#: modules/jolt_physics/jolt_project_settings.cpp scene/2d/tile_map_layer.cpp
+#: scene/main/scene_tree.cpp scene/main/viewport.cpp
+#: scene/resources/2d/tile_set.cpp servers/physics_server_2d.cpp
+#: servers/physics_server_3d.cpp
 msgid "Physics"
 msgstr "فیزیک"
 
@@ -400,8 +425,8 @@ msgstr "جنبه"
 #: scene/2d/parallax_layer.cpp scene/2d/polygon_2d.cpp
 #: scene/2d/remote_transform_2d.cpp scene/3d/cpu_particles_3d.cpp
 #: scene/3d/node_3d.cpp scene/3d/remote_transform_3d.cpp
-#: scene/3d/skeleton_3d.cpp scene/animation/animation_blend_tree.h
-#: scene/gui/control.cpp scene/main/canvas_layer.cpp scene/main/scene_tree.cpp
+#: scene/animation/animation_blend_tree.h scene/gui/control.cpp
+#: scene/main/canvas_layer.cpp scene/main/scene_tree.cpp
 #: scene/main/viewport.cpp scene/resources/camera_attributes.cpp
 #: scene/resources/material.cpp scene/resources/particle_process_material.cpp
 #: servers/rendering_server.cpp
@@ -612,7 +637,8 @@ msgstr "کش"
 #: editor/import/3d/post_import_plugin_skeleton_rest_fixer.cpp
 #: modules/gdscript/gdscript.cpp platform/android/export/export_plugin.cpp
 #: platform/windows/export/export_plugin.cpp
-#: scene/3d/physics/joints/hinge_joint_3d.cpp servers/rendering_server.cpp
+#: scene/3d/physics/joints/hinge_joint_3d.cpp scene/3d/retarget_modifier_3d.cpp
+#: servers/rendering_server.cpp
 msgid "Enable"
 msgstr "به‌کاراندازی"
 
@@ -685,10 +711,6 @@ msgstr "دستگاه‌های درونداد"
 msgid "Pointing"
 msgstr "برداشتن نقطه"
 
-#: core/config/project_settings.cpp platform/android/export/export.cpp
-msgid "Android"
-msgstr "اندروید"
-
 #: core/config/project_settings.cpp editor/editor_settings.cpp
 msgid "Enable Long Press as Right Click"
 msgstr "به‌کاراندازی فشار دراز به‌عنوان راست کلیک"
@@ -716,6 +738,10 @@ msgstr "یکنواخت‌سازی دلتا"
 #: core/core_bind.cpp
 msgid "Print Error Messages"
 msgstr "چاپ کردن پیام خطا"
+
+#: core/core_bind.cpp
+msgid "Print to stdout"
+msgstr ""
 
 #: core/core_bind.cpp main/main.cpp
 msgid "Physics Ticks per Second"
@@ -846,8 +872,7 @@ msgstr "ماسک دکمه"
 #: editor/import/3d/resource_importer_scene.cpp
 #: modules/gltf/structures/gltf_node.cpp scene/2d/node_2d.cpp
 #: scene/2d/remote_transform_2d.cpp scene/3d/node_3d.cpp
-#: scene/3d/remote_transform_3d.cpp scene/3d/skeleton_3d.cpp
-#: scene/gui/control.cpp scene/main/window.cpp
+#: scene/3d/remote_transform_3d.cpp scene/gui/control.cpp scene/main/window.cpp
 #: scene/resources/particle_process_material.cpp servers/physics_server_2d.cpp
 #: servers/physics_server_3d.cpp
 msgid "Position"
@@ -1102,6 +1127,7 @@ msgid "Memory"
 msgstr "حافظه"
 
 #: core/object/message_queue.cpp core/register_core_types.cpp main/main.cpp
+#: modules/jolt_physics/jolt_project_settings.cpp
 #: modules/webrtc/register_types.cpp scene/main/window.cpp
 #: servers/rendering_server.cpp
 msgid "Limits"
@@ -1225,9 +1251,8 @@ msgstr "بارگیری به عنوان جانگهدار"
 #: modules/gltf/structures/gltf_node.cpp scene/2d/node_2d.cpp
 #: scene/2d/polygon_2d.cpp scene/2d/remote_transform_2d.cpp
 #: scene/3d/node_3d.cpp scene/3d/physics/physical_bone_3d.cpp
-#: scene/3d/remote_transform_3d.cpp scene/3d/skeleton_3d.cpp
-#: scene/gui/control.cpp scene/main/canvas_layer.cpp
-#: scene/resources/environment.cpp
+#: scene/3d/remote_transform_3d.cpp scene/gui/control.cpp
+#: scene/main/canvas_layer.cpp scene/resources/environment.cpp
 msgid "Rotation"
 msgstr "چرخش"
 
@@ -1333,6 +1358,20 @@ msgstr "کلیدزدن"
 #: editor/editor_inspector.cpp
 msgid "Deletable"
 msgstr "زدایش‌پذیر"
+
+#: editor/editor_inspector.cpp scene/gui/graph_element.cpp
+msgid "Selectable"
+msgstr "گزینش‌پذیر"
+
+#: editor/editor_inspector.cpp
+#, fuzzy
+msgid "Use Folding"
+msgstr "غیرفعال شده"
+
+#: editor/editor_inspector.cpp
+#, fuzzy
+msgid "Name Split Ratio"
+msgstr "کشیدن فاصله‌ها"
 
 #: editor/editor_interface.cpp
 msgid "Distraction Free Mode"
@@ -1464,10 +1503,6 @@ msgid "Single Window Mode"
 msgstr "حالت تک‌پنجره"
 
 #: editor/editor_settings.cpp
-msgid "Remember Window Size and Position"
-msgstr ""
-
-#: editor/editor_settings.cpp
 msgid "Mouse Extra Buttons Navigate History"
 msgstr ""
 
@@ -1501,6 +1536,7 @@ msgstr "بروزرسانی مستمر"
 
 #: editor/editor_settings.cpp
 #: editor/plugins/gizmos/particles_3d_emission_shape_gizmo_plugin.cpp
+#: editor/plugins/path_3d_editor_plugin.cpp
 msgid "Editors"
 msgstr "ویراستارها"
 
@@ -1716,6 +1752,41 @@ msgstr "حالت نمایش"
 msgid "Thumbnail Size"
 msgstr ""
 
+#: editor/editor_settings.cpp
+#, fuzzy
+msgid "Quick Open Dialog"
+msgstr "دیالوگ پرونده"
+
+#: editor/editor_settings.cpp scene/2d/physics/shape_cast_2d.cpp
+#: scene/3d/physics/shape_cast_3d.cpp
+msgid "Max Results"
+msgstr "نتایج بیشینه‌"
+
+#: editor/editor_settings.cpp
+#, fuzzy
+msgid "Show Search Highlight"
+msgstr "توضیح"
+
+#: editor/editor_settings.cpp
+#, fuzzy
+msgid "Enable Fuzzy Matching"
+msgstr "فرزند قابل ویرایش"
+
+#: editor/editor_settings.cpp
+#, fuzzy
+msgid "Max Fuzzy Misses"
+msgstr "بیشینه‌‌ی پیام‌های صف‌شده"
+
+#: editor/editor_settings.cpp
+#, fuzzy
+msgid "Include Addons"
+msgstr "یک Breakpoint درج کن"
+
+#: editor/editor_settings.cpp
+#, fuzzy
+msgid "Default Display Mode"
+msgstr "حالت نمایش"
+
 #: editor/editor_settings.cpp editor/import/3d/resource_importer_scene.cpp
 #: editor/register_editor_types.cpp modules/fbx/register_types.cpp
 #: modules/gltf/register_types.cpp
@@ -1810,7 +1881,7 @@ msgstr "ویراستار متن"
 
 #: editor/editor_settings.cpp scene/3d/label_3d.cpp
 #: scene/resources/3d/primitive_meshes.cpp scene/resources/label_settings.cpp
-#: scene/theme/default_theme.cpp
+#: scene/resources/text_paragraph.cpp scene/theme/default_theme.cpp
 msgid "Line Spacing"
 msgstr "فاصله خطوط"
 
@@ -1922,6 +1993,11 @@ msgstr "کشیدن فاصله‌ها"
 msgid "Behavior"
 msgstr "رفتار"
 
+#: editor/editor_settings.cpp
+#, fuzzy
+msgid "Empty Selection Clipboard"
+msgstr "تنها در قسمت انتخاب شده"
+
 #: editor/editor_settings.cpp main/performance.cpp modules/gridmap/grid_map.cpp
 #: scene/2d/tile_map_layer.cpp scene/resources/2d/tile_set.cpp
 #: servers/navigation_server_3d.cpp
@@ -2017,6 +2093,16 @@ msgid "Open Dominant Script on Scene Change"
 msgstr "گشودن اسکریپت چیره بر دگرگونی صحنه"
 
 #: editor/editor_settings.cpp
+#, fuzzy
+msgid "Documentation"
+msgstr "شمارش ها"
+
+#: editor/editor_settings.cpp
+#, fuzzy
+msgid "Enable Tooltips"
+msgstr "به‌کاراندازی ژیروسکوپ"
+
+#: editor/editor_settings.cpp
 msgid "Script List"
 msgstr "فهرست اسکریپت"
 
@@ -2035,6 +2121,11 @@ msgstr "حرارت اسکریپت فعال شد"
 #: editor/editor_settings.cpp
 msgid "Script Temperature History Size"
 msgstr "اندازه تاریخچه حرارت اسکریپت"
+
+#: editor/editor_settings.cpp
+#, fuzzy
+msgid "Highlight Scene Scripts"
+msgstr "برجسته‌سازی لایهٔ برگزیده"
 
 #: editor/editor_settings.cpp
 msgid "Group Help Pages"
@@ -2066,6 +2157,10 @@ msgstr "تکمیل"
 
 #: editor/editor_settings.cpp
 msgid "Idle Parse Delay"
+msgstr ""
+
+#: editor/editor_settings.cpp
+msgid "Idle Parse Delay With Errors Found"
 msgstr ""
 
 #: editor/editor_settings.cpp
@@ -2158,6 +2253,7 @@ msgstr "تنها در قسمت انتخاب شده"
 
 #: editor/editor_settings.cpp
 #: editor/plugins/gizmos/particles_3d_emission_shape_gizmo_plugin.cpp
+#: editor/plugins/path_3d_editor_plugin.cpp
 msgid "3D Gizmos"
 msgstr "گیزمو‌های سه‌بعدی"
 
@@ -2265,7 +2361,7 @@ msgstr "استخوان برگزیده"
 msgid "CSG"
 msgstr "سی.اس.جی"
 
-#: editor/editor_settings.cpp
+#: editor/editor_settings.cpp editor/plugins/path_3d_editor_plugin.cpp
 #, fuzzy
 msgid "Gizmo Settings"
 msgstr "ترجیحات"
@@ -2279,7 +2375,7 @@ msgstr "پیشفرض"
 msgid "Bone Shape"
 msgstr "شکل استخوان"
 
-#: editor/editor_settings.cpp
+#: editor/editor_settings.cpp editor/plugins/path_3d_editor_plugin.cpp
 msgid "Path 3D Tilt Disk Size"
 msgstr ""
 
@@ -2625,7 +2721,7 @@ msgid "Platforms"
 msgstr "سکوها"
 
 #: editor/editor_settings.cpp
-msgid "Linuxbsd"
+msgid "Linux/*BSD"
 msgstr ""
 
 #: editor/editor_settings.cpp
@@ -2665,6 +2761,10 @@ msgstr ""
 #, fuzzy
 msgid "Profiler Frame Max Functions"
 msgstr "تغییر نام نقش"
+
+#: editor/editor_settings.cpp
+msgid "Profiler Target FPS"
+msgstr ""
 
 #: editor/editor_settings.cpp
 msgid "Remote Scene Tree Refresh Interval"
@@ -3111,12 +3211,23 @@ msgstr ""
 
 #: editor/import/3d/post_import_plugin_skeleton_rest_fixer.cpp
 #, fuzzy
-msgid "Overwrite Axis"
-msgstr "بازنویسی می‌کند"
+msgid "Retarget Method"
+msgstr "روش نماپردازش"
 
 #: editor/import/3d/post_import_plugin_skeleton_rest_fixer.cpp
 msgid "Keep Global Rest on Leftovers"
 msgstr ""
+
+#: editor/import/3d/post_import_plugin_skeleton_rest_fixer.cpp
+#: scene/3d/retarget_modifier_3d.cpp
+#, fuzzy
+msgid "Use Global Pose"
+msgstr "بکاربردن مختصات‌های جهانی"
+
+#: editor/import/3d/post_import_plugin_skeleton_rest_fixer.cpp
+#, fuzzy
+msgid "Original Skeleton Name"
+msgstr "اسکلت"
 
 #: editor/import/3d/post_import_plugin_skeleton_rest_fixer.cpp
 msgid "Fix Silhouette"
@@ -3131,6 +3242,7 @@ msgstr "پالایش"
 
 #: editor/import/3d/post_import_plugin_skeleton_rest_fixer.cpp
 #: editor/import/resource_importer_bitmask.cpp
+#: modules/openxr/extensions/openxr_dpad_binding_extension.cpp
 #: servers/audio/effects/audio_effect_compressor.cpp
 msgid "Threshold"
 msgstr "آستانه"
@@ -3163,6 +3275,26 @@ msgstr ""
 #, fuzzy
 msgid "Generate Tangents"
 msgstr "حذف کن"
+
+#: editor/import/3d/resource_importer_obj.cpp
+#: editor/import/3d/resource_importer_scene.cpp
+#, fuzzy
+msgid "Generate LODs"
+msgstr "حذف کن"
+
+#: editor/import/3d/resource_importer_obj.cpp
+#, fuzzy
+msgid "Generate Shadow Mesh"
+msgstr "ساختن گره"
+
+#: editor/import/3d/resource_importer_obj.cpp
+#, fuzzy
+msgid "Generate Lightmap UV2"
+msgstr "حذف کن"
+
+#: editor/import/3d/resource_importer_obj.cpp
+msgid "Generate Lightmap UV2 Texel Size"
+msgstr ""
 
 #: editor/import/3d/resource_importer_obj.cpp
 #, fuzzy
@@ -3394,8 +3526,8 @@ msgstr "یک پرونده را ذخیره کن"
 #: scene/3d/navigation_region_3d.cpp scene/3d/physics/area_3d.cpp
 #: scene/3d/physics/joints/generic_6dof_joint_3d.cpp
 #: scene/3d/physics/ray_cast_3d.cpp scene/3d/physics/shape_cast_3d.cpp
-#: scene/3d/skeleton_3d.cpp scene/3d/sprite_3d.cpp scene/gui/code_edit.cpp
-#: scene/gui/graph_edit.cpp scene/main/canvas_layer.cpp
+#: scene/3d/sprite_3d.cpp scene/gui/code_edit.cpp scene/gui/graph_edit.cpp
+#: scene/main/canvas_layer.cpp
 #: scene/resources/2d/skeleton/skeleton_modification_2d.cpp
 #: scene/resources/2d/skeleton/skeleton_modification_stack_2d.cpp
 #: scene/resources/camera_attributes.cpp scene/resources/compositor.cpp
@@ -3421,18 +3553,8 @@ msgstr "LODs"
 
 #: editor/import/3d/resource_importer_scene.cpp
 #, fuzzy
-msgid "Normal Split Angle"
-msgstr "حذف قالب"
-
-#: editor/import/3d/resource_importer_scene.cpp
-#, fuzzy
 msgid "Normal Merge Angle"
 msgstr "حذف قالب"
-
-#: editor/import/3d/resource_importer_scene.cpp
-#, fuzzy
-msgid "Raycast Normals"
-msgstr "پشتیبانی..."
 
 #: editor/import/3d/resource_importer_scene.cpp
 #, fuzzy
@@ -3550,6 +3672,10 @@ msgstr "مقیاس ریشه"
 msgid "Import as Skeleton Bones"
 msgstr "درون‌برد به‌عنوان استخوان‌های استخوان‌بندی"
 
+#: editor/import/3d/resource_importer_scene.cpp
+msgid "Use Node Type Suffixes"
+msgstr ""
+
 #: editor/import/3d/resource_importer_scene.cpp modules/gltf/gltf_state.cpp
 msgid "Meshes"
 msgstr "مش‌ها"
@@ -3558,11 +3684,6 @@ msgstr "مش‌ها"
 #, fuzzy
 msgid "Ensure Tangents"
 msgstr "ویرایش مماس منحنی"
-
-#: editor/import/3d/resource_importer_scene.cpp
-#, fuzzy
-msgid "Generate LODs"
-msgstr "حذف کن"
 
 #: editor/import/3d/resource_importer_scene.cpp
 #, fuzzy
@@ -4095,6 +4216,7 @@ msgid "Frames Count"
 msgstr "افزودن عمل ورودی"
 
 #: editor/plugins/tiles/tile_set_atlas_source_editor.cpp
+#: modules/openxr/action_map/openxr_haptic_feedback.cpp
 msgid "Duration"
 msgstr "مدت"
 
@@ -4165,6 +4287,36 @@ msgid "Flush stdout on Print"
 msgstr ""
 
 #: main/main.cpp
+msgid "Low Processor Mode"
+msgstr "حالت کم پردازنده"
+
+#: main/main.cpp
+msgid "stdout"
+msgstr ""
+
+#: main/main.cpp
+msgid "Print FPS"
+msgstr "چاپ FPS"
+
+#: main/main.cpp
+msgid "Print GPU Profile"
+msgstr "چاپ نمایهٔ کارت گرفیک"
+
+#: main/main.cpp
+msgid "Verbose stdout"
+msgstr ""
+
+#: main/main.cpp scene/main/node.cpp scene/main/scene_tree.cpp
+#: scene/resources/multimesh.cpp
+msgid "Physics Interpolation"
+msgstr "میان‌یابی فیزیکی"
+
+#: main/main.cpp
+#, fuzzy
+msgid "Enable Warnings"
+msgstr "هشدارها"
+
+#: main/main.cpp
 msgid "Max Chars per Second"
 msgstr ""
 
@@ -4217,7 +4369,7 @@ msgstr "بازگشت"
 
 #: main/main.cpp
 #, fuzzy
-msgid "Fallback to Opengl 3"
+msgid "Fallback to OpenGL 3"
 msgstr "بازگشت"
 
 #: main/main.cpp servers/rendering_server.cpp
@@ -4241,7 +4393,7 @@ msgstr "بازگشت"
 
 #: main/main.cpp
 #, fuzzy
-msgid "Fallback to Gles"
+msgid "Fallback to GLES"
 msgstr "بازگشت"
 
 #: main/main.cpp
@@ -4310,28 +4462,8 @@ msgid "Output Latency"
 msgstr "نهفتگی برونداد"
 
 #: main/main.cpp
-msgid "stdout"
-msgstr ""
-
-#: main/main.cpp
-msgid "Print FPS"
-msgstr "چاپ FPS"
-
-#: main/main.cpp
-msgid "Print GPU Profile"
-msgstr "چاپ نمایهٔ کارت گرفیک"
-
-#: main/main.cpp
-msgid "Verbose stdout"
-msgstr ""
-
-#: main/main.cpp
 msgid "Frame Delay Msec"
 msgstr ""
-
-#: main/main.cpp
-msgid "Low Processor Mode"
-msgstr "حالت کم پردازنده"
 
 #: main/main.cpp
 msgid "Allow High Refresh Rate"
@@ -4440,6 +4572,21 @@ msgid "Eye Gaze Interaction"
 msgstr "تغییر نام نقش"
 
 #: main/main.cpp
+#, fuzzy
+msgid "Binding Modifiers"
+msgstr "حالت صدور:"
+
+#: main/main.cpp
+#, fuzzy
+msgid "Analog Threshold"
+msgstr "آستانه"
+
+#: main/main.cpp
+#, fuzzy
+msgid "Dpad Binding"
+msgstr "لایه گذاری"
+
+#: main/main.cpp
 msgid "Boot Splash"
 msgstr ""
 
@@ -4512,11 +4659,6 @@ msgstr "بازه از مبدای نهشت پندابزار"
 msgid "Show Image"
 msgstr "نمایش تصویر"
 
-#: main/main.cpp platform/web/export/export_plugin.cpp
-#: scene/resources/image_texture.cpp
-msgid "Image"
-msgstr "عکس"
-
 #: main/main.cpp
 msgid "Fullsize"
 msgstr "اندازه کامل"
@@ -4524,6 +4666,11 @@ msgstr "اندازه کامل"
 #: main/main.cpp servers/rendering_server.cpp
 msgid "Use Filter"
 msgstr "بکاربردن پالایه"
+
+#: main/main.cpp platform/web/export/export_plugin.cpp
+#: scene/resources/image_texture.cpp
+msgid "Image"
+msgstr "عکس"
 
 #: main/main.cpp
 #, fuzzy
@@ -4690,6 +4837,10 @@ msgstr "حداکثر اتصالات معلق"
 
 #: main/performance.cpp
 msgid "Edges Free"
+msgstr ""
+
+#: main/performance.cpp
+msgid "Obstacles"
 msgstr ""
 
 #: modules/blazium_sdk/csv/resource_importer_csv.cpp
@@ -4907,10 +5058,6 @@ msgstr "حالت ساخت"
 #: modules/csg/csg_shape.cpp
 msgid "Operation"
 msgstr "عملیات"
-
-#: modules/csg/csg_shape.cpp scene/main/scene_tree.cpp
-msgid "Snap"
-msgstr "چفت"
 
 #: modules/csg/csg_shape.cpp
 msgid "Calculate Tangents"
@@ -5548,7 +5695,7 @@ msgstr "گره مخلوط۲"
 msgid "Instance Materials"
 msgstr "تغییر بده"
 
-#: modules/gltf/structures/gltf_node.cpp scene/3d/skeleton_3d.cpp
+#: modules/gltf/structures/gltf_node.cpp
 msgid "Parent"
 msgstr "سرپرست"
 
@@ -5570,8 +5717,36 @@ msgstr "فرزند قابل ویرایش"
 msgid "Light"
 msgstr "نور"
 
+#: modules/gltf/structures/gltf_object_model_property.cpp
+msgid "glTF to Godot Expression"
+msgstr ""
+
+#: modules/gltf/structures/gltf_object_model_property.cpp
+msgid "Godot to glTF Expression"
+msgstr ""
+
+#: modules/gltf/structures/gltf_object_model_property.cpp
+#, fuzzy
+msgid "Node Paths"
+msgstr "مسیر گره"
+
+#: modules/gltf/structures/gltf_object_model_property.cpp
+msgid "Object Model Type"
+msgstr ""
+
+#: modules/gltf/structures/gltf_object_model_property.cpp
+#, fuzzy
+msgid "Json Pointers"
+msgstr "برداشتن نقطه"
+
+#: modules/gltf/structures/gltf_object_model_property.cpp
+#, fuzzy
+msgid "Variant Type"
+msgstr "تغییر نوع"
+
 #: modules/gltf/structures/gltf_skeleton.cpp
 #: modules/gltf/structures/gltf_skin.cpp
+#: modules/jolt_physics/jolt_project_settings.cpp
 #, fuzzy
 msgid "Joints"
 msgstr "برداشتن نقطه"
@@ -5716,13 +5891,13 @@ msgstr "پخت ناوبری"
 
 #: modules/interactive_music/audio_stream_interactive.cpp
 #, fuzzy
-msgid "Initial Clip"
-msgstr "موقعیت اولیه"
+msgid "Clip Count"
+msgstr "ثابت"
 
 #: modules/interactive_music/audio_stream_interactive.cpp
 #, fuzzy
-msgid "Clip Count"
-msgstr "ثابت"
+msgid "Initial Clip"
+msgstr "موقعیت اولیه"
 
 #: modules/interactive_music/audio_stream_playlist.cpp
 msgid "Shuffle"
@@ -5737,6 +5912,175 @@ msgstr "زمان پریدگی"
 #, fuzzy
 msgid "Stream Count"
 msgstr "افزودن عمل ورودی"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Jolt Physics 3D"
+msgstr "فیزیک ۳‌بعدی"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Simulation"
+msgstr "پویانمایی"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Velocity Steps"
+msgstr "سرعت"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Position Steps"
+msgstr "موقعیت"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+msgid "Use Enhanced Internal Edge Removal"
+msgstr ""
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Areas Detect Static Bodies"
+msgstr "بکاربردن بدن‌های جنبشی"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+msgid "Generate All Kinematic Contacts"
+msgstr ""
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Penetration Slop"
+msgstr "توابع"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Speculative Contact Distance"
+msgstr "افزودن وظیفه"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+msgid "Baumgarte Stabilization Factor"
+msgstr ""
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Soft Body Point Radius"
+msgstr "هشدارها"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+msgid "Bounce Velocity Threshold"
+msgstr ""
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Allow Sleep"
+msgstr "جستجو"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Sleep Velocity Threshold"
+msgstr "ویرایش منحنی گره"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Sleep Time Threshold"
+msgstr "آستانهٔ خوابیدن خطی"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+msgid "Continuous CD Movement Threshold"
+msgstr ""
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Continuous CD Max Penetration"
+msgstr "شمارش ها:"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+msgid "Body Pair Contact Cache Enabled"
+msgstr ""
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+msgid "Body Pair Contact Cache Distance Threshold"
+msgstr ""
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+msgid "Body Pair Contact Cache Angle Threshold"
+msgstr ""
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+msgid "Queries"
+msgstr ""
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+msgid "Enable Ray Cast Face Index"
+msgstr ""
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Motion Queries"
+msgstr "حالت جنبش"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Recovery Iterations"
+msgstr "تغییر نام نقش"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Recovery Amount"
+msgstr "انتخاب شده را تغییر مقیاس بده"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Collisions"
+msgstr "برخوردگاه"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Collision Margin Fraction"
+msgstr "انتخاب شده را تغییر مقیاس بده"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Active Edge Threshold"
+msgstr "آستانه"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "World Node"
+msgstr "مقیاس جهان"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Temporary Memory Buffer Size"
+msgstr "اندازه بافر مورد"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+msgid "World Boundary Shape Size"
+msgstr ""
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Max Linear Velocity"
+msgstr "خطی"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Max Angular Velocity"
+msgstr "سرعت زاویه‌ای ثابت"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Max Bodies"
+msgstr "بدن‌ها"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Max Body Pairs"
+msgstr "لایه‌های بیشینه‌"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Max Contact Constraints"
+msgstr "ثابت ها"
 
 #: modules/lightmapper_rd/register_types.cpp servers/rendering_server.cpp
 #, fuzzy
@@ -5958,6 +6302,7 @@ msgid "Noise Type"
 msgstr "تغییر نوع پایه"
 
 #: modules/noise/fastnoise_lite.cpp
+#: modules/openxr/action_map/openxr_haptic_feedback.cpp
 #: scene/resources/particle_process_material.cpp
 #, fuzzy
 msgid "Frequency"
@@ -6015,6 +6360,7 @@ msgid "Domain Warp"
 msgstr ""
 
 #: modules/noise/fastnoise_lite.cpp
+#: modules/openxr/action_map/openxr_haptic_feedback.cpp
 #, fuzzy
 msgid "Amplitude"
 msgstr "ویرایش منحنی گره"
@@ -6099,10 +6445,9 @@ msgid "Toplevel Paths"
 msgstr "کپی کردن مسیر node"
 
 #: modules/openxr/action_map/openxr_interaction_profile.cpp
-#: scene/main/scene_tree.cpp
 #, fuzzy
-msgid "Paths"
-msgstr "آدرس"
+msgid "Binding Path"
+msgstr "مسیر بلندر"
 
 #: modules/openxr/action_map/openxr_interaction_profile.cpp
 #, fuzzy
@@ -6113,6 +6458,55 @@ msgstr "حالت درون‌یابی"
 #, fuzzy
 msgid "Runtime Paths"
 msgstr "برداشتن نقطه"
+
+#: modules/openxr/extensions/openxr_dpad_binding_extension.cpp
+#, fuzzy
+msgid "Action Set"
+msgstr "انتخاب حالت"
+
+#: modules/openxr/extensions/openxr_dpad_binding_extension.cpp
+#, fuzzy
+msgid "Input Path"
+msgstr "نام درونداد"
+
+#: modules/openxr/extensions/openxr_dpad_binding_extension.cpp
+#, fuzzy
+msgid "Threshold Released"
+msgstr "آستانه"
+
+#: modules/openxr/extensions/openxr_dpad_binding_extension.cpp
+#, fuzzy
+msgid "Center Region"
+msgstr "دامنه‌های رنگ"
+
+#: modules/openxr/extensions/openxr_dpad_binding_extension.cpp
+#, fuzzy
+msgid "Wedge Angle"
+msgstr "زاویهٔ استخوان"
+
+#: modules/openxr/extensions/openxr_dpad_binding_extension.cpp
+msgid "Is Sticky"
+msgstr ""
+
+#: modules/openxr/extensions/openxr_dpad_binding_extension.cpp
+#: modules/openxr/extensions/openxr_valve_analog_threshold_extension.cpp
+msgid "On Haptic"
+msgstr ""
+
+#: modules/openxr/extensions/openxr_dpad_binding_extension.cpp
+#: modules/openxr/extensions/openxr_valve_analog_threshold_extension.cpp
+msgid "Off Haptic"
+msgstr ""
+
+#: modules/openxr/extensions/openxr_valve_analog_threshold_extension.cpp
+#, fuzzy
+msgid "On Threshold"
+msgstr "آستانه"
+
+#: modules/openxr/extensions/openxr_valve_analog_threshold_extension.cpp
+#, fuzzy
+msgid "Off Threshold"
+msgstr "آستانه"
 
 #: modules/openxr/openxr_interface.cpp
 #, fuzzy
@@ -6128,6 +6522,16 @@ msgstr "تعیین چندگانه:"
 #, fuzzy
 msgid "Layer Viewport"
 msgstr "صدور پروژه"
+
+#: modules/openxr/scene/openxr_composition_layer.cpp
+#, fuzzy
+msgid "Use Android Surface"
+msgstr "دنبال کردن سطح"
+
+#: modules/openxr/scene/openxr_composition_layer.cpp
+#, fuzzy
+msgid "Android Surface Size"
+msgstr "ورود حداکثر اندازه بافر"
 
 #: modules/openxr/scene/openxr_composition_layer.cpp
 #, fuzzy
@@ -6349,6 +6753,11 @@ msgstr "زمان:"
 #: modules/websocket/websocket_peer.cpp
 msgid "Max Queued Packets"
 msgstr ""
+
+#: modules/websocket/websocket_peer.cpp
+#, fuzzy
+msgid "Heartbeat Interval"
+msgstr "ترجمه‌ها"
 
 #: modules/webxr/webxr_interface.cpp
 #, fuzzy
@@ -6633,40 +7042,6 @@ msgid "Icons"
 msgstr "آیکون‌ها"
 
 #: platform/ios/export/export_plugin.cpp
-msgid "iPhone 120 X 120"
-msgstr "آی‌فون ۱۲۰ × ۱۲۰"
-
-#: platform/ios/export/export_plugin.cpp
-msgid "iPhone 180 X 180"
-msgstr "آی‌فون ۱۸۰ × ۱۸۰"
-
-#: platform/ios/export/export_plugin.cpp
-#, fuzzy
-msgid "iPad 76 X 76"
-msgstr "آی‌پَد ۱۶۷ × ۱۶۷"
-
-#: platform/ios/export/export_plugin.cpp
-msgid "iPad 152 X 152"
-msgstr "آی‌پَد ۱۵۲ × ۱۵۲"
-
-#: platform/ios/export/export_plugin.cpp
-msgid "iPad 167 X 167"
-msgstr "آی‌پَد ۱۶۷ × ۱۶۷"
-
-#: platform/ios/export/export_plugin.cpp
-msgid "App Store 1024 X 1024"
-msgstr "اَپ‌اِستور ۱۰۲۴ × ۱۰۲۴"
-
-#: platform/ios/export/export_plugin.cpp
-#, fuzzy
-msgid "Spotlight 40 X 40"
-msgstr "اِسپات‌لایت ۸۰ × ۸۰"
-
-#: platform/ios/export/export_plugin.cpp
-msgid "Spotlight 80 X 80"
-msgstr "اِسپات‌لایت ۸۰ × ۸۰"
-
-#: platform/ios/export/export_plugin.cpp
 #, fuzzy
 msgid "Settings 58 X 58"
 msgstr "تنظیمات"
@@ -6687,15 +7062,61 @@ msgid "Notification 60 X 60"
 msgstr "ثابت"
 
 #: platform/ios/export/export_plugin.cpp
+#, fuzzy
+msgid "Notification 76 X 76"
+msgstr "ثابت"
+
+#: platform/ios/export/export_plugin.cpp
+#, fuzzy
+msgid "Notification 114 X 114"
+msgstr "ثابت"
+
+#: platform/ios/export/export_plugin.cpp
+msgid "Spotlight 80 X 80"
+msgstr "اِسپات‌لایت ۸۰ × ۸۰"
+
+#: platform/ios/export/export_plugin.cpp
+#, fuzzy
+msgid "Spotlight 120 X 120"
+msgstr "اِسپات‌لایت ۸۰ × ۸۰"
+
+#: platform/ios/export/export_plugin.cpp
+msgid "iPhone 120 X 120"
+msgstr "آی‌فون ۱۲۰ × ۱۲۰"
+
+#: platform/ios/export/export_plugin.cpp
+msgid "iPhone 180 X 180"
+msgstr "آی‌فون ۱۸۰ × ۱۸۰"
+
+#: platform/ios/export/export_plugin.cpp
+msgid "iPad 167 X 167"
+msgstr "آی‌پَد ۱۶۷ × ۱۶۷"
+
+#: platform/ios/export/export_plugin.cpp
+msgid "iPad 152 X 152"
+msgstr "آی‌پَد ۱۵۲ × ۱۵۲"
+
+#: platform/ios/export/export_plugin.cpp
+#, fuzzy
+msgid "iOS 128 X 128"
+msgstr "اصلی ۱۹۲ × ۱۹۲"
+
+#: platform/ios/export/export_plugin.cpp
+#, fuzzy
+msgid "iOS 192 X 192"
+msgstr "اصلی ۱۹۲ × ۱۹۲"
+
+#: platform/ios/export/export_plugin.cpp
+#, fuzzy
+msgid "iOS 136 X 136"
+msgstr "آی‌پَد ۱۶۷ × ۱۶۷"
+
+#: platform/ios/export/export_plugin.cpp
+msgid "App Store 1024 X 1024"
+msgstr "اَپ‌اِستور ۱۰۲۴ × ۱۰۲۴"
+
+#: platform/ios/export/export_plugin.cpp
 msgid "App Store Team ID"
-msgstr ""
-
-#: platform/ios/export/export_plugin.cpp
-msgid "Provisioning Profile UUID Debug"
-msgstr ""
-
-#: platform/ios/export/export_plugin.cpp
-msgid "Code Sign Identity Debug"
 msgstr ""
 
 #: platform/ios/export/export_plugin.cpp
@@ -6704,12 +7125,30 @@ msgid "Export Method Debug"
 msgstr "صدور با اشکال زدا"
 
 #: platform/ios/export/export_plugin.cpp
-msgid "Provisioning Profile UUID Release"
+msgid "Code Sign Identity Debug"
 msgstr ""
 
 #: platform/ios/export/export_plugin.cpp
 msgid "Code Sign Identity Release"
 msgstr ""
+
+#: platform/ios/export/export_plugin.cpp
+msgid "Provisioning Profile UUID Debug"
+msgstr ""
+
+#: platform/ios/export/export_plugin.cpp
+msgid "Provisioning Profile UUID Release"
+msgstr ""
+
+#: platform/ios/export/export_plugin.cpp
+#, fuzzy
+msgid "Provisioning Profile Specifier Debug"
+msgstr "نمایه تامین"
+
+#: platform/ios/export/export_plugin.cpp
+#, fuzzy
+msgid "Provisioning Profile Specifier Release"
+msgstr "نمایه تامین"
 
 #: platform/ios/export/export_plugin.cpp
 #, fuzzy
@@ -6868,6 +7307,20 @@ msgstr "روشن"
 #, fuzzy
 msgid "Tracking Domains"
 msgstr "بسته بندی"
+
+#: platform/ios/export/export_plugin.cpp
+#, fuzzy
+msgid "Icon 1024 X 1024"
+msgstr "اَپ‌اِستور ۱۰۲۴ × ۱۰۲۴"
+
+#: platform/ios/export/export_plugin.cpp
+#, fuzzy
+msgid "Icon 1024 X 1024 Dark"
+msgstr "اَپ‌اِستور ۱۰۲۴ × ۱۰۲۴"
+
+#: platform/ios/export/export_plugin.cpp
+msgid "Icon 1024 X 1024 Tinted"
+msgstr ""
 
 #: platform/ios/export/export_plugin.cpp
 msgid "Storyboard"
@@ -8029,16 +8482,12 @@ msgid "Sub Emitter"
 msgstr ""
 
 #: scene/2d/gpu_particles_2d.cpp scene/3d/gpu_particles_3d.cpp
-msgid "Process Material"
-msgstr "پردازش جنس"
+msgid "Interp to End"
+msgstr "Interp تا پایان"
 
 #: scene/2d/gpu_particles_2d.cpp scene/3d/gpu_particles_3d.cpp
 msgid "Interpolate"
 msgstr "درون‌یابی"
-
-#: scene/2d/gpu_particles_2d.cpp scene/3d/gpu_particles_3d.cpp
-msgid "Interp to End"
-msgstr "Interp تا پایان"
 
 #: scene/2d/gpu_particles_2d.cpp scene/3d/gpu_particles_3d.cpp
 msgid "Base Size"
@@ -8061,6 +8510,10 @@ msgstr "توضیح"
 #: scene/2d/gpu_particles_2d.cpp
 msgid "Section Subdivisions"
 msgstr ""
+
+#: scene/2d/gpu_particles_2d.cpp scene/3d/gpu_particles_3d.cpp
+msgid "Process Material"
+msgstr "پردازش جنس"
 
 #: scene/2d/light_2d.cpp scene/3d/light_3d.cpp scene/gui/reference_rect.cpp
 msgid "Editor Only"
@@ -8110,6 +8563,7 @@ msgid "Texture Scale"
 msgstr "مقیاس بافت"
 
 #: scene/2d/light_occluder_2d.cpp scene/2d/line_2d.cpp
+#: scene/resources/curve.cpp
 msgid "Closed"
 msgstr "بسته"
 
@@ -8645,6 +9099,7 @@ msgid "One Way Collision Margin"
 msgstr "انتخاب شده را تغییر مقیاس بده"
 
 #: scene/2d/physics/collision_shape_2d.cpp
+#: scene/3d/physics/collision_shape_3d.cpp
 msgid "Debug Color"
 msgstr "رنگ اشکال‌زدایی"
 
@@ -8888,10 +9343,6 @@ msgstr "گشتاور"
 msgid "Margin"
 msgstr "لبه"
 
-#: scene/2d/physics/shape_cast_2d.cpp scene/3d/physics/shape_cast_3d.cpp
-msgid "Max Results"
-msgstr "نتایج بیشینه‌"
-
 #: scene/2d/physics/static_body_2d.cpp scene/3d/physics/static_body_3d.cpp
 msgid "Constant Linear Velocity"
 msgstr "سرعت خطی ثابت"
@@ -8942,7 +9393,7 @@ msgstr "تنظیمات ویراستار"
 msgid "Show Bone Gizmo"
 msgstr "بومی‌سازی"
 
-#: scene/2d/skeleton_2d.cpp scene/3d/skeleton_3d.cpp
+#: scene/2d/skeleton_2d.cpp
 #, fuzzy
 msgid "Rest"
 msgstr "راه اندازی دوباره"
@@ -9426,7 +9877,7 @@ msgstr "اندازهٔ قلم"
 msgid "Horizontal Alignment"
 msgstr "تراز افقی"
 
-#: scene/3d/label_3d.cpp scene/gui/label.cpp
+#: scene/3d/label_3d.cpp scene/gui/label.cpp scene/gui/rich_text_label.cpp
 #: scene/resources/3d/primitive_meshes.cpp
 msgid "Vertical Alignment"
 msgstr "تراز عمودی"
@@ -9594,11 +10045,11 @@ msgstr "کاهانش زاویه"
 
 #: scene/3d/lightmap_gi.cpp
 #, fuzzy
-msgid "Light Texture"
+msgid "Lightmap Textures"
 msgstr "بافت نور"
 
 #: scene/3d/lightmap_gi.cpp scene/main/scene_tree.cpp
-#: servers/rendering_server.cpp
+#: scene/resources/multimesh.cpp servers/rendering_server.cpp
 msgid "Quality"
 msgstr "کیفیت"
 
@@ -9799,6 +10250,11 @@ msgstr ""
 #, fuzzy
 msgid "Capture on Drag"
 msgstr "گرفتن"
+
+#: scene/3d/physics/collision_shape_3d.cpp
+#, fuzzy
+msgid "Debug Fill"
+msgstr "کاربر اشکال‌زدایی"
 
 #: scene/3d/physics/joints/cone_twist_joint_3d.cpp
 #: scene/3d/physics/physical_bone_3d.cpp
@@ -10203,6 +10659,11 @@ msgid "Max Force"
 msgstr "نیروی بیشینه"
 
 #: scene/3d/reflection_probe.cpp
+#, fuzzy
+msgid "Blend Distance"
+msgstr "نصب کردن"
+
+#: scene/3d/reflection_probe.cpp
 msgid "Origin Offset"
 msgstr ""
 
@@ -10236,10 +10697,11 @@ msgstr "ویرایش سیگنال"
 msgid "Color Energy"
 msgstr "انتقال جلوه خطی"
 
-#: scene/3d/skeleton_3d.cpp
+#: scene/3d/retarget_modifier_3d.cpp scene/resources/bone_map.cpp
+#: servers/xr/xr_positional_tracker.cpp
 #, fuzzy
-msgid "Bones"
-msgstr "استخوان"
+msgid "Profile"
+msgstr "پروفایلر"
 
 #: scene/3d/skeleton_3d.cpp
 #, fuzzy
@@ -10424,6 +10886,11 @@ msgid "Global Illumination"
 msgstr "ثابت"
 
 #: scene/3d/visual_instance_3d.cpp
+#, fuzzy
+msgid "Lightmap Texel Scale"
+msgstr "باز کردن و اجرای یک اسکریپت"
+
+#: scene/3d/visual_instance_3d.cpp
 msgid "Lightmap Scale"
 msgstr ""
 
@@ -10477,6 +10944,11 @@ msgstr "مقیاس جهان"
 #: scene/animation/animation_blend_tree.cpp
 msgid "Play Mode"
 msgstr "حالت پخش"
+
+#: scene/animation/animation_blend_tree.cpp
+#, fuzzy
+msgid "Advance on Start"
+msgstr "خودبارکردن هنگام راه‌اندازی"
 
 #: scene/animation/animation_blend_tree.cpp
 #, fuzzy
@@ -10541,6 +11013,10 @@ msgstr "دیرکرد"
 
 #: scene/animation/animation_blend_tree.cpp
 msgid "Random Delay"
+msgstr ""
+
+#: scene/animation/animation_blend_tree.cpp
+msgid "Explicit Elapse"
 msgstr ""
 
 #: scene/animation/animation_blend_tree.cpp
@@ -10630,6 +11106,11 @@ msgstr ""
 #: scene/animation/animation_mixer.cpp
 msgid "Track"
 msgstr "نوار"
+
+#: scene/animation/animation_mixer.cpp
+#, fuzzy
+msgid "Local"
+msgstr "بومی"
 
 #: scene/animation/animation_mixer.cpp
 #, fuzzy
@@ -10856,6 +11337,10 @@ msgid "Symbol Lookup on Click"
 msgstr ""
 
 #: scene/gui/code_edit.cpp
+msgid "Symbol Tooltip on Hover"
+msgstr ""
+
+#: scene/gui/code_edit.cpp
 #, fuzzy
 msgid "Line Folding"
 msgstr "غیرفعال شده"
@@ -11073,6 +11558,11 @@ msgstr ""
 #: scene/gui/control.cpp scene/main/status_indicator.cpp
 msgid "Tooltip"
 msgstr "پندابزار"
+
+#: scene/gui/control.cpp
+#, fuzzy
+msgid "Auto Translate Mode"
+msgstr "ترجمهٔ خودکار"
 
 #: scene/gui/control.cpp scene/theme/default_theme.cpp
 msgid "Focus"
@@ -11298,10 +11788,6 @@ msgstr "انتخاب حالت"
 msgid "Draggable"
 msgstr "کشاندنی"
 
-#: scene/gui/graph_element.cpp
-msgid "Selectable"
-msgstr "گزینش‌پذیر"
-
 #: scene/gui/graph_element.cpp scene/gui/option_button.cpp
 #: scene/theme/default_theme.cpp
 msgid "Selected"
@@ -11358,6 +11844,11 @@ msgstr ""
 
 #: scene/gui/item_list.cpp
 #, fuzzy
+msgid "Auto Width"
+msgstr "پهنای استخوان"
+
+#: scene/gui/item_list.cpp
+#, fuzzy
 msgid "Auto Height"
 msgstr "آزمودن"
 
@@ -11396,6 +11887,11 @@ msgstr "باز کردن و اجرای یک اسکریپت"
 #, fuzzy
 msgid "Label Settings"
 msgstr "بومی‌سازی"
+
+#: scene/gui/label.cpp
+#, fuzzy
+msgid "Paragraph Separator"
+msgstr "جداگر"
 
 #: scene/gui/label.cpp scene/resources/text_line.cpp
 #: scene/resources/text_paragraph.cpp
@@ -11783,6 +12279,11 @@ msgstr ""
 
 #: scene/gui/scroll_container.cpp
 #, fuzzy
+msgid "Draw Focus Border"
+msgstr "حالت ماوس"
+
+#: scene/gui/scroll_container.cpp
+#, fuzzy
 msgid "Horizontal Custom Step"
 msgstr "کلیدهای نامعتبر را حذف کن"
 
@@ -11864,6 +12365,11 @@ msgstr "توضیح"
 #: scene/gui/subviewport_container.cpp
 msgid "Stretch Shrink"
 msgstr "تنجش کشش"
+
+#: scene/gui/subviewport_container.cpp
+#, fuzzy
+msgid "Mouse Target"
+msgstr "هدف"
 
 #: scene/gui/tab_bar.cpp scene/gui/tab_container.cpp
 #, fuzzy
@@ -11949,6 +12455,11 @@ msgstr "حالت ماوس"
 
 #: scene/gui/text_edit.cpp
 #, fuzzy
+msgid "Empty Selection Clipboard Enabled"
+msgstr "تنها در قسمت انتخاب شده"
+
+#: scene/gui/text_edit.cpp
+#, fuzzy
 msgid "Wrap Mode"
 msgstr "حالت صدور:"
 
@@ -11964,6 +12475,11 @@ msgstr ""
 #: scene/gui/text_edit.cpp
 #, fuzzy
 msgid "Fit Content Height"
+msgstr "آزمودن"
+
+#: scene/gui/text_edit.cpp
+#, fuzzy
+msgid "Fit Content Width"
 msgstr "آزمودن"
 
 #: scene/gui/text_edit.cpp
@@ -12120,6 +12636,11 @@ msgstr "پیمایش افقی بکارافتاده"
 msgid "Scroll Vertical Enabled"
 msgstr "پیمایش عمودی بکارافتاده"
 
+#: scene/gui/tree.cpp
+#, fuzzy
+msgid "Auto Tooltip"
+msgstr "پندابزار"
+
 #: scene/gui/video_stream_player.cpp
 msgid "Audio Track"
 msgstr "نوار شنیداری"
@@ -12256,10 +12777,6 @@ msgstr "ترجیحات"
 msgid "Messages"
 msgstr "پیام"
 
-#: scene/main/node.cpp scene/main/scene_tree.cpp
-msgid "Physics Interpolation"
-msgstr "میان‌یابی فیزیکی"
-
 #: scene/main/node.cpp
 msgid "Auto Translate"
 msgstr "ترجمهٔ خودکار"
@@ -12304,6 +12821,11 @@ msgstr ""
 #: scene/main/scene_tree.cpp
 msgid "Contact Color"
 msgstr ""
+
+#: scene/main/scene_tree.cpp
+#, fuzzy
+msgid "Paths"
+msgstr "آدرس"
 
 #: scene/main/scene_tree.cpp
 msgid "Geometry Color"
@@ -12383,6 +12905,10 @@ msgstr ""
 #, fuzzy
 msgid "Threshold Pixels"
 msgstr "آستانه"
+
+#: scene/main/scene_tree.cpp
+msgid "Snap"
+msgstr "چفت"
 
 #: scene/main/scene_tree.cpp scene/main/viewport.cpp
 msgid "Snap 2D Transforms to Pixel"
@@ -12675,6 +13201,11 @@ msgstr ""
 
 #: scene/main/window.cpp
 #, fuzzy
+msgid "Exclude From Capture"
+msgstr "حذف گره(ها)"
+
+#: scene/main/window.cpp
+#, fuzzy
 msgid "Force Native"
 msgstr "فراخوانی"
 
@@ -12738,6 +13269,18 @@ msgstr "گره انیمیشن"
 #, fuzzy
 msgid "Segments"
 msgstr "نشانوندها:"
+
+#: scene/resources/2d/navigation_polygon.cpp scene/resources/material.cpp
+#: scene/resources/navigation_mesh.cpp
+#, fuzzy
+msgid "Sampling"
+msgstr "بومی"
+
+#: scene/resources/2d/navigation_polygon.cpp
+#: scene/resources/navigation_mesh.cpp
+#, fuzzy
+msgid "Partition Type"
+msgstr "متغیر را ویرایش کن:"
 
 #: scene/resources/2d/navigation_polygon.cpp
 #: scene/resources/navigation_mesh.cpp
@@ -12953,26 +13496,6 @@ msgstr "داده سفارشی"
 
 #: scene/resources/2d/tile_set.cpp
 #, fuzzy
-msgid "Tile Proxies"
-msgstr "صدور مجموعه کاشی"
-
-#: scene/resources/2d/tile_set.cpp
-#, fuzzy
-msgid "Source Level"
-msgstr "توسعه دهندگان"
-
-#: scene/resources/2d/tile_set.cpp
-#, fuzzy
-msgid "Coords Level"
-msgstr "میزان فشرده‌سازی"
-
-#: scene/resources/2d/tile_set.cpp
-#, fuzzy
-msgid "Alternative Level"
-msgstr "شناسهٔ دگرگزین"
-
-#: scene/resources/2d/tile_set.cpp
-#, fuzzy
 msgid "Tile Shape"
 msgstr "صدور مجموعه کاشی"
 
@@ -13117,6 +13640,11 @@ msgstr "مورد"
 #: scene/resources/3d/mesh_library.cpp
 msgid "Mesh Transform"
 msgstr "ترادیسی مش"
+
+#: scene/resources/3d/mesh_library.cpp
+#, fuzzy
+msgid "Mesh Cast Shadow"
+msgstr "ساختن گره"
 
 #: scene/resources/3d/mesh_library.cpp
 msgid "Navigation Mesh Transform"
@@ -13345,11 +13873,6 @@ msgstr "گره ترکیب"
 msgid "Stereo"
 msgstr "استریو"
 
-#: scene/resources/bone_map.cpp servers/xr/xr_positional_tracker.cpp
-#, fuzzy
-msgid "Profile"
-msgstr "پروفایلر"
-
 #: scene/resources/bone_map.cpp
 #, fuzzy
 msgid "Bonemap"
@@ -13516,6 +14039,16 @@ msgstr "انتقال جلوه خطی"
 #: scene/resources/compressed_texture.cpp
 msgid "Load Path"
 msgstr "بارکردن مسیر"
+
+#: scene/resources/curve.cpp
+#, fuzzy
+msgid "Min Domain"
+msgstr "بسته بندی"
+
+#: scene/resources/curve.cpp
+#, fuzzy
+msgid "Max Domain"
+msgstr "بیشینهٔ ستون‌ها"
 
 #: scene/resources/curve.cpp
 #, fuzzy
@@ -13931,6 +14464,11 @@ msgstr "از"
 msgid "To"
 msgstr "به"
 
+#: scene/resources/label_settings.cpp
+#, fuzzy
+msgid "Paragraph Spacing"
+msgstr "گزینه‌های کلاس:"
+
 #: scene/resources/material.cpp
 #, fuzzy
 msgid "Next Pass"
@@ -14117,11 +14655,6 @@ msgstr ""
 msgid "UV2"
 msgstr "فرابنفش ۲"
 
-#: scene/resources/material.cpp scene/resources/navigation_mesh.cpp
-#, fuzzy
-msgid "Sampling"
-msgstr "بومی"
-
 #: scene/resources/material.cpp
 msgid "Shadows"
 msgstr "سایه‌ها"
@@ -14240,11 +14773,6 @@ msgstr "ارث‌بری صحنهٔ فرزند"
 #: scene/resources/multimesh.cpp
 msgid "Visible Instance Count"
 msgstr ""
-
-#: scene/resources/navigation_mesh.cpp
-#, fuzzy
-msgid "Partition Type"
-msgstr "متغیر را ویرایش کن:"
 
 #: scene/resources/navigation_mesh.cpp
 #, fuzzy
@@ -14504,6 +15032,11 @@ msgstr "انتخاب شده را تغییر مقیاس بده"
 
 #: scene/resources/particle_process_material.cpp
 #, fuzzy
+msgid "Amount at Start"
+msgstr "مقدار:"
+
+#: scene/resources/particle_process_material.cpp
+#, fuzzy
 msgid "Keep Velocity"
 msgstr "سرعت"
 
@@ -14661,16 +15194,6 @@ msgstr ""
 #, fuzzy
 msgid "Modes"
 msgstr "انتخاب حالت"
-
-#: scene/resources/visual_shader.cpp
-#, fuzzy
-msgid "Varyings"
-msgstr "هشدارها"
-
-#: scene/resources/visual_shader.cpp
-#, fuzzy
-msgid "Preview Params"
-msgstr "پیش نمایش"
 
 #: scene/resources/visual_shader.cpp
 msgid "Input Name"
@@ -15505,6 +16028,16 @@ msgstr "انتخاب حالت"
 
 #: scene/theme/default_theme.cpp
 #, fuzzy
+msgid "Hovered"
+msgstr "بازنشانی بزرگنمایی"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Hovered Dimmed"
+msgstr "بازنشانی بزرگنمایی"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
 msgid "Selected Focus"
 msgstr "همهٔ انتخاب ها"
 
@@ -15516,6 +16049,11 @@ msgstr "اشاره‌گر"
 #: scene/theme/default_theme.cpp
 msgid "Cursor Unfocused"
 msgstr ""
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Button Hover"
+msgstr "دکمهٔ میانی."
 
 #: scene/theme/default_theme.cpp
 #, fuzzy
@@ -15581,6 +16119,16 @@ msgstr "دکمهٔ میانی."
 #, fuzzy
 msgid "Title Button Color"
 msgstr "تنها در قسمت انتخاب شده"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Font Hovered Color"
+msgstr "توابع"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Font Hovered Dimmed Color"
+msgstr "توابع"
 
 #: scene/theme/default_theme.cpp
 #, fuzzy
@@ -15704,13 +16252,18 @@ msgstr "لبهٔ آیکن"
 
 #: scene/theme/default_theme.cpp
 #, fuzzy
-msgid "Font Hovered Color"
-msgstr "توابع"
+msgid "Font Hovered Selected Color"
+msgstr "نمایه موجود:"
 
 #: scene/theme/default_theme.cpp
 #, fuzzy
-msgid "Hovered"
-msgstr "بازنشانی بزرگنمایی"
+msgid "Hovered Selected"
+msgstr "همهٔ انتخاب ها"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Hovered Selected Focus"
+msgstr "همهٔ انتخاب ها"
 
 #: scene/theme/default_theme.cpp
 #, fuzzy
@@ -16529,6 +17082,11 @@ msgstr "زمان:"
 msgid "Surround"
 msgstr ""
 
+#: servers/audio/effects/audio_stream_generator.cpp
+#, fuzzy
+msgid "Mix Rate Mode"
+msgstr "گره ترکیب"
+
 #: servers/audio_server.cpp
 msgid "Enable Input"
 msgstr "به‌کاراندازی درونداد"
@@ -17164,6 +17722,11 @@ msgid "Compress With GPU"
 msgstr "اجزا"
 
 #: servers/rendering_server.cpp
+#, fuzzy
+msgid "Cache GPU Compressor"
+msgstr "فشرده‌سازی"
+
+#: servers/rendering_server.cpp
 msgid "Lossless Compression"
 msgstr ""
 
@@ -17557,6 +18120,10 @@ msgstr "قدرت"
 #: servers/xr_server.cpp
 msgid "World Origin"
 msgstr "خاستگاه جهان"
+
+#: servers/xr_server.cpp
+msgid "Camera Locked to Origin"
+msgstr ""
 
 #: servers/xr_server.cpp
 msgid "Primary Interface"

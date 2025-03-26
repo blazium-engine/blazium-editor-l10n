@@ -35,8 +35,8 @@ msgstr "கட்டமைப்பு"
 #: editor/plugins/tiles/tile_set_atlas_source_editor.cpp
 #: modules/sqlite/src/godot_sqlite.h platform/android/export/export_plugin.cpp
 #: scene/2d/physics/area_2d.cpp scene/3d/physics/area_3d.cpp
-#: scene/3d/skeleton_3d.cpp scene/resources/3d/mesh_library.cpp
-#: scene/resources/3d/skin.cpp servers/xr/xr_pose.cpp servers/xr/xr_tracker.cpp
+#: scene/resources/3d/mesh_library.cpp scene/resources/3d/skin.cpp
+#: servers/xr/xr_pose.cpp servers/xr/xr_tracker.cpp
 msgid "Name"
 msgstr "பெயர்"
 
@@ -152,9 +152,9 @@ msgstr "சாளரம்"
 #: scene/gui/control.cpp scene/gui/graph_edit.cpp scene/main/viewport.cpp
 #: scene/main/window.cpp scene/resources/2d/rectangle_shape_2d.cpp
 #: scene/resources/3d/box_shape_3d.cpp scene/resources/3d/primitive_meshes.cpp
-#: scene/resources/label_settings.cpp scene/resources/placeholder_textures.cpp
-#: scene/resources/style_box_flat.cpp scene/resources/visual_shader.cpp
-#: servers/rendering_server.cpp
+#: scene/resources/external_texture.cpp scene/resources/label_settings.cpp
+#: scene/resources/placeholder_textures.cpp scene/resources/style_box_flat.cpp
+#: scene/resources/visual_shader.cpp servers/rendering_server.cpp
 msgid "Size"
 msgstr "அளவு"
 
@@ -224,6 +224,11 @@ msgstr "தலைப்புக்கு நீட்டிக்கவும�
 msgid "No Focus"
 msgstr "கவனம் இல்லை"
 
+#: core/config/project_settings.cpp scene/main/window.cpp
+#, fuzzy
+msgid "Sharp Corners"
+msgstr "கூர்மையானது"
+
 #: core/config/project_settings.cpp
 msgid "Window Width Override"
 msgstr "சாளர அகலம் மேலெழுகிறது"
@@ -276,7 +281,7 @@ msgstr "பேருந்துகள்"
 msgid "Default Bus Layout"
 msgstr "இயல்புநிலை பச் தளவமைப்பு"
 
-#: core/config/project_settings.cpp
+#: core/config/project_settings.cpp editor/editor_settings.cpp
 msgid "General"
 msgstr "பொது"
 
@@ -318,10 +323,30 @@ msgid "Embed Subwindows"
 msgstr "உட்பொதிக்கப்பட்ட துணை சிந்தனைகள்"
 
 #: core/config/project_settings.cpp
+#, fuzzy
+msgid "Frame Pacing"
+msgstr "அடிப்படை இடைவெளி"
+
+#: core/config/project_settings.cpp platform/android/export/export.cpp
+msgid "Android"
+msgstr "ஆண்ட்ராய்டு"
+
+#: core/config/project_settings.cpp
+#, fuzzy
+msgid "Enable Frame Pacing"
+msgstr "பொருள் எடுப்பதை இயக்கவும்"
+
+#: core/config/project_settings.cpp
+#, fuzzy
+msgid "Swappy Mode"
+msgstr "ச்கை பயன்முறை"
+
+#: core/config/project_settings.cpp
 #: editor/import/3d/resource_importer_scene.cpp main/main.cpp
-#: scene/2d/tile_map_layer.cpp scene/main/scene_tree.cpp
-#: scene/main/viewport.cpp scene/resources/2d/tile_set.cpp
-#: servers/physics_server_2d.cpp servers/physics_server_3d.cpp
+#: modules/jolt_physics/jolt_project_settings.cpp scene/2d/tile_map_layer.cpp
+#: scene/main/scene_tree.cpp scene/main/viewport.cpp
+#: scene/resources/2d/tile_set.cpp servers/physics_server_2d.cpp
+#: servers/physics_server_3d.cpp
 msgid "Physics"
 msgstr "இயற்பியல்"
 
@@ -357,8 +382,8 @@ msgstr "நற்பொருத்தம்"
 #: scene/2d/parallax_layer.cpp scene/2d/polygon_2d.cpp
 #: scene/2d/remote_transform_2d.cpp scene/3d/cpu_particles_3d.cpp
 #: scene/3d/node_3d.cpp scene/3d/remote_transform_3d.cpp
-#: scene/3d/skeleton_3d.cpp scene/animation/animation_blend_tree.h
-#: scene/gui/control.cpp scene/main/canvas_layer.cpp scene/main/scene_tree.cpp
+#: scene/animation/animation_blend_tree.h scene/gui/control.cpp
+#: scene/main/canvas_layer.cpp scene/main/scene_tree.cpp
 #: scene/main/viewport.cpp scene/resources/camera_attributes.cpp
 #: scene/resources/material.cpp scene/resources/particle_process_material.cpp
 #: servers/rendering_server.cpp
@@ -564,7 +589,8 @@ msgstr "பைப்லைன் கேச்"
 #: editor/import/3d/post_import_plugin_skeleton_rest_fixer.cpp
 #: modules/gdscript/gdscript.cpp platform/android/export/export_plugin.cpp
 #: platform/windows/export/export_plugin.cpp
-#: scene/3d/physics/joints/hinge_joint_3d.cpp servers/rendering_server.cpp
+#: scene/3d/physics/joints/hinge_joint_3d.cpp scene/3d/retarget_modifier_3d.cpp
+#: servers/rendering_server.cpp
 msgid "Enable"
 msgstr "இயக்கு"
 
@@ -634,10 +660,6 @@ msgstr "உள்ளீட்டு சாதனங்கள்"
 msgid "Pointing"
 msgstr "சுட்டிக்காட்டி"
 
-#: core/config/project_settings.cpp platform/android/export/export.cpp
-msgid "Android"
-msgstr "ஆண்ட்ராய்டு"
-
 #: core/config/project_settings.cpp editor/editor_settings.cpp
 msgid "Enable Long Press as Right Click"
 msgstr "வலது சொடுக்கு என நீண்ட அழுத்தத்தை இயக்கவும்"
@@ -665,6 +687,11 @@ msgstr "டெல்டா மென்மையானது"
 #: core/core_bind.cpp
 msgid "Print Error Messages"
 msgstr "பிழை செய்திகளை அச்சிடுக"
+
+#: core/core_bind.cpp
+#, fuzzy
+msgid "Print to stdout"
+msgstr "VERBOSE STDOUT"
 
 #: core/core_bind.cpp main/main.cpp
 msgid "Physics Ticks per Second"
@@ -797,8 +824,7 @@ msgstr "பொத்தான் முகமூடி"
 #: editor/import/3d/resource_importer_scene.cpp
 #: modules/gltf/structures/gltf_node.cpp scene/2d/node_2d.cpp
 #: scene/2d/remote_transform_2d.cpp scene/3d/node_3d.cpp
-#: scene/3d/remote_transform_3d.cpp scene/3d/skeleton_3d.cpp
-#: scene/gui/control.cpp scene/main/window.cpp
+#: scene/3d/remote_transform_3d.cpp scene/gui/control.cpp scene/main/window.cpp
 #: scene/resources/particle_process_material.cpp servers/physics_server_2d.cpp
 #: servers/physics_server_3d.cpp
 msgid "Position"
@@ -1047,6 +1073,7 @@ msgid "Memory"
 msgstr "நினைவகம்"
 
 #: core/object/message_queue.cpp core/register_core_types.cpp main/main.cpp
+#: modules/jolt_physics/jolt_project_settings.cpp
 #: modules/webrtc/register_types.cpp scene/main/window.cpp
 #: servers/rendering_server.cpp
 msgid "Limits"
@@ -1167,9 +1194,8 @@ msgstr "பிளேச்ஓல்டர்களைத் தவிர்க�
 #: modules/gltf/structures/gltf_node.cpp scene/2d/node_2d.cpp
 #: scene/2d/polygon_2d.cpp scene/2d/remote_transform_2d.cpp
 #: scene/3d/node_3d.cpp scene/3d/physics/physical_bone_3d.cpp
-#: scene/3d/remote_transform_3d.cpp scene/3d/skeleton_3d.cpp
-#: scene/gui/control.cpp scene/main/canvas_layer.cpp
-#: scene/resources/environment.cpp
+#: scene/3d/remote_transform_3d.cpp scene/gui/control.cpp
+#: scene/main/canvas_layer.cpp scene/resources/environment.cpp
 msgid "Rotation"
 msgstr "சுழற்சி"
 
@@ -1269,6 +1295,20 @@ msgstr "இணைத்தல்"
 #: editor/editor_inspector.cpp
 msgid "Deletable"
 msgstr "நீக்கக்கூடிய"
+
+#: editor/editor_inspector.cpp scene/gui/graph_element.cpp
+msgid "Selectable"
+msgstr "தேர்ந்தெடுக்கக்கூடியது"
+
+#: editor/editor_inspector.cpp
+#, fuzzy
+msgid "Use Folding"
+msgstr "குறியீடு மடிப்பு"
+
+#: editor/editor_inspector.cpp
+#, fuzzy
+msgid "Name Split Ratio"
+msgstr "இடைவெளிகளை வரையவும்"
 
 #: editor/editor_interface.cpp
 msgid "Distraction Free Mode"
@@ -1395,10 +1435,6 @@ msgid "Single Window Mode"
 msgstr "ஒற்றை சாளர முறை"
 
 #: editor/editor_settings.cpp
-msgid "Remember Window Size and Position"
-msgstr ""
-
-#: editor/editor_settings.cpp
 msgid "Mouse Extra Buttons Navigate History"
 msgstr "சுட்டி கூடுதல் பொத்தான்கள் வரலாற்றில் செல்லவும்"
 
@@ -1432,6 +1468,7 @@ msgstr "தொடர்ந்து புதுப்பிக்கவும�
 
 #: editor/editor_settings.cpp
 #: editor/plugins/gizmos/particles_3d_emission_shape_gizmo_plugin.cpp
+#: editor/plugins/path_3d_editor_plugin.cpp
 msgid "Editors"
 msgstr "ஆசிரியர்கள்"
 
@@ -1644,6 +1681,41 @@ msgstr "காட்சி முறை"
 msgid "Thumbnail Size"
 msgstr "சிறு அளவு"
 
+#: editor/editor_settings.cpp
+#, fuzzy
+msgid "Quick Open Dialog"
+msgstr "கோப்பு உரையாடல்"
+
+#: editor/editor_settings.cpp scene/2d/physics/shape_cast_2d.cpp
+#: scene/3d/physics/shape_cast_3d.cpp
+msgid "Max Results"
+msgstr "அதிகபட்ச முடிவுகள்"
+
+#: editor/editor_settings.cpp
+#, fuzzy
+msgid "Show Search Highlight"
+msgstr "கிராபர் சிறப்பம்சமாக"
+
+#: editor/editor_settings.cpp
+#, fuzzy
+msgid "Enable Fuzzy Matching"
+msgstr "கோப்பு பதிவுகளை இயக்கவும்"
+
+#: editor/editor_settings.cpp
+#, fuzzy
+msgid "Max Fuzzy Misses"
+msgstr "அதிகபட்சம் வரிசைப்படுத்தப்பட்ட செய்திகள்"
+
+#: editor/editor_settings.cpp
+#, fuzzy
+msgid "Include Addons"
+msgstr "துணை நிரல்களை விலக்கு"
+
+#: editor/editor_settings.cpp
+#, fuzzy
+msgid "Default Display Mode"
+msgstr "காட்சி முறை"
+
 #: editor/editor_settings.cpp editor/import/3d/resource_importer_scene.cpp
 #: editor/register_editor_types.cpp modules/fbx/register_types.cpp
 #: modules/gltf/register_types.cpp
@@ -1733,7 +1805,7 @@ msgstr "உரை ஆசிரியர்"
 
 #: editor/editor_settings.cpp scene/3d/label_3d.cpp
 #: scene/resources/3d/primitive_meshes.cpp scene/resources/label_settings.cpp
-#: scene/theme/default_theme.cpp
+#: scene/resources/text_paragraph.cpp scene/theme/default_theme.cpp
 msgid "Line Spacing"
 msgstr "வரி இடைவெளி"
 
@@ -1839,6 +1911,11 @@ msgstr "இடைவெளிகளை வரையவும்"
 msgid "Behavior"
 msgstr "நடத்தை"
 
+#: editor/editor_settings.cpp
+#, fuzzy
+msgid "Empty Selection Clipboard"
+msgstr "தேர்வு நிறம்"
+
 #: editor/editor_settings.cpp main/performance.cpp modules/gridmap/grid_map.cpp
 #: scene/2d/tile_map_layer.cpp scene/resources/2d/tile_set.cpp
 #: servers/navigation_server_3d.cpp
@@ -1934,6 +2011,16 @@ msgid "Open Dominant Script on Scene Change"
 msgstr "காட்சி மாற்றத்தில் ஆதிக்கம் செலுத்தும் ச்கிரிப்ட்"
 
 #: editor/editor_settings.cpp
+#, fuzzy
+msgid "Documentation"
+msgstr "நோக்குநிலை"
+
+#: editor/editor_settings.cpp
+#, fuzzy
+msgid "Enable Tooltips"
+msgstr "அறிவுள்ள தீர்மானத்தை இயக்கவும்"
+
+#: editor/editor_settings.cpp
 msgid "Script List"
 msgstr "ச்கிரிப்ட் பட்டியல்"
 
@@ -1952,6 +2039,11 @@ msgstr "ச்கிரிப்ட் வெப்பநிலை இயக்�
 #: editor/editor_settings.cpp
 msgid "Script Temperature History Size"
 msgstr "ச்கிரிப்ட் வெப்பநிலை வரலாறு அளவு"
+
+#: editor/editor_settings.cpp
+#, fuzzy
+msgid "Highlight Scene Scripts"
+msgstr "தேர்ந்தெடுக்கப்பட்ட அடுக்கை முன்னிலைப்படுத்தவும்"
 
 #: editor/editor_settings.cpp
 msgid "Group Help Pages"
@@ -1983,6 +2075,11 @@ msgstr "நிறைவு"
 
 #: editor/editor_settings.cpp
 msgid "Idle Parse Delay"
+msgstr "செயலற்ற பாகுபடுத்தல் நேரந்தவறுகை"
+
+#: editor/editor_settings.cpp
+#, fuzzy
+msgid "Idle Parse Delay With Errors Found"
 msgstr "செயலற்ற பாகுபடுத்தல் நேரந்தவறுகை"
 
 #: editor/editor_settings.cpp
@@ -2069,6 +2166,7 @@ msgstr "தேர்வு பெட்டி நிறம்"
 
 #: editor/editor_settings.cpp
 #: editor/plugins/gizmos/particles_3d_emission_shape_gizmo_plugin.cpp
+#: editor/plugins/path_3d_editor_plugin.cpp
 msgid "3D Gizmos"
 msgstr "3 டி கிச்மோச்"
 
@@ -2171,7 +2269,7 @@ msgstr "தேர்ந்தெடுக்கப்பட்ட எலும�
 msgid "CSG"
 msgstr "சி.எச்.சி."
 
-#: editor/editor_settings.cpp
+#: editor/editor_settings.cpp editor/plugins/path_3d_editor_plugin.cpp
 msgid "Gizmo Settings"
 msgstr "கிச்மோ அமைப்புகள்"
 
@@ -2183,7 +2281,7 @@ msgstr "எலும்பு அச்சு நீளம்"
 msgid "Bone Shape"
 msgstr "எலும்பு வடிவம்"
 
-#: editor/editor_settings.cpp
+#: editor/editor_settings.cpp editor/plugins/path_3d_editor_plugin.cpp
 msgid "Path 3D Tilt Disk Size"
 msgstr "பாதை 3D டில்ட் வட்டு அளவு"
 
@@ -2509,7 +2607,7 @@ msgid "Platforms"
 msgstr "தளங்கள்"
 
 #: editor/editor_settings.cpp
-msgid "Linuxbsd"
+msgid "Linux/*BSD"
 msgstr ""
 
 #: editor/editor_settings.cpp
@@ -2547,6 +2645,11 @@ msgstr "சுயவிவர பிரேம் வரலாற்று அள
 #: editor/editor_settings.cpp
 msgid "Profiler Frame Max Functions"
 msgstr "சுயவிவர பிரேம் அதிகபட்ச செயல்பாடுகள்"
+
+#: editor/editor_settings.cpp
+#, fuzzy
+msgid "Profiler Target FPS"
+msgstr "சுயவிவர பிரேம் வரலாற்று அளவு"
 
 #: editor/editor_settings.cpp
 msgid "Remote Scene Tree Refresh Interval"
@@ -2954,12 +3057,23 @@ msgstr "இறக்குமதிக்குப் பிறகு அனை�
 
 #: editor/import/3d/post_import_plugin_skeleton_rest_fixer.cpp
 #, fuzzy
-msgid "Overwrite Axis"
-msgstr "மீறுகிறது"
+msgid "Retarget Method"
+msgstr "வழங்குதல் முறை"
 
 #: editor/import/3d/post_import_plugin_skeleton_rest_fixer.cpp
 msgid "Keep Global Rest on Leftovers"
 msgstr "எஞ்சியவற்றில் உலகளாவிய ஓய்வு வைத்திருங்கள்"
+
+#: editor/import/3d/post_import_plugin_skeleton_rest_fixer.cpp
+#: scene/3d/retarget_modifier_3d.cpp
+#, fuzzy
+msgid "Use Global Pose"
+msgstr "உலகளாவிய ஆயத்தொலைவுகளைப் பயன்படுத்துங்கள்"
+
+#: editor/import/3d/post_import_plugin_skeleton_rest_fixer.cpp
+#, fuzzy
+msgid "Original Skeleton Name"
+msgstr "எலும்புக்கூடு பெயர்"
 
 #: editor/import/3d/post_import_plugin_skeleton_rest_fixer.cpp
 msgid "Fix Silhouette"
@@ -2974,6 +3088,7 @@ msgstr "வடிப்பி"
 
 #: editor/import/3d/post_import_plugin_skeleton_rest_fixer.cpp
 #: editor/import/resource_importer_bitmask.cpp
+#: modules/openxr/extensions/openxr_dpad_binding_extension.cpp
 #: servers/audio/effects/audio_effect_compressor.cpp
 msgid "Threshold"
 msgstr "வாசல்"
@@ -3001,6 +3116,26 @@ msgstr "தடையற்ற எலும்புகள்"
 #: editor/import/3d/resource_importer_obj.cpp
 msgid "Generate Tangents"
 msgstr "தொடுகோடுகளை உருவாக்குங்கள்"
+
+#: editor/import/3d/resource_importer_obj.cpp
+#: editor/import/3d/resource_importer_scene.cpp
+msgid "Generate LODs"
+msgstr "லாட்சை உருவாக்குங்கள்"
+
+#: editor/import/3d/resource_importer_obj.cpp
+#, fuzzy
+msgid "Generate Shadow Mesh"
+msgstr "நிழல் மெச்களை உருவாக்கவும்"
+
+#: editor/import/3d/resource_importer_obj.cpp
+#, fuzzy
+msgid "Generate Lightmap UV2"
+msgstr "MIPMAPS ஐ உருவாக்குங்கள்"
+
+#: editor/import/3d/resource_importer_obj.cpp
+#, fuzzy
+msgid "Generate Lightmap UV2 Texel Size"
+msgstr "லைட்மேப் டெக்செல் அளவு"
 
 #: editor/import/3d/resource_importer_obj.cpp
 msgid "Scale Mesh"
@@ -3217,8 +3352,8 @@ msgstr "கோப்பில் சேமிக்கவும்"
 #: scene/3d/navigation_region_3d.cpp scene/3d/physics/area_3d.cpp
 #: scene/3d/physics/joints/generic_6dof_joint_3d.cpp
 #: scene/3d/physics/ray_cast_3d.cpp scene/3d/physics/shape_cast_3d.cpp
-#: scene/3d/skeleton_3d.cpp scene/3d/sprite_3d.cpp scene/gui/code_edit.cpp
-#: scene/gui/graph_edit.cpp scene/main/canvas_layer.cpp
+#: scene/3d/sprite_3d.cpp scene/gui/code_edit.cpp scene/gui/graph_edit.cpp
+#: scene/main/canvas_layer.cpp
 #: scene/resources/2d/skeleton/skeleton_modification_2d.cpp
 #: scene/resources/2d/skeleton/skeleton_modification_stack_2d.cpp
 #: scene/resources/camera_attributes.cpp scene/resources/compositor.cpp
@@ -3241,18 +3376,8 @@ msgid "LODs"
 msgstr "பைலட்"
 
 #: editor/import/3d/resource_importer_scene.cpp
-#, fuzzy
-msgid "Normal Split Angle"
-msgstr "சாதாரண ஒன்றிணைப்பு கோணம்"
-
-#: editor/import/3d/resource_importer_scene.cpp
 msgid "Normal Merge Angle"
 msgstr "சாதாரண ஒன்றிணைப்பு கோணம்"
-
-#: editor/import/3d/resource_importer_scene.cpp
-#, fuzzy
-msgid "Raycast Normals"
-msgstr "எச்.ஆர்.சி இயல்பானது"
 
 #: editor/import/3d/resource_importer_scene.cpp
 msgid "Use External"
@@ -3357,6 +3482,10 @@ msgstr "ரூட் அளவு"
 msgid "Import as Skeleton Bones"
 msgstr "எலும்புக்கூடு எலும்புகளாக இறக்குமதி செய்யுங்கள்"
 
+#: editor/import/3d/resource_importer_scene.cpp
+msgid "Use Node Type Suffixes"
+msgstr ""
+
 #: editor/import/3d/resource_importer_scene.cpp modules/gltf/gltf_state.cpp
 msgid "Meshes"
 msgstr "மெச்கள்"
@@ -3364,10 +3493,6 @@ msgstr "மெச்கள்"
 #: editor/import/3d/resource_importer_scene.cpp
 msgid "Ensure Tangents"
 msgstr "தொடுகோடுகளை உறுதி செய்யுங்கள்"
-
-#: editor/import/3d/resource_importer_scene.cpp
-msgid "Generate LODs"
-msgstr "லாட்சை உருவாக்குங்கள்"
 
 #: editor/import/3d/resource_importer_scene.cpp
 msgid "Create Shadow Meshes"
@@ -3855,6 +3980,7 @@ msgid "Frames Count"
 msgstr "பிரேம்கள் எண்ணப்படுகின்றன"
 
 #: editor/plugins/tiles/tile_set_atlas_source_editor.cpp
+#: modules/openxr/action_map/openxr_haptic_feedback.cpp
 msgid "Duration"
 msgstr "காலம்"
 
@@ -3919,6 +4045,36 @@ msgid "Flush stdout on Print"
 msgstr "அச்சில் stdout ஐ பறிக்கவும்"
 
 #: main/main.cpp
+msgid "Low Processor Mode"
+msgstr "குறைந்த செயலி பயன்முறை"
+
+#: main/main.cpp
+msgid "stdout"
+msgstr "stdout"
+
+#: main/main.cpp
+msgid "Print FPS"
+msgstr "FPS ஐ அச்சிடுக"
+
+#: main/main.cpp
+msgid "Print GPU Profile"
+msgstr "GPU சுயவிவரத்தை அச்சிடுக"
+
+#: main/main.cpp
+msgid "Verbose stdout"
+msgstr "VERBOSE STDOUT"
+
+#: main/main.cpp scene/main/node.cpp scene/main/scene_tree.cpp
+#: scene/resources/multimesh.cpp
+msgid "Physics Interpolation"
+msgstr "இயற்பியல் இடைக்கணிப்பு"
+
+#: main/main.cpp
+#, fuzzy
+msgid "Enable Warnings"
+msgstr "எச்சரிக்கைகள்"
+
+#: main/main.cpp
 msgid "Max Chars per Second"
 msgstr "ஒரு நொடிக்கு அதிகபட்ச எழுத்துக்கள்"
 
@@ -3965,7 +4121,7 @@ msgstr "D3D12 க்கு குறைவானது"
 
 #: main/main.cpp
 #, fuzzy
-msgid "Fallback to Opengl 3"
+msgid "Fallback to OpenGL 3"
 msgstr "க்ளெசுக்கு குறைவானது"
 
 #: main/main.cpp servers/rendering_server.cpp
@@ -3986,7 +4142,7 @@ msgstr "பூர்வீகத்திற்கு குறைவு"
 
 #: main/main.cpp
 #, fuzzy
-msgid "Fallback to Gles"
+msgid "Fallback to GLES"
 msgstr "கோணத்திற்கு குறைவானது"
 
 #: main/main.cpp
@@ -4052,28 +4208,8 @@ msgid "Output Latency"
 msgstr "வெளியீட்டு நேரந்தவறுகை"
 
 #: main/main.cpp
-msgid "stdout"
-msgstr "stdout"
-
-#: main/main.cpp
-msgid "Print FPS"
-msgstr "FPS ஐ அச்சிடுக"
-
-#: main/main.cpp
-msgid "Print GPU Profile"
-msgstr "GPU சுயவிவரத்தை அச்சிடுக"
-
-#: main/main.cpp
-msgid "Verbose stdout"
-msgstr "VERBOSE STDOUT"
-
-#: main/main.cpp
 msgid "Frame Delay Msec"
 msgstr "பிரேம் நேரந்தவறுகை msec"
-
-#: main/main.cpp
-msgid "Low Processor Mode"
-msgstr "குறைந்த செயலி பயன்முறை"
 
 #: main/main.cpp
 msgid "Allow High Refresh Rate"
@@ -4173,6 +4309,21 @@ msgid "Eye Gaze Interaction"
 msgstr "கண் பார்வை தொடர்பு"
 
 #: main/main.cpp
+#, fuzzy
+msgid "Binding Modifiers"
+msgstr "மாற்றியமைப்பாளர்"
+
+#: main/main.cpp
+#, fuzzy
+msgid "Analog Threshold"
+msgstr "வாசல்"
+
+#: main/main.cpp
+#, fuzzy
+msgid "Dpad Binding"
+msgstr "UV2 திணிப்பு"
+
+#: main/main.cpp
 msgid "Boot Splash"
 msgstr "துவக்க ச்பிளாச்"
 
@@ -4240,11 +4391,6 @@ msgstr "உதவிக்குறிப்பு நிலை ஆஃப்ச�
 msgid "Show Image"
 msgstr "படத்தைக் காட்டு"
 
-#: main/main.cpp platform/web/export/export_plugin.cpp
-#: scene/resources/image_texture.cpp
-msgid "Image"
-msgstr "படம்"
-
 #: main/main.cpp
 msgid "Fullsize"
 msgstr "ஃபுல்ச்"
@@ -4252,6 +4398,11 @@ msgstr "ஃபுல்ச்"
 #: main/main.cpp servers/rendering_server.cpp
 msgid "Use Filter"
 msgstr "வடிகட்டியைப் பயன்படுத்தவும்"
+
+#: main/main.cpp platform/web/export/export_plugin.cpp
+#: scene/resources/image_texture.cpp
+msgid "Image"
+msgstr "படம்"
 
 #: main/main.cpp
 msgid "Minimum Display Time"
@@ -4408,6 +4559,11 @@ msgstr "விளிம்புகள் இணைக்கப்பட்ட�
 #: main/performance.cpp
 msgid "Edges Free"
 msgstr "விளிம்புகள் இலவசம்"
+
+#: main/performance.cpp
+#, fuzzy
+msgid "Obstacles"
+msgstr "குறைந்த தொங்கும் தடைகள்"
 
 #: modules/blazium_sdk/csv/resource_importer_csv.cpp
 #, fuzzy
@@ -4625,10 +4781,6 @@ msgstr "பயன்முறையை உருவாக்குங்கள�
 #: modules/csg/csg_shape.cpp
 msgid "Operation"
 msgstr "செயல்பாடு"
-
-#: modules/csg/csg_shape.cpp scene/main/scene_tree.cpp
-msgid "Snap"
-msgstr "ச்னாப்"
 
 #: modules/csg/csg_shape.cpp
 msgid "Calculate Tangents"
@@ -5224,7 +5376,7 @@ msgstr "எடைகளை கலக்கவும்"
 msgid "Instance Materials"
 msgstr "நிகழ்வு பொருட்கள்"
 
-#: modules/gltf/structures/gltf_node.cpp scene/3d/skeleton_3d.cpp
+#: modules/gltf/structures/gltf_node.cpp
 msgid "Parent"
 msgstr "பெற்றோர்"
 
@@ -5245,8 +5397,36 @@ msgstr "குழந்தைகள்"
 msgid "Light"
 msgstr "ஒளி"
 
+#: modules/gltf/structures/gltf_object_model_property.cpp
+msgid "glTF to Godot Expression"
+msgstr ""
+
+#: modules/gltf/structures/gltf_object_model_property.cpp
+msgid "Godot to glTF Expression"
+msgstr ""
+
+#: modules/gltf/structures/gltf_object_model_property.cpp
+#, fuzzy
+msgid "Node Paths"
+msgstr "முனை பாதை"
+
+#: modules/gltf/structures/gltf_object_model_property.cpp
+msgid "Object Model Type"
+msgstr ""
+
+#: modules/gltf/structures/gltf_object_model_property.cpp
+#, fuzzy
+msgid "Json Pointers"
+msgstr "அல்லாத மூட்டுகள்"
+
+#: modules/gltf/structures/gltf_object_model_property.cpp
+#, fuzzy
+msgid "Variant Type"
+msgstr "மாறுபட்ட வகை"
+
 #: modules/gltf/structures/gltf_skeleton.cpp
 #: modules/gltf/structures/gltf_skin.cpp
+#: modules/jolt_physics/jolt_project_settings.cpp
 msgid "Joints"
 msgstr "மூட்டுகள்"
 
@@ -5380,12 +5560,12 @@ msgid "Bake Navigation"
 msgstr "சுட்டுக்கொள்ள வழிசெலுத்தல்"
 
 #: modules/interactive_music/audio_stream_interactive.cpp
-msgid "Initial Clip"
-msgstr "தொடக்க கிளிப்"
-
-#: modules/interactive_music/audio_stream_interactive.cpp
 msgid "Clip Count"
 msgstr "கிளிப் எண்ணிக்கை"
+
+#: modules/interactive_music/audio_stream_interactive.cpp
+msgid "Initial Clip"
+msgstr "தொடக்க கிளிப்"
 
 #: modules/interactive_music/audio_stream_playlist.cpp
 msgid "Shuffle"
@@ -5399,6 +5579,175 @@ msgstr "மங்கலான நேரம்"
 #: modules/interactive_music/audio_stream_synchronized.cpp
 msgid "Stream Count"
 msgstr "ச்ட்ரீம் எண்ணிக்கை"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Jolt Physics 3D"
+msgstr "இயற்பியல் 3D"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Simulation"
+msgstr "அனிமேசன்"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Velocity Steps"
+msgstr "திசை வேகம்"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Position Steps"
+msgstr "நிலை"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+msgid "Use Enhanced Internal Edge Removal"
+msgstr ""
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Areas Detect Static Bodies"
+msgstr "இயக்கவியல் உடல்களைப் பயன்படுத்துங்கள்"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+msgid "Generate All Kinematic Contacts"
+msgstr ""
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Penetration Slop"
+msgstr "சிறுகுறிப்பு நிறம்"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Speculative Contact Distance"
+msgstr "எளிமைப்படுத்தும் தூரம்"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+msgid "Baumgarte Stabilization Factor"
+msgstr ""
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Soft Body Point Radius"
+msgstr "புள்ளி கிராப் ஆரம்"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+msgid "Bounce Velocity Threshold"
+msgstr ""
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Allow Sleep"
+msgstr "தேடலை அனுமதிக்கவும்"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Sleep Velocity Threshold"
+msgstr "விரைவு வளைவின் மீது அளவிடவும்"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Sleep Time Threshold"
+msgstr "தூக்க வாசல் நேரியல்"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+msgid "Continuous CD Movement Threshold"
+msgstr ""
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Continuous CD Max Penetration"
+msgstr "மேக்ச் அனுமதிக்கப்பட்ட ஊடுருவலை தொடர்பு கொள்ளவும்"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+msgid "Body Pair Contact Cache Enabled"
+msgstr ""
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+msgid "Body Pair Contact Cache Distance Threshold"
+msgstr ""
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+msgid "Body Pair Contact Cache Angle Threshold"
+msgstr ""
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+msgid "Queries"
+msgstr ""
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+msgid "Enable Ray Cast Face Index"
+msgstr ""
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Motion Queries"
+msgstr "இயக்க முறை"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Recovery Iterations"
+msgstr "தீர்வு மறு செய்கைகள்"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Recovery Amount"
+msgstr "மோதலாக மீட்பு"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Collisions"
+msgstr "மோதுகை"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Collision Margin Fraction"
+msgstr "ஒரு வழி மோதல் விளிம்பு"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Active Edge Threshold"
+msgstr "மெச் லாட் வாசல்"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "World Node"
+msgstr "உலக அளவு"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Temporary Memory Buffer Size"
+msgstr "பொருள் இடையக அளவு"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+msgid "World Boundary Shape Size"
+msgstr ""
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Max Linear Velocity"
+msgstr "நேரியல் விரைவு"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Max Angular Velocity"
+msgstr "கோணத் திசைவேகம்"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Max Bodies"
+msgstr "உடல்கள்"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Max Body Pairs"
+msgstr "அதிகபட்ச அடுக்குகள்"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Max Contact Constraints"
+msgstr "கூட்டு கட்டுப்பாடுகள்"
 
 #: modules/lightmapper_rd/register_types.cpp servers/rendering_server.cpp
 msgid "Lightmapping"
@@ -5596,6 +5945,7 @@ msgid "Noise Type"
 msgstr "இரைச்சல் வகை"
 
 #: modules/noise/fastnoise_lite.cpp
+#: modules/openxr/action_map/openxr_haptic_feedback.cpp
 #: scene/resources/particle_process_material.cpp
 msgid "Frequency"
 msgstr "மீடிறன், மீள்திறன், நிகழ்வெண், நிகழ்வு"
@@ -5647,6 +5997,7 @@ msgid "Domain Warp"
 msgstr "டொமைன் வார்ப்"
 
 #: modules/noise/fastnoise_lite.cpp
+#: modules/openxr/action_map/openxr_haptic_feedback.cpp
 msgid "Amplitude"
 msgstr "வீச்சு"
 
@@ -5723,9 +6074,9 @@ msgid "Toplevel Paths"
 msgstr "டோப்ல்வெல் பாதைகள்"
 
 #: modules/openxr/action_map/openxr_interaction_profile.cpp
-#: scene/main/scene_tree.cpp
-msgid "Paths"
-msgstr "பாதைகள்"
+#, fuzzy
+msgid "Binding Path"
+msgstr "பிளெண்டர் பாதை"
 
 #: modules/openxr/action_map/openxr_interaction_profile.cpp
 msgid "Interaction Profile Path"
@@ -5734,6 +6085,55 @@ msgstr "தொடர்பு சுயவிவர பாதை"
 #: modules/openxr/editor/openxr_select_runtime.cpp
 msgid "Runtime Paths"
 msgstr "இயக்க நேர பாதைகள்"
+
+#: modules/openxr/extensions/openxr_dpad_binding_extension.cpp
+#, fuzzy
+msgid "Action Set"
+msgstr "செயல் வகை"
+
+#: modules/openxr/extensions/openxr_dpad_binding_extension.cpp
+#, fuzzy
+msgid "Input Path"
+msgstr "உள்ளீட்டு பெயர்"
+
+#: modules/openxr/extensions/openxr_dpad_binding_extension.cpp
+#, fuzzy
+msgid "Threshold Released"
+msgstr "வாசல் படப்புள்ளிகள்"
+
+#: modules/openxr/extensions/openxr_dpad_binding_extension.cpp
+#, fuzzy
+msgid "Center Region"
+msgstr "வண்ண பகுதிகள்"
+
+#: modules/openxr/extensions/openxr_dpad_binding_extension.cpp
+#, fuzzy
+msgid "Wedge Angle"
+msgstr "எலும்பு கோணம்"
+
+#: modules/openxr/extensions/openxr_dpad_binding_extension.cpp
+msgid "Is Sticky"
+msgstr ""
+
+#: modules/openxr/extensions/openxr_dpad_binding_extension.cpp
+#: modules/openxr/extensions/openxr_valve_analog_threshold_extension.cpp
+msgid "On Haptic"
+msgstr ""
+
+#: modules/openxr/extensions/openxr_dpad_binding_extension.cpp
+#: modules/openxr/extensions/openxr_valve_analog_threshold_extension.cpp
+msgid "Off Haptic"
+msgstr ""
+
+#: modules/openxr/extensions/openxr_valve_analog_threshold_extension.cpp
+#, fuzzy
+msgid "On Threshold"
+msgstr "வாசல்"
+
+#: modules/openxr/extensions/openxr_valve_analog_threshold_extension.cpp
+#, fuzzy
+msgid "Off Threshold"
+msgstr "வாசல்"
 
 #: modules/openxr/openxr_interface.cpp
 msgid "Display Refresh Rate"
@@ -5746,6 +6146,16 @@ msgstr "இலக்கு அளவு பெருக்கி வழங்க
 #: modules/openxr/scene/openxr_composition_layer.cpp
 msgid "Layer Viewport"
 msgstr "அடுக்கு வியாபோர்ட்"
+
+#: modules/openxr/scene/openxr_composition_layer.cpp
+#, fuzzy
+msgid "Use Android Surface"
+msgstr "அனைத்து மேற்பரப்புகளையும் பயன்படுத்தவும்"
+
+#: modules/openxr/scene/openxr_composition_layer.cpp
+#, fuzzy
+msgid "Android Surface Size"
+msgstr "ஆண்ட்ராய்டு மூல வார்ப்புரு"
 
 #: modules/openxr/scene/openxr_composition_layer.cpp
 msgid "Sort Order"
@@ -5944,6 +6354,11 @@ msgstr "ஏண்ட்சேக் நேரம் முடிந்தது"
 #: modules/websocket/websocket_peer.cpp
 msgid "Max Queued Packets"
 msgstr "அதிகபட்சம் வரிசைப்படுத்தப்பட்ட பாக்கெட்டுகள்"
+
+#: modules/websocket/websocket_peer.cpp
+#, fuzzy
+msgid "Heartbeat Interval"
+msgstr "டெல்டா இடைவெளி"
 
 #: modules/webxr/webxr_interface.cpp
 msgid "Session Mode"
@@ -6203,40 +6618,6 @@ msgid "Icons"
 msgstr "சின்னங்கள்"
 
 #: platform/ios/export/export_plugin.cpp
-msgid "iPhone 120 X 120"
-msgstr "ஐபோன் 120 ஃச் 120"
-
-#: platform/ios/export/export_plugin.cpp
-msgid "iPhone 180 X 180"
-msgstr "ஐபோன் 180 ஃச் 180"
-
-#: platform/ios/export/export_plugin.cpp
-#, fuzzy
-msgid "iPad 76 X 76"
-msgstr "ஐபாட் 167 ஃச் 167"
-
-#: platform/ios/export/export_plugin.cpp
-msgid "iPad 152 X 152"
-msgstr "ஐபாட் 152 ஃச் 152"
-
-#: platform/ios/export/export_plugin.cpp
-msgid "iPad 167 X 167"
-msgstr "ஐபாட் 167 ஃச் 167"
-
-#: platform/ios/export/export_plugin.cpp
-msgid "App Store 1024 X 1024"
-msgstr "ஆப் கடை 1024 ஃச் 1024"
-
-#: platform/ios/export/export_plugin.cpp
-#, fuzzy
-msgid "Spotlight 40 X 40"
-msgstr "ச்பாட்லைட் 80 ஃச் 80"
-
-#: platform/ios/export/export_plugin.cpp
-msgid "Spotlight 80 X 80"
-msgstr "ச்பாட்லைட் 80 ஃச் 80"
-
-#: platform/ios/export/export_plugin.cpp
 msgid "Settings 58 X 58"
 msgstr "அமைப்புகள் 58 ஃச் 58"
 
@@ -6253,28 +6634,92 @@ msgid "Notification 60 X 60"
 msgstr "அறிவிப்பு 60 ஃச் 60"
 
 #: platform/ios/export/export_plugin.cpp
+#, fuzzy
+msgid "Notification 76 X 76"
+msgstr "அறிவிப்பு 60 ஃச் 60"
+
+#: platform/ios/export/export_plugin.cpp
+#, fuzzy
+msgid "Notification 114 X 114"
+msgstr "அறிவிப்பு 40 ஃச் 40"
+
+#: platform/ios/export/export_plugin.cpp
+msgid "Spotlight 80 X 80"
+msgstr "ச்பாட்லைட் 80 ஃச் 80"
+
+#: platform/ios/export/export_plugin.cpp
+#, fuzzy
+msgid "Spotlight 120 X 120"
+msgstr "ச்பாட்லைட் 80 ஃச் 80"
+
+#: platform/ios/export/export_plugin.cpp
+msgid "iPhone 120 X 120"
+msgstr "ஐபோன் 120 ஃச் 120"
+
+#: platform/ios/export/export_plugin.cpp
+msgid "iPhone 180 X 180"
+msgstr "ஐபோன் 180 ஃச் 180"
+
+#: platform/ios/export/export_plugin.cpp
+msgid "iPad 167 X 167"
+msgstr "ஐபாட் 167 ஃச் 167"
+
+#: platform/ios/export/export_plugin.cpp
+msgid "iPad 152 X 152"
+msgstr "ஐபாட் 152 ஃச் 152"
+
+#: platform/ios/export/export_plugin.cpp
+#, fuzzy
+msgid "iOS 128 X 128"
+msgstr "முதன்மை 192 ஃச் 192"
+
+#: platform/ios/export/export_plugin.cpp
+#, fuzzy
+msgid "iOS 192 X 192"
+msgstr "முதன்மை 192 ஃச் 192"
+
+#: platform/ios/export/export_plugin.cpp
+#, fuzzy
+msgid "iOS 136 X 136"
+msgstr "ஐபாட் 167 ஃச் 167"
+
+#: platform/ios/export/export_plugin.cpp
+msgid "App Store 1024 X 1024"
+msgstr "ஆப் கடை 1024 ஃச் 1024"
+
+#: platform/ios/export/export_plugin.cpp
 msgid "App Store Team ID"
 msgstr "ஆப் கடை குழு ஐடி"
-
-#: platform/ios/export/export_plugin.cpp
-msgid "Provisioning Profile UUID Debug"
-msgstr "வழங்கல் சுயவிவரம் UUID பிழைத்திருத்தம்"
-
-#: platform/ios/export/export_plugin.cpp
-msgid "Code Sign Identity Debug"
-msgstr "குறியீடு அடையாள அடையாள பிழைத்திருத்தம்"
 
 #: platform/ios/export/export_plugin.cpp
 msgid "Export Method Debug"
 msgstr "ஏற்றுமதி முறை பிழைத்திருத்தம்"
 
 #: platform/ios/export/export_plugin.cpp
-msgid "Provisioning Profile UUID Release"
-msgstr "வழங்கல் சுயவிவரம் UUID வெளியீடு"
+msgid "Code Sign Identity Debug"
+msgstr "குறியீடு அடையாள அடையாள பிழைத்திருத்தம்"
 
 #: platform/ios/export/export_plugin.cpp
 msgid "Code Sign Identity Release"
 msgstr "குறியீடு அடையாளம் அடையாள வெளியீடு"
+
+#: platform/ios/export/export_plugin.cpp
+msgid "Provisioning Profile UUID Debug"
+msgstr "வழங்கல் சுயவிவரம் UUID பிழைத்திருத்தம்"
+
+#: platform/ios/export/export_plugin.cpp
+msgid "Provisioning Profile UUID Release"
+msgstr "வழங்கல் சுயவிவரம் UUID வெளியீடு"
+
+#: platform/ios/export/export_plugin.cpp
+#, fuzzy
+msgid "Provisioning Profile Specifier Debug"
+msgstr "வழங்கல் சுயவிவரம் UUID பிழைத்திருத்தம்"
+
+#: platform/ios/export/export_plugin.cpp
+#, fuzzy
+msgid "Provisioning Profile Specifier Release"
+msgstr "வழங்கல் சுயவிவரம் UUID வெளியீடு"
 
 #: platform/ios/export/export_plugin.cpp
 msgid "Export Method Release"
@@ -6416,6 +6861,21 @@ msgstr "கண்காணிப்பு இயக்கப்பட்டத�
 #: platform/macos/export/export_plugin.cpp
 msgid "Tracking Domains"
 msgstr "கண்காணிப்பு களங்கள்"
+
+#: platform/ios/export/export_plugin.cpp
+#, fuzzy
+msgid "Icon 1024 X 1024"
+msgstr "படவுரு 144 ஃச் 144"
+
+#: platform/ios/export/export_plugin.cpp
+#, fuzzy
+msgid "Icon 1024 X 1024 Dark"
+msgstr "படவுரு 144 ஃச் 144"
+
+#: platform/ios/export/export_plugin.cpp
+#, fuzzy
+msgid "Icon 1024 X 1024 Tinted"
+msgstr "படவுரு 144 ஃச் 144"
 
 #: platform/ios/export/export_plugin.cpp
 msgid "Storyboard"
@@ -7493,16 +7953,12 @@ msgid "Sub Emitter"
 msgstr "துணை உமிழ்ப்பான்"
 
 #: scene/2d/gpu_particles_2d.cpp scene/3d/gpu_particles_3d.cpp
-msgid "Process Material"
-msgstr "செயல்முறை பொருள்"
+msgid "Interp to End"
+msgstr "முடிவுக்கு உட்பட்டது"
 
 #: scene/2d/gpu_particles_2d.cpp scene/3d/gpu_particles_3d.cpp
 msgid "Interpolate"
 msgstr "இடைக்கணிப்பு"
-
-#: scene/2d/gpu_particles_2d.cpp scene/3d/gpu_particles_3d.cpp
-msgid "Interp to End"
-msgstr "முடிவுக்கு உட்பட்டது"
 
 #: scene/2d/gpu_particles_2d.cpp scene/3d/gpu_particles_3d.cpp
 msgid "Base Size"
@@ -7523,6 +7979,10 @@ msgstr "பிரிவுகள்"
 #: scene/2d/gpu_particles_2d.cpp
 msgid "Section Subdivisions"
 msgstr "பிரிவு துணைப்பிரிவுகள்"
+
+#: scene/2d/gpu_particles_2d.cpp scene/3d/gpu_particles_3d.cpp
+msgid "Process Material"
+msgstr "செயல்முறை பொருள்"
 
 #: scene/2d/light_2d.cpp scene/3d/light_3d.cpp scene/gui/reference_rect.cpp
 msgid "Editor Only"
@@ -7572,6 +8032,7 @@ msgid "Texture Scale"
 msgstr "அமைப்பு அளவு"
 
 #: scene/2d/light_occluder_2d.cpp scene/2d/line_2d.cpp
+#: scene/resources/curve.cpp
 msgid "Closed"
 msgstr "மூடப்பட்டது"
 
@@ -8079,6 +8540,7 @@ msgid "One Way Collision Margin"
 msgstr "ஒரு வழி மோதல் விளிம்பு"
 
 #: scene/2d/physics/collision_shape_2d.cpp
+#: scene/3d/physics/collision_shape_3d.cpp
 msgid "Debug Color"
 msgstr "பிழைத்திருத்த நிறம்"
 
@@ -8318,10 +8780,6 @@ msgstr "விசைத்திருப்பம"
 msgid "Margin"
 msgstr "விளிம்பு"
 
-#: scene/2d/physics/shape_cast_2d.cpp scene/3d/physics/shape_cast_3d.cpp
-msgid "Max Results"
-msgstr "அதிகபட்ச முடிவுகள்"
-
 #: scene/2d/physics/static_body_2d.cpp scene/3d/physics/static_body_3d.cpp
 msgid "Constant Linear Velocity"
 msgstr "நிலையான நேரியல் விரைவு"
@@ -8370,7 +8828,7 @@ msgstr "ஆசிரியர் அமைப்புகள்"
 msgid "Show Bone Gizmo"
 msgstr "எலும்பு கிச்மோவைக் காட்டு"
 
-#: scene/2d/skeleton_2d.cpp scene/3d/skeleton_3d.cpp
+#: scene/2d/skeleton_2d.cpp
 msgid "Rest"
 msgstr "ஓய்வு"
 
@@ -8825,7 +9283,7 @@ msgstr "எழுத்துரு அளவு"
 msgid "Horizontal Alignment"
 msgstr "கிடைமட்ட சீரமைப்பு"
 
-#: scene/3d/label_3d.cpp scene/gui/label.cpp
+#: scene/3d/label_3d.cpp scene/gui/label.cpp scene/gui/rich_text_label.cpp
 #: scene/resources/3d/primitive_meshes.cpp
 msgid "Vertical Alignment"
 msgstr "செங்குத்து சீரமைப்பு"
@@ -8977,11 +9435,11 @@ msgstr "கோண விழிப்புணர்வு"
 
 #: scene/3d/lightmap_gi.cpp
 #, fuzzy
-msgid "Light Texture"
+msgid "Lightmap Textures"
 msgstr "ஒளி அமைப்பு"
 
 #: scene/3d/lightmap_gi.cpp scene/main/scene_tree.cpp
-#: servers/rendering_server.cpp
+#: scene/resources/multimesh.cpp servers/rendering_server.cpp
 msgid "Quality"
 msgstr "தகுதி"
 
@@ -9156,6 +9614,11 @@ msgstr "ரே எடுக்கக்கூடிய"
 #: scene/3d/physics/collision_object_3d.cpp
 msgid "Capture on Drag"
 msgstr "இழுவில் பிடிக்கவும்"
+
+#: scene/3d/physics/collision_shape_3d.cpp
+#, fuzzy
+msgid "Debug Fill"
+msgstr "பிழைத்திருத்த பயனர்"
 
 #: scene/3d/physics/joints/cone_twist_joint_3d.cpp
 #: scene/3d/physics/physical_bone_3d.cpp
@@ -9510,6 +9973,11 @@ msgid "Max Force"
 msgstr "அதிகபட்ச ஆற்றல்"
 
 #: scene/3d/reflection_probe.cpp
+#, fuzzy
+msgid "Blend Distance"
+msgstr "மணித்துளி தூரம்"
+
+#: scene/3d/reflection_probe.cpp
 msgid "Origin Offset"
 msgstr "தோற்றம் ஆஃப்செட்"
 
@@ -9537,10 +10005,10 @@ msgstr "சுற்றுப்புறம்"
 msgid "Color Energy"
 msgstr "வண்ண ஆற்றல்"
 
-#: scene/3d/skeleton_3d.cpp
-#, fuzzy
-msgid "Bones"
-msgstr "எலும்பு"
+#: scene/3d/retarget_modifier_3d.cpp scene/resources/bone_map.cpp
+#: servers/xr/xr_positional_tracker.cpp
+msgid "Profile"
+msgstr "சுயவிவரம்"
 
 #: scene/3d/skeleton_3d.cpp
 msgid "Motion Scale"
@@ -9707,6 +10175,11 @@ msgid "Global Illumination"
 msgstr "உலகளாவிய வெளிச்சம்"
 
 #: scene/3d/visual_instance_3d.cpp
+#, fuzzy
+msgid "Lightmap Texel Scale"
+msgstr "லைட்மேப் டெக்செல் அளவு"
+
+#: scene/3d/visual_instance_3d.cpp
 msgid "Lightmap Scale"
 msgstr "லைட்மேப் அளவுகோல்"
 
@@ -9757,6 +10230,11 @@ msgstr "உலக அளவு"
 #: scene/animation/animation_blend_tree.cpp
 msgid "Play Mode"
 msgstr "ப்ளே பயன்முறையில்"
+
+#: scene/animation/animation_blend_tree.cpp
+#, fuzzy
+msgid "Advance on Start"
+msgstr "தொடக்கத்தில் ஆட்டோலோட்"
 
 #: scene/animation/animation_blend_tree.cpp
 msgid "Use Custom Timeline"
@@ -9814,6 +10292,10 @@ msgstr "சுணக்கம்"
 #: scene/animation/animation_blend_tree.cpp
 msgid "Random Delay"
 msgstr "சீரற்ற நேரந்தவறுகை"
+
+#: scene/animation/animation_blend_tree.cpp
+msgid "Explicit Elapse"
+msgstr ""
 
 #: scene/animation/animation_blend_tree.cpp
 #: scene/animation/animation_node_state_machine.cpp
@@ -9893,6 +10375,11 @@ msgstr "வேர் இயக்கம்"
 #: scene/animation/animation_mixer.cpp
 msgid "Track"
 msgstr "மின்தடம்"
+
+#: scene/animation/animation_mixer.cpp
+#, fuzzy
+msgid "Local"
+msgstr "மொழி"
 
 #: scene/animation/animation_mixer.cpp
 msgid "Callback Mode"
@@ -10094,6 +10581,11 @@ msgid "Symbol Lookup on Click"
 msgstr "கிளிக்கில் குறியீட்டு தேடல்"
 
 #: scene/gui/code_edit.cpp
+#, fuzzy
+msgid "Symbol Tooltip on Hover"
+msgstr "அடையாளம் நிறம்"
+
+#: scene/gui/code_edit.cpp
 msgid "Line Folding"
 msgstr "வரி மடிப்பு"
 
@@ -10284,6 +10776,11 @@ msgstr "எண் அமைப்பை உள்ளூர்மயமாக்�
 #: scene/gui/control.cpp scene/main/status_indicator.cpp
 msgid "Tooltip"
 msgstr "உதவிக்குறிப்பு"
+
+#: scene/gui/control.cpp
+#, fuzzy
+msgid "Auto Translate Mode"
+msgstr "ஆட்டோ மொழிபெயர்ப்பு"
 
 #: scene/gui/control.cpp scene/theme/default_theme.cpp
 msgid "Focus"
@@ -10487,10 +10984,6 @@ msgstr "நிலை ஆஃப்செட்"
 msgid "Draggable"
 msgstr "இழுக்கக்கூடிய"
 
-#: scene/gui/graph_element.cpp
-msgid "Selectable"
-msgstr "தேர்ந்தெடுக்கக்கூடியது"
-
 #: scene/gui/graph_element.cpp scene/gui/option_button.cpp
 #: scene/theme/default_theme.cpp
 msgid "Selected"
@@ -10541,6 +11034,11 @@ msgid "Max Text Lines"
 msgstr "அதிகபட்ச உரை கோடுகள்"
 
 #: scene/gui/item_list.cpp
+#, fuzzy
+msgid "Auto Width"
+msgstr "எலும்பு அகலம்"
+
+#: scene/gui/item_list.cpp
 msgid "Auto Height"
 msgstr "வாகன உயரம்"
 
@@ -10576,6 +11074,11 @@ msgstr "நிலையான படவுரு அளவு"
 #: scene/gui/label.cpp
 msgid "Label Settings"
 msgstr "சிட்டை அமைப்புகள்"
+
+#: scene/gui/label.cpp
+#, fuzzy
+msgid "Paragraph Separator"
+msgstr "பிரிப்பான்"
 
 #: scene/gui/label.cpp scene/resources/text_line.cpp
 #: scene/resources/text_paragraph.cpp
@@ -10924,6 +11427,11 @@ msgid "Follow Focus"
 msgstr "கவனம் செலுத்துங்கள்"
 
 #: scene/gui/scroll_container.cpp
+#, fuzzy
+msgid "Draw Focus Border"
+msgstr "தாவல் கவனம் முறை"
+
+#: scene/gui/scroll_container.cpp
 msgid "Horizontal Custom Step"
 msgstr "கிடைமட்ட தனிப்பயன் படி"
 
@@ -10998,6 +11506,11 @@ msgstr "சிறப்பம்சமாக"
 msgid "Stretch Shrink"
 msgstr "நீட்டிக்க வேண்டும்"
 
+#: scene/gui/subviewport_container.cpp
+#, fuzzy
+msgid "Mouse Target"
+msgstr "இலக்கு கலக்கவும்"
+
 #: scene/gui/tab_bar.cpp scene/gui/tab_container.cpp
 msgid "Current Tab"
 msgstr "தற்போதைய தாவல்"
@@ -11067,6 +11580,11 @@ msgid "Tab Focus Mode"
 msgstr "தாவல் கவனம் முறை"
 
 #: scene/gui/text_edit.cpp
+#, fuzzy
+msgid "Empty Selection Clipboard Enabled"
+msgstr "தேர்வு இயக்கப்பட்டது"
+
+#: scene/gui/text_edit.cpp
 msgid "Wrap Mode"
 msgstr "மடக்கு பயன்முறை"
 
@@ -11080,6 +11598,11 @@ msgstr "கோப்பின் கடந்த முடிவு"
 
 #: scene/gui/text_edit.cpp
 msgid "Fit Content Height"
+msgstr "உள்ளடக்க உயரத்திற்கு பொருந்தும்"
+
+#: scene/gui/text_edit.cpp
+#, fuzzy
+msgid "Fit Content Width"
 msgstr "உள்ளடக்க உயரத்திற்கு பொருந்தும்"
 
 #: scene/gui/text_edit.cpp
@@ -11219,6 +11742,11 @@ msgstr "உருட்டல் கிடைமட்ட இயக்கப்�
 msgid "Scroll Vertical Enabled"
 msgstr "உருட்டல் செங்குத்து இயக்கப்பட்டது"
 
+#: scene/gui/tree.cpp
+#, fuzzy
+msgid "Auto Tooltip"
+msgstr "உதவிக்குறிப்பு"
+
 #: scene/gui/video_stream_player.cpp
 msgid "Audio Track"
 msgstr "ஆடியோ டிராக்"
@@ -11347,10 +11875,6 @@ msgstr "குழு ஒழுங்கு"
 msgid "Messages"
 msgstr "செய்திகள்"
 
-#: scene/main/node.cpp scene/main/scene_tree.cpp
-msgid "Physics Interpolation"
-msgstr "இயற்பியல் இடைக்கணிப்பு"
-
 #: scene/main/node.cpp
 msgid "Auto Translate"
 msgstr "ஆட்டோ மொழிபெயர்ப்பு"
@@ -11391,6 +11915,10 @@ msgstr "வடிவ நிறம்"
 #: scene/main/scene_tree.cpp
 msgid "Contact Color"
 msgstr "தொடர்பு வண்ணம்"
+
+#: scene/main/scene_tree.cpp
+msgid "Paths"
+msgstr "பாதைகள்"
 
 #: scene/main/scene_tree.cpp
 msgid "Geometry Color"
@@ -11463,6 +11991,10 @@ msgstr "லாட் மாற்றம்"
 #: scene/main/scene_tree.cpp
 msgid "Threshold Pixels"
 msgstr "வாசல் படப்புள்ளிகள்"
+
+#: scene/main/scene_tree.cpp
+msgid "Snap"
+msgstr "ச்னாப்"
 
 #: scene/main/scene_tree.cpp scene/main/viewport.cpp
 msgid "Snap 2D Transforms to Pixel"
@@ -11721,6 +12253,11 @@ msgid "Mouse Passthrough"
 msgstr "மவுச் பாச்ட்ரூ"
 
 #: scene/main/window.cpp
+#, fuzzy
+msgid "Exclude From Capture"
+msgstr "முன்னேற்றங்களிலிருந்து விலக்கு"
+
+#: scene/main/window.cpp
 msgid "Force Native"
 msgstr "பூர்வீகத்தை கட்டாயப்படுத்துங்கள்"
 
@@ -11775,6 +12312,16 @@ msgstr "3 டி வழிசெலுத்தல்"
 #: scene/resources/2d/concave_polygon_shape_2d.cpp
 msgid "Segments"
 msgstr "பிரிவுகள்"
+
+#: scene/resources/2d/navigation_polygon.cpp scene/resources/material.cpp
+#: scene/resources/navigation_mesh.cpp
+msgid "Sampling"
+msgstr "மாதிரி எடுத்தல்"
+
+#: scene/resources/2d/navigation_polygon.cpp
+#: scene/resources/navigation_mesh.cpp
+msgid "Partition Type"
+msgstr "பகிர்வு வகை"
 
 #: scene/resources/2d/navigation_polygon.cpp
 #: scene/resources/navigation_mesh.cpp
@@ -11961,26 +12508,6 @@ msgid "Custom Data"
 msgstr "தனிப்பயன் தரவு"
 
 #: scene/resources/2d/tile_set.cpp
-#, fuzzy
-msgid "Tile Proxies"
-msgstr "ஓடு அளவு"
-
-#: scene/resources/2d/tile_set.cpp
-#, fuzzy
-msgid "Source Level"
-msgstr "உயர் நிலை"
-
-#: scene/resources/2d/tile_set.cpp
-#, fuzzy
-msgid "Coords Level"
-msgstr "சுருக்க நிலை"
-
-#: scene/resources/2d/tile_set.cpp
-#, fuzzy
-msgid "Alternative Level"
-msgstr "மாற்று ஐடி"
-
-#: scene/resources/2d/tile_set.cpp
 msgid "Tile Shape"
 msgstr "ஓடு வடிவம்"
 
@@ -12111,6 +12638,11 @@ msgstr "உருப்படி"
 #: scene/resources/3d/mesh_library.cpp
 msgid "Mesh Transform"
 msgstr "மெச் உருமாற்றம்"
+
+#: scene/resources/3d/mesh_library.cpp
+#, fuzzy
+msgid "Mesh Cast Shadow"
+msgstr "நிழல் வார்ப்பு"
 
 #: scene/resources/3d/mesh_library.cpp
 msgid "Navigation Mesh Transform"
@@ -12316,10 +12848,6 @@ msgstr "கலவை வீதம்"
 msgid "Stereo"
 msgstr "ச்டீரியோ"
 
-#: scene/resources/bone_map.cpp servers/xr/xr_positional_tracker.cpp
-msgid "Profile"
-msgstr "சுயவிவரம்"
-
 #: scene/resources/bone_map.cpp
 msgid "Bonemap"
 msgstr "போன்மேப்"
@@ -12467,6 +12995,16 @@ msgstr "கூட்டு விளைவுகள்"
 #: scene/resources/compressed_texture.cpp
 msgid "Load Path"
 msgstr "சுமை பாதை"
+
+#: scene/resources/curve.cpp
+#, fuzzy
+msgid "Min Domain"
+msgstr "கண்காணிப்பு களங்கள்"
+
+#: scene/resources/curve.cpp
+#, fuzzy
+msgid "Max Domain"
+msgstr "அதிகபட்ச நெடுவரிசைகள்"
 
 #: scene/resources/curve.cpp
 msgid "Bake Resolution"
@@ -12842,6 +13380,11 @@ msgstr "இருந்து"
 msgid "To"
 msgstr "பெறுநர்"
 
+#: scene/resources/label_settings.cpp
+#, fuzzy
+msgid "Paragraph Spacing"
+msgstr "கூடுதல் இடைவெளி"
+
 #: scene/resources/material.cpp
 msgid "Next Pass"
 msgstr "அடுத்த பாச்"
@@ -13010,10 +13553,6 @@ msgstr "உலக டிரிப்ளனார்"
 msgid "UV2"
 msgstr "UV2"
 
-#: scene/resources/material.cpp scene/resources/navigation_mesh.cpp
-msgid "Sampling"
-msgstr "மாதிரி எடுத்தல்"
-
 #: scene/resources/material.cpp
 msgid "Shadows"
 msgstr "நிழல்கள்"
@@ -13117,10 +13656,6 @@ msgstr "நிகழ்வு எண்ணிக்கை"
 #: scene/resources/multimesh.cpp
 msgid "Visible Instance Count"
 msgstr "புலப்படும் நிகழ்வு எண்ணிக்கை"
-
-#: scene/resources/navigation_mesh.cpp
-msgid "Partition Type"
-msgstr "பகிர்வு வகை"
 
 #: scene/resources/navigation_mesh.cpp
 msgid "Source Group Name"
@@ -13340,6 +13875,11 @@ msgid "Amount at Collision"
 msgstr "மோதலில் தொகை"
 
 #: scene/resources/particle_process_material.cpp
+#, fuzzy
+msgid "Amount at Start"
+msgstr "இறுதியில் தொகை"
+
+#: scene/resources/particle_process_material.cpp
 msgid "Keep Velocity"
 msgstr "விரைவு வைத்திருங்கள்"
 
@@ -13482,16 +14022,6 @@ msgstr "முன்னோட்டத்திற்கான வெளிய�
 #: scene/resources/visual_shader.cpp
 msgid "Modes"
 msgstr "முறைகள்"
-
-#: scene/resources/visual_shader.cpp
-#, fuzzy
-msgid "Varyings"
-msgstr "எச்சரிக்கைகள்"
-
-#: scene/resources/visual_shader.cpp
-#, fuzzy
-msgid "Preview Params"
-msgstr "முன்னோட்டம்"
 
 #: scene/resources/visual_shader.cpp
 msgid "Input Name"
@@ -14225,6 +14755,15 @@ msgid "Port H Offset"
 msgstr "துறைமுகம் எச் ஆஃப்செட்"
 
 #: scene/theme/default_theme.cpp
+msgid "Hovered"
+msgstr "வட்டமிட்டது"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Hovered Dimmed"
+msgstr "வட்டமிட்டது"
+
+#: scene/theme/default_theme.cpp
 msgid "Selected Focus"
 msgstr "தேர்ந்தெடுக்கப்பட்ட கவனம்"
 
@@ -14235,6 +14774,11 @@ msgstr "கர்சர்"
 #: scene/theme/default_theme.cpp
 msgid "Cursor Unfocused"
 msgstr "கர்சர் கவனம் செலுத்தவில்லை"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Button Hover"
+msgstr "தலைப்பு பொத்தான் ஓவர்"
 
 #: scene/theme/default_theme.cpp
 msgid "Title Button Normal"
@@ -14287,6 +14831,15 @@ msgstr "தலைப்பு பொத்தான் எழுத்துர�
 #: scene/theme/default_theme.cpp
 msgid "Title Button Color"
 msgstr "தலைப்பு பொத்தான் நிறம்"
+
+#: scene/theme/default_theme.cpp
+msgid "Font Hovered Color"
+msgstr "எழுத்துரு வண்ணம்"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Font Hovered Dimmed Color"
+msgstr "எழுத்துரு வண்ணம்"
 
 #: scene/theme/default_theme.cpp
 msgid "Guide Color"
@@ -14397,12 +14950,19 @@ msgid "Icon Margin"
 msgstr "படவுரு விளிம்பு"
 
 #: scene/theme/default_theme.cpp
-msgid "Font Hovered Color"
-msgstr "எழுத்துரு வண்ணம்"
+#, fuzzy
+msgid "Font Hovered Selected Color"
+msgstr "எழுத்துரு தேர்ந்தெடுக்கப்பட்ட வண்ணம்"
 
 #: scene/theme/default_theme.cpp
-msgid "Hovered"
-msgstr "வட்டமிட்டது"
+#, fuzzy
+msgid "Hovered Selected"
+msgstr "குழு தேர்ந்தெடுக்கப்பட்டது"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Hovered Selected Focus"
+msgstr "தேர்ந்தெடுக்கப்பட்ட கவனம்"
 
 #: scene/theme/default_theme.cpp
 msgid "Tab Selected"
@@ -15161,6 +15721,11 @@ msgstr "நேர வெளியேறுதல் (எம்.எச்)"
 msgid "Surround"
 msgstr "சுற்று"
 
+#: servers/audio/effects/audio_stream_generator.cpp
+#, fuzzy
+msgid "Mix Rate Mode"
+msgstr "கலவை வீதம்"
+
 #: servers/audio_server.cpp
 msgid "Enable Input"
 msgstr "உள்ளீட்டை இயக்கவும்"
@@ -15719,6 +16284,11 @@ msgid "Compress With GPU"
 msgstr "சுருக்க"
 
 #: servers/rendering_server.cpp
+#, fuzzy
+msgid "Cache GPU Compressor"
+msgstr "வலை சுருக்க"
+
+#: servers/rendering_server.cpp
 msgid "Lossless Compression"
 msgstr "இழப்பற்ற சுருக்க"
 
@@ -16072,6 +16642,10 @@ msgstr "வி.ஆர்.எச் வலிமை"
 #: servers/xr_server.cpp
 msgid "World Origin"
 msgstr "உலக தோற்றம்"
+
+#: servers/xr_server.cpp
+msgid "Camera Locked to Origin"
+msgstr ""
 
 #: servers/xr_server.cpp
 msgid "Primary Interface"

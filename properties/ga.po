@@ -35,8 +35,8 @@ msgstr "Cumraíocht"
 #: editor/plugins/tiles/tile_set_atlas_source_editor.cpp
 #: modules/sqlite/src/godot_sqlite.h platform/android/export/export_plugin.cpp
 #: scene/2d/physics/area_2d.cpp scene/3d/physics/area_3d.cpp
-#: scene/3d/skeleton_3d.cpp scene/resources/3d/mesh_library.cpp
-#: scene/resources/3d/skin.cpp servers/xr/xr_pose.cpp servers/xr/xr_tracker.cpp
+#: scene/resources/3d/mesh_library.cpp scene/resources/3d/skin.cpp
+#: servers/xr/xr_pose.cpp servers/xr/xr_tracker.cpp
 msgid "Name"
 msgstr "Ainm"
 
@@ -152,9 +152,9 @@ msgstr "Fuinneog"
 #: scene/gui/control.cpp scene/gui/graph_edit.cpp scene/main/viewport.cpp
 #: scene/main/window.cpp scene/resources/2d/rectangle_shape_2d.cpp
 #: scene/resources/3d/box_shape_3d.cpp scene/resources/3d/primitive_meshes.cpp
-#: scene/resources/label_settings.cpp scene/resources/placeholder_textures.cpp
-#: scene/resources/style_box_flat.cpp scene/resources/visual_shader.cpp
-#: servers/rendering_server.cpp
+#: scene/resources/external_texture.cpp scene/resources/label_settings.cpp
+#: scene/resources/placeholder_textures.cpp scene/resources/style_box_flat.cpp
+#: scene/resources/visual_shader.cpp servers/rendering_server.cpp
 msgid "Size"
 msgstr "Méid"
 
@@ -224,6 +224,11 @@ msgstr "Leathnaigh go Teideal"
 msgid "No Focus"
 msgstr "Gan Fócas"
 
+#: core/config/project_settings.cpp scene/main/window.cpp
+#, fuzzy
+msgid "Sharp Corners"
+msgstr "Faobhar"
+
 #: core/config/project_settings.cpp
 msgid "Window Width Override"
 msgstr "Sáraigh Leithead na Fuinneoige"
@@ -276,7 +281,7 @@ msgstr "Busanna"
 msgid "Default Bus Layout"
 msgstr "Leagan Amach Réamhshocraithe Bus"
 
-#: core/config/project_settings.cpp
+#: core/config/project_settings.cpp editor/editor_settings.cpp
 msgid "General"
 msgstr "Ginearálta"
 
@@ -318,10 +323,30 @@ msgid "Embed Subwindows"
 msgstr "Leabú Subwindows"
 
 #: core/config/project_settings.cpp
+#, fuzzy
+msgid "Frame Pacing"
+msgstr "Spásáil Bonn"
+
+#: core/config/project_settings.cpp platform/android/export/export.cpp
+msgid "Android"
+msgstr "Android"
+
+#: core/config/project_settings.cpp
+#, fuzzy
+msgid "Enable Frame Pacing"
+msgstr "Cumasaigh Piocadh Réada"
+
+#: core/config/project_settings.cpp
+#, fuzzy
+msgid "Swappy Mode"
+msgstr "Mód Spéire"
+
+#: core/config/project_settings.cpp
 #: editor/import/3d/resource_importer_scene.cpp main/main.cpp
-#: scene/2d/tile_map_layer.cpp scene/main/scene_tree.cpp
-#: scene/main/viewport.cpp scene/resources/2d/tile_set.cpp
-#: servers/physics_server_2d.cpp servers/physics_server_3d.cpp
+#: modules/jolt_physics/jolt_project_settings.cpp scene/2d/tile_map_layer.cpp
+#: scene/main/scene_tree.cpp scene/main/viewport.cpp
+#: scene/resources/2d/tile_set.cpp servers/physics_server_2d.cpp
+#: servers/physics_server_3d.cpp
 msgid "Physics"
 msgstr "Fisic"
 
@@ -357,8 +382,8 @@ msgstr "Gné"
 #: scene/2d/parallax_layer.cpp scene/2d/polygon_2d.cpp
 #: scene/2d/remote_transform_2d.cpp scene/3d/cpu_particles_3d.cpp
 #: scene/3d/node_3d.cpp scene/3d/remote_transform_3d.cpp
-#: scene/3d/skeleton_3d.cpp scene/animation/animation_blend_tree.h
-#: scene/gui/control.cpp scene/main/canvas_layer.cpp scene/main/scene_tree.cpp
+#: scene/animation/animation_blend_tree.h scene/gui/control.cpp
+#: scene/main/canvas_layer.cpp scene/main/scene_tree.cpp
 #: scene/main/viewport.cpp scene/resources/camera_attributes.cpp
 #: scene/resources/material.cpp scene/resources/particle_process_material.cpp
 #: servers/rendering_server.cpp
@@ -564,7 +589,8 @@ msgstr "Taisce píblíne"
 #: editor/import/3d/post_import_plugin_skeleton_rest_fixer.cpp
 #: modules/gdscript/gdscript.cpp platform/android/export/export_plugin.cpp
 #: platform/windows/export/export_plugin.cpp
-#: scene/3d/physics/joints/hinge_joint_3d.cpp servers/rendering_server.cpp
+#: scene/3d/physics/joints/hinge_joint_3d.cpp scene/3d/retarget_modifier_3d.cpp
+#: servers/rendering_server.cpp
 msgid "Enable"
 msgstr "Cumasaigh"
 
@@ -634,10 +660,6 @@ msgstr "Gléasanna Ionchurtha"
 msgid "Pointing"
 msgstr "Pointeáil"
 
-#: core/config/project_settings.cpp platform/android/export/export.cpp
-msgid "Android"
-msgstr "Android"
-
 #: core/config/project_settings.cpp editor/editor_settings.cpp
 msgid "Enable Long Press as Right Click"
 msgstr "Cumasaigh Preas Fada mar Chliceáil Ar Dheis"
@@ -665,6 +687,11 @@ msgstr "Smúdú Delta"
 #: core/core_bind.cpp
 msgid "Print Error Messages"
 msgstr "Priontáil Teachtaireachtaí Earráide"
+
+#: core/core_bind.cpp
+#, fuzzy
+msgid "Print to stdout"
+msgstr "Stdout briathartha"
 
 #: core/core_bind.cpp main/main.cpp
 msgid "Physics Ticks per Second"
@@ -794,8 +821,7 @@ msgstr "Masc Cnaipe"
 #: editor/import/3d/resource_importer_scene.cpp
 #: modules/gltf/structures/gltf_node.cpp scene/2d/node_2d.cpp
 #: scene/2d/remote_transform_2d.cpp scene/3d/node_3d.cpp
-#: scene/3d/remote_transform_3d.cpp scene/3d/skeleton_3d.cpp
-#: scene/gui/control.cpp scene/main/window.cpp
+#: scene/3d/remote_transform_3d.cpp scene/gui/control.cpp scene/main/window.cpp
 #: scene/resources/particle_process_material.cpp servers/physics_server_2d.cpp
 #: servers/physics_server_3d.cpp
 msgid "Position"
@@ -1044,6 +1070,7 @@ msgid "Memory"
 msgstr "Cuimhne"
 
 #: core/object/message_queue.cpp core/register_core_types.cpp main/main.cpp
+#: modules/jolt_physics/jolt_project_settings.cpp
 #: modules/webrtc/register_types.cpp scene/main/window.cpp
 #: servers/rendering_server.cpp
 msgid "Limits"
@@ -1164,9 +1191,8 @@ msgstr "Ná bac le sealbhóirí áite"
 #: modules/gltf/structures/gltf_node.cpp scene/2d/node_2d.cpp
 #: scene/2d/polygon_2d.cpp scene/2d/remote_transform_2d.cpp
 #: scene/3d/node_3d.cpp scene/3d/physics/physical_bone_3d.cpp
-#: scene/3d/remote_transform_3d.cpp scene/3d/skeleton_3d.cpp
-#: scene/gui/control.cpp scene/main/canvas_layer.cpp
-#: scene/resources/environment.cpp
+#: scene/3d/remote_transform_3d.cpp scene/gui/control.cpp
+#: scene/main/canvas_layer.cpp scene/resources/environment.cpp
 msgid "Rotation"
 msgstr "Rothlú"
 
@@ -1266,6 +1292,20 @@ msgstr "Eochair"
 #: editor/editor_inspector.cpp
 msgid "Deletable"
 msgstr "In-scriosta"
+
+#: editor/editor_inspector.cpp scene/gui/graph_element.cpp
+msgid "Selectable"
+msgstr "Inroghnaithe"
+
+#: editor/editor_inspector.cpp
+#, fuzzy
+msgid "Use Folding"
+msgstr "Cód Fillte"
+
+#: editor/editor_inspector.cpp
+#, fuzzy
+msgid "Name Split Ratio"
+msgstr "Tarraing Spásanna"
 
 #: editor/editor_interface.cpp
 msgid "Distraction Free Mode"
@@ -1392,10 +1432,6 @@ msgid "Single Window Mode"
 msgstr "Mód Fuinneoige Aonair"
 
 #: editor/editor_settings.cpp
-msgid "Remember Window Size and Position"
-msgstr ""
-
-#: editor/editor_settings.cpp
 msgid "Mouse Extra Buttons Navigate History"
 msgstr "Luch Cnaipí Breise Nascleanúint Stair"
 
@@ -1429,6 +1465,7 @@ msgstr "Nuashonraigh go leanúnach"
 
 #: editor/editor_settings.cpp
 #: editor/plugins/gizmos/particles_3d_emission_shape_gizmo_plugin.cpp
+#: editor/plugins/path_3d_editor_plugin.cpp
 msgid "Editors"
 msgstr "Eagarthóirí"
 
@@ -1641,6 +1678,41 @@ msgstr "Mód Taispeána"
 msgid "Thumbnail Size"
 msgstr "Méid na Mionsamhlacha"
 
+#: editor/editor_settings.cpp
+#, fuzzy
+msgid "Quick Open Dialog"
+msgstr "Dialóg Chomhaid"
+
+#: editor/editor_settings.cpp scene/2d/physics/shape_cast_2d.cpp
+#: scene/3d/physics/shape_cast_3d.cpp
+msgid "Max Results"
+msgstr "Torthaí Uasta"
+
+#: editor/editor_settings.cpp
+#, fuzzy
+msgid "Show Search Highlight"
+msgstr "Aibhsiú Grabber"
+
+#: editor/editor_settings.cpp
+#, fuzzy
+msgid "Enable Fuzzy Matching"
+msgstr "Cumasaigh Logáil Comhad"
+
+#: editor/editor_settings.cpp
+#, fuzzy
+msgid "Max Fuzzy Misses"
+msgstr "Uasteachtaireachtaí Ciúáilte"
+
+#: editor/editor_settings.cpp
+#, fuzzy
+msgid "Include Addons"
+msgstr "Ná Cuir Breiseáin as an áireamh"
+
+#: editor/editor_settings.cpp
+#, fuzzy
+msgid "Default Display Mode"
+msgstr "Mód Taispeána"
+
 #: editor/editor_settings.cpp editor/import/3d/resource_importer_scene.cpp
 #: editor/register_editor_types.cpp modules/fbx/register_types.cpp
 #: modules/gltf/register_types.cpp
@@ -1729,7 +1801,7 @@ msgstr "Eagarthóir Téacs"
 
 #: editor/editor_settings.cpp scene/3d/label_3d.cpp
 #: scene/resources/3d/primitive_meshes.cpp scene/resources/label_settings.cpp
-#: scene/theme/default_theme.cpp
+#: scene/resources/text_paragraph.cpp scene/theme/default_theme.cpp
 msgid "Line Spacing"
 msgstr "Spásáil Líne"
 
@@ -1835,6 +1907,11 @@ msgstr "Tarraing Spásanna"
 msgid "Behavior"
 msgstr "Oibriú"
 
+#: editor/editor_settings.cpp
+#, fuzzy
+msgid "Empty Selection Clipboard"
+msgstr "Dath an Roghnaithe"
+
 #: editor/editor_settings.cpp main/performance.cpp modules/gridmap/grid_map.cpp
 #: scene/2d/tile_map_layer.cpp scene/resources/2d/tile_set.cpp
 #: servers/navigation_server_3d.cpp
@@ -1930,6 +2007,16 @@ msgid "Open Dominant Script on Scene Change"
 msgstr "Oscail Script Cheannasach ar Athrú Radhairc"
 
 #: editor/editor_settings.cpp
+#, fuzzy
+msgid "Documentation"
+msgstr "Treoshuíomh"
+
+#: editor/editor_settings.cpp
+#, fuzzy
+msgid "Enable Tooltips"
+msgstr "Cumasaigh Gíreascóip"
+
+#: editor/editor_settings.cpp
 msgid "Script List"
 msgstr "Liosta Scripteanna"
 
@@ -1948,6 +2035,11 @@ msgstr "Teocht na Scripte Cumasaithe"
 #: editor/editor_settings.cpp
 msgid "Script Temperature History Size"
 msgstr "Script Teocht Stair Méid"
+
+#: editor/editor_settings.cpp
+#, fuzzy
+msgid "Highlight Scene Scripts"
+msgstr "Aibhsigh an tSraith Roghnaithe"
 
 #: editor/editor_settings.cpp
 msgid "Group Help Pages"
@@ -1979,6 +2071,11 @@ msgstr "Críochnú"
 
 #: editor/editor_settings.cpp
 msgid "Idle Parse Delay"
+msgstr "Moill pharsála díomhaoin"
+
+#: editor/editor_settings.cpp
+#, fuzzy
+msgid "Idle Parse Delay With Errors Found"
 msgstr "Moill pharsála díomhaoin"
 
 #: editor/editor_settings.cpp
@@ -2065,6 +2162,7 @@ msgstr "Dath an Bhosca Roghnaithe"
 
 #: editor/editor_settings.cpp
 #: editor/plugins/gizmos/particles_3d_emission_shape_gizmo_plugin.cpp
+#: editor/plugins/path_3d_editor_plugin.cpp
 msgid "3D Gizmos"
 msgstr "Gizmos 3D"
 
@@ -2167,7 +2265,7 @@ msgstr "Cnámh Roghnaithe"
 msgid "CSG"
 msgstr "CSGName"
 
-#: editor/editor_settings.cpp
+#: editor/editor_settings.cpp editor/plugins/path_3d_editor_plugin.cpp
 msgid "Gizmo Settings"
 msgstr "Socruithe Gizmo"
 
@@ -2179,7 +2277,7 @@ msgstr "Fad Ais na gCnámh"
 msgid "Bone Shape"
 msgstr "Cruth Cnámh"
 
-#: editor/editor_settings.cpp
+#: editor/editor_settings.cpp editor/plugins/path_3d_editor_plugin.cpp
 msgid "Path 3D Tilt Disk Size"
 msgstr "Conair 3D Tilt Diosca Méid"
 
@@ -2504,7 +2602,7 @@ msgid "Platforms"
 msgstr "Ardáin"
 
 #: editor/editor_settings.cpp
-msgid "Linuxbsd"
+msgid "Linux/*BSD"
 msgstr ""
 
 #: editor/editor_settings.cpp
@@ -2542,6 +2640,11 @@ msgstr "Méid Stair an Fhráma Próifíleora"
 #: editor/editor_settings.cpp
 msgid "Profiler Frame Max Functions"
 msgstr "Feidhmeanna Max Fráma Próifíleora"
+
+#: editor/editor_settings.cpp
+#, fuzzy
+msgid "Profiler Target FPS"
+msgstr "Méid Stair an Fhráma Próifíleora"
 
 #: editor/editor_settings.cpp
 msgid "Remote Scene Tree Refresh Interval"
@@ -2949,12 +3052,23 @@ msgstr "Athshocraigh gach cnámh tar éis na hiompórtála"
 
 #: editor/import/3d/post_import_plugin_skeleton_rest_fixer.cpp
 #, fuzzy
-msgid "Overwrite Axis"
-msgstr "Sáraigh"
+msgid "Retarget Method"
+msgstr "Modh Rindreála"
 
 #: editor/import/3d/post_import_plugin_skeleton_rest_fixer.cpp
 msgid "Keep Global Rest on Leftovers"
 msgstr "Coinnigh Scíth Dhomhanda ar Leftovers"
+
+#: editor/import/3d/post_import_plugin_skeleton_rest_fixer.cpp
+#: scene/3d/retarget_modifier_3d.cpp
+#, fuzzy
+msgid "Use Global Pose"
+msgstr "Úsáid Comhordanáidí Domhanda"
+
+#: editor/import/3d/post_import_plugin_skeleton_rest_fixer.cpp
+#, fuzzy
+msgid "Original Skeleton Name"
+msgstr "Ainm an Chnámharlaigh"
 
 #: editor/import/3d/post_import_plugin_skeleton_rest_fixer.cpp
 msgid "Fix Silhouette"
@@ -2969,6 +3083,7 @@ msgstr "Scagaire"
 
 #: editor/import/3d/post_import_plugin_skeleton_rest_fixer.cpp
 #: editor/import/resource_importer_bitmask.cpp
+#: modules/openxr/extensions/openxr_dpad_binding_extension.cpp
 #: servers/audio/effects/audio_effect_compressor.cpp
 msgid "Threshold"
 msgstr "Tairseach"
@@ -2996,6 +3111,26 @@ msgstr "Cnámha Gan Teorainn"
 #: editor/import/3d/resource_importer_obj.cpp
 msgid "Generate Tangents"
 msgstr "Gin Tangents"
+
+#: editor/import/3d/resource_importer_obj.cpp
+#: editor/import/3d/resource_importer_scene.cpp
+msgid "Generate LODs"
+msgstr "Gin LODanna"
+
+#: editor/import/3d/resource_importer_obj.cpp
+#, fuzzy
+msgid "Generate Shadow Mesh"
+msgstr "Cruthaigh Scáth-Mhogaill"
+
+#: editor/import/3d/resource_importer_obj.cpp
+#, fuzzy
+msgid "Generate Lightmap UV2"
+msgstr "Gin Mipmaps"
+
+#: editor/import/3d/resource_importer_obj.cpp
+#, fuzzy
+msgid "Generate Lightmap UV2 Texel Size"
+msgstr "Lightmap Texel Méid"
 
 #: editor/import/3d/resource_importer_obj.cpp
 msgid "Scale Mesh"
@@ -3212,8 +3347,8 @@ msgstr "Sábháil i gComhad"
 #: scene/3d/navigation_region_3d.cpp scene/3d/physics/area_3d.cpp
 #: scene/3d/physics/joints/generic_6dof_joint_3d.cpp
 #: scene/3d/physics/ray_cast_3d.cpp scene/3d/physics/shape_cast_3d.cpp
-#: scene/3d/skeleton_3d.cpp scene/3d/sprite_3d.cpp scene/gui/code_edit.cpp
-#: scene/gui/graph_edit.cpp scene/main/canvas_layer.cpp
+#: scene/3d/sprite_3d.cpp scene/gui/code_edit.cpp scene/gui/graph_edit.cpp
+#: scene/main/canvas_layer.cpp
 #: scene/resources/2d/skeleton/skeleton_modification_2d.cpp
 #: scene/resources/2d/skeleton/skeleton_modification_stack_2d.cpp
 #: scene/resources/camera_attributes.cpp scene/resources/compositor.cpp
@@ -3236,18 +3371,8 @@ msgid "LODs"
 msgstr "LODanna"
 
 #: editor/import/3d/resource_importer_scene.cpp
-#, fuzzy
-msgid "Normal Split Angle"
-msgstr "Gnáthuillinn Chumaisc"
-
-#: editor/import/3d/resource_importer_scene.cpp
 msgid "Normal Merge Angle"
 msgstr "Gnáthuillinn Chumaisc"
-
-#: editor/import/3d/resource_importer_scene.cpp
-#, fuzzy
-msgid "Raycast Normals"
-msgstr "Src Gnáth"
 
 #: editor/import/3d/resource_importer_scene.cpp
 msgid "Use External"
@@ -3352,6 +3477,10 @@ msgstr "Fréamhscála"
 msgid "Import as Skeleton Bones"
 msgstr "Iompórtáil mar chnámha cnámharlaigh"
 
+#: editor/import/3d/resource_importer_scene.cpp
+msgid "Use Node Type Suffixes"
+msgstr ""
+
 #: editor/import/3d/resource_importer_scene.cpp modules/gltf/gltf_state.cpp
 msgid "Meshes"
 msgstr "Mogalraí"
@@ -3359,10 +3488,6 @@ msgstr "Mogalraí"
 #: editor/import/3d/resource_importer_scene.cpp
 msgid "Ensure Tangents"
 msgstr "Cinntigh Tangents"
-
-#: editor/import/3d/resource_importer_scene.cpp
-msgid "Generate LODs"
-msgstr "Gin LODanna"
 
 #: editor/import/3d/resource_importer_scene.cpp
 msgid "Create Shadow Meshes"
@@ -3849,6 +3974,7 @@ msgid "Frames Count"
 msgstr "Líon na bhFrámaí"
 
 #: editor/plugins/tiles/tile_set_atlas_source_editor.cpp
+#: modules/openxr/action_map/openxr_haptic_feedback.cpp
 msgid "Duration"
 msgstr "Fad ama"
 
@@ -3913,6 +4039,36 @@ msgid "Flush stdout on Print"
 msgstr "Stdout Flush ar Priontáil"
 
 #: main/main.cpp
+msgid "Low Processor Mode"
+msgstr "Mód Próiseálaí Íseal"
+
+#: main/main.cpp
+msgid "stdout"
+msgstr "an t-am ar fad"
+
+#: main/main.cpp
+msgid "Print FPS"
+msgstr "Priontáil FPS"
+
+#: main/main.cpp
+msgid "Print GPU Profile"
+msgstr "Priontáil Próifíl GPU"
+
+#: main/main.cpp
+msgid "Verbose stdout"
+msgstr "Stdout briathartha"
+
+#: main/main.cpp scene/main/node.cpp scene/main/scene_tree.cpp
+#: scene/resources/multimesh.cpp
+msgid "Physics Interpolation"
+msgstr "Idirshuíomh Fisice"
+
+#: main/main.cpp
+#, fuzzy
+msgid "Enable Warnings"
+msgstr "Rabhaidh"
+
+#: main/main.cpp
 msgid "Max Chars per Second"
 msgstr "Max Chars in aghaidh an tSoicind"
 
@@ -3959,7 +4115,7 @@ msgstr "Fallback go D3D12"
 
 #: main/main.cpp
 #, fuzzy
-msgid "Fallback to Opengl 3"
+msgid "Fallback to OpenGL 3"
 msgstr "Fill ar ais go OpenGL 3"
 
 #: main/main.cpp servers/rendering_server.cpp
@@ -3980,7 +4136,7 @@ msgstr "Fallback go Dúchasach"
 
 #: main/main.cpp
 #, fuzzy
-msgid "Fallback to Gles"
+msgid "Fallback to GLES"
 msgstr "Fallback go Uillinn"
 
 #: main/main.cpp
@@ -4046,28 +4202,8 @@ msgid "Output Latency"
 msgstr "Latency Aschuir"
 
 #: main/main.cpp
-msgid "stdout"
-msgstr "an t-am ar fad"
-
-#: main/main.cpp
-msgid "Print FPS"
-msgstr "Priontáil FPS"
-
-#: main/main.cpp
-msgid "Print GPU Profile"
-msgstr "Priontáil Próifíl GPU"
-
-#: main/main.cpp
-msgid "Verbose stdout"
-msgstr "Stdout briathartha"
-
-#: main/main.cpp
 msgid "Frame Delay Msec"
 msgstr "Msec Moill Fráma"
-
-#: main/main.cpp
-msgid "Low Processor Mode"
-msgstr "Mód Próiseálaí Íseal"
 
 #: main/main.cpp
 msgid "Allow High Refresh Rate"
@@ -4163,6 +4299,21 @@ msgid "Eye Gaze Interaction"
 msgstr "Idirghníomhaíocht Súl"
 
 #: main/main.cpp
+#, fuzzy
+msgid "Binding Modifiers"
+msgstr "Mionathraigh"
+
+#: main/main.cpp
+#, fuzzy
+msgid "Analog Threshold"
+msgstr "Tairseach"
+
+#: main/main.cpp
+#, fuzzy
+msgid "Dpad Binding"
+msgstr "Stuáil UV2"
+
+#: main/main.cpp
 msgid "Boot Splash"
 msgstr "Splancscáileán Tosaithe"
 
@@ -4230,11 +4381,6 @@ msgstr "Fritháireamh Suímh Leideanna"
 msgid "Show Image"
 msgstr "Taispeáin Íomhá"
 
-#: main/main.cpp platform/web/export/export_plugin.cpp
-#: scene/resources/image_texture.cpp
-msgid "Image"
-msgstr "Íomhá"
-
 #: main/main.cpp
 msgid "Fullsize"
 msgstr "Lánmhéid"
@@ -4242,6 +4388,11 @@ msgstr "Lánmhéid"
 #: main/main.cpp servers/rendering_server.cpp
 msgid "Use Filter"
 msgstr "Úsáid scagaire"
+
+#: main/main.cpp platform/web/export/export_plugin.cpp
+#: scene/resources/image_texture.cpp
+msgid "Image"
+msgstr "Íomhá"
 
 #: main/main.cpp
 msgid "Minimum Display Time"
@@ -4398,6 +4549,11 @@ msgstr "Imill Ceangailte"
 #: main/performance.cpp
 msgid "Edges Free"
 msgstr "Imill Saor in Aisce"
+
+#: main/performance.cpp
+#, fuzzy
+msgid "Obstacles"
+msgstr "Constaicí Crochta Íseal"
 
 #: modules/blazium_sdk/csv/resource_importer_csv.cpp
 #, fuzzy
@@ -4615,10 +4771,6 @@ msgstr "Mód Tógála"
 #: modules/csg/csg_shape.cpp
 msgid "Operation"
 msgstr "Oibríocht"
-
-#: modules/csg/csg_shape.cpp scene/main/scene_tree.cpp
-msgid "Snap"
-msgstr "Léim"
 
 #: modules/csg/csg_shape.cpp
 msgid "Calculate Tangents"
@@ -5214,7 +5366,7 @@ msgstr "Meáchain Cumaisc"
 msgid "Instance Materials"
 msgstr "Ábhair Shamplacha"
 
-#: modules/gltf/structures/gltf_node.cpp scene/3d/skeleton_3d.cpp
+#: modules/gltf/structures/gltf_node.cpp
 msgid "Parent"
 msgstr "Tuismitheoir"
 
@@ -5235,8 +5387,36 @@ msgstr "Leanaí"
 msgid "Light"
 msgstr "Solas"
 
+#: modules/gltf/structures/gltf_object_model_property.cpp
+msgid "glTF to Godot Expression"
+msgstr ""
+
+#: modules/gltf/structures/gltf_object_model_property.cpp
+msgid "Godot to glTF Expression"
+msgstr ""
+
+#: modules/gltf/structures/gltf_object_model_property.cpp
+#, fuzzy
+msgid "Node Paths"
+msgstr "Conair nód"
+
+#: modules/gltf/structures/gltf_object_model_property.cpp
+msgid "Object Model Type"
+msgstr ""
+
+#: modules/gltf/structures/gltf_object_model_property.cpp
+#, fuzzy
+msgid "Json Pointers"
+msgstr "Neamh-Ailt"
+
+#: modules/gltf/structures/gltf_object_model_property.cpp
+#, fuzzy
+msgid "Variant Type"
+msgstr "Cineál Éagsúil"
+
 #: modules/gltf/structures/gltf_skeleton.cpp
 #: modules/gltf/structures/gltf_skin.cpp
+#: modules/jolt_physics/jolt_project_settings.cpp
 msgid "Joints"
 msgstr "Ailt"
 
@@ -5370,12 +5550,12 @@ msgid "Bake Navigation"
 msgstr "Nascleanúint Bácála"
 
 #: modules/interactive_music/audio_stream_interactive.cpp
-msgid "Initial Clip"
-msgstr "Gearrthóg Tosaigh"
-
-#: modules/interactive_music/audio_stream_interactive.cpp
 msgid "Clip Count"
 msgstr "Líon na Gearrthóg"
+
+#: modules/interactive_music/audio_stream_interactive.cpp
+msgid "Initial Clip"
+msgstr "Gearrthóg Tosaigh"
 
 #: modules/interactive_music/audio_stream_playlist.cpp
 msgid "Shuffle"
@@ -5389,6 +5569,175 @@ msgstr "Am Céimnithe"
 #: modules/interactive_music/audio_stream_synchronized.cpp
 msgid "Stream Count"
 msgstr "Líon na Sruthanna"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Jolt Physics 3D"
+msgstr "Fisic 3D"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Simulation"
+msgstr "Beochan"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Velocity Steps"
+msgstr "Treoluas"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Position Steps"
+msgstr "Ionad"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+msgid "Use Enhanced Internal Edge Removal"
+msgstr ""
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Areas Detect Static Bodies"
+msgstr "Úsáid Comhlachtaí Kinematic"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+msgid "Generate All Kinematic Contacts"
+msgstr ""
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Penetration Slop"
+msgstr "Dath Anótála"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Speculative Contact Distance"
+msgstr "Fad simpliúcháin"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+msgid "Baumgarte Stabilization Factor"
+msgstr ""
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Soft Body Point Radius"
+msgstr "Ga Grab Pointe"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+msgid "Bounce Velocity Threshold"
+msgstr ""
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Allow Sleep"
+msgstr "Ceadaigh Cuardach"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Sleep Velocity Threshold"
+msgstr "Scálaigh thar Chuar treoluais"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Sleep Time Threshold"
+msgstr "Tairseach Codlata Líneach"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+msgid "Continuous CD Movement Threshold"
+msgstr ""
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Continuous CD Max Penetration"
+msgstr "Déan teagmháil le Max Treá Ceadaithe"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+msgid "Body Pair Contact Cache Enabled"
+msgstr ""
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+msgid "Body Pair Contact Cache Distance Threshold"
+msgstr ""
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+msgid "Body Pair Contact Cache Angle Threshold"
+msgstr ""
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+msgid "Queries"
+msgstr ""
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+msgid "Enable Ray Cast Face Index"
+msgstr ""
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Motion Queries"
+msgstr "Mód Gluaisne"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Recovery Iterations"
+msgstr "Atriall Réitigh"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Recovery Amount"
+msgstr "Aisghabháil mar Imbhualadh"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Collisions"
+msgstr "Imbhualadh"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Collision Margin Fraction"
+msgstr "Imeall Imbhuailtí Aon-Bhealach"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Active Edge Threshold"
+msgstr "Tairseach LOD mogalra"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "World Node"
+msgstr "Scála Domhanda"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Temporary Memory Buffer Size"
+msgstr "Méid an mhaoláin míre"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+msgid "World Boundary Shape Size"
+msgstr ""
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Max Linear Velocity"
+msgstr "Treoluas Líneach"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Max Angular Velocity"
+msgstr "Treoluas Uilleach"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Max Bodies"
+msgstr "Comhlachtaí"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Max Body Pairs"
+msgstr "Sraitheanna Uasta"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Max Contact Constraints"
+msgstr "Srianta Comhpháirteacha"
 
 #: modules/lightmapper_rd/register_types.cpp servers/rendering_server.cpp
 msgid "Lightmapping"
@@ -5586,6 +5935,7 @@ msgid "Noise Type"
 msgstr "Cineál Torainn"
 
 #: modules/noise/fastnoise_lite.cpp
+#: modules/openxr/action_map/openxr_haptic_feedback.cpp
 #: scene/resources/particle_process_material.cpp
 msgid "Frequency"
 msgstr "Minicíocht"
@@ -5637,6 +5987,7 @@ msgid "Domain Warp"
 msgstr "Warp Fearainn"
 
 #: modules/noise/fastnoise_lite.cpp
+#: modules/openxr/action_map/openxr_haptic_feedback.cpp
 msgid "Amplitude"
 msgstr "Aimplitiúid"
 
@@ -5713,9 +6064,9 @@ msgid "Toplevel Paths"
 msgstr "Cosáin Toplevel"
 
 #: modules/openxr/action_map/openxr_interaction_profile.cpp
-#: scene/main/scene_tree.cpp
-msgid "Paths"
-msgstr "Cosáin"
+#, fuzzy
+msgid "Binding Path"
+msgstr "Conair an Chumascóra"
 
 #: modules/openxr/action_map/openxr_interaction_profile.cpp
 msgid "Interaction Profile Path"
@@ -5724,6 +6075,55 @@ msgstr "Conair Phróifíl Idirghníomhaíochta"
 #: modules/openxr/editor/openxr_select_runtime.cpp
 msgid "Runtime Paths"
 msgstr "Cosáin Am Rith"
+
+#: modules/openxr/extensions/openxr_dpad_binding_extension.cpp
+#, fuzzy
+msgid "Action Set"
+msgstr "Cineál Gnímh"
+
+#: modules/openxr/extensions/openxr_dpad_binding_extension.cpp
+#, fuzzy
+msgid "Input Path"
+msgstr "Ainm Ionchurtha"
+
+#: modules/openxr/extensions/openxr_dpad_binding_extension.cpp
+#, fuzzy
+msgid "Threshold Released"
+msgstr "Picteilíní Tairsí"
+
+#: modules/openxr/extensions/openxr_dpad_binding_extension.cpp
+#, fuzzy
+msgid "Center Region"
+msgstr "Réigiúin Datha"
+
+#: modules/openxr/extensions/openxr_dpad_binding_extension.cpp
+#, fuzzy
+msgid "Wedge Angle"
+msgstr "Uillinn Cnámh"
+
+#: modules/openxr/extensions/openxr_dpad_binding_extension.cpp
+msgid "Is Sticky"
+msgstr ""
+
+#: modules/openxr/extensions/openxr_dpad_binding_extension.cpp
+#: modules/openxr/extensions/openxr_valve_analog_threshold_extension.cpp
+msgid "On Haptic"
+msgstr ""
+
+#: modules/openxr/extensions/openxr_dpad_binding_extension.cpp
+#: modules/openxr/extensions/openxr_valve_analog_threshold_extension.cpp
+msgid "Off Haptic"
+msgstr ""
+
+#: modules/openxr/extensions/openxr_valve_analog_threshold_extension.cpp
+#, fuzzy
+msgid "On Threshold"
+msgstr "Tairseach"
+
+#: modules/openxr/extensions/openxr_valve_analog_threshold_extension.cpp
+#, fuzzy
+msgid "Off Threshold"
+msgstr "Tairseach"
 
 #: modules/openxr/openxr_interface.cpp
 msgid "Display Refresh Rate"
@@ -5736,6 +6136,16 @@ msgstr "Rindreáil Iolraitheoir Spriocmhéid"
 #: modules/openxr/scene/openxr_composition_layer.cpp
 msgid "Layer Viewport"
 msgstr "Amharcphort na Sraithe"
+
+#: modules/openxr/scene/openxr_composition_layer.cpp
+#, fuzzy
+msgid "Use Android Surface"
+msgstr "Úsáid Gach Dromchla"
+
+#: modules/openxr/scene/openxr_composition_layer.cpp
+#, fuzzy
+msgid "Android Surface Size"
+msgstr "Teimpléad Foinse Android"
 
 #: modules/openxr/scene/openxr_composition_layer.cpp
 msgid "Sort Order"
@@ -5934,6 +6344,11 @@ msgstr "Teorainn Ama Handshake"
 #: modules/websocket/websocket_peer.cpp
 msgid "Max Queued Packets"
 msgstr "Paicéid Ciúáilte Uasta"
+
+#: modules/websocket/websocket_peer.cpp
+#, fuzzy
+msgid "Heartbeat Interval"
+msgstr "Eatramh Deilte"
 
 #: modules/webxr/webxr_interface.cpp
 msgid "Session Mode"
@@ -6192,40 +6607,6 @@ msgid "Icons"
 msgstr "Deilbhíní"
 
 #: platform/ios/export/export_plugin.cpp
-msgid "iPhone 120 X 120"
-msgstr "iPhone 120 X 120"
-
-#: platform/ios/export/export_plugin.cpp
-msgid "iPhone 180 X 180"
-msgstr "iPhone 180 × 180"
-
-#: platform/ios/export/export_plugin.cpp
-#, fuzzy
-msgid "iPad 76 X 76"
-msgstr "iPad 167 X 167"
-
-#: platform/ios/export/export_plugin.cpp
-msgid "iPad 152 X 152"
-msgstr "iPad 152 X 152"
-
-#: platform/ios/export/export_plugin.cpp
-msgid "iPad 167 X 167"
-msgstr "iPad 167 X 167"
-
-#: platform/ios/export/export_plugin.cpp
-msgid "App Store 1024 X 1024"
-msgstr "Siopa Aipeanna 1024 X 1024"
-
-#: platform/ios/export/export_plugin.cpp
-#, fuzzy
-msgid "Spotlight 40 X 40"
-msgstr "Spotsolas 80 X 80"
-
-#: platform/ios/export/export_plugin.cpp
-msgid "Spotlight 80 X 80"
-msgstr "Spotsolas 80 X 80"
-
-#: platform/ios/export/export_plugin.cpp
 msgid "Settings 58 X 58"
 msgstr "Socruithe 58 x 58"
 
@@ -6242,28 +6623,92 @@ msgid "Notification 60 X 60"
 msgstr "Fógra 60 X 60"
 
 #: platform/ios/export/export_plugin.cpp
+#, fuzzy
+msgid "Notification 76 X 76"
+msgstr "Fógra 60 X 60"
+
+#: platform/ios/export/export_plugin.cpp
+#, fuzzy
+msgid "Notification 114 X 114"
+msgstr "Fógra 40 X 40"
+
+#: platform/ios/export/export_plugin.cpp
+msgid "Spotlight 80 X 80"
+msgstr "Spotsolas 80 X 80"
+
+#: platform/ios/export/export_plugin.cpp
+#, fuzzy
+msgid "Spotlight 120 X 120"
+msgstr "Spotsolas 80 X 80"
+
+#: platform/ios/export/export_plugin.cpp
+msgid "iPhone 120 X 120"
+msgstr "iPhone 120 X 120"
+
+#: platform/ios/export/export_plugin.cpp
+msgid "iPhone 180 X 180"
+msgstr "iPhone 180 × 180"
+
+#: platform/ios/export/export_plugin.cpp
+msgid "iPad 167 X 167"
+msgstr "iPad 167 X 167"
+
+#: platform/ios/export/export_plugin.cpp
+msgid "iPad 152 X 152"
+msgstr "iPad 152 X 152"
+
+#: platform/ios/export/export_plugin.cpp
+#, fuzzy
+msgid "iOS 128 X 128"
+msgstr "Príomh 192 X 192"
+
+#: platform/ios/export/export_plugin.cpp
+#, fuzzy
+msgid "iOS 192 X 192"
+msgstr "Príomh 192 X 192"
+
+#: platform/ios/export/export_plugin.cpp
+#, fuzzy
+msgid "iOS 136 X 136"
+msgstr "iPad 167 X 167"
+
+#: platform/ios/export/export_plugin.cpp
+msgid "App Store 1024 X 1024"
+msgstr "Siopa Aipeanna 1024 X 1024"
+
+#: platform/ios/export/export_plugin.cpp
 msgid "App Store Team ID"
 msgstr "Aitheantas Foirne App Store"
-
-#: platform/ios/export/export_plugin.cpp
-msgid "Provisioning Profile UUID Debug"
-msgstr "Próifíl Soláthair UUID Dífhabhtaithe"
-
-#: platform/ios/export/export_plugin.cpp
-msgid "Code Sign Identity Debug"
-msgstr "Dífhabhtú Aitheantais Chomharthaigh an Chóid"
 
 #: platform/ios/export/export_plugin.cpp
 msgid "Export Method Debug"
 msgstr "Easpórtáil Modh Dífhabhtaithe"
 
 #: platform/ios/export/export_plugin.cpp
-msgid "Provisioning Profile UUID Release"
-msgstr "Próifíl Soláthair Scaoileadh UUID"
+msgid "Code Sign Identity Debug"
+msgstr "Dífhabhtú Aitheantais Chomharthaigh an Chóid"
 
 #: platform/ios/export/export_plugin.cpp
 msgid "Code Sign Identity Release"
 msgstr "Scaoileadh Aitheantais Comhartha Cóid"
+
+#: platform/ios/export/export_plugin.cpp
+msgid "Provisioning Profile UUID Debug"
+msgstr "Próifíl Soláthair UUID Dífhabhtaithe"
+
+#: platform/ios/export/export_plugin.cpp
+msgid "Provisioning Profile UUID Release"
+msgstr "Próifíl Soláthair Scaoileadh UUID"
+
+#: platform/ios/export/export_plugin.cpp
+#, fuzzy
+msgid "Provisioning Profile Specifier Debug"
+msgstr "Próifíl Soláthair UUID Dífhabhtaithe"
+
+#: platform/ios/export/export_plugin.cpp
+#, fuzzy
+msgid "Provisioning Profile Specifier Release"
+msgstr "Próifíl Soláthair Scaoileadh UUID"
 
 #: platform/ios/export/export_plugin.cpp
 msgid "Export Method Release"
@@ -6403,6 +6848,21 @@ msgstr "Rianú Cumasaithe"
 #: platform/macos/export/export_plugin.cpp
 msgid "Tracking Domains"
 msgstr "Fearainn Rianaithe"
+
+#: platform/ios/export/export_plugin.cpp
+#, fuzzy
+msgid "Icon 1024 X 1024"
+msgstr "Deilbhín 144 X 144"
+
+#: platform/ios/export/export_plugin.cpp
+#, fuzzy
+msgid "Icon 1024 X 1024 Dark"
+msgstr "Deilbhín 144 X 144"
+
+#: platform/ios/export/export_plugin.cpp
+#, fuzzy
+msgid "Icon 1024 X 1024 Tinted"
+msgstr "Deilbhín 144 X 144"
 
 #: platform/ios/export/export_plugin.cpp
 msgid "Storyboard"
@@ -7478,16 +7938,12 @@ msgid "Sub Emitter"
 msgstr "Fo-Astaír"
 
 #: scene/2d/gpu_particles_2d.cpp scene/3d/gpu_particles_3d.cpp
-msgid "Process Material"
-msgstr "Ábhar Próisis"
+msgid "Interp to End"
+msgstr "Interp go Deireadh"
 
 #: scene/2d/gpu_particles_2d.cpp scene/3d/gpu_particles_3d.cpp
 msgid "Interpolate"
 msgstr "Idirshuíomh"
-
-#: scene/2d/gpu_particles_2d.cpp scene/3d/gpu_particles_3d.cpp
-msgid "Interp to End"
-msgstr "Interp go Deireadh"
 
 #: scene/2d/gpu_particles_2d.cpp scene/3d/gpu_particles_3d.cpp
 msgid "Base Size"
@@ -7508,6 +7964,10 @@ msgstr "Rannóga"
 #: scene/2d/gpu_particles_2d.cpp
 msgid "Section Subdivisions"
 msgstr "Foranna Rannóige"
+
+#: scene/2d/gpu_particles_2d.cpp scene/3d/gpu_particles_3d.cpp
+msgid "Process Material"
+msgstr "Ábhar Próisis"
 
 #: scene/2d/light_2d.cpp scene/3d/light_3d.cpp scene/gui/reference_rect.cpp
 msgid "Editor Only"
@@ -7557,6 +8017,7 @@ msgid "Texture Scale"
 msgstr "Scála Uigeachta"
 
 #: scene/2d/light_occluder_2d.cpp scene/2d/line_2d.cpp
+#: scene/resources/curve.cpp
 msgid "Closed"
 msgstr "Dúnta"
 
@@ -8064,6 +8525,7 @@ msgid "One Way Collision Margin"
 msgstr "Imeall Imbhuailtí Aon-Bhealach"
 
 #: scene/2d/physics/collision_shape_2d.cpp
+#: scene/3d/physics/collision_shape_3d.cpp
 msgid "Debug Color"
 msgstr "Dífhabhtaigh Dath"
 
@@ -8303,10 +8765,6 @@ msgstr "Chasmhóimint"
 msgid "Margin"
 msgstr "Imeall"
 
-#: scene/2d/physics/shape_cast_2d.cpp scene/3d/physics/shape_cast_3d.cpp
-msgid "Max Results"
-msgstr "Torthaí Uasta"
-
 #: scene/2d/physics/static_body_2d.cpp scene/3d/physics/static_body_3d.cpp
 msgid "Constant Linear Velocity"
 msgstr "Treoluas líneach tairiseach"
@@ -8355,7 +8813,7 @@ msgstr "Socruithe an Eagarthóra"
 msgid "Show Bone Gizmo"
 msgstr "Taispeáin Gizmo Cnámh"
 
-#: scene/2d/skeleton_2d.cpp scene/3d/skeleton_3d.cpp
+#: scene/2d/skeleton_2d.cpp
 msgid "Rest"
 msgstr "An chuid eile"
 
@@ -8809,7 +9267,7 @@ msgstr "Clómhéid"
 msgid "Horizontal Alignment"
 msgstr "Ailíniú Cothrománach"
 
-#: scene/3d/label_3d.cpp scene/gui/label.cpp
+#: scene/3d/label_3d.cpp scene/gui/label.cpp scene/gui/rich_text_label.cpp
 #: scene/resources/3d/primitive_meshes.cpp
 msgid "Vertical Alignment"
 msgstr "Ailíniú Ingearach"
@@ -8961,11 +9419,11 @@ msgstr "Maolú uillinne"
 
 #: scene/3d/lightmap_gi.cpp
 #, fuzzy
-msgid "Light Texture"
+msgid "Lightmap Textures"
 msgstr "Uigeachtaí Lightmap"
 
 #: scene/3d/lightmap_gi.cpp scene/main/scene_tree.cpp
-#: servers/rendering_server.cpp
+#: scene/resources/multimesh.cpp servers/rendering_server.cpp
 msgid "Quality"
 msgstr "Cáilíocht"
 
@@ -9140,6 +9598,11 @@ msgstr "Ráiteoir Roghnaithe"
 #: scene/3d/physics/collision_object_3d.cpp
 msgid "Capture on Drag"
 msgstr "Gabháil ar Tarraing"
+
+#: scene/3d/physics/collision_shape_3d.cpp
+#, fuzzy
+msgid "Debug Fill"
+msgstr "Utils dífhabhtaithe"
 
 #: scene/3d/physics/joints/cone_twist_joint_3d.cpp
 #: scene/3d/physics/physical_bone_3d.cpp
@@ -9494,6 +9957,11 @@ msgid "Max Force"
 msgstr "Fórsa Uasta"
 
 #: scene/3d/reflection_probe.cpp
+#, fuzzy
+msgid "Blend Distance"
+msgstr "Min Fad"
+
+#: scene/3d/reflection_probe.cpp
 msgid "Origin Offset"
 msgstr "Fritháireamh Tionscnaimh"
 
@@ -9521,10 +9989,10 @@ msgstr "Débhríocht"
 msgid "Color Energy"
 msgstr "Fuinneamh Datha"
 
-#: scene/3d/skeleton_3d.cpp
-#, fuzzy
-msgid "Bones"
-msgstr "Cnámh"
+#: scene/3d/retarget_modifier_3d.cpp scene/resources/bone_map.cpp
+#: servers/xr/xr_positional_tracker.cpp
+msgid "Profile"
+msgstr "Próifíl"
 
 #: scene/3d/skeleton_3d.cpp
 msgid "Motion Scale"
@@ -9691,6 +10159,11 @@ msgid "Global Illumination"
 msgstr "Soilsiú Domhanda"
 
 #: scene/3d/visual_instance_3d.cpp
+#, fuzzy
+msgid "Lightmap Texel Scale"
+msgstr "Lightmap Texel Méid"
+
+#: scene/3d/visual_instance_3d.cpp
 msgid "Lightmap Scale"
 msgstr "Scála Mapa Solais"
 
@@ -9741,6 +10214,11 @@ msgstr "Scála Domhanda"
 #: scene/animation/animation_blend_tree.cpp
 msgid "Play Mode"
 msgstr "Mód Seinnte"
+
+#: scene/animation/animation_blend_tree.cpp
+#, fuzzy
+msgid "Advance on Start"
+msgstr "Uathluchtaigh ag am tosaithe"
 
 #: scene/animation/animation_blend_tree.cpp
 msgid "Use Custom Timeline"
@@ -9798,6 +10276,10 @@ msgstr "Moill"
 #: scene/animation/animation_blend_tree.cpp
 msgid "Random Delay"
 msgstr "Moill Randamach"
+
+#: scene/animation/animation_blend_tree.cpp
+msgid "Explicit Elapse"
+msgstr ""
 
 #: scene/animation/animation_blend_tree.cpp
 #: scene/animation/animation_node_state_machine.cpp
@@ -9877,6 +10359,11 @@ msgstr "Gluaisne Fréimhe"
 #: scene/animation/animation_mixer.cpp
 msgid "Track"
 msgstr "Amhrán"
+
+#: scene/animation/animation_mixer.cpp
+#, fuzzy
+msgid "Local"
+msgstr "Áitiúil"
 
 #: scene/animation/animation_mixer.cpp
 msgid "Callback Mode"
@@ -10078,6 +10565,11 @@ msgid "Symbol Lookup on Click"
 msgstr "Siombail Lookup ar Cliceáil"
 
 #: scene/gui/code_edit.cpp
+#, fuzzy
+msgid "Symbol Tooltip on Hover"
+msgstr "Dath na Siombaile"
+
+#: scene/gui/code_edit.cpp
 msgid "Line Folding"
 msgstr "Líne Fillte"
 
@@ -10268,6 +10760,11 @@ msgstr "Logánaigh Córas Uimhriúil"
 #: scene/gui/control.cpp scene/main/status_indicator.cpp
 msgid "Tooltip"
 msgstr "Leid Uirlisí"
+
+#: scene/gui/control.cpp
+#, fuzzy
+msgid "Auto Translate Mode"
+msgstr "Aistriú Uathoibríoch"
 
 #: scene/gui/control.cpp scene/theme/default_theme.cpp
 msgid "Focus"
@@ -10470,10 +10967,6 @@ msgstr "Fritháireamh Suímh"
 msgid "Draggable"
 msgstr "In-íomhá"
 
-#: scene/gui/graph_element.cpp
-msgid "Selectable"
-msgstr "Inroghnaithe"
-
 #: scene/gui/graph_element.cpp scene/gui/option_button.cpp
 #: scene/theme/default_theme.cpp
 msgid "Selected"
@@ -10524,6 +11017,11 @@ msgid "Max Text Lines"
 msgstr "Uaslínte Téacs"
 
 #: scene/gui/item_list.cpp
+#, fuzzy
+msgid "Auto Width"
+msgstr "Leithead cnámh"
+
+#: scene/gui/item_list.cpp
 msgid "Auto Height"
 msgstr "Airde Uathoibríoch"
 
@@ -10559,6 +11057,11 @@ msgstr "Méid na nDeilbhíní Seasta"
 #: scene/gui/label.cpp
 msgid "Label Settings"
 msgstr "Socruithe Lipéid"
+
+#: scene/gui/label.cpp
+#, fuzzy
+msgid "Paragraph Separator"
+msgstr "Deighilteoir"
 
 #: scene/gui/label.cpp scene/resources/text_line.cpp
 #: scene/resources/text_paragraph.cpp
@@ -10907,6 +11410,11 @@ msgid "Follow Focus"
 msgstr "Lean Fócas"
 
 #: scene/gui/scroll_container.cpp
+#, fuzzy
+msgid "Draw Focus Border"
+msgstr "Mód Fócas Cluaisíní"
+
+#: scene/gui/scroll_container.cpp
 msgid "Horizontal Custom Step"
 msgstr "Céim Shaincheaptha Chothrománach"
 
@@ -10980,6 +11488,11 @@ msgstr "Buaicphointe san Eagarthóir"
 msgid "Stretch Shrink"
 msgstr "Sín Laghdaigh"
 
+#: scene/gui/subviewport_container.cpp
+#, fuzzy
+msgid "Mouse Target"
+msgstr "Measc Sprioc"
+
 #: scene/gui/tab_bar.cpp scene/gui/tab_container.cpp
 msgid "Current Tab"
 msgstr "Cluaisín Reatha"
@@ -11049,6 +11562,11 @@ msgid "Tab Focus Mode"
 msgstr "Mód Fócas Cluaisíní"
 
 #: scene/gui/text_edit.cpp
+#, fuzzy
+msgid "Empty Selection Clipboard Enabled"
+msgstr "Roghnúchán Cumasaithe"
+
+#: scene/gui/text_edit.cpp
 msgid "Wrap Mode"
 msgstr "Timfhilleadh Mód"
 
@@ -11062,6 +11580,11 @@ msgstr "Deireadh an Chomhaid Roimhe Seo"
 
 #: scene/gui/text_edit.cpp
 msgid "Fit Content Height"
+msgstr "Oiriúnaigh Airde an Ábhair"
+
+#: scene/gui/text_edit.cpp
+#, fuzzy
+msgid "Fit Content Width"
 msgstr "Oiriúnaigh Airde an Ábhair"
 
 #: scene/gui/text_edit.cpp
@@ -11201,6 +11724,11 @@ msgstr "Scrollaigh Cothrománach Cumasaithe"
 msgid "Scroll Vertical Enabled"
 msgstr "Scrollaigh Ingearach Cumasaithe"
 
+#: scene/gui/tree.cpp
+#, fuzzy
+msgid "Auto Tooltip"
+msgstr "Leid Uirlisí"
+
 #: scene/gui/video_stream_player.cpp
 msgid "Audio Track"
 msgstr "Rian Fuaime"
@@ -11329,10 +11857,6 @@ msgstr "Ordú Grúpa"
 msgid "Messages"
 msgstr "Teachtaireachtaí"
 
-#: scene/main/node.cpp scene/main/scene_tree.cpp
-msgid "Physics Interpolation"
-msgstr "Idirshuíomh Fisice"
-
 #: scene/main/node.cpp
 msgid "Auto Translate"
 msgstr "Aistriú Uathoibríoch"
@@ -11373,6 +11897,10 @@ msgstr "Dath an Chrutha"
 #: scene/main/scene_tree.cpp
 msgid "Contact Color"
 msgstr "Dath Teagmhála"
+
+#: scene/main/scene_tree.cpp
+msgid "Paths"
+msgstr "Cosáin"
 
 #: scene/main/scene_tree.cpp
 msgid "Geometry Color"
@@ -11445,6 +11973,10 @@ msgstr "Athrú LOD"
 #: scene/main/scene_tree.cpp
 msgid "Threshold Pixels"
 msgstr "Picteilíní Tairsí"
+
+#: scene/main/scene_tree.cpp
+msgid "Snap"
+msgstr "Léim"
 
 #: scene/main/scene_tree.cpp scene/main/viewport.cpp
 msgid "Snap 2D Transforms to Pixel"
@@ -11703,6 +12235,11 @@ msgid "Mouse Passthrough"
 msgstr "Passthrough Luiche"
 
 #: scene/main/window.cpp
+#, fuzzy
+msgid "Exclude From Capture"
+msgstr "Eisiamh ó Déanaí"
+
+#: scene/main/window.cpp
 msgid "Force Native"
 msgstr "Fórsa Dúchasach"
 
@@ -11757,6 +12294,16 @@ msgstr "Nascleanúint 3D"
 #: scene/resources/2d/concave_polygon_shape_2d.cpp
 msgid "Segments"
 msgstr "Deighleáin"
+
+#: scene/resources/2d/navigation_polygon.cpp scene/resources/material.cpp
+#: scene/resources/navigation_mesh.cpp
+msgid "Sampling"
+msgstr "Sampláil"
+
+#: scene/resources/2d/navigation_polygon.cpp
+#: scene/resources/navigation_mesh.cpp
+msgid "Partition Type"
+msgstr "Cineál Deighiltí"
 
 #: scene/resources/2d/navigation_polygon.cpp
 #: scene/resources/navigation_mesh.cpp
@@ -11943,26 +12490,6 @@ msgid "Custom Data"
 msgstr "Sonraí Saincheaptha"
 
 #: scene/resources/2d/tile_set.cpp
-#, fuzzy
-msgid "Tile Proxies"
-msgstr "Méid na Tíleanna"
-
-#: scene/resources/2d/tile_set.cpp
-#, fuzzy
-msgid "Source Level"
-msgstr "Barrleibhéal"
-
-#: scene/resources/2d/tile_set.cpp
-#, fuzzy
-msgid "Coords Level"
-msgstr "Leibhéal Comhbhrúite"
-
-#: scene/resources/2d/tile_set.cpp
-#, fuzzy
-msgid "Alternative Level"
-msgstr "Aitheantas malartach"
-
-#: scene/resources/2d/tile_set.cpp
 msgid "Tile Shape"
 msgstr "Stencils"
 
@@ -12093,6 +12620,11 @@ msgstr "Mír"
 #: scene/resources/3d/mesh_library.cpp
 msgid "Mesh Transform"
 msgstr "Mogalra Trasfhoirmigh"
+
+#: scene/resources/3d/mesh_library.cpp
+#, fuzzy
+msgid "Mesh Cast Shadow"
+msgstr "Scáth Teilgthe"
 
 #: scene/resources/3d/mesh_library.cpp
 msgid "Navigation Mesh Transform"
@@ -12298,10 +12830,6 @@ msgstr "Ráta Meascáin"
 msgid "Stereo"
 msgstr "Steirió"
 
-#: scene/resources/bone_map.cpp servers/xr/xr_positional_tracker.cpp
-msgid "Profile"
-msgstr "Próifíl"
-
 #: scene/resources/bone_map.cpp
 msgid "Bonemap"
 msgstr "Mapa cnámh"
@@ -12449,6 +12977,16 @@ msgstr "Éifeachtaí Compositor"
 #: scene/resources/compressed_texture.cpp
 msgid "Load Path"
 msgstr "Luchtaigh Conair"
+
+#: scene/resources/curve.cpp
+#, fuzzy
+msgid "Min Domain"
+msgstr "Fearainn Rianaithe"
+
+#: scene/resources/curve.cpp
+#, fuzzy
+msgid "Max Domain"
+msgstr "Colúin Uasta"
 
 #: scene/resources/curve.cpp
 msgid "Bake Resolution"
@@ -12824,6 +13362,11 @@ msgstr "Ó"
 msgid "To"
 msgstr "Chun"
 
+#: scene/resources/label_settings.cpp
+#, fuzzy
+msgid "Paragraph Spacing"
+msgstr "Spásáil Bhreise"
+
 #: scene/resources/material.cpp
 msgid "Next Pass"
 msgstr "An Chéad Phas Eile"
@@ -12992,10 +13535,6 @@ msgstr "Tríphlandú Domhanda"
 msgid "UV2"
 msgstr "UV2"
 
-#: scene/resources/material.cpp scene/resources/navigation_mesh.cpp
-msgid "Sampling"
-msgstr "Sampláil"
-
 #: scene/resources/material.cpp
 msgid "Shadows"
 msgstr "Scáthanna"
@@ -13099,10 +13638,6 @@ msgstr "Líon na nÁsc"
 #: scene/resources/multimesh.cpp
 msgid "Visible Instance Count"
 msgstr "Líon na nÁsc Infheicthe"
-
-#: scene/resources/navigation_mesh.cpp
-msgid "Partition Type"
-msgstr "Cineál Deighiltí"
 
 #: scene/resources/navigation_mesh.cpp
 msgid "Source Group Name"
@@ -13321,6 +13856,11 @@ msgid "Amount at Collision"
 msgstr "Méid ag Imbhualadh"
 
 #: scene/resources/particle_process_material.cpp
+#, fuzzy
+msgid "Amount at Start"
+msgstr "Méid ag deireadh"
+
+#: scene/resources/particle_process_material.cpp
 msgid "Keep Velocity"
 msgstr "Coinnigh treoluas"
 
@@ -13463,16 +14003,6 @@ msgstr "Port Aschurtha le haghaidh Réamhamhairc"
 #: scene/resources/visual_shader.cpp
 msgid "Modes"
 msgstr "Móid"
-
-#: scene/resources/visual_shader.cpp
-#, fuzzy
-msgid "Varyings"
-msgstr "Rabhaidh"
-
-#: scene/resources/visual_shader.cpp
-#, fuzzy
-msgid "Preview Params"
-msgstr "Réamhamharc"
 
 #: scene/resources/visual_shader.cpp
 msgid "Input Name"
@@ -14190,6 +14720,15 @@ msgid "Port H Offset"
 msgstr "Fritháireamh Phort H"
 
 #: scene/theme/default_theme.cpp
+msgid "Hovered"
+msgstr "Ag Dul Ar"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Hovered Dimmed"
+msgstr "Ag Dul Ar"
+
+#: scene/theme/default_theme.cpp
 msgid "Selected Focus"
 msgstr "Fócas Roghnaithe"
 
@@ -14200,6 +14739,11 @@ msgstr "Cúrsóir"
 #: scene/theme/default_theme.cpp
 msgid "Cursor Unfocused"
 msgstr "Cúrsóir Neamhdhírithe"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Button Hover"
+msgstr "Teideal Button Hover"
 
 #: scene/theme/default_theme.cpp
 msgid "Title Button Normal"
@@ -14252,6 +14796,15 @@ msgstr "Clómhéid an Chnaipe Teidil"
 #: scene/theme/default_theme.cpp
 msgid "Title Button Color"
 msgstr "Dath an Chnaipe Teidil"
+
+#: scene/theme/default_theme.cpp
+msgid "Font Hovered Color"
+msgstr "Dath ainlithe cló"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Font Hovered Dimmed Color"
+msgstr "Dath ainlithe cló"
 
 #: scene/theme/default_theme.cpp
 msgid "Guide Color"
@@ -14362,12 +14915,19 @@ msgid "Icon Margin"
 msgstr "Imeall Deilbhíní"
 
 #: scene/theme/default_theme.cpp
-msgid "Font Hovered Color"
-msgstr "Dath ainlithe cló"
+#, fuzzy
+msgid "Font Hovered Selected Color"
+msgstr "Dath roghnaithe an chló"
 
 #: scene/theme/default_theme.cpp
-msgid "Hovered"
-msgstr "Ag Dul Ar"
+#, fuzzy
+msgid "Hovered Selected"
+msgstr "Painéal roghnaithe"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Hovered Selected Focus"
+msgstr "Fócas Roghnaithe"
 
 #: scene/theme/default_theme.cpp
 msgid "Tab Selected"
@@ -15126,6 +15686,11 @@ msgstr "Tarraingt Ama (ms)"
 msgid "Surround"
 msgstr "Timpeall"
 
+#: servers/audio/effects/audio_stream_generator.cpp
+#, fuzzy
+msgid "Mix Rate Mode"
+msgstr "Ráta Meascáin"
+
 #: servers/audio_server.cpp
 msgid "Enable Input"
 msgstr "Cumasaigh Ionchur"
@@ -15684,6 +16249,11 @@ msgid "Compress With GPU"
 msgstr "Comhbhrú go"
 
 #: servers/rendering_server.cpp
+#, fuzzy
+msgid "Cache GPU Compressor"
+msgstr "Comhbhrú WebP"
+
+#: servers/rendering_server.cpp
 msgid "Lossless Compression"
 msgstr "Comhbhrú gan chailliúint"
 
@@ -16037,6 +16607,10 @@ msgstr "Neart VRS"
 #: servers/xr_server.cpp
 msgid "World Origin"
 msgstr "Bunús an Domhain"
+
+#: servers/xr_server.cpp
+msgid "Camera Locked to Origin"
+msgstr ""
 
 #: servers/xr_server.cpp
 msgid "Primary Interface"

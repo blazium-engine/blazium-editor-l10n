@@ -61,8 +61,16 @@ msgid "Hex code or named color"
 msgstr "十六进制码或颜色名称"
 
 #: scene/gui/color_picker.cpp
+msgid "Swatches"
+msgstr ""
+
+#: scene/gui/color_picker.cpp
 msgid "Add current color as a preset."
 msgstr "将当前颜色添加为预设。"
+
+#: scene/gui/color_picker.cpp
+msgid "Recent Colors"
+msgstr ""
 
 #: scene/gui/dialogs.cpp
 msgid "Cancel"
@@ -103,6 +111,15 @@ msgstr "选择当前文件夹"
 #: scene/gui/file_dialog.cpp
 msgid "Select This Folder"
 msgstr "选择此文件夹"
+
+#: scene/gui/file_dialog.cpp
+#, fuzzy
+msgid "Open in File Manager"
+msgstr "打开文件"
+
+#: scene/gui/file_dialog.cpp
+msgid "Show Package Contents"
+msgstr ""
 
 #: scene/gui/file_dialog.cpp
 msgid "You don't have permission to access contents of this folder."

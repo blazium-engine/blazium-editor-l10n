@@ -75,8 +75,8 @@ msgstr "Konfigurace"
 #: editor/plugins/tiles/tile_set_atlas_source_editor.cpp
 #: modules/sqlite/src/godot_sqlite.h platform/android/export/export_plugin.cpp
 #: scene/2d/physics/area_2d.cpp scene/3d/physics/area_3d.cpp
-#: scene/3d/skeleton_3d.cpp scene/resources/3d/mesh_library.cpp
-#: scene/resources/3d/skin.cpp servers/xr/xr_pose.cpp servers/xr/xr_tracker.cpp
+#: scene/resources/3d/mesh_library.cpp scene/resources/3d/skin.cpp
+#: servers/xr/xr_pose.cpp servers/xr/xr_tracker.cpp
 msgid "Name"
 msgstr "Název"
 
@@ -192,9 +192,9 @@ msgstr "Okno"
 #: scene/gui/control.cpp scene/gui/graph_edit.cpp scene/main/viewport.cpp
 #: scene/main/window.cpp scene/resources/2d/rectangle_shape_2d.cpp
 #: scene/resources/3d/box_shape_3d.cpp scene/resources/3d/primitive_meshes.cpp
-#: scene/resources/label_settings.cpp scene/resources/placeholder_textures.cpp
-#: scene/resources/style_box_flat.cpp scene/resources/visual_shader.cpp
-#: servers/rendering_server.cpp
+#: scene/resources/external_texture.cpp scene/resources/label_settings.cpp
+#: scene/resources/placeholder_textures.cpp scene/resources/style_box_flat.cpp
+#: scene/resources/visual_shader.cpp servers/rendering_server.cpp
 msgid "Size"
 msgstr "Velikost"
 
@@ -264,6 +264,11 @@ msgstr "Rozšířit na název"
 msgid "No Focus"
 msgstr "Nelze zaměřit"
 
+#: core/config/project_settings.cpp scene/main/window.cpp
+#, fuzzy
+msgid "Sharp Corners"
+msgstr "Intenzita Zaostření"
+
 #: core/config/project_settings.cpp
 msgid "Window Width Override"
 msgstr "Přepsání šířky okna"
@@ -316,7 +321,7 @@ msgstr "Sběrnice"
 msgid "Default Bus Layout"
 msgstr "Výchozí rozvržení sběrnice"
 
-#: core/config/project_settings.cpp
+#: core/config/project_settings.cpp editor/editor_settings.cpp
 msgid "General"
 msgstr "Obecné"
 
@@ -358,10 +363,30 @@ msgid "Embed Subwindows"
 msgstr "Vložit podokna"
 
 #: core/config/project_settings.cpp
+#, fuzzy
+msgid "Frame Pacing"
+msgstr "Základní řádkování"
+
+#: core/config/project_settings.cpp platform/android/export/export.cpp
+msgid "Android"
+msgstr "Android"
+
+#: core/config/project_settings.cpp
+#, fuzzy
+msgid "Enable Frame Pacing"
+msgstr "Povolit vybírání objektů"
+
+#: core/config/project_settings.cpp
+#, fuzzy
+msgid "Swappy Mode"
+msgstr "Režim oblohy"
+
+#: core/config/project_settings.cpp
 #: editor/import/3d/resource_importer_scene.cpp main/main.cpp
-#: scene/2d/tile_map_layer.cpp scene/main/scene_tree.cpp
-#: scene/main/viewport.cpp scene/resources/2d/tile_set.cpp
-#: servers/physics_server_2d.cpp servers/physics_server_3d.cpp
+#: modules/jolt_physics/jolt_project_settings.cpp scene/2d/tile_map_layer.cpp
+#: scene/main/scene_tree.cpp scene/main/viewport.cpp
+#: scene/resources/2d/tile_set.cpp servers/physics_server_2d.cpp
+#: servers/physics_server_3d.cpp
 msgid "Physics"
 msgstr "Fyzika"
 
@@ -397,8 +422,8 @@ msgstr "Poměr stran"
 #: scene/2d/parallax_layer.cpp scene/2d/polygon_2d.cpp
 #: scene/2d/remote_transform_2d.cpp scene/3d/cpu_particles_3d.cpp
 #: scene/3d/node_3d.cpp scene/3d/remote_transform_3d.cpp
-#: scene/3d/skeleton_3d.cpp scene/animation/animation_blend_tree.h
-#: scene/gui/control.cpp scene/main/canvas_layer.cpp scene/main/scene_tree.cpp
+#: scene/animation/animation_blend_tree.h scene/gui/control.cpp
+#: scene/main/canvas_layer.cpp scene/main/scene_tree.cpp
 #: scene/main/viewport.cpp scene/resources/camera_attributes.cpp
 #: scene/resources/material.cpp scene/resources/particle_process_material.cpp
 #: servers/rendering_server.cpp
@@ -604,7 +629,8 @@ msgstr "Pipeline mezipaměť"
 #: editor/import/3d/post_import_plugin_skeleton_rest_fixer.cpp
 #: modules/gdscript/gdscript.cpp platform/android/export/export_plugin.cpp
 #: platform/windows/export/export_plugin.cpp
-#: scene/3d/physics/joints/hinge_joint_3d.cpp servers/rendering_server.cpp
+#: scene/3d/physics/joints/hinge_joint_3d.cpp scene/3d/retarget_modifier_3d.cpp
+#: servers/rendering_server.cpp
 msgid "Enable"
 msgstr "Povolit"
 
@@ -674,10 +700,6 @@ msgstr "Vstupní zařízení"
 msgid "Pointing"
 msgstr "Dotyk"
 
-#: core/config/project_settings.cpp platform/android/export/export.cpp
-msgid "Android"
-msgstr "Android"
-
 #: core/config/project_settings.cpp editor/editor_settings.cpp
 msgid "Enable Long Press as Right Click"
 msgstr "Povolit pravé kliknutí dlouhým dotykem"
@@ -705,6 +727,11 @@ msgstr "Vyhlazování delty"
 #: core/core_bind.cpp
 msgid "Print Error Messages"
 msgstr "Vypisovat chybové hlášky"
+
+#: core/core_bind.cpp
+#, fuzzy
+msgid "Print to stdout"
+msgstr "Podrobný stdout"
 
 #: core/core_bind.cpp main/main.cpp
 msgid "Physics Ticks per Second"
@@ -834,8 +861,7 @@ msgstr "Maska tlačítka"
 #: editor/import/3d/resource_importer_scene.cpp
 #: modules/gltf/structures/gltf_node.cpp scene/2d/node_2d.cpp
 #: scene/2d/remote_transform_2d.cpp scene/3d/node_3d.cpp
-#: scene/3d/remote_transform_3d.cpp scene/3d/skeleton_3d.cpp
-#: scene/gui/control.cpp scene/main/window.cpp
+#: scene/3d/remote_transform_3d.cpp scene/gui/control.cpp scene/main/window.cpp
 #: scene/resources/particle_process_material.cpp servers/physics_server_2d.cpp
 #: servers/physics_server_3d.cpp
 msgid "Position"
@@ -1084,6 +1110,7 @@ msgid "Memory"
 msgstr "Paměť"
 
 #: core/object/message_queue.cpp core/register_core_types.cpp main/main.cpp
+#: modules/jolt_physics/jolt_project_settings.cpp
 #: modules/webrtc/register_types.cpp scene/main/window.cpp
 #: servers/rendering_server.cpp
 msgid "Limits"
@@ -1204,9 +1231,8 @@ msgstr "Přeskočit zástupné symboly"
 #: modules/gltf/structures/gltf_node.cpp scene/2d/node_2d.cpp
 #: scene/2d/polygon_2d.cpp scene/2d/remote_transform_2d.cpp
 #: scene/3d/node_3d.cpp scene/3d/physics/physical_bone_3d.cpp
-#: scene/3d/remote_transform_3d.cpp scene/3d/skeleton_3d.cpp
-#: scene/gui/control.cpp scene/main/canvas_layer.cpp
-#: scene/resources/environment.cpp
+#: scene/3d/remote_transform_3d.cpp scene/gui/control.cpp
+#: scene/main/canvas_layer.cpp scene/resources/environment.cpp
 msgid "Rotation"
 msgstr "Rotace"
 
@@ -1306,6 +1332,20 @@ msgstr "Klíčování"
 #: editor/editor_inspector.cpp
 msgid "Deletable"
 msgstr "Odstranitelné"
+
+#: editor/editor_inspector.cpp scene/gui/graph_element.cpp
+msgid "Selectable"
+msgstr "Zvolitelné"
+
+#: editor/editor_inspector.cpp
+#, fuzzy
+msgid "Use Folding"
+msgstr "Složení kódu"
+
+#: editor/editor_inspector.cpp
+#, fuzzy
+msgid "Name Split Ratio"
+msgstr "Vykreslit mezery"
 
 #: editor/editor_interface.cpp
 msgid "Distraction Free Mode"
@@ -1432,10 +1472,6 @@ msgid "Single Window Mode"
 msgstr "Režim jednoho okna"
 
 #: editor/editor_settings.cpp
-msgid "Remember Window Size and Position"
-msgstr ""
-
-#: editor/editor_settings.cpp
 msgid "Mouse Extra Buttons Navigate History"
 msgstr "Navigovat v historii extra tlačítky myši"
 
@@ -1469,6 +1505,7 @@ msgstr "Aktualizovat průběžně"
 
 #: editor/editor_settings.cpp
 #: editor/plugins/gizmos/particles_3d_emission_shape_gizmo_plugin.cpp
+#: editor/plugins/path_3d_editor_plugin.cpp
 msgid "Editors"
 msgstr "Editory"
 
@@ -1681,6 +1718,41 @@ msgstr "Režim zobrazení"
 msgid "Thumbnail Size"
 msgstr "Velikost náhledu"
 
+#: editor/editor_settings.cpp
+#, fuzzy
+msgid "Quick Open Dialog"
+msgstr "Souborový dialog"
+
+#: editor/editor_settings.cpp scene/2d/physics/shape_cast_2d.cpp
+#: scene/3d/physics/shape_cast_3d.cpp
+msgid "Max Results"
+msgstr "Maximum výsledků"
+
+#: editor/editor_settings.cpp
+#, fuzzy
+msgid "Show Search Highlight"
+msgstr "Zvýrazňovač syntaxe"
+
+#: editor/editor_settings.cpp
+#, fuzzy
+msgid "Enable Fuzzy Matching"
+msgstr "Povolit logování do souborů"
+
+#: editor/editor_settings.cpp
+#, fuzzy
+msgid "Max Fuzzy Misses"
+msgstr "Maximum zpráv ve frontě"
+
+#: editor/editor_settings.cpp
+#, fuzzy
+msgid "Include Addons"
+msgstr "Vyloučit doplňky"
+
+#: editor/editor_settings.cpp
+#, fuzzy
+msgid "Default Display Mode"
+msgstr "Režim zobrazení"
+
 #: editor/editor_settings.cpp editor/import/3d/resource_importer_scene.cpp
 #: editor/register_editor_types.cpp modules/fbx/register_types.cpp
 #: modules/gltf/register_types.cpp
@@ -1769,7 +1841,7 @@ msgstr "Editor textu"
 
 #: editor/editor_settings.cpp scene/3d/label_3d.cpp
 #: scene/resources/3d/primitive_meshes.cpp scene/resources/label_settings.cpp
-#: scene/theme/default_theme.cpp
+#: scene/resources/text_paragraph.cpp scene/theme/default_theme.cpp
 msgid "Line Spacing"
 msgstr "Řádkování"
 
@@ -1875,6 +1947,11 @@ msgstr "Vykreslit mezery"
 msgid "Behavior"
 msgstr "Chování"
 
+#: editor/editor_settings.cpp
+#, fuzzy
+msgid "Empty Selection Clipboard"
+msgstr "Barva výběru"
+
 #: editor/editor_settings.cpp main/performance.cpp modules/gridmap/grid_map.cpp
 #: scene/2d/tile_map_layer.cpp scene/resources/2d/tile_set.cpp
 #: servers/navigation_server_3d.cpp
@@ -1970,6 +2047,16 @@ msgid "Open Dominant Script on Scene Change"
 msgstr "Otevřít dominantní skript při změně scény"
 
 #: editor/editor_settings.cpp
+#, fuzzy
+msgid "Documentation"
+msgstr "Orientace"
+
+#: editor/editor_settings.cpp
+#, fuzzy
+msgid "Enable Tooltips"
+msgstr "Povolit gyroskop"
+
+#: editor/editor_settings.cpp
 msgid "Script List"
 msgstr "Seznam skriptů"
 
@@ -1988,6 +2075,11 @@ msgstr "Povolit teplotu skriptu"
 #: editor/editor_settings.cpp
 msgid "Script Temperature History Size"
 msgstr "Velikost historie teploty skriptu"
+
+#: editor/editor_settings.cpp
+#, fuzzy
+msgid "Highlight Scene Scripts"
+msgstr "Zvýraznit vybranou vrstvu"
 
 #: editor/editor_settings.cpp
 msgid "Group Help Pages"
@@ -2019,6 +2111,11 @@ msgstr "Dokončování"
 
 #: editor/editor_settings.cpp
 msgid "Idle Parse Delay"
+msgstr "Zpoždění rozboru kódu při nečinnosti"
+
+#: editor/editor_settings.cpp
+#, fuzzy
+msgid "Idle Parse Delay With Errors Found"
 msgstr "Zpoždění rozboru kódu při nečinnosti"
 
 #: editor/editor_settings.cpp
@@ -2105,6 +2202,7 @@ msgstr "Barva pole výběru"
 
 #: editor/editor_settings.cpp
 #: editor/plugins/gizmos/particles_3d_emission_shape_gizmo_plugin.cpp
+#: editor/plugins/path_3d_editor_plugin.cpp
 msgid "3D Gizmos"
 msgstr "3D Gizma"
 
@@ -2207,7 +2305,7 @@ msgstr "Vybraná kost"
 msgid "CSG"
 msgstr "CSG (konstruktivní geometrie těles)"
 
-#: editor/editor_settings.cpp
+#: editor/editor_settings.cpp editor/plugins/path_3d_editor_plugin.cpp
 msgid "Gizmo Settings"
 msgstr "Nastavení gizma"
 
@@ -2219,7 +2317,7 @@ msgstr "Délka osy kosti"
 msgid "Bone Shape"
 msgstr "Tvar kosti"
 
-#: editor/editor_settings.cpp
+#: editor/editor_settings.cpp editor/plugins/path_3d_editor_plugin.cpp
 msgid "Path 3D Tilt Disk Size"
 msgstr "Velikost disku náklonu 3D cesty"
 
@@ -2544,7 +2642,7 @@ msgid "Platforms"
 msgstr "Platformy"
 
 #: editor/editor_settings.cpp
-msgid "Linuxbsd"
+msgid "Linux/*BSD"
 msgstr ""
 
 #: editor/editor_settings.cpp
@@ -2582,6 +2680,11 @@ msgstr "Velikost historie profilovacího rámce"
 #: editor/editor_settings.cpp
 msgid "Profiler Frame Max Functions"
 msgstr "Maximální počet funkcí profilovacího rámce"
+
+#: editor/editor_settings.cpp
+#, fuzzy
+msgid "Profiler Target FPS"
+msgstr "Velikost historie profilovacího rámce"
 
 #: editor/editor_settings.cpp
 msgid "Remote Scene Tree Refresh Interval"
@@ -2989,12 +3092,23 @@ msgstr "Resetovat všechny pózy kostí po importu"
 
 #: editor/import/3d/post_import_plugin_skeleton_rest_fixer.cpp
 #, fuzzy
-msgid "Overwrite Axis"
-msgstr "Přepisuje"
+msgid "Retarget Method"
+msgstr "Metoda vykreslování"
 
 #: editor/import/3d/post_import_plugin_skeleton_rest_fixer.cpp
 msgid "Keep Global Rest on Leftovers"
 msgstr "Ponechat globální klid na zbylých"
+
+#: editor/import/3d/post_import_plugin_skeleton_rest_fixer.cpp
+#: scene/3d/retarget_modifier_3d.cpp
+#, fuzzy
+msgid "Use Global Pose"
+msgstr "Použít globální souřadnice"
+
+#: editor/import/3d/post_import_plugin_skeleton_rest_fixer.cpp
+#, fuzzy
+msgid "Original Skeleton Name"
+msgstr "Název kostry"
 
 #: editor/import/3d/post_import_plugin_skeleton_rest_fixer.cpp
 msgid "Fix Silhouette"
@@ -3009,6 +3123,7 @@ msgstr "Filtr"
 
 #: editor/import/3d/post_import_plugin_skeleton_rest_fixer.cpp
 #: editor/import/resource_importer_bitmask.cpp
+#: modules/openxr/extensions/openxr_dpad_binding_extension.cpp
 #: servers/audio/effects/audio_effect_compressor.cpp
 msgid "Threshold"
 msgstr "Práh"
@@ -3036,6 +3151,26 @@ msgstr "Nemapované kosti"
 #: editor/import/3d/resource_importer_obj.cpp
 msgid "Generate Tangents"
 msgstr "Generovat tečny"
+
+#: editor/import/3d/resource_importer_obj.cpp
+#: editor/import/3d/resource_importer_scene.cpp
+msgid "Generate LODs"
+msgstr "Generovat LODy"
+
+#: editor/import/3d/resource_importer_obj.cpp
+#, fuzzy
+msgid "Generate Shadow Mesh"
+msgstr "Vytvořit sítě stínů"
+
+#: editor/import/3d/resource_importer_obj.cpp
+#, fuzzy
+msgid "Generate Lightmap UV2"
+msgstr "Generovat mipmapy"
+
+#: editor/import/3d/resource_importer_obj.cpp
+#, fuzzy
+msgid "Generate Lightmap UV2 Texel Size"
+msgstr "Velikost texelů světelné mapy"
 
 #: editor/import/3d/resource_importer_obj.cpp
 msgid "Scale Mesh"
@@ -3252,8 +3387,8 @@ msgstr "Uložit do souboru"
 #: scene/3d/navigation_region_3d.cpp scene/3d/physics/area_3d.cpp
 #: scene/3d/physics/joints/generic_6dof_joint_3d.cpp
 #: scene/3d/physics/ray_cast_3d.cpp scene/3d/physics/shape_cast_3d.cpp
-#: scene/3d/skeleton_3d.cpp scene/3d/sprite_3d.cpp scene/gui/code_edit.cpp
-#: scene/gui/graph_edit.cpp scene/main/canvas_layer.cpp
+#: scene/3d/sprite_3d.cpp scene/gui/code_edit.cpp scene/gui/graph_edit.cpp
+#: scene/main/canvas_layer.cpp
 #: scene/resources/2d/skeleton/skeleton_modification_2d.cpp
 #: scene/resources/2d/skeleton/skeleton_modification_stack_2d.cpp
 #: scene/resources/camera_attributes.cpp scene/resources/compositor.cpp
@@ -3276,18 +3411,8 @@ msgid "LODs"
 msgstr "LODy"
 
 #: editor/import/3d/resource_importer_scene.cpp
-#, fuzzy
-msgid "Normal Split Angle"
-msgstr "Normální úhel sloučení"
-
-#: editor/import/3d/resource_importer_scene.cpp
 msgid "Normal Merge Angle"
 msgstr "Normální úhel sloučení"
-
-#: editor/import/3d/resource_importer_scene.cpp
-#, fuzzy
-msgid "Raycast Normals"
-msgstr "Zdroj normál"
 
 #: editor/import/3d/resource_importer_scene.cpp
 msgid "Use External"
@@ -3392,6 +3517,10 @@ msgstr "Měřítko kořenového uzlu"
 msgid "Import as Skeleton Bones"
 msgstr "Importovat jako kosti kostry"
 
+#: editor/import/3d/resource_importer_scene.cpp
+msgid "Use Node Type Suffixes"
+msgstr ""
+
 #: editor/import/3d/resource_importer_scene.cpp modules/gltf/gltf_state.cpp
 msgid "Meshes"
 msgstr "Sítě"
@@ -3399,10 +3528,6 @@ msgstr "Sítě"
 #: editor/import/3d/resource_importer_scene.cpp
 msgid "Ensure Tangents"
 msgstr "Zajistit tečny"
-
-#: editor/import/3d/resource_importer_scene.cpp
-msgid "Generate LODs"
-msgstr "Generovat LODy"
 
 #: editor/import/3d/resource_importer_scene.cpp
 msgid "Create Shadow Meshes"
@@ -3889,6 +4014,7 @@ msgid "Frames Count"
 msgstr "Počet snímků"
 
 #: editor/plugins/tiles/tile_set_atlas_source_editor.cpp
+#: modules/openxr/action_map/openxr_haptic_feedback.cpp
 msgid "Duration"
 msgstr "Trvání"
 
@@ -3953,6 +4079,36 @@ msgid "Flush stdout on Print"
 msgstr "Vyprázdnit stdout při výpisu"
 
 #: main/main.cpp
+msgid "Low Processor Mode"
+msgstr "Režim nízkého využití procesoru"
+
+#: main/main.cpp
+msgid "stdout"
+msgstr "stdout"
+
+#: main/main.cpp
+msgid "Print FPS"
+msgstr "Vypisovat FPS"
+
+#: main/main.cpp
+msgid "Print GPU Profile"
+msgstr "Vypisovat GPU profil"
+
+#: main/main.cpp
+msgid "Verbose stdout"
+msgstr "Podrobný stdout"
+
+#: main/main.cpp scene/main/node.cpp scene/main/scene_tree.cpp
+#: scene/resources/multimesh.cpp
+msgid "Physics Interpolation"
+msgstr "Fyzikální interpolace"
+
+#: main/main.cpp
+#, fuzzy
+msgid "Enable Warnings"
+msgstr "Varování"
+
+#: main/main.cpp
 msgid "Max Chars per Second"
 msgstr "Maximum znaků za sekundu"
 
@@ -3999,7 +4155,7 @@ msgstr "Záložní D3D12"
 
 #: main/main.cpp
 #, fuzzy
-msgid "Fallback to Opengl 3"
+msgid "Fallback to OpenGL 3"
 msgstr "Záložní OpenGL 3"
 
 #: main/main.cpp servers/rendering_server.cpp
@@ -4020,7 +4176,7 @@ msgstr "Záložní Native"
 
 #: main/main.cpp
 #, fuzzy
-msgid "Fallback to Gles"
+msgid "Fallback to GLES"
 msgstr "Záložní ANGLE"
 
 #: main/main.cpp
@@ -4086,28 +4242,8 @@ msgid "Output Latency"
 msgstr "Latence výstupu"
 
 #: main/main.cpp
-msgid "stdout"
-msgstr "stdout"
-
-#: main/main.cpp
-msgid "Print FPS"
-msgstr "Vypisovat FPS"
-
-#: main/main.cpp
-msgid "Print GPU Profile"
-msgstr "Vypisovat GPU profil"
-
-#: main/main.cpp
-msgid "Verbose stdout"
-msgstr "Podrobný stdout"
-
-#: main/main.cpp
 msgid "Frame Delay Msec"
 msgstr "Zpoždění snímků (ms)"
-
-#: main/main.cpp
-msgid "Low Processor Mode"
-msgstr "Režim nízkého využití procesoru"
 
 #: main/main.cpp
 msgid "Allow High Refresh Rate"
@@ -4203,6 +4339,21 @@ msgid "Eye Gaze Interaction"
 msgstr "Interakce s pohledem očí"
 
 #: main/main.cpp
+#, fuzzy
+msgid "Binding Modifiers"
+msgstr "Modifikátor posouvání"
+
+#: main/main.cpp
+#, fuzzy
+msgid "Analog Threshold"
+msgstr "Práh"
+
+#: main/main.cpp
+#, fuzzy
+msgid "Dpad Binding"
+msgstr "Zarovnávání"
+
+#: main/main.cpp
 msgid "Boot Splash"
 msgstr "Úvodní obrazovka načítání"
 
@@ -4270,11 +4421,6 @@ msgstr "Offset nápovědy"
 msgid "Show Image"
 msgstr "Zobrazit obrázek"
 
-#: main/main.cpp platform/web/export/export_plugin.cpp
-#: scene/resources/image_texture.cpp
-msgid "Image"
-msgstr "Obrázek"
-
 #: main/main.cpp
 msgid "Fullsize"
 msgstr "Plná velikost"
@@ -4282,6 +4428,11 @@ msgstr "Plná velikost"
 #: main/main.cpp servers/rendering_server.cpp
 msgid "Use Filter"
 msgstr "Použít filtr"
+
+#: main/main.cpp platform/web/export/export_plugin.cpp
+#: scene/resources/image_texture.cpp
+msgid "Image"
+msgstr "Obrázek"
 
 #: main/main.cpp
 msgid "Minimum Display Time"
@@ -4438,6 +4589,10 @@ msgstr "Spojené hrany"
 #: main/performance.cpp
 msgid "Edges Free"
 msgstr "Volné hrany"
+
+#: main/performance.cpp
+msgid "Obstacles"
+msgstr ""
 
 #: modules/blazium_sdk/csv/resource_importer_csv.cpp
 #, fuzzy
@@ -4655,10 +4810,6 @@ msgstr "Režim sestavení"
 #: modules/csg/csg_shape.cpp
 msgid "Operation"
 msgstr "Operace"
-
-#: modules/csg/csg_shape.cpp scene/main/scene_tree.cpp
-msgid "Snap"
-msgstr "Přichytit"
 
 #: modules/csg/csg_shape.cpp
 msgid "Calculate Tangents"
@@ -5254,7 +5405,7 @@ msgstr "Váhy prolnutí"
 msgid "Instance Materials"
 msgstr "Materiály instance"
 
-#: modules/gltf/structures/gltf_node.cpp scene/3d/skeleton_3d.cpp
+#: modules/gltf/structures/gltf_node.cpp
 msgid "Parent"
 msgstr "Rodič"
 
@@ -5275,8 +5426,36 @@ msgstr "Potomci"
 msgid "Light"
 msgstr "Světlo"
 
+#: modules/gltf/structures/gltf_object_model_property.cpp
+msgid "glTF to Godot Expression"
+msgstr ""
+
+#: modules/gltf/structures/gltf_object_model_property.cpp
+msgid "Godot to glTF Expression"
+msgstr ""
+
+#: modules/gltf/structures/gltf_object_model_property.cpp
+#, fuzzy
+msgid "Node Paths"
+msgstr "Kopírovat cestu k uzlu"
+
+#: modules/gltf/structures/gltf_object_model_property.cpp
+msgid "Object Model Type"
+msgstr ""
+
+#: modules/gltf/structures/gltf_object_model_property.cpp
+#, fuzzy
+msgid "Json Pointers"
+msgstr "Ne klouby"
+
+#: modules/gltf/structures/gltf_object_model_property.cpp
+#, fuzzy
+msgid "Variant Type"
+msgstr "Typ interpolované proměnné"
+
 #: modules/gltf/structures/gltf_skeleton.cpp
 #: modules/gltf/structures/gltf_skin.cpp
+#: modules/jolt_physics/jolt_project_settings.cpp
 msgid "Joints"
 msgstr "Klouby"
 
@@ -5410,12 +5589,12 @@ msgid "Bake Navigation"
 msgstr "Vypálit navigaci"
 
 #: modules/interactive_music/audio_stream_interactive.cpp
-msgid "Initial Clip"
-msgstr "Počáteční klip"
-
-#: modules/interactive_music/audio_stream_interactive.cpp
 msgid "Clip Count"
 msgstr "Počet klipů"
+
+#: modules/interactive_music/audio_stream_interactive.cpp
+msgid "Initial Clip"
+msgstr "Počáteční klip"
 
 #: modules/interactive_music/audio_stream_playlist.cpp
 msgid "Shuffle"
@@ -5429,6 +5608,174 @@ msgstr "Čas přechodu hlasitosti"
 #: modules/interactive_music/audio_stream_synchronized.cpp
 msgid "Stream Count"
 msgstr "Počet streamů"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Jolt Physics 3D"
+msgstr "3D fyzika"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Simulation"
+msgstr "Animace"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Velocity Steps"
+msgstr "Rychlost"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Position Steps"
+msgstr "Pozice"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+msgid "Use Enhanced Internal Edge Removal"
+msgstr ""
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+msgid "Areas Detect Static Bodies"
+msgstr ""
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+msgid "Generate All Kinematic Contacts"
+msgstr ""
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Penetration Slop"
+msgstr "Barva anotací"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Speculative Contact Distance"
+msgstr "Vzdálenost zjednodušení"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+msgid "Baumgarte Stabilization Factor"
+msgstr ""
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Soft Body Point Radius"
+msgstr "Poloměr uchopení bodu"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+msgid "Bounce Velocity Threshold"
+msgstr ""
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Allow Sleep"
+msgstr "Hledat"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Sleep Velocity Threshold"
+msgstr "Inicializovat"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Sleep Time Threshold"
+msgstr "Práh alfa nůžek"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+msgid "Continuous CD Movement Threshold"
+msgstr ""
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Continuous CD Max Penetration"
+msgstr "Oddělení:"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+msgid "Body Pair Contact Cache Enabled"
+msgstr ""
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+msgid "Body Pair Contact Cache Distance Threshold"
+msgstr ""
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+msgid "Body Pair Contact Cache Angle Threshold"
+msgstr ""
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+msgid "Queries"
+msgstr ""
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+msgid "Enable Ray Cast Face Index"
+msgstr ""
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Motion Queries"
+msgstr "Režim otáčení"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Recovery Iterations"
+msgstr "Vytvořit funkci"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Recovery Amount"
+msgstr "Vytvořit kolizní polygon"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Collisions"
+msgstr "Kolize"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Collision Margin Fraction"
+msgstr "Rozpětí jednosměrných kolizí"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Active Edge Threshold"
+msgstr "Práh LOD sítě"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "World Node"
+msgstr "Měřítko světa"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Temporary Memory Buffer Size"
+msgstr "Pohled zezadu"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+msgid "World Boundary Shape Size"
+msgstr ""
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Max Linear Velocity"
+msgstr "Lineární rychlost"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Max Angular Velocity"
+msgstr "Úhlová rychlost"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Max Bodies"
+msgstr "Tělesa"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Max Body Pairs"
+msgstr "Vrstva"
+
+#: modules/jolt_physics/jolt_project_settings.cpp
+#, fuzzy
+msgid "Max Contact Constraints"
+msgstr "Konstanty"
 
 #: modules/lightmapper_rd/register_types.cpp servers/rendering_server.cpp
 msgid "Lightmapping"
@@ -5626,6 +5973,7 @@ msgid "Noise Type"
 msgstr "Typ šumu"
 
 #: modules/noise/fastnoise_lite.cpp
+#: modules/openxr/action_map/openxr_haptic_feedback.cpp
 #: scene/resources/particle_process_material.cpp
 msgid "Frequency"
 msgstr "Frekcence"
@@ -5677,6 +6025,7 @@ msgid "Domain Warp"
 msgstr "Deformace domény"
 
 #: modules/noise/fastnoise_lite.cpp
+#: modules/openxr/action_map/openxr_haptic_feedback.cpp
 msgid "Amplitude"
 msgstr "Amplituda"
 
@@ -5753,10 +6102,9 @@ msgid "Toplevel Paths"
 msgstr "Cesty nejvyšší úrovně"
 
 #: modules/openxr/action_map/openxr_interaction_profile.cpp
-#: scene/main/scene_tree.cpp
 #, fuzzy
-msgid "Paths"
-msgstr "Cesta"
+msgid "Binding Path"
+msgstr "Cesta k Blenderu"
 
 #: modules/openxr/action_map/openxr_interaction_profile.cpp
 msgid "Interaction Profile Path"
@@ -5765,6 +6113,55 @@ msgstr "Cesta k interakčnímu profilu"
 #: modules/openxr/editor/openxr_select_runtime.cpp
 msgid "Runtime Paths"
 msgstr "Cesty k běhovým prostředím"
+
+#: modules/openxr/extensions/openxr_dpad_binding_extension.cpp
+#, fuzzy
+msgid "Action Set"
+msgstr "Typ akce"
+
+#: modules/openxr/extensions/openxr_dpad_binding_extension.cpp
+#, fuzzy
+msgid "Input Path"
+msgstr "Název vstupu"
+
+#: modules/openxr/extensions/openxr_dpad_binding_extension.cpp
+#, fuzzy
+msgid "Threshold Released"
+msgstr "Práh"
+
+#: modules/openxr/extensions/openxr_dpad_binding_extension.cpp
+#, fuzzy
+msgid "Center Region"
+msgstr "Nastavit oblast textury"
+
+#: modules/openxr/extensions/openxr_dpad_binding_extension.cpp
+#, fuzzy
+msgid "Wedge Angle"
+msgstr "Malá písmena"
+
+#: modules/openxr/extensions/openxr_dpad_binding_extension.cpp
+msgid "Is Sticky"
+msgstr ""
+
+#: modules/openxr/extensions/openxr_dpad_binding_extension.cpp
+#: modules/openxr/extensions/openxr_valve_analog_threshold_extension.cpp
+msgid "On Haptic"
+msgstr ""
+
+#: modules/openxr/extensions/openxr_dpad_binding_extension.cpp
+#: modules/openxr/extensions/openxr_valve_analog_threshold_extension.cpp
+msgid "Off Haptic"
+msgstr ""
+
+#: modules/openxr/extensions/openxr_valve_analog_threshold_extension.cpp
+#, fuzzy
+msgid "On Threshold"
+msgstr "Práh"
+
+#: modules/openxr/extensions/openxr_valve_analog_threshold_extension.cpp
+#, fuzzy
+msgid "Off Threshold"
+msgstr "Práh"
 
 #: modules/openxr/openxr_interface.cpp
 msgid "Display Refresh Rate"
@@ -5777,6 +6174,16 @@ msgstr "Multiplikátor velikosti cíle vykreslování"
 #: modules/openxr/scene/openxr_composition_layer.cpp
 msgid "Layer Viewport"
 msgstr "Průzor vrstev"
+
+#: modules/openxr/scene/openxr_composition_layer.cpp
+#, fuzzy
+msgid "Use Android Surface"
+msgstr "Použít všechny povrchy"
+
+#: modules/openxr/scene/openxr_composition_layer.cpp
+#, fuzzy
+msgid "Android Surface Size"
+msgstr "Zdrojová Android šablona"
 
 #: modules/openxr/scene/openxr_composition_layer.cpp
 msgid "Sort Order"
@@ -5975,6 +6382,11 @@ msgstr "Vypršel čas pro inicializaci"
 #: modules/websocket/websocket_peer.cpp
 msgid "Max Queued Packets"
 msgstr "Maximum paketů ve frontě"
+
+#: modules/websocket/websocket_peer.cpp
+#, fuzzy
+msgid "Heartbeat Interval"
+msgstr "Interval synchronizace delt"
 
 #: modules/webxr/webxr_interface.cpp
 msgid "Session Mode"
@@ -6233,40 +6645,6 @@ msgid "Icons"
 msgstr "Ikony"
 
 #: platform/ios/export/export_plugin.cpp
-msgid "iPhone 120 X 120"
-msgstr "iPhone 120 x 120"
-
-#: platform/ios/export/export_plugin.cpp
-msgid "iPhone 180 X 180"
-msgstr "iPhone 180 x 180"
-
-#: platform/ios/export/export_plugin.cpp
-#, fuzzy
-msgid "iPad 76 X 76"
-msgstr "iPad 167 x 167"
-
-#: platform/ios/export/export_plugin.cpp
-msgid "iPad 152 X 152"
-msgstr "iPad 152 x 152"
-
-#: platform/ios/export/export_plugin.cpp
-msgid "iPad 167 X 167"
-msgstr "iPad 167 x 167"
-
-#: platform/ios/export/export_plugin.cpp
-msgid "App Store 1024 X 1024"
-msgstr "App Store 1024 x 1024"
-
-#: platform/ios/export/export_plugin.cpp
-#, fuzzy
-msgid "Spotlight 40 X 40"
-msgstr "Spotlight 80 x 80"
-
-#: platform/ios/export/export_plugin.cpp
-msgid "Spotlight 80 X 80"
-msgstr "Spotlight 80 x 80"
-
-#: platform/ios/export/export_plugin.cpp
 msgid "Settings 58 X 58"
 msgstr "Nastavení 58 x 58"
 
@@ -6283,28 +6661,92 @@ msgid "Notification 60 X 60"
 msgstr "Notifikace 60 x 60"
 
 #: platform/ios/export/export_plugin.cpp
+#, fuzzy
+msgid "Notification 76 X 76"
+msgstr "Notifikace 60 x 60"
+
+#: platform/ios/export/export_plugin.cpp
+#, fuzzy
+msgid "Notification 114 X 114"
+msgstr "Notifikace 40 x 40"
+
+#: platform/ios/export/export_plugin.cpp
+msgid "Spotlight 80 X 80"
+msgstr "Spotlight 80 x 80"
+
+#: platform/ios/export/export_plugin.cpp
+#, fuzzy
+msgid "Spotlight 120 X 120"
+msgstr "Spotlight 80 x 80"
+
+#: platform/ios/export/export_plugin.cpp
+msgid "iPhone 120 X 120"
+msgstr "iPhone 120 x 120"
+
+#: platform/ios/export/export_plugin.cpp
+msgid "iPhone 180 X 180"
+msgstr "iPhone 180 x 180"
+
+#: platform/ios/export/export_plugin.cpp
+msgid "iPad 167 X 167"
+msgstr "iPad 167 x 167"
+
+#: platform/ios/export/export_plugin.cpp
+msgid "iPad 152 X 152"
+msgstr "iPad 152 x 152"
+
+#: platform/ios/export/export_plugin.cpp
+#, fuzzy
+msgid "iOS 128 X 128"
+msgstr "Hlavní 192 x 192"
+
+#: platform/ios/export/export_plugin.cpp
+#, fuzzy
+msgid "iOS 192 X 192"
+msgstr "Hlavní 192 x 192"
+
+#: platform/ios/export/export_plugin.cpp
+#, fuzzy
+msgid "iOS 136 X 136"
+msgstr "iPad 167 x 167"
+
+#: platform/ios/export/export_plugin.cpp
+msgid "App Store 1024 X 1024"
+msgstr "App Store 1024 x 1024"
+
+#: platform/ios/export/export_plugin.cpp
 msgid "App Store Team ID"
 msgstr "App Store Team ID"
-
-#: platform/ios/export/export_plugin.cpp
-msgid "Provisioning Profile UUID Debug"
-msgstr "UUID provisioning profilu pro ladění"
-
-#: platform/ios/export/export_plugin.cpp
-msgid "Code Sign Identity Debug"
-msgstr "Identita podepisování kódu pro ladění"
 
 #: platform/ios/export/export_plugin.cpp
 msgid "Export Method Debug"
 msgstr "Metoda exportu ladění"
 
 #: platform/ios/export/export_plugin.cpp
-msgid "Provisioning Profile UUID Release"
-msgstr "UUID provisioning profilu pro vydání"
+msgid "Code Sign Identity Debug"
+msgstr "Identita podepisování kódu pro ladění"
 
 #: platform/ios/export/export_plugin.cpp
 msgid "Code Sign Identity Release"
 msgstr "Identita podepisování kódu pro vydání"
+
+#: platform/ios/export/export_plugin.cpp
+msgid "Provisioning Profile UUID Debug"
+msgstr "UUID provisioning profilu pro ladění"
+
+#: platform/ios/export/export_plugin.cpp
+msgid "Provisioning Profile UUID Release"
+msgstr "UUID provisioning profilu pro vydání"
+
+#: platform/ios/export/export_plugin.cpp
+#, fuzzy
+msgid "Provisioning Profile Specifier Debug"
+msgstr "UUID provisioning profilu pro ladění"
+
+#: platform/ios/export/export_plugin.cpp
+#, fuzzy
+msgid "Provisioning Profile Specifier Release"
+msgstr "UUID provisioning profilu pro vydání"
 
 #: platform/ios/export/export_plugin.cpp
 msgid "Export Method Release"
@@ -6444,6 +6886,21 @@ msgstr "Sledování povoleno"
 #: platform/macos/export/export_plugin.cpp
 msgid "Tracking Domains"
 msgstr "Oblasti sledování"
+
+#: platform/ios/export/export_plugin.cpp
+#, fuzzy
+msgid "Icon 1024 X 1024"
+msgstr "Ikona 144 x 144"
+
+#: platform/ios/export/export_plugin.cpp
+#, fuzzy
+msgid "Icon 1024 X 1024 Dark"
+msgstr "Ikona 144 x 144"
+
+#: platform/ios/export/export_plugin.cpp
+#, fuzzy
+msgid "Icon 1024 X 1024 Tinted"
+msgstr "Ikona 144 x 144"
 
 #: platform/ios/export/export_plugin.cpp
 msgid "Storyboard"
@@ -7543,16 +8000,12 @@ msgid "Sub Emitter"
 msgstr "Dílčí emitor"
 
 #: scene/2d/gpu_particles_2d.cpp scene/3d/gpu_particles_3d.cpp
-msgid "Process Material"
-msgstr "Procesní materiál"
+msgid "Interp to End"
+msgstr "Interpolovat ke konci"
 
 #: scene/2d/gpu_particles_2d.cpp scene/3d/gpu_particles_3d.cpp
 msgid "Interpolate"
 msgstr "Interpolovat"
-
-#: scene/2d/gpu_particles_2d.cpp scene/3d/gpu_particles_3d.cpp
-msgid "Interp to End"
-msgstr "Interpolovat ke konci"
 
 #: scene/2d/gpu_particles_2d.cpp scene/3d/gpu_particles_3d.cpp
 msgid "Base Size"
@@ -7573,6 +8026,10 @@ msgstr "Sekce"
 #: scene/2d/gpu_particles_2d.cpp
 msgid "Section Subdivisions"
 msgstr "Členění sekce"
+
+#: scene/2d/gpu_particles_2d.cpp scene/3d/gpu_particles_3d.cpp
+msgid "Process Material"
+msgstr "Procesní materiál"
 
 #: scene/2d/light_2d.cpp scene/3d/light_3d.cpp scene/gui/reference_rect.cpp
 msgid "Editor Only"
@@ -7622,6 +8079,7 @@ msgid "Texture Scale"
 msgstr "Měřítko textury"
 
 #: scene/2d/light_occluder_2d.cpp scene/2d/line_2d.cpp
+#: scene/resources/curve.cpp
 msgid "Closed"
 msgstr "Zavřený"
 
@@ -8164,6 +8622,7 @@ msgid "One Way Collision Margin"
 msgstr "Rozpětí jednosměrných kolizí"
 
 #: scene/2d/physics/collision_shape_2d.cpp
+#: scene/3d/physics/collision_shape_3d.cpp
 msgid "Debug Color"
 msgstr "Barva ladění"
 
@@ -8407,10 +8866,6 @@ msgstr "Točivý moment"
 msgid "Margin"
 msgstr "Rozpětí"
 
-#: scene/2d/physics/shape_cast_2d.cpp scene/3d/physics/shape_cast_3d.cpp
-msgid "Max Results"
-msgstr "Maximum výsledků"
-
 #: scene/2d/physics/static_body_2d.cpp scene/3d/physics/static_body_3d.cpp
 #, fuzzy
 msgid "Constant Linear Velocity"
@@ -8464,7 +8919,7 @@ msgstr "Nastavení editoru"
 msgid "Show Bone Gizmo"
 msgstr "Zobrazit gizmo kosti"
 
-#: scene/2d/skeleton_2d.cpp scene/3d/skeleton_3d.cpp
+#: scene/2d/skeleton_2d.cpp
 msgid "Rest"
 msgstr "Klid"
 
@@ -8943,7 +9398,7 @@ msgstr "Velikost fontu"
 msgid "Horizontal Alignment"
 msgstr "Horizontální zarovnání"
 
-#: scene/3d/label_3d.cpp scene/gui/label.cpp
+#: scene/3d/label_3d.cpp scene/gui/label.cpp scene/gui/rich_text_label.cpp
 #: scene/resources/3d/primitive_meshes.cpp
 msgid "Vertical Alignment"
 msgstr "Vertikální zarovnání"
@@ -9095,11 +9550,11 @@ msgstr "Úhlový útlum"
 
 #: scene/3d/lightmap_gi.cpp
 #, fuzzy
-msgid "Light Texture"
+msgid "Lightmap Textures"
 msgstr "Textury světelné mapy"
 
 #: scene/3d/lightmap_gi.cpp scene/main/scene_tree.cpp
-#: servers/rendering_server.cpp
+#: scene/resources/multimesh.cpp servers/rendering_server.cpp
 msgid "Quality"
 msgstr "Kvalita"
 
@@ -9283,6 +9738,11 @@ msgstr "Vybíratelný paprskem"
 #: scene/3d/physics/collision_object_3d.cpp
 msgid "Capture on Drag"
 msgstr "Zachytit při táhnutí"
+
+#: scene/3d/physics/collision_shape_3d.cpp
+#, fuzzy
+msgid "Debug Fill"
+msgstr "Utility pro ladění"
 
 #: scene/3d/physics/joints/cone_twist_joint_3d.cpp
 #: scene/3d/physics/physical_bone_3d.cpp
@@ -9681,6 +10141,11 @@ msgstr "Maximální síla"
 
 #: scene/3d/reflection_probe.cpp
 #, fuzzy
+msgid "Blend Distance"
+msgstr "Vybrat vzdálenost:"
+
+#: scene/3d/reflection_probe.cpp
+#, fuzzy
 msgid "Origin Offset"
 msgstr "Offset mřížky:"
 
@@ -9713,10 +10178,10 @@ msgstr "Vyberte barvu"
 msgid "Color Energy"
 msgstr "Přesunout efekt zvukové sběrnice"
 
-#: scene/3d/skeleton_3d.cpp
-#, fuzzy
-msgid "Bones"
-msgstr "Kost"
+#: scene/3d/retarget_modifier_3d.cpp scene/resources/bone_map.cpp
+#: servers/xr/xr_positional_tracker.cpp
+msgid "Profile"
+msgstr "Profil"
 
 #: scene/3d/skeleton_3d.cpp
 #, fuzzy
@@ -9890,6 +10355,11 @@ msgid "Global Illumination"
 msgstr "Globální osvětlení"
 
 #: scene/3d/visual_instance_3d.cpp
+#, fuzzy
+msgid "Lightmap Texel Scale"
+msgstr "Velikost texelů světelné mapy"
+
+#: scene/3d/visual_instance_3d.cpp
 msgid "Lightmap Scale"
 msgstr "Měřítko světelné mapy"
 
@@ -9941,6 +10411,11 @@ msgstr "Měřítko světa"
 #: scene/animation/animation_blend_tree.cpp
 msgid "Play Mode"
 msgstr "Režim přehrávání"
+
+#: scene/animation/animation_blend_tree.cpp
+#, fuzzy
+msgid "Advance on Start"
+msgstr "Automatické načtení při spuštění"
 
 #: scene/animation/animation_blend_tree.cpp
 msgid "Use Custom Timeline"
@@ -9998,6 +10473,10 @@ msgstr "Zpoždění"
 #: scene/animation/animation_blend_tree.cpp
 msgid "Random Delay"
 msgstr "Náhodné zpodění"
+
+#: scene/animation/animation_blend_tree.cpp
+msgid "Explicit Elapse"
+msgstr ""
 
 #: scene/animation/animation_blend_tree.cpp
 #: scene/animation/animation_node_state_machine.cpp
@@ -10084,6 +10563,11 @@ msgstr "Pohyb kořenového uzlu"
 #: scene/animation/animation_mixer.cpp
 msgid "Track"
 msgstr "Stopa"
+
+#: scene/animation/animation_mixer.cpp
+#, fuzzy
+msgid "Local"
+msgstr "Jazyk"
 
 #: scene/animation/animation_mixer.cpp
 msgid "Callback Mode"
@@ -10310,6 +10794,11 @@ msgstr ""
 
 #: scene/gui/code_edit.cpp
 #, fuzzy
+msgid "Symbol Tooltip on Hover"
+msgstr "Barva znaků"
+
+#: scene/gui/code_edit.cpp
+#, fuzzy
 msgid "Line Folding"
 msgstr "Deaktivované tlačítko"
 
@@ -10514,6 +11003,11 @@ msgstr "Lokalizovat systém číslic"
 #: scene/gui/control.cpp scene/main/status_indicator.cpp
 msgid "Tooltip"
 msgstr "Nápověda"
+
+#: scene/gui/control.cpp
+#, fuzzy
+msgid "Auto Translate Mode"
+msgstr "Posunout"
 
 #: scene/gui/control.cpp scene/theme/default_theme.cpp
 msgid "Focus"
@@ -10723,10 +11217,6 @@ msgstr "Offset pozice"
 msgid "Draggable"
 msgstr "Nastavit okraj"
 
-#: scene/gui/graph_element.cpp
-msgid "Selectable"
-msgstr "Zvolitelné"
-
 #: scene/gui/graph_element.cpp scene/gui/option_button.cpp
 #: scene/theme/default_theme.cpp
 #, fuzzy
@@ -10785,6 +11275,11 @@ msgstr "Maximální počet řádků textu"
 
 #: scene/gui/item_list.cpp
 #, fuzzy
+msgid "Auto Width"
+msgstr "Šířka kosti"
+
+#: scene/gui/item_list.cpp
+#, fuzzy
 msgid "Auto Height"
 msgstr "Testované"
 
@@ -10822,6 +11317,11 @@ msgstr "Pohled zepředu"
 #: scene/gui/label.cpp
 msgid "Label Settings"
 msgstr "Nastavení popisku"
+
+#: scene/gui/label.cpp
+#, fuzzy
+msgid "Paragraph Separator"
+msgstr "Oddělení:"
 
 #: scene/gui/label.cpp scene/resources/text_line.cpp
 #: scene/resources/text_paragraph.cpp
@@ -11214,6 +11714,11 @@ msgid "Follow Focus"
 msgstr "Sledovat zaměření"
 
 #: scene/gui/scroll_container.cpp
+#, fuzzy
+msgid "Draw Focus Border"
+msgstr "Režim myši"
+
+#: scene/gui/scroll_container.cpp
 msgid "Horizontal Custom Step"
 msgstr "Horizontální vlastní krok"
 
@@ -11294,6 +11799,11 @@ msgstr "Zvýrazňování"
 #: scene/gui/subviewport_container.cpp
 msgid "Stretch Shrink"
 msgstr "Roztáhnout změnšený"
+
+#: scene/gui/subviewport_container.cpp
+#, fuzzy
+msgid "Mouse Target"
+msgstr "Cíl"
 
 #: scene/gui/tab_bar.cpp scene/gui/tab_container.cpp
 #, fuzzy
@@ -11377,6 +11887,11 @@ msgstr "Režim myši"
 
 #: scene/gui/text_edit.cpp
 #, fuzzy
+msgid "Empty Selection Clipboard Enabled"
+msgstr "Pouze výběr"
+
+#: scene/gui/text_edit.cpp
+#, fuzzy
 msgid "Wrap Mode"
 msgstr "Režim přichycení:"
 
@@ -11393,6 +11908,11 @@ msgstr "Skrolovat za konec souboru"
 #: scene/gui/text_edit.cpp
 #, fuzzy
 msgid "Fit Content Height"
+msgstr "Změnit hmotnost kostí"
+
+#: scene/gui/text_edit.cpp
+#, fuzzy
+msgid "Fit Content Width"
 msgstr "Změnit hmotnost kostí"
 
 #: scene/gui/text_edit.cpp
@@ -11549,6 +12069,11 @@ msgstr "Vodorovné posouvání povoleno"
 msgid "Scroll Vertical Enabled"
 msgstr "Svislé posouvání povoleno"
 
+#: scene/gui/tree.cpp
+#, fuzzy
+msgid "Auto Tooltip"
+msgstr "Nápověda"
+
 #: scene/gui/video_stream_player.cpp
 msgid "Audio Track"
 msgstr "Audio stopa"
@@ -11693,10 +12218,6 @@ msgstr "Pořadí vykreslování"
 msgid "Messages"
 msgstr "Zpráva"
 
-#: scene/main/node.cpp scene/main/scene_tree.cpp
-msgid "Physics Interpolation"
-msgstr "Fyzikální interpolace"
-
 #: scene/main/node.cpp
 #, fuzzy
 msgid "Auto Translate"
@@ -11744,6 +12265,11 @@ msgstr ""
 #, fuzzy
 msgid "Contact Color"
 msgstr "Vyberte barvu"
+
+#: scene/main/scene_tree.cpp
+#, fuzzy
+msgid "Paths"
+msgstr "Cesta"
 
 #: scene/main/scene_tree.cpp
 msgid "Geometry Color"
@@ -11822,6 +12348,10 @@ msgstr ""
 #: scene/main/scene_tree.cpp
 msgid "Threshold Pixels"
 msgstr ""
+
+#: scene/main/scene_tree.cpp
+msgid "Snap"
+msgstr "Přichytit"
 
 #: scene/main/scene_tree.cpp scene/main/viewport.cpp
 msgid "Snap 2D Transforms to Pixel"
@@ -12095,6 +12625,11 @@ msgstr ""
 
 #: scene/main/window.cpp
 #, fuzzy
+msgid "Exclude From Capture"
+msgstr "Vyřadit z nedávných"
+
+#: scene/main/window.cpp
+#, fuzzy
 msgid "Force Native"
 msgstr "Vykreslovací volání:"
 
@@ -12160,6 +12695,18 @@ msgstr "Navigace"
 #, fuzzy
 msgid "Segments"
 msgstr "Argumenty hlavní scény:"
+
+#: scene/resources/2d/navigation_polygon.cpp scene/resources/material.cpp
+#: scene/resources/navigation_mesh.cpp
+#, fuzzy
+msgid "Sampling"
+msgstr "Škálování: "
+
+#: scene/resources/2d/navigation_polygon.cpp
+#: scene/resources/navigation_mesh.cpp
+#, fuzzy
+msgid "Partition Type"
+msgstr "Nastavit typ proměnné"
 
 #: scene/resources/2d/navigation_polygon.cpp
 #: scene/resources/navigation_mesh.cpp
@@ -12376,26 +12923,6 @@ msgstr "Vlastní data"
 
 #: scene/resources/2d/tile_set.cpp
 #, fuzzy
-msgid "Tile Proxies"
-msgstr "TileSet (Sada dlaždic)"
-
-#: scene/resources/2d/tile_set.cpp
-#, fuzzy
-msgid "Source Level"
-msgstr "Vlevo nahoře"
-
-#: scene/resources/2d/tile_set.cpp
-#, fuzzy
-msgid "Coords Level"
-msgstr "Úroveň komprese"
-
-#: scene/resources/2d/tile_set.cpp
-#, fuzzy
-msgid "Alternative Level"
-msgstr "Alternativní ID"
-
-#: scene/resources/2d/tile_set.cpp
-#, fuzzy
 msgid "Tile Shape"
 msgstr "TileSet (Sada dlaždic)"
 
@@ -12546,6 +13073,11 @@ msgstr "Položka"
 #, fuzzy
 msgid "Mesh Transform"
 msgstr "Transformace"
+
+#: scene/resources/3d/mesh_library.cpp
+#, fuzzy
+msgid "Mesh Cast Shadow"
+msgstr "Vržený stín"
 
 #: scene/resources/3d/mesh_library.cpp
 #, fuzzy
@@ -12783,10 +13315,6 @@ msgstr "Uzel Mix"
 msgid "Stereo"
 msgstr ""
 
-#: scene/resources/bone_map.cpp servers/xr/xr_positional_tracker.cpp
-msgid "Profile"
-msgstr "Profil"
-
 #: scene/resources/bone_map.cpp
 #, fuzzy
 msgid "Bonemap"
@@ -12957,6 +13485,16 @@ msgstr "Přesunout efekt zvukové sběrnice"
 #, fuzzy
 msgid "Load Path"
 msgstr "Načíst přednastavení"
+
+#: scene/resources/curve.cpp
+#, fuzzy
+msgid "Min Domain"
+msgstr "Oblasti sledování"
+
+#: scene/resources/curve.cpp
+#, fuzzy
+msgid "Max Domain"
+msgstr "Maximální počet sloupců"
 
 #: scene/resources/curve.cpp
 #, fuzzy
@@ -13390,6 +13928,11 @@ msgstr "Z"
 msgid "To"
 msgstr "Horní"
 
+#: scene/resources/label_settings.cpp
+#, fuzzy
+msgid "Paragraph Spacing"
+msgstr "Další možnosti:"
+
 #: scene/resources/material.cpp
 #, fuzzy
 msgid "Next Pass"
@@ -13584,11 +14127,6 @@ msgstr ""
 msgid "UV2"
 msgstr "UV"
 
-#: scene/resources/material.cpp scene/resources/navigation_mesh.cpp
-#, fuzzy
-msgid "Sampling"
-msgstr "Škálování: "
-
 #: scene/resources/material.cpp
 #, fuzzy
 msgid "Shadows"
@@ -13711,11 +14249,6 @@ msgstr "Instance"
 #: scene/resources/multimesh.cpp
 msgid "Visible Instance Count"
 msgstr ""
-
-#: scene/resources/navigation_mesh.cpp
-#, fuzzy
-msgid "Partition Type"
-msgstr "Nastavit typ proměnné"
 
 #: scene/resources/navigation_mesh.cpp
 #, fuzzy
@@ -13979,6 +14512,11 @@ msgstr "Vytvořit kolizní polygon"
 
 #: scene/resources/particle_process_material.cpp
 #, fuzzy
+msgid "Amount at Start"
+msgstr "Množství:"
+
+#: scene/resources/particle_process_material.cpp
+#, fuzzy
 msgid "Keep Velocity"
 msgstr "Inicializovat"
 
@@ -14142,16 +14680,6 @@ msgstr "Výstupní port pro náhled"
 #: scene/resources/visual_shader.cpp
 msgid "Modes"
 msgstr "Režimy"
-
-#: scene/resources/visual_shader.cpp
-#, fuzzy
-msgid "Varyings"
-msgstr "Varování"
-
-#: scene/resources/visual_shader.cpp
-#, fuzzy
-msgid "Preview Params"
-msgstr "Náhled"
 
 #: scene/resources/visual_shader.cpp
 msgid "Input Name"
@@ -14982,6 +15510,16 @@ msgstr "Offset mřížky:"
 
 #: scene/theme/default_theme.cpp
 #, fuzzy
+msgid "Hovered"
+msgstr "Profil"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Hovered Dimmed"
+msgstr "Profil"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
 msgid "Selected Focus"
 msgstr "Vybrat"
 
@@ -14992,6 +15530,11 @@ msgstr "Kurzor"
 #: scene/theme/default_theme.cpp
 msgid "Cursor Unfocused"
 msgstr ""
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Button Hover"
+msgstr "Přepínatelné tlačítko"
 
 #: scene/theme/default_theme.cpp
 #, fuzzy
@@ -15057,6 +15600,16 @@ msgstr "Přepínatelné tlačítko"
 #, fuzzy
 msgid "Title Button Color"
 msgstr "Pouze výběr"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Font Hovered Color"
+msgstr "Vyberte barvu"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Font Hovered Dimmed Color"
+msgstr "Vyberte barvu"
 
 #: scene/theme/default_theme.cpp
 #, fuzzy
@@ -15193,13 +15746,18 @@ msgstr "Nastavit okraj"
 
 #: scene/theme/default_theme.cpp
 #, fuzzy
-msgid "Font Hovered Color"
-msgstr "Vyberte barvu"
+msgid "Font Hovered Selected Color"
+msgstr "Barva vybrané kosti"
 
 #: scene/theme/default_theme.cpp
 #, fuzzy
-msgid "Hovered"
-msgstr "Profil"
+msgid "Hovered Selected"
+msgstr "Vybrat"
+
+#: scene/theme/default_theme.cpp
+#, fuzzy
+msgid "Hovered Selected Focus"
+msgstr "Vybrat"
 
 #: scene/theme/default_theme.cpp
 #, fuzzy
@@ -16039,6 +16597,11 @@ msgstr "Čas vypršel."
 msgid "Surround"
 msgstr "Surround"
 
+#: servers/audio/effects/audio_stream_generator.cpp
+#, fuzzy
+msgid "Mix Rate Mode"
+msgstr "Uzel Mix"
+
 #: servers/audio_server.cpp
 msgid "Enable Input"
 msgstr "Povolit vstup"
@@ -16681,6 +17244,11 @@ msgid "Compress With GPU"
 msgstr "Komponenty"
 
 #: servers/rendering_server.cpp
+#, fuzzy
+msgid "Cache GPU Compressor"
+msgstr "Nastavit výraz"
+
+#: servers/rendering_server.cpp
 msgid "Lossless Compression"
 msgstr ""
 
@@ -17082,6 +17650,10 @@ msgstr "Síla"
 #, fuzzy
 msgid "World Origin"
 msgstr "Zobrazit počátek"
+
+#: servers/xr_server.cpp
+msgid "Camera Locked to Origin"
+msgstr ""
 
 #: servers/xr_server.cpp
 #, fuzzy

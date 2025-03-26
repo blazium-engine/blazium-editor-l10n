@@ -68,8 +68,16 @@ msgid "Hex code or named color"
 msgstr ""
 
 #: scene/gui/color_picker.cpp
+msgid "Swatches"
+msgstr ""
+
+#: scene/gui/color_picker.cpp
 msgid "Add current color as a preset."
 msgstr "Agregar color actual como preset."
+
+#: scene/gui/color_picker.cpp
+msgid "Recent Colors"
+msgstr ""
 
 #: scene/gui/dialogs.cpp
 msgid "Cancel"
@@ -108,6 +116,15 @@ msgstr "Seleccionar Carpeta Actual"
 #: scene/gui/file_dialog.cpp
 msgid "Select This Folder"
 msgstr "Seleccionar Esta Carpeta"
+
+#: scene/gui/file_dialog.cpp
+#, fuzzy
+msgid "Open in File Manager"
+msgstr "Abrir un Archivo"
+
+#: scene/gui/file_dialog.cpp
+msgid "Show Package Contents"
+msgstr ""
 
 #: scene/gui/file_dialog.cpp
 msgid "You don't have permission to access contents of this folder."
